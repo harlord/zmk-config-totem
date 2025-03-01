@@ -69,6 +69,71 @@
     };
 
     behaviors {
+
+lrlMo: lrlMo {
+    compatible = "zmk,behavior-hold-tap";
+    label = "LRLMO";
+    bindings = <&kp>, <&kp>;
+
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;
+    hold-trigger-on-release;
+};
+
+lrrMo: lrrMo {
+    compatible = "zmk,behavior-hold-tap";
+    label = "LRRMO";
+    bindings = <&kp>, <&kp>;
+
+    #binding-cells = <2>;
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;
+    hold-trigger-on-release;
+};
+
+base_th_mo_kp_hp: base_th_mo_kp_hp {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = "hold-preferred";
+    tapping-term-ms = <THUMB_HOLDING_TIME>;
+    quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
+    hold-trigger-on-release; // wait for other home row mods
+    #binding-cells = <2>;
+    bindings = <&mo>, <&kp>;
+};
+
+th_kp_kp_hp: th_kp_kp_hp {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = "hold-preferred";
+        tapping-term-ms = <THUMB_HOLDING_TIME>;
+        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+        #binding-cells = <2>;
+        hold-trigger-on-release; 
+        bindings = <&kp>, <&kp>;
+    }; 
+
+space: space {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = "balanced";
+        tapping-term-ms = <300>;
+        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+        #binding-cells = <2>;
+        require-prior-idle-ms = <80>;
+        hold-trigger-on-release; 
+        bindings = <&kp>, <&kp>;
+    };
+
+
+
+ bhm: bhm {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+        };
     };
 
     keymap {
@@ -252,67 +317,3 @@
     };
 };
 
-lrlMo: lrlMo {
-    compatible = "zmk,behavior-hold-tap";
-    label = "LRLMO";
-    bindings = <&kp>, <&kp>;
-
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <280>;
-    quick-tap-ms = <175>;
-    hold-trigger-on-release;
-};
-
-lrrMo: lrrMo {
-    compatible = "zmk,behavior-hold-tap";
-    label = "LRRMO";
-    bindings = <&kp>, <&kp>;
-
-    #binding-cells = <2>;
-    tapping-term-ms = <280>;
-    quick-tap-ms = <175>;
-    hold-trigger-on-release;
-};
-
-base_th_mo_kp_hp: base_th_mo_kp_hp {
-    compatible = "zmk,behavior-hold-tap";
-    flavor = "hold-preferred";
-    tapping-term-ms = <THUMB_HOLDING_TIME>;
-    quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
-    hold-trigger-on-release; // wait for other home row mods
-    #binding-cells = <2>;
-    bindings = <&mo>, <&kp>;
-};
-
-th_kp_kp_hp: th_kp_kp_hp {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "hold-preferred";
-        tapping-term-ms = <THUMB_HOLDING_TIME>;
-        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        #binding-cells = <2>;
-        hold-trigger-on-release; 
-        bindings = <&kp>, <&kp>;
-    }; 
-
-space: space {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "balanced";
-        tapping-term-ms = <300>;
-        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        #binding-cells = <2>;
-        require-prior-idle-ms = <80>;
-        hold-trigger-on-release; 
-        bindings = <&kp>, <&kp>;
-    };
-
-
-
- bhm: bhm {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;    // <---[[moderate duration]]
-            quick-tap-ms = <175>;
-            flavor = "balanced";
-            bindings = <&mo>, <&kp>;
-        };
