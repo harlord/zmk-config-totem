@@ -20,7 +20,7 @@
 #define RAISE  2
 #define HOMEROW 3
 #define NAVOVERR 4
-#define TILDE 5
+#define TILDEL 5
 #define DIRECTACC 6
 #define FUNC 7
 #define ADJ  8
@@ -72,32 +72,27 @@
                 <&kp G &kp I &kp F>;
         };
 
-         tildem: tildem {
-            label = "&TILDEM";
+         // tilde
+        tilde: tilde {
+            label = "&TILDE";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-
-            bindings
-                = <&macro_tap &kp LA(E)>
-                , <&macro_press &kp LSHIFT>
+            bindings = <&macro_tap>
+                , <&kp LA(E)>
+                , <&macro_tap>
                 , <&macro_param_1to1>
-                , <&macro_tap &kp LS(MACRO_PLACEHOLDER)>
-                , <&macro_release &kp LSHIFT>
-                ;
+                , <&kp A>;
         };
-     
-        ennem: ennem {
-            label = "&ENNEM";
+
+        // enne
+        enne: enne {
+            label = "&ENNE";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-
-            bindings
-               = <&macro_tap &kp LA(N)>
-                , <&macro_press &kp LSHIFT>
+            bindings = <&macro_tap>
+                , <&kp LA(N)>
                 , <&macro_param_1to1>
-                , <&macro_tap &kp LS(MACRO_PLACEHOLDER)>
-                , <&macro_release &kp LSHIFT>
-                ;
+                , <&kp A>;
         };
 
         lm_mac_homerow: lm_mac_homerow {
@@ -341,7 +336,7 @@ spacelm: thumb_layer_access_spacebarlm {
        &kp Q  &kp W  &kp F    &kp P     &kp B                          &kp J                          &kp L      &kp U      &kp Y    &kp SEMI
        &kp A  &kp R  &kp S    &kp T     &kp G                          &kp M                          &kp N      &kp E      &kp I    &kp O
 &kp Q  &kp Z  &kp X  &kp C    &kp D     &kp V                          &kp K                          &kp H      &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-&lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE &base_th_mo_kp_hp LOWER TAB      &base_th_mo_kp_hp RAISE ENTER  &spacelm LCTRL SPACE &th_kp_sl_tp LALT TILDE
+&lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE &base_th_mo_kp_hp LOWER TAB      &base_th_mo_kp_hp RAISE ENTER  &spacelm LCTRL SPACE &th_kp_sl_tp LALT TILDEL
             >;
         };
 
@@ -417,8 +412,8 @@ spacelm: thumb_layer_access_spacebarlm {
             >;
         };
 
-        layer_tilde {
-            label = "TILDE";
+        layer_tildel {
+            label = "TILDEL";
             bindings = <
                &kp LA(N1)  &trans  &trans  &kp LS(LA(N2))  &trans                          &trans   &trans  &tilde U    &trans          &trans  
                &tilde A    &trans  &trans          &trans  &trans                          &trans  &enne N  &tilde E  &tilde I          &tilde O  
