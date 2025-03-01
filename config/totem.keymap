@@ -38,6 +38,7 @@
 #define THUMB_REPEAT_DECAY_BASE 200 // "tap then hold" for key auto-repeat
 #define THUMB_REPEAT_DECAY 190 // "tap then hold" for key auto-repeat
 #define SPACE_HOLDING_TYPE "balanced"
+#define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 &mt {
     quick-tap-ms = <100>;
