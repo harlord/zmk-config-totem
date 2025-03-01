@@ -18,9 +18,12 @@
 #define BASE 0
 #define LOWER  1
 #define RAISE  2
-#define ADJ  3
-#define TVP1 4
-#define TVP2 5
+#define Homerow 3
+#define NavOverR 4
+#define ADJ  5
+#define TVP1 6
+#define TVP2 7
+
 #define THUMB_HOLDING_TIME 200 // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds) a thumb key to activate a layer.  Shorter holds are treated as taps.
 #define THUMB_REPEAT_DECAY_BASE 200 // "tap then hold" for key auto-repeat
 
@@ -149,6 +152,24 @@
             >;
         };
 
+        layer_Homerow {
+            bindings = <
+                         &kp Q           &kp W          &kp F          &kp P   &kp B              &kp J          &kp L          &kp U           &kp Y                   &kp SQT  
+                &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S  &lrlMo LGUI T   &kp G              &kp M  &lrrMo RGUI N  &lrrMo RALT E  &lrrMo RCTRL I            &lrrMo RSHFT O  
+                         &kp Z           &kp X          &kp C          &kp D   &kp V              &kp K          &kp H      &kp COMMA         &kp DOT  &bhm LAYER_NavOverR FSLH  
+&th_kp_kp_hp LGUI DELETE   &th_kp_kp_hp LSHFT BACKSPACE &th_mo_kp_hp LAYER_Lower TAB             &th_mo_kp_hp LAYER_Raise ENTER &space LCTRL SPACE &th_kp_kp_hp RALT ESC    
+            >;
+        };
+
+        layer_NavOverR {
+            bindings = <
+                         &kp Q           &kp W          &kp F          &kp P   &kp B             &kp J          &kp L     &kp U           &kp Y    &kp SQT     
+                &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S  &lrlMo LGUI T   &kp G             &kp M  &lrrMo RGUI N    &kp UP  &lrrMo RCTRL I  &kp RSHFT     
+                         &kp Z           &kp X          &kp C          &kp D   &kp V             &kp K       &kp LEFT  &kp DOWN       &kp RIGHT   &kp RALT     
+&th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE &th_mo_kp_hp LAYER_Lower TAB               &th_mo_kp_hp LAYER_Raise ENTER  &space LCTRL SPACE &th_kp_kp_hp LALT ESC                 
+            >;
+        };
+
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         adjust_layer {
@@ -239,6 +260,27 @@ base_th_mo_kp_hp: thumb_base_th_mo_kp_hp {
     bindings = <&mo>, <&kp>;
 };
 
+th_kp_kp_hp: thumb_th_kp_kp_hp {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = "hold-preferred";
+        tapping-term-ms = <THUMB_HOLDING_TIME>;
+        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+        #binding-cells = <2>;
+        hold-trigger-on-release; 
+        bindings = <&kp>, <&kp>;
+    }; 
+
+space: thumb_layer_access_spacebar {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = "balanced";
+        tapping-term-ms = <300>;
+        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+        #binding-cells = <2>;
+        require-prior-idle-ms = <80>;
+        hold-trigger-on-release; 
+        bindings = <&kp>, <&kp>;
+    };
+
 lrlMo: lrlMo {
     compatible = "zmk,behavior-hold-tap";
     label = "LRLMO";
@@ -261,3 +303,12 @@ lrrMo: lrrMo {
     quick-tap-ms = <175>;
     hold-trigger-on-release;
 };
+
+ bhm: balanced_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+        };
