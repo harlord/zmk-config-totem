@@ -18,8 +18,8 @@
 #define BASE 0
 #define LOWER  1
 #define RAISE  2
-#define Homerow 3
-#define NavOverR 4
+#define HOMEROW 3
+#define NAVOVERR 4
 #define ADJ  5
 #define TVP1 6
 #define TVP2 7
@@ -152,21 +152,23 @@
             >;
         };
 
-        layer_Homerow {
+        layer_homerow {
+            label = "HOMEROW";
             bindings = <
                          &kp Q           &kp W          &kp F          &kp P   &kp B              &kp J          &kp L          &kp U           &kp Y                   &kp SQT  
                 &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S  &lrlMo LGUI T   &kp G              &kp M  &lrrMo RGUI N  &lrrMo RALT E  &lrrMo RCTRL I            &lrrMo RSHFT O  
-                         &kp Z           &kp X          &kp C          &kp D   &kp V              &kp K          &kp H      &kp COMMA         &kp DOT  &bhm LAYER_NavOverR FSLH  
-&th_kp_kp_hp LGUI DELETE   &th_kp_kp_hp LSHFT BACKSPACE &th_mo_kp_hp LAYER_Lower TAB             &th_mo_kp_hp LAYER_Raise ENTER &space LCTRL SPACE &th_kp_kp_hp RALT ESC    
+                         &kp Z           &kp X          &kp C          &kp D   &kp V              &kp K          &kp H      &kp COMMA         &kp DOT  &bhm NAVOVERR FSLH  
+&th_kp_kp_hp LGUI DELETE   &th_kp_kp_hp LSHFT BACKSPACE &th_mo_kp_hp LOWER TAB             &th_mo_kp_hp RAISE ENTER &space LCTRL SPACE &th_kp_kp_hp RALT ESC    
             >;
         };
 
-        layer_NavOverR {
+        layer_navoverr {
+            label = "NAVOVERR";
             bindings = <
                          &kp Q           &kp W          &kp F          &kp P   &kp B             &kp J          &kp L     &kp U           &kp Y    &kp SQT     
                 &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S  &lrlMo LGUI T   &kp G             &kp M  &lrrMo RGUI N    &kp UP  &lrrMo RCTRL I  &kp RSHFT     
                          &kp Z           &kp X          &kp C          &kp D   &kp V             &kp K       &kp LEFT  &kp DOWN       &kp RIGHT   &kp RALT     
-&th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE &th_mo_kp_hp LAYER_Lower TAB               &th_mo_kp_hp LAYER_Raise ENTER  &space LCTRL SPACE &th_kp_kp_hp LALT ESC                 
+&th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE &th_mo_kp_hp LOWER TAB               &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE &th_kp_kp_hp LALT ESC                 
             >;
         };
 
