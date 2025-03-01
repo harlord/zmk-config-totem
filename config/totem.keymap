@@ -252,7 +252,7 @@
     };
 };
 
-base_th_mo_kp_hp: thumb_base_th_mo_kp_hp {
+base_th_mo_kp_hp: base_th_mo_kp_hp {
     compatible = "zmk,behavior-hold-tap";
     flavor = "hold-preferred";
     tapping-term-ms = <THUMB_HOLDING_TIME>;
@@ -262,7 +262,7 @@ base_th_mo_kp_hp: thumb_base_th_mo_kp_hp {
     bindings = <&mo>, <&kp>;
 };
 
-th_kp_kp_hp: thumb_th_kp_kp_hp {
+th_kp_kp_hp: th_kp_kp_hp {
         compatible = "zmk,behavior-hold-tap";
         flavor = "hold-preferred";
         tapping-term-ms = <THUMB_HOLDING_TIME>;
@@ -272,7 +272,7 @@ th_kp_kp_hp: thumb_th_kp_kp_hp {
         bindings = <&kp>, <&kp>;
     }; 
 
-space: thumb_layer_access_spacebar {
+space: space {
         compatible = "zmk,behavior-hold-tap";
         flavor = "balanced";
         tapping-term-ms = <300>;
@@ -306,7 +306,7 @@ lrrMo: lrrMo {
     hold-trigger-on-release;
 };
 
- bhm: balanced_homerow_mods {
+ bhm: bhm {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;    // <---[[moderate duration]]
