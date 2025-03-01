@@ -423,7 +423,7 @@ spacelm: thumb_layer_access_spacebarlm {
         };
 
         layer_direcaAcc {
-            label =  "DIRECTACC"
+            label =  "DIRECTACC";
             bindings = <
          &trans   &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))  &kp LC(MINUS)           &kp LC(LS(MINUS))                 &kp C_VOL_UP    &kp C_PREV      &kp C_PP        &kp C_NEXT         &trans  
          &trans   &kp LS(LA(DOWN))       &as LA(LS(H)) LA(LS(F12))  &tdSelectCoppingRL A A  &tdSelectCoppingLR A A            &kp C_VOL_DN    &sk RGUI        &sk RALT        &sk RCTRL          &sk RSHFT  
