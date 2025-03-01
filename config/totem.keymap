@@ -15,6 +15,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
+
+/* On demand includes */
+#include <dt-bindings/zmk/pointing.h>
+
+
 #define BASE 0
 #define LOWER  1
 #define RAISE  2
@@ -436,8 +443,8 @@ spacelm: thumb_layer_access_spacebarlm {
             label = "FUNC";
             bindings = <
          &kp F1      &kp F2           &kp F3            &kp F4     &kp F5                             &kp F6          &kp F7          &kp F8           &kp F9    &kp F10  
-         &sk LSHFT   &sk LCTRL        &kp F3       &sk LGUI   &kp F1                             &kp F1       &sk RGUI    &kp F1         &sk RGUI  &sk RSHFT  
-&trans   &sk LALT    &kp F3    &kp F3     &msc SCRL_RIGHT   &kp F11                     &kp F12  &kp F3   &kp F3   &kp F3    &sk RALT  &trans
+         &sk LSHFT   &sk LCTRL        &msc SCRL_UP      &sk LGUI   &mkp LCLK                          &mkp RCLK        &sk RGUI    &mmv MOVE_UP         &sk RGUI  &sk RSHFT  
+&trans   &sk LALT    &msc SCRL_LEFT   &msc SCRL_DOWN    &msc SCRL_RIGHT   &kp F11                     &kp F12  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &sk RALT  &trans
 &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE &th_mo_kp_hp LOWER TAB                        &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE &th_kp_kp_hp LALT ESC                   
             >;
         };
