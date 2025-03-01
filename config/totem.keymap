@@ -38,7 +38,6 @@
 #define THUMB_REPEAT_DECAY_BASE 200 // "tap then hold" for key auto-repeat
 #define THUMB_REPEAT_DECAY 190 // "tap then hold" for key auto-repeat
 #define SPACE_HOLDING_TYPE "balanced"
-#define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 &mt {
     quick-tap-ms = <100>;
@@ -179,7 +178,34 @@
                 , <&kp LG(C)>;
         };
 
-       
+        // Select and copy forward a word from right to left
+        scfw_r_to_l: scfw_r_to_l {
+            label = "&SCFW_R_TO_L";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>
+                , <&kp LA(LS(LEFT))>
+                , <&macro_pause_for_release>
+                , <&macro_release>
+                , <&kp LA(LS(LEFT))>
+                , <&macro_tap>
+                , <&kp LG(C)>;
+        };
+
+        // Select and copy forward a word from left to right
+        scfw_l_to_r: scfw_l_to_r {
+            label = "&SCFW_L_TO_R";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>
+                , <&kp LA(LS(RIGHT))>
+                , <&macro_pause_for_release>
+                , <&macro_release>
+                , <&kp LA(LS(RIGHT))>
+                , <&macro_tap>
+                , <&kp LG(C)>;
+        };
+
 
 };
 
