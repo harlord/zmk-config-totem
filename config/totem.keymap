@@ -252,6 +252,29 @@
     };
 };
 
+lrlMo: lrlMo {
+    compatible = "zmk,behavior-hold-tap";
+    label = "LRLMO";
+    bindings = <&kp>, <&kp>;
+
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;
+    hold-trigger-on-release;
+};
+
+lrrMo: lrrMo {
+    compatible = "zmk,behavior-hold-tap";
+    label = "LRRMO";
+    bindings = <&kp>, <&kp>;
+
+    #binding-cells = <2>;
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;
+    hold-trigger-on-release;
+};
+
 base_th_mo_kp_hp: base_th_mo_kp_hp {
     compatible = "zmk,behavior-hold-tap";
     flavor = "hold-preferred";
@@ -283,28 +306,7 @@ space: space {
         bindings = <&kp>, <&kp>;
     };
 
-lrlMo: lrlMo {
-    compatible = "zmk,behavior-hold-tap";
-    label = "LRLMO";
-    bindings = <&kp>, <&kp>;
 
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <280>;
-    quick-tap-ms = <175>;
-    hold-trigger-on-release;
-};
-
-lrrMo: lrrMo {
-    compatible = "zmk,behavior-hold-tap";
-    label = "LRRMO";
-    bindings = <&kp>, <&kp>;
-
-    #binding-cells = <2>;
-    tapping-term-ms = <280>;
-    quick-tap-ms = <175>;
-    hold-trigger-on-release;
-};
 
  bhm: bhm {
             compatible = "zmk,behavior-hold-tap";
