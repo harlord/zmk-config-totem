@@ -26,6 +26,7 @@
 
 #define THUMB_HOLDING_TIME 200 // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds) a thumb key to activate a layer.  Shorter holds are treated as taps.
 #define THUMB_REPEAT_DECAY_BASE 200 // "tap then hold" for key auto-repeat
+#define THUMB_REPEAT_DECAY 190 // "tap then hold" for key auto-repeat
 
 &mt {
     quick-tap-ms = <100>;
