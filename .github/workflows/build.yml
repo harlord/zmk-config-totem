@@ -1,6 +1,4 @@
-
-on:
-  [push, pull_request, workflow_dispatch]:
+on: [push, pull_request, workflow_dispatch]:
     inputs:
       build_matrix_path:
         description: "Path to the build matrix file"
