@@ -20,9 +20,12 @@
 #define RAISE  2
 #define HOMEROW 3
 #define NAVOVERR 4
-#define ADJ  5
-#define TVP1 6
-#define TVP2 7
+#define TILDE 5
+#define DIRECTACC 6
+#define FUNC 7
+#define ADJ  8
+#define TVP1 9
+#define TVP2 10
 
 #define THUMB_HOLDING_TIME 200 // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds) a thumb key to activate a layer.  Shorter holds are treated as taps.
 #define THUMB_REPEAT_DECAY_BASE 200 // "tap then hold" for key auto-repeat
@@ -67,9 +70,125 @@
                 <&macro_tap>,
                 <&kp G &kp I &kp F>;
         };
-    };
+
+         tildem: tildem {
+            label = "&TILDEM";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+
+            bindings
+                = <&macro_tap &kp LA(E)>
+                , <&macro_press &kp LSHIFT>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp LS(MACRO_PLACEHOLDER)>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+     
+        ennem: ennem {
+            label = "&ENNEM";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+
+            bindings
+               = <&macro_tap &kp LA(N)>
+                , <&macro_press &kp LSHIFT>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp LS(MACRO_PLACEHOLDER)>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
+        lm_mac_homerow: lm_mac_homerow {
+    compatible = "zmk,behavior-macro-one-param";
+    wait-ms = <0>;
+    tap-ms = <0>;
+    #binding-cells = <1>;
+    bindings
+        = <&macro_press &mo HOMEROW>
+        , <&macro_param_1to1>
+        , <&macro_press &kp MACRO_PLACEHOLDER>
+        , <&macro_pause_for_release>
+        , <&macro_param_1to1>
+        , <&macro_release &kp MACRO_PLACEHOLDER>
+        , <&macro_release &mo HOMEROW>
+        ;
+  };
+
+  // Select a line copping from left to right
+        scl_l_to_r: scl_l_to_r {
+            label = "&SCL_L_TO_R";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>
+                , <&kp LG(LEFT)>
+                , <&macro_wait_time 5>
+                , <&macro_tap>
+                , <&kp LG(LS(RIGHT))>
+                , <&macro_wait_time 5>
+                , <&macro_tap>
+                , <&kp LG(C)>;
+        };
+    
+        // Select a line copping from left to right
+        scl_r_to_l: scl_r_to_l {
+            label = "&SCL_R_TO_L";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>
+                , <&kp LG(RIGHT)>
+                , <&macro_wait_time 5>
+                , <&macro_tap>
+                , <&kp LG(LS(LEFT))>
+                , <&macro_wait_time 5>
+                , <&macro_tap>
+                , <&kp LG(C)>;
+        };
+
+        // Select a word from right to left
+        scw_r_to_l: scw_r_to_l {
+            label = "&SCW_R_TO_L";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>
+                , <&kp LA(RIGHT)>
+                , <&macro_wait_time 5>
+                , <&macro_tap>
+                , <&kp LA(LS(LEFT))>
+                , <&macro_wait_time 5>
+                , <&macro_tap>
+                , <&kp LG(C)>;
+        };
+
+         // Select a word from right to left
+        scw_l_to_r: scw_l_to_r {
+            label = "&SCW_L_TO_R";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>
+                , <&kp LA(LEFT)>
+                , <&macro_wait_time 5>
+                , <&macro_tap>
+                , <&kp LA(LS(RIGHT))>
+                , <&macro_wait_time 5>
+                , <&macro_tap>
+                , <&kp LG(C)>;
+        };
+
+       
+
+};
 
     behaviors {
+
+         tdSelectCoppingLR: tdSelectCoppingLR{
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&scl_l_to_r>, <&scw_l_to_r>;
+        };
 
 lrlMo: lrlMo {
     compatible = "zmk,behavior-hold-tap";
@@ -145,7 +264,56 @@ space: space {
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
         };
+
+lm_homerow: lm_homerow {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = "hold-preferred";
+        tapping-term-ms = <THUMB_HOLDING_TIME>;
+        quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
+        hold-trigger-on-release; // wait for other home row mods
+        #binding-cells = <2>;
+        bindings = <&lm_mac_homerow>, <&kp>;
     };
+
+spacelm: thumb_layer_access_spacebarlm {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = SPACE_HOLDING_TYPE;
+        tapping-term-ms = <300>;
+        quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
+        #binding-cells = <2>;
+        require-prior-idle-ms = <80>;
+        hold-trigger-on-release; 
+        bindings = <&lm_mac_homerow>, <&kp>;
+    };
+
+    tdSelectCoppingRL: tdSelectCoppingRL{
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&scl_r_to_l>, <&scw_r_to_l>;
+        };
+
+ td_find_s_ht: td_find_s_ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&pfind>, <&kp>;
+        };
+        
+  td_find_g_ht: td_find_g_ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&gpfind>, <&kp>;
+        };       
+
+};
 
     keymap {
         compatible = "zmk,keymap";
@@ -172,7 +340,7 @@ space: space {
        &kp Q  &kp W  &kp F    &kp P     &kp B                          &kp J                          &kp L      &kp U      &kp Y    &kp SEMI
        &kp A  &kp R  &kp S    &kp T     &kp G                          &kp M                          &kp N      &kp E      &kp I    &kp O
 &kp Q  &kp Z  &kp X  &kp C    &kp D     &kp V                          &kp K                          &kp H      &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                     &kp DEL  &kp BSPC  &base_th_mo_kp_hp LOWER TAB    &base_th_mo_kp_hp RAISE ENTER  &kp SPACE  &kp ESC
+&lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE &base_th_mo_kp_hp LOWER TAB      &base_th_mo_kp_hp RAISE ENTER  &spacelm LCTRL SPACE &th_kp_sl_tp LALT TILDE
             >;
         };
 
@@ -195,10 +363,10 @@ space: space {
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC    &bt BT_CLR  &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-        &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-&trans  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
-                               &trans    &trans     &trans      &mo ADJ   &kp KP_N0  &trans
+                &kp N1     &kp N2    &kp N3     &kp N4     &kp N5                             &kp N6    &kp N7    &kp N8     &kp N9     &kp N0  
+                &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI   &kp CAPS                          &caps_word  &kp RGUI    &kp UP  &kp RCTRL  &kp RSHFT  
+        &trans  &kp BSLH   &kp LBKT  &kp RBKT  &kp GRAVE  &kp MINUS                           &kp EQUAL  &kp LEFT  &kp DOWN  &kp RIGHT   &kp RALT   &trans
+&th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE &th_mo_kp_hp LOWER TAB         &th_mo_kp_hp RAISE ENTER   &space LCTRL SPACE &th_kp_kp_hp LALT ESC                
             >;
         };
 
@@ -221,10 +389,10 @@ space: space {
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp RA(U)   &kp SQT     &kp DQT
-        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
-                                  &trans     &gif      &mo ADJ      &trans        &kp C_PP        &trans
+          &kp EXCL             &kp AT           &kp HASH            &kp DLLR  &kp PRCNT                              &kp CARET           &kp AMPS            &kp STAR         &kp LPAR               &kp RPAR  
+          &lrlMo LSHFT PIPE  &lrlMo LCTRL LBRC  &lrlMo LCTRL RBRC  &lrlMo LCTRL TILDE  &kp UNDER                     &kp PLUS            &lrrMo RGUI COLON  &lrrMo RALT LT    &lrrMo RCTRL GT        &lrrMo RSHFT QUESTION  
+&trans    &kp BSLH           &kp LBKT           &kp RBKT           &kp GRAVE  &kp MINUS                              &kp EQUAL           &kp SEMI           &kp COMMA          &kp DOT               &lrrMo RALT FSLH        &trans
+&th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE &th_mo_kp_hp LOWER TAB                                       &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE &th_kp_kp_hp LALT ESC  
             >;
         };
 
@@ -233,7 +401,7 @@ space: space {
             bindings = <
                          &kp Q           &kp W          &kp F          &kp P   &kp B              &kp J          &kp L          &kp U           &kp Y                   &kp SQT  
                 &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S  &lrlMo LGUI T   &kp G              &kp M  &lrrMo RGUI N  &lrrMo RALT E  &lrrMo RCTRL I            &lrrMo RSHFT O  
-                         &kp Z           &kp X          &kp C          &kp D   &kp V              &kp K          &kp H      &kp COMMA         &kp DOT  &bhm NAVOVERR FSLH  
+&trans                   &kp Z           &kp X          &kp C          &kp D   &kp V              &kp K          &kp H      &kp COMMA         &kp DOT  &bhm NAVOVERR FSLH         &trans 
 &th_kp_kp_hp LGUI DELETE   &th_kp_kp_hp LSHFT BACKSPACE &th_mo_kp_hp LOWER TAB             &th_mo_kp_hp RAISE ENTER &space LCTRL SPACE &th_kp_kp_hp RALT ESC    
             >;
         };
@@ -243,8 +411,38 @@ space: space {
             bindings = <
                          &kp Q           &kp W          &kp F          &kp P   &kp B             &kp J          &kp L     &kp U           &kp Y    &kp SQT     
                 &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S  &lrlMo LGUI T   &kp G             &kp M  &lrrMo RGUI N    &kp UP  &lrrMo RCTRL I  &kp RSHFT     
-                         &kp Z           &kp X          &kp C          &kp D   &kp V             &kp K       &kp LEFT  &kp DOWN       &kp RIGHT   &kp RALT     
+&trans                   &kp Z           &kp X          &kp C          &kp D   &kp V             &kp K       &kp LEFT  &kp DOWN       &kp RIGHT   &kp RALT     &trans 
 &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE &th_mo_kp_hp LOWER TAB               &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE &th_kp_kp_hp LALT ESC                 
+            >;
+        };
+
+        layer_tilde {
+            label = "TILDE";
+            bindings = <
+               &kp LA(N1)  &trans  &trans  &kp LS(LA(N2))  &trans                          &trans   &trans  &tilde U    &trans          &trans  
+               &tilde A    &trans  &trans          &trans  &trans                          &trans  &enne N  &tilde E  &tilde I          &tilde O  
+&trans         &trans      &trans  &trans          &trans  &trans                          &trans   &trans    &trans    &trans          &kp LA(LS(FSLH))    &trans
+&th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE &th_mo_kp_hp LOWER TAB         &th_mo_kp_hp RAISE ENTER      &space LCTRL SPACE       &kp ESC       
+            >;
+        };
+
+        layer_direcaAcc {
+            label =  "DIRECTACC"
+            bindings = <
+         &trans   &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))  &kp LC(MINUS)           &kp LC(LS(MINUS))                 &kp C_VOL_UP    &kp C_PREV      &kp C_PP        &kp C_NEXT         &trans  
+         &trans   &kp LS(LA(DOWN))       &as LA(LS(H)) LA(LS(F12))  &tdSelectCoppingRL A A  &tdSelectCoppingLR A A            &kp C_VOL_DN    &sk RGUI        &sk RALT        &sk RCTRL          &sk RSHFT  
+&trans   &trans   &trans                 &trans                     &scfw_r_to_l            &scfw_l_to_r                      &kp C_MUTE      &kp C_BRI_DN    &kp C_BRI_UP    &kp RC(C_BRI_DN)   &kp RC(C_BRI_UP)  &trans
+&th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE &th_mo_kp_hp LOWER TAB                                                   &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE &th_kp_kp_hp LALT ESC                   
+            >;
+        };
+
+        layer_func {
+            label = "FUNC";
+            bindings = <
+         &kp F1      &kp F2           &kp F3            &kp F4     &kp F5                             &kp F6          &kp F7          &kp F8           &kp F9    &kp F10  
+         &sk LSHFT   &sk LCTRL        &msc SCRL_UP      &sk LGUI   &mkp MB1                           &mkp MB2        &sk RGUI    &mmv MOVE_UP         &sk RGUI  &sk RSHFT  
+&trans   &sk LALT    &msc SCRL_LEFT   &msc SCRL_DOWN    &msc SCRL_RIGHT   &kp F11                     &kp F12  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &sk RALT  &trans
+&th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE &th_mo_kp_hp LOWER TAB                        &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE &th_kp_kp_hp LALT ESC                   
             >;
         };
 
