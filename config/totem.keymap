@@ -115,9 +115,9 @@
 
 
 //THUMBS
-  COMBO(delete_space, &mo LAYER_Homerow, 35 36)// ENTER SPACE
-  COMBO(bkspace_delete2, &mo LAYER_DirectAcc, 33 34)// BKSPACE TAB
-  COMBO(delete_enter, &sl LAYER_Func, 34 35)// TAB ENTER
+  COMBO(delete_space, &mo HOMEROW, 35 36)// ENTER SPACE
+  COMBO(bkspace_delete2, &mo DIRECTACC, 33 34)// BKSPACE TAB
+  COMBO(delete_enter, &sl FUNC, 34 35)// TAB ENTER
 
 //NavOverR
   NAVBACOMBO(pg_0, &kp HOME, 27 28)// H , 
