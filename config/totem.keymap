@@ -46,85 +46,105 @@
     tapping-term-ms = <170>;
 };
 
+#define COMBO(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    timeout-ms = <199>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    slow-release; \
+    layers = <BASE>; \
+  };
+
+#define RCOMBO(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    timeout-ms = <300>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <NAVOVERR DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+  };
+
+#define NAVBACOMBO(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    timeout-ms = <150>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <NAVOVERR LOWER>; \
+  };
+
 / {
     combos {
         compatible = "zmk,combos";
+        //    0  1  2  3  4     5  6  7  8  9
+        //10 11 12 13 14 15    16 17 18 19 20 31
+        //   21 22 23 24 25    26 27 28 29 30
+        //      32 33 34         35 36 37
 
-        combo_enter_space {
-            bindings = <&mo 3>;
-            key-positions = <35 36>;
-            timeout-ms = <199>;
-            layers = <0>;
-            slow-release;
-        };
+//LEFT HAND
+  RCOMBO(comb_wf, &kp ESC, 0 1)// Q W
+  RCOMBO(comb_fp, &kp BACKSPACE, 1 2)// W F
+  RCOMBO(comb_pb, &kp ENTER, 2 3)// F P
+  RCOMBO(comb_tg, &kp TAB, 23 24)// C D
+  RCOMBO(comb_cd, &kp SPACE, 22 23)// X C
+  RCOMBO(comb_xc, &kp DELETE, 21 22)// Z X
 
-        combo_bkspace_tab {
-            bindings = <&mo 6>;
-            key-positions = <34 33>;
-            timeout-ms = <199>;
-            slow-release;
-            layers = <0>;
-        };
 
-        combo_tab_enter {
-            bindings = <&mo 7>;
-            key-positions = <34 35>;
-            timeout-ms = <199>;
-            slow-release;
-            layers = <0>;
-        };
+  RCOMBO(comb_gv, &kp MINUS, 15 25)// G V
+  RCOMBO(comb_td, &kp GRAVE, 14 24)// T D 
+  RCOMBO(comb_sc, &kp RBKT, 13 23)// S C
+  RCOMBO(comb_rx, &kp LBKT, 12 22)// R X
+  RCOMBO(comb_az, &kp BSLH, 11 21)// A Z
 
-        navcombo_pg_0 {
-            bindings = <&kp PAGE_UP>;
-            key-positions = <17 27>;
-            timeout-ms = <150>;
-            slow-release;
-            layers = <1 4>;
-        };
+//RIGHT HAND
+  RCOMBO(requal, &kp EQUAL, 16 26)
+  RCOMBO(rsemi, &kp SEMI, 17 27)
+  RCOMBO(SEMI, &kp COMMA, 18 28)
+  RCOMBO(COLON, &kp DOT, 19 29)
+  RCOMBO(FSLH, &kp FSLH, 20 30)
 
-        navcombo_pg_1 {
-            bindings = <&kp HOME>;
-            key-positions = <27 28>;
-            timeout-ms = <150>;
-            slow-release;
-            layers = <1 4>;
-        };
+//NUMBERS
+  RCOMBO(NUM1, &kp N1, 0 11)
+  RCOMBO(NUM2, &kp N2, 1 12)
+  RCOMBO(NUM3, &kp N3, 2 13)
+  RCOMBO(NUM4, &kp N4, 3 14)
+  RCOMBO(NUM5, &kp N5, 4 15)
+  RCOMBO(NUM6, &kp N6, 5 16)
+  RCOMBO(NUM7, &kp N7, 6 17)
+  RCOMBO(NUM8, &kp N8, 7 18) 
+  RCOMBO(NUM9, &kp N9, 8 19)
+  RCOMBO(NUM0, &kp N0, 9 20)
 
-        navcombo_pg_2 {
-            bindings = <&kp END>;
-            key-positions = <29 28>;
-            timeout-ms = <150>;
-            slow-release;
-            layers = <1 4>;
-        };
 
-        navcombo_pg_3 {
-            bindings = <&kp PAGE_DOWN>;
-            key-positions = <17 29>;
-            timeout-ms = <150>;
-            slow-release;
-            layers = <1 4>;
-        };
+//THUMBS
+  COMBO(delete_space, &mo LAYER_Homerow, 35 36)// ENTER SPACE
+  COMBO(bkspace_delete2, &mo LAYER_DirectAcc, 33 34)// BKSPACE TAB
+  COMBO(delete_enter, &sl LAYER_Func, 34 35)// TAB ENTER
 
-        combo1 {
-            bindings = <&kp A>;
-            key-positions = <0 1 2 3 4 5 6 7 8 9>;
-        };
+//NavOverR
+  NAVBACOMBO(pg_0, &kp HOME, 27 28)// H , 
+  NAVBACOMBO(pg_1, &kp END, 28 29)// , .
+  NAVBACOMBO(pg_4, &kp PG_UP, 27 18)// , H 
+  NAVBACOMBO(pg_5, &kp PG_DN, 18 29)// H .
 
-        combo2 {
-            bindings = <&kp B>;
-            key-positions = <10 11 12 13 14 15 16 17 18 19 20 31>;
-        };
 
-        combo3 {
-            bindings = <&kp C>;
-            key-positions = <21 22 23 24 25 26 27 28 29 30>;
-        };
+//        combo1 {
+//            bindings = <&kp A>;
+//            key-positions = <0 1 2 3 4 5 6 7 8 9>;
+//        };
 
-        thumbs {
-            bindings = <&kp D>;
-            key-positions = <32 33 34 35 36 37>;
-        };
+//        combo2 {
+//            bindings = <&kp B>;
+//            key-positions = <10 11 12 13 14 15 16 17 18 19 20 31>;
+//        };
+
+//        combo3 {
+//            bindings = <&kp C>;
+//            key-positions = <21 22 23 24 25 26 27 28 29 30>;
+//        };
+
+//        thumbs {
+//            bindings = <&kp D>;
+//            key-positions = <32 33 34 35 36 37>;
+//        };
     };
 
     macros {
@@ -144,7 +164,6 @@
         };
 
         // tilde
-
         tilde: tilde {
             label = "&TILDE";
             compatible = "zmk,behavior-macro-one-param";
@@ -157,7 +176,6 @@
         };
 
         // enne
-
         enne: enne {
             label = "&ENNE";
             compatible = "zmk,behavior-macro-one-param";
@@ -186,7 +204,6 @@
         };
 
         // Select a line copping from left to right
-
         scl_l_to_r: scl_l_to_r {
             label = "&SCL_L_TO_R";
             compatible = "zmk,behavior-macro";
@@ -203,7 +220,6 @@
         };
 
         // Select a line copping from left to right
-
         scl_r_to_l: scl_r_to_l {
             label = "&SCL_R_TO_L";
             compatible = "zmk,behavior-macro";
@@ -220,7 +236,6 @@
         };
 
         // Select a word from right to left
-
         scw_r_to_l: scw_r_to_l {
             label = "&SCW_R_TO_L";
             compatible = "zmk,behavior-macro";
@@ -237,7 +252,6 @@
         };
 
         // Select a word from right to left
-
         scw_l_to_r: scw_l_to_r {
             label = "&SCW_L_TO_R";
             compatible = "zmk,behavior-macro";
@@ -254,7 +268,6 @@
         };
 
         // Select and copy forward a word from right to left
-
         scfw_r_to_l: scfw_r_to_l {
             label = "&SCFW_R_TO_L";
             compatible = "zmk,behavior-macro";
@@ -270,7 +283,6 @@
         };
 
         // Select and copy forward a word from left to right
-
         scfw_l_to_r: scfw_l_to_r {
             label = "&SCFW_L_TO_R";
             compatible = "zmk,behavior-macro";
