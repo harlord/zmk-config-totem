@@ -383,7 +383,7 @@ th_kp_sl_tp: thumb_th_kp_sl_tp {
 
 };
 
-/ {
+
 #ifdef BT_DISC_CMD
     behaviors {
         bt_0: bt_0 {
@@ -439,7 +439,7 @@ th_kp_sl_tp: thumb_th_kp_sl_tp {
         };
     };
 #endif
-};
+
 
 
     keymap {
