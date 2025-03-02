@@ -50,19 +50,7 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-
-        combo_tvp {
-            timeout-ms = <100>;
-            key-positions = <11 12 13>;
-            bindings = <&tog TVP1>;
-        };
-
-        combo_delete_space {
+        combo_enter_space {
             bindings = <&mo 3>;
             key-positions = <35 36>;
             timeout-ms = <199>;
@@ -70,7 +58,7 @@
             slow-release;
         };
 
-        combo_bkspace_delete {
+        combo_bkspace_tab {
             bindings = <&mo 6>;
             key-positions = <34 33>;
             timeout-ms = <199>;
@@ -78,12 +66,64 @@
             layers = <0>;
         };
 
-        combo_delete_enter {
+        combo_tab_enter {
             bindings = <&mo 7>;
             key-positions = <34 35>;
             timeout-ms = <199>;
             slow-release;
             layers = <0>;
+        };
+
+        navcombo_pg_0 {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <17 27>;
+            timeout-ms = <150>;
+            slow-release;
+            layers = <1 4>;
+        };
+
+        navcombo_pg_1 {
+            bindings = <&kp HOME>;
+            key-positions = <27 28>;
+            timeout-ms = <150>;
+            slow-release;
+            layers = <1 4>;
+        };
+
+        navcombo_pg_2 {
+            bindings = <&kp END>;
+            key-positions = <29 28>;
+            timeout-ms = <150>;
+            slow-release;
+            layers = <1 4>;
+        };
+
+        navcombo_pg_3 {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <17 29>;
+            timeout-ms = <150>;
+            slow-release;
+            layers = <1 4>;
+        };
+
+        combo1 {
+            bindings = <&kp A>;
+            key-positions = <0 1 2 3 4 5 6 7 8 9>;
+        };
+
+        combo2 {
+            bindings = <&kp B>;
+            key-positions = <10 11 12 13 14 15 16 17 18 19 20 31>;
+        };
+
+        combo3 {
+            bindings = <&kp C>;
+            key-positions = <21 22 23 24 25 26 27 28 29 30>;
+        };
+
+        thumbs {
+            bindings = <&kp D>;
+            key-positions = <32 33 34 35 36 37>;
         };
     };
 
