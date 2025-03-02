@@ -10,17 +10,18 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
-
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
 
 /* On demand includes */
-#include <dt-bindings/zmk/pointing.h>
 
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define LOWER  1
@@ -33,7 +34,6 @@
 #define ADJ  8
 #define TVP1 9
 #define TVP2 10
-
 #define THUMB_HOLDING_TIME 200 // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds) a thumb key to activate a layer.  Shorter holds are treated as taps.
 #define THUMB_REPEAT_DECAY_BASE 200 // "tap then hold" for key auto-repeat
 #define THUMB_REPEAT_DECAY 190 // "tap then hold" for key auto-repeat
@@ -61,6 +61,30 @@
             key-positions = <11 12 13>;
             bindings = <&tog TVP1>;
         };
+
+        combo_delete_space {
+            bindings = <&mo 3>;
+            key-positions = <35 36>;
+            timeout-ms = <199>;
+            layers = <0>;
+            slow-release;
+        };
+
+        combo_bkspace_delete {
+            bindings = <&mo 6>;
+            key-positions = <34 33>;
+            timeout-ms = <199>;
+            slow-release;
+            layers = <0>;
+        };
+
+        combo_delete_enter {
+            bindings = <&mo 7>;
+            key-positions = <34 35>;
+            timeout-ms = <199>;
+            slow-release;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -79,156 +103,164 @@
                 <&kp G &kp I &kp F>;
         };
 
-         // tilde
+        // tilde
+
         tilde: tilde {
             label = "&TILDE";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_tap>
-                , <&kp LA(E)>
-                , <&macro_tap>
-                , <&macro_param_1to1>
-                , <&kp A>;
+            bindings =
+                <&macro_tap>,
+                <&kp LA(E)>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
 
         // enne
+
         enne: enne {
             label = "&ENNE";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_tap>
-                , <&kp LA(N)>
-                , <&macro_param_1to1>
-                , <&kp A>;
+            bindings =
+                <&macro_tap>,
+                <&kp LA(N) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
 
         lm_mac_homerow: lm_mac_homerow {
-    compatible = "zmk,behavior-macro-one-param";
-    wait-ms = <0>;
-    tap-ms = <0>;
-    #binding-cells = <1>;
-    bindings
-        = <&macro_press &mo HOMEROW>
-        , <&macro_param_1to1>
-        , <&macro_press &kp MACRO_PLACEHOLDER>
-        , <&macro_pause_for_release>
-        , <&macro_param_1to1>
-        , <&macro_release &kp MACRO_PLACEHOLDER>
-        , <&macro_release &mo HOMEROW>
-        ;
-  };
+            compatible = "zmk,behavior-macro-one-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&mo HOMEROW &macro_param_1to1>,
+                <&macro_press>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&macro_release>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&mo HOMEROW>;
+        };
 
-  // Select a line copping from left to right
+        // Select a line copping from left to right
+
         scl_l_to_r: scl_l_to_r {
             label = "&SCL_L_TO_R";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp LG(LEFT)>
-                , <&macro_wait_time 5>
-                , <&macro_tap>
-                , <&kp LG(LS(RIGHT))>
-                , <&macro_wait_time 5>
-                , <&macro_tap>
-                , <&kp LG(C)>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(LEFT)>,
+                <&macro_wait_time 5>,
+                <&macro_tap>,
+                <&kp LG(LS(RIGHT))>,
+                <&macro_wait_time 5>,
+                <&macro_tap>,
+                <&kp LG(C)>;
         };
-    
+
         // Select a line copping from left to right
+
         scl_r_to_l: scl_r_to_l {
             label = "&SCL_R_TO_L";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp LG(RIGHT)>
-                , <&macro_wait_time 5>
-                , <&macro_tap>
-                , <&kp LG(LS(LEFT))>
-                , <&macro_wait_time 5>
-                , <&macro_tap>
-                , <&kp LG(C)>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(RIGHT)>,
+                <&macro_wait_time 5>,
+                <&macro_tap>,
+                <&kp LG(LS(LEFT))>,
+                <&macro_wait_time 5>,
+                <&macro_tap>,
+                <&kp LG(C)>;
         };
 
         // Select a word from right to left
+
         scw_r_to_l: scw_r_to_l {
             label = "&SCW_R_TO_L";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp LA(RIGHT)>
-                , <&macro_wait_time 5>
-                , <&macro_tap>
-                , <&kp LA(LS(LEFT))>
-                , <&macro_wait_time 5>
-                , <&macro_tap>
-                , <&kp LG(C)>;
+            bindings =
+                <&macro_tap>,
+                <&kp LA(RIGHT)>,
+                <&macro_wait_time 5>,
+                <&macro_tap>,
+                <&kp LA(LS(LEFT))>,
+                <&macro_wait_time 5>,
+                <&macro_tap>,
+                <&kp LG(C)>;
         };
 
-         // Select a word from right to left
+        // Select a word from right to left
+
         scw_l_to_r: scw_l_to_r {
             label = "&SCW_L_TO_R";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp LA(LEFT)>
-                , <&macro_wait_time 5>
-                , <&macro_tap>
-                , <&kp LA(LS(RIGHT))>
-                , <&macro_wait_time 5>
-                , <&macro_tap>
-                , <&kp LG(C)>;
+            bindings =
+                <&macro_tap>,
+                <&kp LA(LEFT)>,
+                <&macro_wait_time 5>,
+                <&macro_tap>,
+                <&kp LA(LS(RIGHT))>,
+                <&macro_wait_time 5>,
+                <&macro_tap>,
+                <&kp LG(C)>;
         };
 
         // Select and copy forward a word from right to left
+
         scfw_r_to_l: scfw_r_to_l {
             label = "&SCFW_R_TO_L";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>
-                , <&kp LA(LS(LEFT))>
-                , <&macro_pause_for_release>
-                , <&macro_release>
-                , <&kp LA(LS(LEFT))>
-                , <&macro_tap>
-                , <&kp LG(C)>;
+            bindings =
+                <&macro_press>,
+                <&kp LA(LS(LEFT))>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LA(LS(LEFT))>,
+                <&macro_tap>,
+                <&kp LG(C)>;
         };
 
         // Select and copy forward a word from left to right
+
         scfw_l_to_r: scfw_l_to_r {
             label = "&SCFW_L_TO_R";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>
-                , <&kp LA(LS(RIGHT))>
-                , <&macro_pause_for_release>
-                , <&macro_release>
-                , <&kp LA(LS(RIGHT))>
-                , <&macro_tap>
-                , <&kp LG(C)>;
+            bindings =
+                <&macro_press>,
+                <&kp LA(LS(RIGHT))>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LA(LS(RIGHT))>,
+                <&macro_tap>,
+                <&kp LG(C)>;
         };
-
 
         bt_select_0: bt_select_0 {
             label = "BT_SELECT_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 0>;
         };
+
         bt_select_1: bt_select_1 {
             label = "BT_SELECT_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 1>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1>;
         };
-
-
-};
+    };
 
     behaviors {
-
         bt_0: bt_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "BT_0";
@@ -236,6 +268,7 @@
             tapping-term-ms = <200>;
             bindings = <&bt_select_0>, <&bt BT_DISC 0>;
         };
+
         bt_1: bt_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "BT_1";
@@ -243,33 +276,36 @@
             tapping-term-ms = <200>;
             bindings = <&bt_select_1>, <&bt BT_DISC 1>;
         };
-        
 
         //  Copy Find
+
         pfind: pfind {
             label = "&PFIND";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp LG(F)>
-                , <&macro_wait_time 10>
-                , <&macro_tap>
-                , <&kp LG(V)>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(F)>,
+                <&macro_wait_time 10>,
+                <&macro_tap>,
+                <&kp LG(V)>;
         };
 
-// Global Find Paste
+        // Global Find Paste
+
         gpfind: gpfind {
             label = "&GPFIND";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp LG(LS(F))>
-                , <&macro_wait_time 10>
-                , <&macro_tap>
-                , <&kp LG(V)>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(LS(F))>,
+                <&macro_wait_time 10>,
+                <&macro_tap>,
+                <&kp LG(V)>;
         };
 
-         tdSelectCoppingLR: tdSelectCoppingLR{
+        tdSelectCoppingLR: tdSelectCoppingLR {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping_term_ms = <200>;
@@ -278,73 +314,71 @@
             bindings = <&scl_l_to_r>, <&scw_l_to_r>;
         };
 
-lrlMo: lrlMo {
-    compatible = "zmk,behavior-hold-tap";
-    label = "LRLMO";
-    bindings = <&kp>, <&kp>;
+        lrlMo: lrlMo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LRLMO";
+            bindings = <&kp>, <&kp>;
 
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <280>;
-    quick-tap-ms = <175>;
-    hold-trigger-on-release;
-};
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            hold-trigger-on-release;
+        };
 
-lrrMo: lrrMo {
-    compatible = "zmk,behavior-hold-tap";
-    label = "LRRMO";
-    bindings = <&kp>, <&kp>;
+        lrrMo: lrrMo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LRRMO";
+            bindings = <&kp>, <&kp>;
 
-    #binding-cells = <2>;
-    tapping-term-ms = <280>;
-    quick-tap-ms = <175>;
-    hold-trigger-on-release;
-};
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            hold-trigger-on-release;
+        };
 
-base_th_mo_kp_hp: base_th_mo_kp_hp {
-    compatible = "zmk,behavior-hold-tap";
-    flavor = "hold-preferred";
-    tapping-term-ms = <THUMB_HOLDING_TIME>;
-    quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
-    hold-trigger-on-release; // wait for other home row mods
-    #binding-cells = <2>;
-    bindings = <&mo>, <&kp>;
-};
+        base_th_mo_kp_hp: base_th_mo_kp_hp {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            tapping-term-ms = <THUMB_HOLDING_TIME>;
+            quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
+            hold-trigger-on-release; // wait for other home row mods
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+        };
 
-th_mo_kp_hp: th_mo_kp_hp {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "hold-preferred";
-        tapping-term-ms = <THUMB_HOLDING_TIME>;
-        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        hold-trigger-on-release; // wait for other home row mods
-        #binding-cells = <2>;
-        bindings = <&mo>, <&kp>;
-    }; 
+        th_mo_kp_hp: th_mo_kp_hp {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            tapping-term-ms = <THUMB_HOLDING_TIME>;
+            quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+            hold-trigger-on-release; // wait for other home row mods
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+        };
 
-th_kp_kp_hp: th_kp_kp_hp {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "hold-preferred";
-        tapping-term-ms = <THUMB_HOLDING_TIME>;
-        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        #binding-cells = <2>;
-        hold-trigger-on-release; 
-        bindings = <&kp>, <&kp>;
-    }; 
+        th_kp_kp_hp: th_kp_kp_hp {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            tapping-term-ms = <THUMB_HOLDING_TIME>;
+            quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+            #binding-cells = <2>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+        };
 
-space: space {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "balanced";
-        tapping-term-ms = <300>;
-        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        #binding-cells = <2>;
-        require-prior-idle-ms = <80>;
-        hold-trigger-on-release; 
-        bindings = <&kp>, <&kp>;
-    };
+        space: space {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+            #binding-cells = <2>;
+            require-prior-idle-ms = <80>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+        };
 
-
-
- bhm: bhm {
+        bhm: bhm {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;    // <---[[moderate duration]]
@@ -353,28 +387,29 @@ space: space {
             bindings = <&mo>, <&kp>;
         };
 
-lm_homerow: lm_homerow {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "hold-preferred";
-        tapping-term-ms = <THUMB_HOLDING_TIME>;
-        quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
-        hold-trigger-on-release; // wait for other home row mods
-        #binding-cells = <2>;
-        bindings = <&lm_mac_homerow>, <&kp>;
-    };
+        lm_homerow: lm_homerow {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            tapping-term-ms = <THUMB_HOLDING_TIME>;
+            quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
+            hold-trigger-on-release; // wait for other home row mods
+            #binding-cells = <2>;
+            bindings = <&lm_mac_homerow>, <&kp>;
+        };
 
-spacelm: thumb_layer_access_spacebarlm {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = SPACE_HOLDING_TYPE;
-        tapping-term-ms = <300>;
-        quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
-        #binding-cells = <2>;
-        require-prior-idle-ms = <80>;
-        hold-trigger-on-release; 
-        bindings = <&lm_mac_homerow>, <&kp>;
-    };
+        spacelm: thumb_layer_access_spacebarlm {
+            compatible = "zmk,behavior-hold-tap";
+            flavor =
+            SPACE_HOLDING_TYPE;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
+            #binding-cells = <2>;
+            require-prior-idle-ms = <80>;
+            hold-trigger-on-release;
+            bindings = <&lm_mac_homerow>, <&kp>;
+        };
 
-    tdSelectCoppingRL: tdSelectCoppingRL{
+        tdSelectCoppingRL: tdSelectCoppingRL {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping_term_ms = <200>;
@@ -383,7 +418,7 @@ spacelm: thumb_layer_access_spacebarlm {
             bindings = <&scl_r_to_l>, <&scw_r_to_l>;
         };
 
- td_find_s_ht: td_find_s_ht {
+        td_find_s_ht: td_find_s_ht {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping_term_ms = <200>;
@@ -391,31 +426,26 @@ spacelm: thumb_layer_access_spacebarlm {
             flavor = "tap-preferred";
             bindings = <&pfind>, <&kp>;
         };
-        
-  td_find_g_ht: td_find_g_ht {
+
+        td_find_g_ht: td_find_g_ht {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping_term_ms = <200>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&gpfind>, <&kp>;
-        };     
-          
-th_kp_sl_tp: thumb_th_kp_sl_tp {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "tap-preferred";
-        tapping-term-ms = <THUMB_HOLDING_TIME>;
-        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        hold-trigger-on-release; // wait for other home row mods
-        #binding-cells = <2>;
-        bindings = <&kp>, <&sl>;
-    }; 
+        };
 
-
-    
-};
-
-
+        th_kp_sl_tp: thumb_th_kp_sl_tp {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";
+            tapping-term-ms = <THUMB_HOLDING_TIME>;
+            quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+            hold-trigger-on-release; // wait for other home row mods
+            #binding-cells = <2>;
+            bindings = <&kp>, <&sl>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -423,90 +453,90 @@ th_kp_sl_tp: thumb_th_kp_sl_tp {
         base_layer {
             label = "BASE";
             bindings = <
-       &kp Q  &kp W  &kp F    &kp P     &kp B                          &kp J                          &kp L      &kp U      &kp Y    &kp SEMI
-       &kp A  &kp R  &kp S    &kp T     &kp G                          &kp M                          &kp N      &kp E      &kp I    &kp O
-&kp Q  &kp Z  &kp X  &kp C    &kp D     &kp V                          &kp K                          &kp H      &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-&lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE  &base_th_mo_kp_hp LOWER TAB      &base_th_mo_kp_hp RAISE ENTER  &spacelm LCTRL SPACE  &th_kp_sl_tp LALT TILDEL
+       &kp Q  &kp W  &kp F                    &kp P                        &kp B                          &kp J                          &kp L                 &kp U                     &kp Y    &kp SEMI
+       &kp A  &kp R  &kp S                    &kp T                        &kp G                          &kp M                          &kp N                 &kp E                     &kp I    &kp O
+&kp Q  &kp Z  &kp X  &kp C                    &kp D                        &kp V                          &kp K                          &kp H                 &kp COMMA                 &kp DOT  &kp FSLH  &kp BSLH
+                     &lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE  &base_th_mo_kp_hp LOWER TAB    &base_th_mo_kp_hp RAISE ENTER  &spacelm LCTRL SPACE  &th_kp_sl_tp LALT TILDEL
             >;
         };
 
         lower_layer {
             label = "LOWER";
             bindings = <
-                &kp N1     &kp N2    &kp N3     &kp N4     &kp N5                             &kp N6    &kp N7    &kp N8     &kp N9     &kp N0  
-                &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI   &kp CAPS                          &caps_word  &kp RGUI    &kp UP  &kp RCTRL  &kp RSHFT  
-        &trans  &kp BSLH   &kp LBKT  &kp RBKT  &kp GRAVE  &kp MINUS                           &kp EQUAL  &kp LEFT  &kp DOWN  &kp RIGHT   &kp RALT   &trans
-&th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB         &th_mo_kp_hp RAISE ENTER   &space LCTRL SPACE  &th_kp_kp_hp LALT ESC                
+        &kp N1     &kp N2     &kp N3                    &kp N4                        &kp N5                    &kp N6                    &kp N7              &kp N8                 &kp N9     &kp N0
+        &kp LSHFT  &kp LCTRL  &kp LALT                  &kp LGUI                      &kp CAPS                  &caps_word                &kp RGUI            &kp UP                 &kp RCTRL  &kp RSHFT
+&trans  &kp BSLH   &kp LBKT   &kp RBKT                  &kp GRAVE                     &kp MINUS                 &kp EQUAL                 &kp LEFT            &kp DOWN               &kp RIGHT  &kp RALT   &trans
+                              &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
         raise_layer {
             label = "RAISE";
             bindings = <
-          &kp EXCL             &kp AT           &kp HASH            &kp DLLR  &kp PRCNT                              &kp CARET           &kp AMPS            &kp STAR         &kp LPAR               &kp RPAR  
-          &lrlMo LSHFT PIPE  &lrlMo LCTRL LBRC  &lrlMo LCTRL RBRC  &lrlMo LCTRL TILDE  &kp UNDER                     &kp PLUS            &lrrMo RGUI COLON  &lrrMo RALT LT    &lrrMo RCTRL GT        &lrrMo RSHFT QUESTION  
-&trans    &kp BSLH           &kp LBKT           &kp RBKT           &kp GRAVE  &kp MINUS                              &kp EQUAL           &kp SEMI           &kp COMMA          &kp DOT               &lrrMo RALT FSLH        &trans
-&th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB                                       &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC  
+        &kp EXCL           &kp AT             &kp HASH                  &kp DLLR                      &kp PRCNT                 &kp CARET                 &kp AMPS            &kp STAR               &kp LPAR         &kp RPAR
+        &lrlMo LSHFT PIPE  &lrlMo LCTRL LBRC  &lrlMo LCTRL RBRC         &lrlMo LCTRL TILDE            &kp UNDER                 &kp PLUS                  &lrrMo RGUI COLON   &lrrMo RALT LT         &lrrMo RCTRL GT  &lrrMo RSHFT QUESTION
+&trans  &kp BSLH           &kp LBKT           &kp RBKT                  &kp GRAVE                     &kp MINUS                 &kp EQUAL                 &kp SEMI            &kp COMMA              &kp DOT          &lrrMo RALT FSLH       &trans
+                                              &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
         layer_homerow {
             label = "HOMEROW";
             bindings = <
-                         &kp Q           &kp W          &kp F          &kp P   &kp B              &kp J          &kp L          &kp U           &kp Y                   &kp SQT  
-                &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S  &lrlMo LGUI T   &kp G              &kp M  &lrrMo RGUI N  &lrrMo RALT E  &lrrMo RCTRL I            &lrrMo RSHFT O  
-&trans                   &kp Z           &kp X          &kp C          &kp D   &kp V              &kp K          &kp H      &kp COMMA         &kp DOT  &bhm NAVOVERR FSLH         &trans 
-&th_kp_kp_hp LGUI DELETE   &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB             &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp RALT ESC    
+        &kp Q           &kp W           &kp F                     &kp P                         &kp B                     &kp J                     &kp L               &kp U                  &kp Y           &kp SQT
+        &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S             &lrlMo LGUI T                 &kp G                     &kp M                     &lrrMo RGUI N       &lrrMo RALT E          &lrrMo RCTRL I  &lrrMo RSHFT O
+&trans  &kp Z           &kp X           &kp C                     &kp D                         &kp V                     &kp K                     &kp H               &kp COMMA              &kp DOT         &bhm NAVOVERR FSLH  &trans
+                                        &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp RALT ESC
             >;
         };
 
         layer_navoverr {
             label = "NAVOVERR";
             bindings = <
-                         &kp Q           &kp W          &kp F          &kp P   &kp B             &kp J          &kp L     &kp U           &kp Y    &kp SQT     
-                &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S  &lrlMo LGUI T   &kp G             &kp M  &lrrMo RGUI N    &kp UP  &lrrMo RCTRL I  &kp RSHFT     
-&trans                   &kp Z           &kp X          &kp C          &kp D   &kp V             &kp K       &kp LEFT  &kp DOWN       &kp RIGHT   &kp RALT     &trans 
-&th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB               &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC                 
+        &kp Q           &kp W           &kp F                     &kp P                         &kp B                     &kp J                     &kp L               &kp U                  &kp Y           &kp SQT
+        &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S             &lrlMo LGUI T                 &kp G                     &kp M                     &lrrMo RGUI N       &kp UP                 &lrrMo RCTRL I  &kp RSHFT
+&trans  &kp Z           &kp X           &kp C                     &kp D                         &kp V                     &kp K                     &kp LEFT            &kp DOWN               &kp RIGHT       &kp RALT   &trans
+                                        &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
         layer_tildel {
             label = "TILDEL";
             bindings = <
-               &kp LA(N1)  &trans  &trans  &kp LS(LA(N2))  &trans                          &trans   &trans  &tilde U    &trans          &trans  
-               &tilde A    &trans  &trans          &trans  &trans                          &trans  &enne N  &tilde E  &tilde I          &tilde O  
-&trans         &trans      &trans  &trans          &trans  &trans                          &trans   &trans    &trans    &trans          &kp LA(LS(FSLH))    &trans
-&th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB         &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC       
+        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &tilde U  &trans    &trans
+        &tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &enne N             &tilde E  &tilde I  &tilde O
+&trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
+                            &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
             >;
         };
 
-        layer_direcaAcc {
-            label =  "DIRECTACC";
+        layer_direcaacc {
+            label = "DIRECTACC";
             bindings = <
-         &trans   &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))     &kp LC(MINUS)           &kp LC(LS(MINUS))                  &kp C_VOL_UP    &kp C_PREV      &kp C_PP        &kp C_NEXT         &trans  
-         &trans   &kp LS(LA(DOWN))       &lrlMo LA(LS(H)) LA(LS(F12))  &tdSelectCoppingRL A A  &tdSelectCoppingLR A A             &kp C_VOL_DN    &sk RGUI        &sk RALT        &sk RCTRL          &sk RSHFT  
-&trans   &trans   &trans                 &trans                        &scfw_r_to_l            &scfw_l_to_r                       &kp C_MUTE      &kp C_BRI_DN    &kp C_BRI_UP    &kp RC(C_BRI_DN)   &kp RC(C_BRI_UP)  &trans
-                                         &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB         &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC                   
+        &trans  &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))     &kp LC(MINUS)                 &kp LC(LS(MINUS))         &kp C_VOL_UP  &kp C_PREV          &kp C_PP               &kp C_NEXT        &trans
+        &trans  &kp LS(LA(DOWN))       &lrlMo LA(LS(H)) LA(LS(F12))  &tdSelectCoppingRL A A        &tdSelectCoppingLR A A    &kp C_VOL_DN  &sk RGUI            &sk RALT               &sk RCTRL         &sk RSHFT
+&trans  &trans  &trans                 &trans                        &scfw_r_to_l                  &scfw_l_to_r              &kp C_MUTE    &kp C_BRI_DN        &kp C_BRI_UP           &kp RC(C_BRI_DN)  &kp RC(C_BRI_UP)  &trans
+                                       &th_kp_kp_hp LGUI DELETE      &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &mo 8         &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
         layer_func {
             label = "FUNC";
             bindings = <
-         &kp F1      &kp F2           &kp F3            &kp F4            &kp F5                      &kp F6      &kp F7          &kp F8           &kp F9            &kp F10  
-         &sk LSHFT   &sk LCTRL        &msc SCRL_UP      &sk LGUI          &mkp LCLK                   &mkp RCLK   &sk RGUI        &mmv MOVE_UP     &sk RGUI          &sk RSHFT  
-&trans   &sk LALT    &msc SCRL_LEFT   &msc SCRL_DOWN    &msc SCRL_RIGHT   &kp F11                     &kp F12     &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &sk RALT   &trans
-&th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB                           &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC                   
+        &kp F1     &kp F2          &kp F3                    &kp F4                        &kp F5                    &kp F6                    &kp F7              &kp F8                 &kp F9           &kp F10
+        &sk LSHFT  &sk LCTRL       &msc SCRL_UP              &sk LGUI                      &mkp LCLK                 &mkp RCLK                 &sk RGUI            &mmv MOVE_UP           &sk RGUI         &sk RSHFT
+&trans  &sk LALT   &msc SCRL_LEFT  &msc SCRL_DOWN            &msc SCRL_RIGHT               &kp F11                   &kp F12                   &mmv MOVE_LEFT      &mmv MOVE_DOWN         &mmv MOVE_RIGHT  &sk RALT   &trans
+                                   &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
         adjust_layer {
             label = "ADJ";
             bindings = <
-             &bt_0       &bt_1        &bt_0    &out OUT_USB    &bt BT_CLR        &trans  &kp F7  &kp F8  &kp F9  &trans
-             &trans      &trans       &trans   &bt BT_CLR_ALL  &trans            &trans  &kp F4  &kp F5  &kp F6  &trans
-&bootloader  &sys_reset  &bt BT_PRV   &trans   &trans          &trans            &trans  &kp F1  &kp F2  &kp F3  &sys_reset  &bootloader
-                                        &trans  &trans  &trans               &trans  &trans  &trans
+             &bt_0       &bt_1       &bt_0   &out OUT_USB    &bt BT_CLR        &trans  &kp F7  &kp F8  &kp F9  &trans
+             &trans      &bt BT_NXT  &trans  &bt BT_CLR_ALL  &bt BT_CLR_ALL    &trans  &kp F4  &kp F5  &kp F6  &trans
+&bootloader  &sys_reset  &bt BT_PRV  &trans  &trans          &trans            &trans  &kp F1  &kp F2  &kp F3  &sys_reset  &bootloader
+                                     &trans  &trans          &trans            &trans  &trans  &trans
             >;
         };
 
@@ -531,4 +561,3 @@ th_kp_sl_tp: thumb_th_kp_sl_tp {
         };
     };
 };
-
