@@ -71,14 +71,6 @@
     layers = <NAVOVERR LOWER>; \
   };
 
-#define RCOMBOADJ(NAME, BINDINGS, KEYPOS) \
-  combo_##NAME { \
-    timeout-ms = <300>; \
-    bindings = <BINDINGS>; \
-    key-positions = <KEYPOS>; \
-    layers = <ADJ>; \
-  };
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -134,7 +126,7 @@
   NAVBACOMBO(pg_5, &kp PG_DN, 18 29)// H .
 
 // ADJUST
-RCOMBOADJ(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
+COMBO(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
 
 
 //        combo1 {
