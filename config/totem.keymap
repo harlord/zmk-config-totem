@@ -71,6 +71,14 @@
     layers = <NAVOVERR LOWER>; \
   };
 
+#define RCOMBOADJ(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    timeout-ms = <300>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <ADJ>; \
+  };
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -124,6 +132,9 @@
   NAVBACOMBO(pg_1, &kp END, 28 29)// , .
   NAVBACOMBO(pg_4, &kp PG_UP, 27 18)// , H 
   NAVBACOMBO(pg_5, &kp PG_DN, 18 29)// H .
+
+// ADJUST
+RCOMBOADJ(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
 
 
 //        combo1 {
@@ -327,6 +338,13 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&bt_select_1>, <&bt BT_DISC 1>;
+        };
+
+tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
         };
 
         //  Copy Find
