@@ -76,7 +76,7 @@
     timeout-ms = <500>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <DIRECTACC>; \
+    layers = <DIRECTACC, ADJ>; \
   };
 
 / {
@@ -134,7 +134,7 @@
   NAVBACOMBO(pg_5, &kp PG_DN, 18 29)// H .
 
 // ADJUST
-COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
+COMBODIRECTACC(adj_tog_on, &tog ADJ,  0  1  2  3 )
 
 
 //        combo1 {
