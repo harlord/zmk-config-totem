@@ -76,7 +76,15 @@
     timeout-ms = <500>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <DIRECTACC, ADJ>; \
+    layers = <DIRECTACC>; \
+  };
+
+  #define COMBOADJ(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    timeout-ms = <500>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <ADJ>; \
   };
 
 / {
@@ -134,7 +142,8 @@
   NAVBACOMBO(pg_5, &kp PG_DN, 18 29)// H .
 
 // ADJUST
-COMBODIRECTACC(adj_tog_on, &tog 8,  0  1  2  3 )
+COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
+COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
 
 
 //        combo1 {
@@ -345,6 +354,13 @@ tog_on: toggle_layer_on_only {
             #binding-cells = <1>;
             display-name = "Toggle Layer On";
             toggle-mode = "on";
+        };
+
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
         };
 
         //  Copy Find
