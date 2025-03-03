@@ -87,10 +87,56 @@
     combos {
         compatible = "zmk,combos";
 
+        // testgrave {
+        //     bindings = <&kp GRAVE>;
+        //     key-positions = <13 24>;
+        // };
+
+        // top {
+        //     bindings = <&none>;
+        //     key-positions = <0 1 2 3 4>;
+        // };
+
+        // mid {
+        //     bindings = <&none>;
+        //     key-positions = <10 11 12 13 14>;
+        // };
+
+        // bottom {
+        //     bindings = <&none>;
+        //     key-positions = <21 22 23 24 25>;
+        // };
+
+        // topr {
+        //     bindings = <&none>;
+        //     key-positions = <5 6 7 8 9>;
+        // };
+
+        // midr {
+        //     bindings = <&none>;
+        //     key-positions = <15 16 17 18 19>;
+        // };
+
+        // bottomr {
+        //     bindings = <&none>;
+        //     key-positions = <26 27 28 29 30>;
+        // };
+
+        // thumb {
+        //     bindings = <&none>;
+        //     key-positions = <32 33 34>;
+        // };
+
+        // thumbr {
+        //     bindings = <&none>;
+        //     key-positions = <36 37 35>;
+        // };
+        
         //    0  1  2  3  4     5  6  7  8  9
-        //10 11 12 13 14 15    16 17 18 19 20 31
+        //   10 11 12 13 14    15 16 17 18 19
         //   21 22 23 24 25    26 27 28 29 30
         //      32 33 34         35 36 37
+
         //LEFT HAND
 
         RCOMBO(comb_wf, &kp ESC, 0 1)// Q W
@@ -99,31 +145,31 @@
         RCOMBO(comb_tg, &kp TAB, 23 24)// C D
         RCOMBO(comb_cd, &kp SPACE, 22 23)// X C
         RCOMBO(comb_xc, &kp DELETE, 21 22)// Z X
-        RCOMBO(comb_gv, &kp MINUS, 15 25)// G V
-        RCOMBO(comb_td, &kp GRAVE, 14 24)// T D 
-        RCOMBO(comb_sc, &kp RBKT, 13 23)// S C
-        RCOMBO(comb_rx, &kp LBKT, 12 22)// R X
-        RCOMBO(comb_az, &kp BSLH, 11 21)// A Z
+        RCOMBO(comb_gv, &kp MINUS, 14 25)// G V
+        RCOMBO(comb_td, &kp GRAVE, 13 24)// T D 
+        RCOMBO(comb_sc, &kp RBKT, 12 23)// S C
+        RCOMBO(comb_rx, &kp LBKT, 11 22)// R X
+        RCOMBO(comb_az, &kp BSLH, 10 21)// A Z
         //RIGHT HAND
 
-        RCOMBO(requal, &kp EQUAL, 16 26)
-  RCOMBO(rsemi, &kp SEMI, 17 27)
-  RCOMBO(SEMI, &kp COMMA, 18 28)
-  RCOMBO(COLON, &kp DOT, 19 29)
-  RCOMBO(FSLH, &kp FSLH, 20 30)
+        RCOMBO(requal, &kp EQUAL, 15 26)
+        RCOMBO(rsemi, &kp SEMI, 16 27)
+        RCOMBO(SEMI, &kp COMMA, 17 28)
+        RCOMBO(COLON, &kp DOT, 18 29)
+        RCOMBO(FSLH, &kp FSLH, 19 30)
 
         //NUMBERS
 
-        RCOMBO(NUM1, &kp N1, 0 11)
-  RCOMBO(NUM2, &kp N2, 1 12)
-  RCOMBO(NUM3, &kp N3, 2 13)
-  RCOMBO(NUM4, &kp N4, 3 14)
-  RCOMBO(NUM5, &kp N5, 4 15)
-  RCOMBO(NUM6, &kp N6, 5 16)
-  RCOMBO(NUM7, &kp N7, 6 17)
-  RCOMBO(NUM8, &kp N8, 7 18) 
-  RCOMBO(NUM9, &kp N9, 8 19)
-  RCOMBO(NUM0, &kp N0, 9 20)
+        RCOMBO(NUM1, &kp N1, 0 10)
+        RCOMBO(NUM2, &kp N2, 1 11)
+        RCOMBO(NUM3, &kp N3, 2 12)
+        RCOMBO(NUM4, &kp N4, 3 13)
+        RCOMBO(NUM5, &kp N5, 4 14)
+        RCOMBO(NUM6, &kp N6, 5 15)
+        RCOMBO(NUM7, &kp N7, 6 16)
+        RCOMBO(NUM8, &kp N8, 7 17) 
+        RCOMBO(NUM9, &kp N9, 8 18)
+        RCOMBO(NUM0, &kp N0, 9 19)
 
         //THUMBS
 
@@ -139,69 +185,8 @@
         // ADJUST
 
         COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
-COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
+        COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
 
-        //        combo1 {
-        //            bindings = <&kp A>;
-        //            key-positions = <0 1 2 3 4 5 6 7 8 9>;
-        //        };
-        //        combo2 {
-        //            bindings = <&kp B>;
-        //            key-positions = <10 11 12 13 14 15 16 17 18 19 20 31>;
-        //        };
-        //        combo3 {
-        //            bindings = <&kp C>;
-        //            key-positions = <21 22 23 24 25 26 27 28 29 30>;
-        //        };
-        //        thumbs {
-        //            bindings = <&kp D>;
-        //            key-positions = <32 33 34 35 36 37>;
-        //        };
-
-        testgrave {
-            bindings = <&kp GRAVE>;
-            key-positions = <13 24>;
-        };
-
-        top {
-            bindings = <&none>;
-            key-positions = <0 1 2 3 4>;
-        };
-
-        mid {
-            bindings = <&none>;
-            key-positions = <10 11 12 13 14>;
-        };
-
-        bottom {
-            bindings = <&none>;
-            key-positions = <21 22 23 24 25>;
-        };
-
-        topr {
-            bindings = <&none>;
-            key-positions = <5 6 7 8 9>;
-        };
-
-        midr {
-            bindings = <&none>;
-            key-positions = <15 16 17 18 19>;
-        };
-
-        bottomr {
-            bindings = <&none>;
-            key-positions = <26 27 28 29 30>;
-        };
-
-        thumb {
-            bindings = <&none>;
-            key-positions = <32 33 34>;
-        };
-
-        thumbr {
-            bindings = <&none>;
-            key-positions = <36 37 35>;
-        };
     };
 
     macros {
