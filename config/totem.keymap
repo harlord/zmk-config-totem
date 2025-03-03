@@ -54,7 +54,6 @@
     slow-release; \
     layers = <BASE>; \
   };
-
 #define RCOMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
     timeout-ms = <300>; \
@@ -62,7 +61,6 @@
     key-positions = <KEYPOS>; \
     layers = <NAVOVERR DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
-
 #define NAVBACOMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
     timeout-ms = <150>; \
@@ -70,7 +68,6 @@
     key-positions = <KEYPOS>; \
     layers = <NAVOVERR LOWER>; \
   };
-
 #define COMBODIRECTACC(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
     timeout-ms = <500>; \
@@ -78,8 +75,7 @@
     key-positions = <KEYPOS>; \
     layers = <DIRECTACC>; \
   };
-
-  #define COMBOADJ(NAME, BINDINGS, KEYPOS) \
+#define COMBOADJ(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
     timeout-ms = <500>; \
     bindings = <BINDINGS>; \
@@ -90,35 +86,35 @@
 / {
     combos {
         compatible = "zmk,combos";
+
         //    0  1  2  3  4     5  6  7  8  9
         //10 11 12 13 14 15    16 17 18 19 20 31
         //   21 22 23 24 25    26 27 28 29 30
         //      32 33 34         35 36 37
+        //LEFT HAND
 
-//LEFT HAND
-  RCOMBO(comb_wf, &kp ESC, 0 1)// Q W
-  RCOMBO(comb_fp, &kp BACKSPACE, 1 2)// W F
-  RCOMBO(comb_pb, &kp ENTER, 2 3)// F P
-  RCOMBO(comb_tg, &kp TAB, 23 24)// C D
-  RCOMBO(comb_cd, &kp SPACE, 22 23)// X C
-  RCOMBO(comb_xc, &kp DELETE, 21 22)// Z X
+        RCOMBO(comb_wf, &kp ESC, 0 1)// Q W
+        RCOMBO(comb_fp, &kp BACKSPACE, 1 2)// W F
+        RCOMBO(comb_pb, &kp ENTER, 2 3)// F P
+        RCOMBO(comb_tg, &kp TAB, 23 24)// C D
+        RCOMBO(comb_cd, &kp SPACE, 22 23)// X C
+        RCOMBO(comb_xc, &kp DELETE, 21 22)// Z X
+        RCOMBO(comb_gv, &kp MINUS, 15 25)// G V
+        RCOMBO(comb_td, &kp GRAVE, 14 24)// T D 
+        RCOMBO(comb_sc, &kp RBKT, 13 23)// S C
+        RCOMBO(comb_rx, &kp LBKT, 12 22)// R X
+        RCOMBO(comb_az, &kp BSLH, 11 21)// A Z
+        //RIGHT HAND
 
-
-  RCOMBO(comb_gv, &kp MINUS, 15 25)// G V
-  RCOMBO(comb_td, &kp GRAVE, 14 24)// T D 
-  RCOMBO(comb_sc, &kp RBKT, 13 23)// S C
-  RCOMBO(comb_rx, &kp LBKT, 12 22)// R X
-  RCOMBO(comb_az, &kp BSLH, 11 21)// A Z
-
-//RIGHT HAND
-  RCOMBO(requal, &kp EQUAL, 16 26)
+        RCOMBO(requal, &kp EQUAL, 16 26)
   RCOMBO(rsemi, &kp SEMI, 17 27)
   RCOMBO(SEMI, &kp COMMA, 18 28)
   RCOMBO(COLON, &kp DOT, 19 29)
   RCOMBO(FSLH, &kp FSLH, 20 30)
 
-//NUMBERS
-  RCOMBO(NUM1, &kp N1, 0 11)
+        //NUMBERS
+
+        RCOMBO(NUM1, &kp N1, 0 11)
   RCOMBO(NUM2, &kp N2, 1 12)
   RCOMBO(NUM3, &kp N3, 2 13)
   RCOMBO(NUM4, &kp N4, 3 14)
@@ -129,42 +125,43 @@
   RCOMBO(NUM9, &kp N9, 8 19)
   RCOMBO(NUM0, &kp N0, 9 20)
 
+        //THUMBS
 
-//THUMBS
-  COMBO(delete_space, &mo HOMEROW, 35 36)// ENTER SPACE
-  COMBO(bkspace_delete2, &mo DIRECTACC, 33 34)// BKSPACE TAB
-  COMBO(delete_enter, &sl FUNC, 34 35)// TAB ENTER
+        COMBO(delete_space, &mo HOMEROW, 35 36)// ENTER SPACE
+        COMBO(bkspace_delete2, &mo DIRECTACC, 33 34)// BKSPACE TAB
+        COMBO(delete_enter, &sl FUNC, 34 35)// TAB ENTER
+        //NavOverR
 
-//NavOverR
-  NAVBACOMBO(pg_0, &kp HOME, 27 28)// H , 
-  NAVBACOMBO(pg_1, &kp END, 28 29)// , .
-  NAVBACOMBO(pg_4, &kp PG_UP, 27 18)// , H 
-  NAVBACOMBO(pg_5, &kp PG_DN, 18 29)// H .
+        NAVBACOMBO(pg_0, &kp HOME, 27 28)// H , 
+        NAVBACOMBO(pg_1, &kp END, 28 29)// , .
+        NAVBACOMBO(pg_4, &kp PG_UP, 27 18)// , H 
+        NAVBACOMBO(pg_5, &kp PG_DN, 18 29)// H .
+        // ADJUST
 
-// ADJUST
-COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
+        COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
 COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
 
+        //        combo1 {
+        //            bindings = <&kp A>;
+        //            key-positions = <0 1 2 3 4 5 6 7 8 9>;
+        //        };
+        //        combo2 {
+        //            bindings = <&kp B>;
+        //            key-positions = <10 11 12 13 14 15 16 17 18 19 20 31>;
+        //        };
+        //        combo3 {
+        //            bindings = <&kp C>;
+        //            key-positions = <21 22 23 24 25 26 27 28 29 30>;
+        //        };
+        //        thumbs {
+        //            bindings = <&kp D>;
+        //            key-positions = <32 33 34 35 36 37>;
+        //        };
 
-//        combo1 {
-//            bindings = <&kp A>;
-//            key-positions = <0 1 2 3 4 5 6 7 8 9>;
-//        };
-
-//        combo2 {
-//            bindings = <&kp B>;
-//            key-positions = <10 11 12 13 14 15 16 17 18 19 20 31>;
-//        };
-
-//        combo3 {
-//            bindings = <&kp C>;
-//            key-positions = <21 22 23 24 25 26 27 28 29 30>;
-//        };
-
-//        thumbs {
-//            bindings = <&kp D>;
-//            key-positions = <32 33 34 35 36 37>;
-//        };
+        testgrave {
+            bindings = <&kp GRAVE>;
+            key-positions = <13 24>;
+        };
     };
 
     macros {
@@ -184,6 +181,7 @@ COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
         };
 
         // tilde
+
         tilde: tilde {
             label = "&TILDE";
             compatible = "zmk,behavior-macro-one-param";
@@ -196,6 +194,7 @@ COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
         };
 
         // enne
+
         enne: enne {
             label = "&ENNE";
             compatible = "zmk,behavior-macro-one-param";
@@ -224,6 +223,7 @@ COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
         };
 
         // Select a line copping from left to right
+
         scl_l_to_r: scl_l_to_r {
             label = "&SCL_L_TO_R";
             compatible = "zmk,behavior-macro";
@@ -240,6 +240,7 @@ COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
         };
 
         // Select a line copping from left to right
+
         scl_r_to_l: scl_r_to_l {
             label = "&SCL_R_TO_L";
             compatible = "zmk,behavior-macro";
@@ -256,6 +257,7 @@ COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
         };
 
         // Select a word from right to left
+
         scw_r_to_l: scw_r_to_l {
             label = "&SCW_R_TO_L";
             compatible = "zmk,behavior-macro";
@@ -272,6 +274,7 @@ COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
         };
 
         // Select a word from right to left
+
         scw_l_to_r: scw_l_to_r {
             label = "&SCW_L_TO_R";
             compatible = "zmk,behavior-macro";
@@ -288,6 +291,7 @@ COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
         };
 
         // Select and copy forward a word from right to left
+
         scfw_r_to_l: scfw_r_to_l {
             label = "&SCFW_R_TO_L";
             compatible = "zmk,behavior-macro";
@@ -303,6 +307,7 @@ COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
         };
 
         // Select and copy forward a word from left to right
+
         scfw_l_to_r: scfw_l_to_r {
             label = "&SCFW_L_TO_R";
             compatible = "zmk,behavior-macro";
@@ -349,7 +354,7 @@ COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
             bindings = <&bt_select_1>, <&bt BT_DISC 1>;
         };
 
-tog_on: toggle_layer_on_only {
+        tog_on: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
             display-name = "Toggle Layer On";
@@ -521,16 +526,6 @@ tog_on: toggle_layer_on_only {
             flavor = "tap-preferred";
             bindings = <&gpfind>, <&kp>;
         };
-
-        th_kp_sl_tp: thumb_th_kp_sl_tp {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "tap-preferred";
-            tapping-term-ms = <THUMB_HOLDING_TIME>;
-            quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-            hold-trigger-on-release; // wait for other home row mods
-            #binding-cells = <2>;
-            bindings = <&kp>, <&sl>;
-        };
     };
 
     keymap {
@@ -541,8 +536,8 @@ tog_on: toggle_layer_on_only {
             bindings = <
             &kp Q  &kp W  &kp F                    &kp P                        &kp B                          &kp J                          &kp L                 &kp U                     &kp Y    &kp SQT
             &kp A  &kp R  &kp S                    &kp T                        &kp G                          &kp M                          &kp N                 &kp E                     &kp I    &kp O
-&caps_word  &kp Z  &kp X  &kp C                    &kp D                        &kp V                          &kp K                          &kp H                 &kp COMMA                 &kp DOT  &mo 5  &kp BSLH
-            &lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE  &base_th_mo_kp_hp LOWER TAB        &base_th_mo_kp_hp RAISE ENTER  &spacelm LCTRL SPACE  &th_kp_sl_tp LALT TILDEL
+&caps_word  &kp Z  &kp X  &kp C                    &kp D                        &kp V                          &kp K                          &kp H                 &kp COMMA                 &kp DOT  &mo 5    &kp BSLH
+                          &lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE  &base_th_mo_kp_hp LOWER TAB    &base_th_mo_kp_hp RAISE ENTER  &spacelm LCTRL SPACE  &th_kp_sl_tp LALT TILDEL
             >;
         };
 
@@ -552,7 +547,7 @@ tog_on: toggle_layer_on_only {
         &kp N1     &kp N2     &kp N3                    &kp N4                        &kp N5                    &kp N6                    &kp N7              &kp N8                 &kp N9     &kp N0
         &kp LSHFT  &kp LCTRL  &kp LALT                  &kp LGUI                      &kp CAPS                  &caps_word                &kp RGUI            &kp UP                 &kp RCTRL  &kp RSHFT
 &trans  &kp BSLH   &kp LBKT   &kp RBKT                  &kp GRAVE                     &kp MINUS                 &kp EQUAL                 &kp LEFT            &kp DOWN               &kp RIGHT  &kp RALT   &trans
-                      &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB     &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
+                              &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
@@ -562,7 +557,7 @@ tog_on: toggle_layer_on_only {
         &kp EXCL           &kp AT             &kp HASH                  &kp DLLR                      &kp PRCNT                 &kp CARET                 &kp AMPS            &kp STAR               &kp LPAR         &kp RPAR
         &lrlMo LSHFT PIPE  &lrlMo LCTRL LBRC  &lrlMo LCTRL RBRC         &lrlMo LCTRL TILDE            &kp UNDER                 &kp PLUS                  &lrrMo RGUI COLON   &lrrMo RALT LT         &lrrMo RCTRL GT  &lrrMo RSHFT QUESTION
 &trans  &kp BSLH           &kp LBKT           &kp RBKT                  &kp GRAVE                     &kp MINUS                 &kp EQUAL                 &kp SEMI            &kp COMMA              &kp DOT          &lrrMo RALT FSLH       &trans
-                                   &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB            &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
+                                              &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
@@ -572,7 +567,7 @@ tog_on: toggle_layer_on_only {
         &kp Q           &kp W           &kp F                     &kp P                         &kp B                     &kp J                     &kp L               &kp U                  &kp Y           &kp SQT
         &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S             &lrlMo LGUI T                 &kp G                     &kp M                     &lrrMo RGUI N       &lrrMo RALT E          &lrrMo RCTRL I  &lrrMo RSHFT O
 &trans  &kp Z           &kp X           &kp C                     &kp D                         &kp V                     &kp K                     &kp H               &kp COMMA              &kp DOT         &bhm NAVOVERR FSLH  &trans
-                         &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB              &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp RALT ESC
+                                        &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp RALT ESC
             >;
         };
 
@@ -582,7 +577,7 @@ tog_on: toggle_layer_on_only {
         &kp Q           &kp W           &kp F                     &kp P                         &kp B                     &kp J                     &kp L               &kp U                  &kp Y           &kp SQT
         &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S             &lrlMo LGUI T                 &kp G                     &kp M                     &lrrMo RGUI N       &kp UP                 &lrrMo RCTRL I  &kp RSHFT
 &trans  &kp Z           &kp X           &kp C                     &kp D                         &kp V                     &kp K                     &kp LEFT            &kp DOWN               &kp RIGHT       &kp RALT   &trans
-                         &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB               &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
+                                        &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
@@ -592,7 +587,7 @@ tog_on: toggle_layer_on_only {
         &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &tilde U  &trans    &trans
         &tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &enne N             &tilde E  &tilde I  &tilde O
 &trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
-                 &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB         &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
+                            &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
             >;
         };
 
@@ -602,7 +597,7 @@ tog_on: toggle_layer_on_only {
         &trans  &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))     &kp LC(MINUS)                 &kp LC(LS(MINUS))         &kp C_VOL_UP  &kp C_PREV          &kp C_PP               &kp C_NEXT        &trans
         &trans  &kp LS(LA(DOWN))       &lrlMo LA(LS(H)) LA(LS(F12))  &tdSelectCoppingRL A A        &tdSelectCoppingLR A A    &kp C_VOL_DN  &sk RGUI            &sk RALT               &sk RCTRL         &sk RSHFT
 &trans  &trans  &trans                 &trans                        &scfw_r_to_l                  &scfw_l_to_r              &kp C_MUTE    &kp C_BRI_DN        &kp C_BRI_UP           &kp RC(C_BRI_DN)  &kp RC(C_BRI_UP)  &trans
-   &th_kp_kp_hp LGUI DELETE      &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB       &mo 8         &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
+                                       &th_kp_kp_hp LGUI DELETE      &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &mo 8         &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
@@ -612,17 +607,17 @@ tog_on: toggle_layer_on_only {
         &kp F1     &kp F2          &kp F3                    &kp F4                        &kp F5                    &kp F6                    &kp F7              &kp F8                 &kp F9           &kp F10
         &sk LSHFT  &sk LCTRL       &msc SCRL_UP              &sk LGUI                      &mkp LCLK                 &mkp RCLK                 &sk RGUI            &mmv MOVE_UP           &sk RGUI         &sk RSHFT
 &trans  &sk LALT   &msc SCRL_LEFT  &msc SCRL_DOWN            &msc SCRL_RIGHT               &kp F11                   &kp F12                   &mmv MOVE_LEFT      &mmv MOVE_DOWN         &mmv MOVE_RIGHT  &sk RALT   &trans
-                         &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB       &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
+                                   &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
         adjust_layer {
             label = "ADJ";
             bindings = <
-             &bt_0       &bt_1       &bt_0   &out OUT_USB    &bt BT_CLR                 &trans  &trans  &trans  &trans  &trans
-             &trans      &bt BT_NXT  &trans  &bt BT_CLR_ALL  &bt BT_CLR_ALL             &trans  &trans  &trans  &trans  &trans
-&bootloader  &sys_reset  &bt BT_PRV  &trans  &trans          &trans                     &trans  &trans  &trans  &trans  &sys_reset  &bootloader
-&th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB       &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
+             &bt_0       &bt_1       &bt_0                     &out OUT_USB                  &bt BT_CLR                &trans                    &trans              &trans                 &trans  &trans
+             &trans      &bt BT_NXT  &trans                    &bt BT_CLR_ALL                &bt BT_CLR_ALL            &trans                    &trans              &trans                 &trans  &trans
+&bootloader  &sys_reset  &bt BT_PRV  &trans                    &trans                        &trans                    &trans                    &trans              &trans                 &trans  &sys_reset  &bootloader
+                                     &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
