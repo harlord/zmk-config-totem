@@ -551,6 +551,16 @@
             flavor = "tap-preferred";
             bindings = <&gpfind>, <&kp>;
         };
+
+        th_kp_sl_tp: th_kp_sl_tp{
+        compatible = "zmk,behavior-hold-tap";
+        flavor = "tap-preferred";
+        tapping-term-ms = <THUMB_HOLDING_TIME>;
+        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+        hold-trigger-on-release; // wait for other home row mods
+        #binding-cells = <2>;
+        bindings = <&kp>, <&sl>;
+        }; 
     };
 
     keymap {
