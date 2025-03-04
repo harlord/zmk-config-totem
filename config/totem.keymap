@@ -140,10 +140,10 @@
         //LEFT HAND
 
         RCOMBO(comb_wf, &kp ESC, 0 1)// Q W
-        RCOMBO(comb_fp, &kp BACKSPACE, 1 2)// W F
+        RCOMBO(comb_fp, &kp SPACE, 1 2)// W F
         RCOMBO(comb_pb, &kp ENTER, 2 3)// F P
         RCOMBO(comb_tg, &kp TAB, 23 24)// C D
-        RCOMBO(comb_cd, &kp SPACE, 22 23)// X C
+        RCOMBO(comb_cd, &kp BACKSPACE, 22 23)// X C
         RCOMBO(comb_xc, &kp DELETE, 21 22)// Z X
         RCOMBO(comb_gv, &kp MINUS, 14 25)// G V
         RCOMBO(comb_td, &kp GRAVE, 13 24)// T D 
