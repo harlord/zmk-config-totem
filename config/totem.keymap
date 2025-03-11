@@ -20,8 +20,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define LOWER  1
@@ -91,52 +89,42 @@
         //     bindings = <&kp GRAVE>;
         //     key-positions = <13 24>;
         // };
-
         // top {
         //     bindings = <&none>;
         //     key-positions = <0 1 2 3 4>;
         // };
-
         // mid {
         //     bindings = <&none>;
         //     key-positions = <10 11 12 13 14>;
         // };
-
         // bottom {
         //     bindings = <&none>;
         //     key-positions = <21 22 23 24 25>;
         // };
-
         // topr {
         //     bindings = <&none>;
         //     key-positions = <5 6 7 8 9>;
         // };
-
         // midr {
         //     bindings = <&none>;
         //     key-positions = <15 16 17 18 19>;
         // };
-
         // bottomr {
         //     bindings = <&none>;
         //     key-positions = <26 27 28 29 30>;
         // };
-
         // thumb {
         //     bindings = <&none>;
         //     key-positions = <32 33 34>;
         // };
-
         // thumbr {
         //     bindings = <&none>;
         //     key-positions = <36 37 35>;
         // };
-        
         //    0  1  2  3  4     5  6  7  8  9
         //   10 11 12 13 14    15 16 17 18 19
         //   21 22 23 24 25    26 27 28 29 30
         //      32 33 34         35 36 37
-
         //LEFT HAND
 
         RCOMBO(comb_wf, &kp ESC, 0 1)// Q W
@@ -186,7 +174,6 @@
 
         COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
         COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
-
     };
 
     macros {
@@ -552,15 +539,15 @@
             bindings = <&gpfind>, <&kp>;
         };
 
-        th_kp_sl_tp: th_kp_sl_tp{
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "tap-preferred";
-        tapping-term-ms = <THUMB_HOLDING_TIME>;
-        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        hold-trigger-on-release; // wait for other home row mods
-        #binding-cells = <2>;
-        bindings = <&kp>, <&sl>;
-        }; 
+        th_kp_sl_tp: th_kp_sl_tp {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";
+            tapping-term-ms = <THUMB_HOLDING_TIME>;
+            quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+            hold-trigger-on-release; // wait for other home row mods
+            #binding-cells = <2>;
+            bindings = <&kp>, <&sl>;
+        };
     };
 
     keymap {
@@ -581,7 +568,7 @@
             bindings = <
         &kp N1     &kp N2     &kp N3                    &kp N4                        &kp N5                    &kp N6                    &kp N7              &kp N8                 &kp N9     &kp N0
         &kp LSHFT  &kp LCTRL  &kp LALT                  &kp LGUI                      &kp CAPS                  &caps_word                &kp RGUI            &kp RALT               &kp RCTRL  &kp RSHFT
-&trans  &kp BSLH   &kp LBKT   &kp RBKT                  &kp GRAVE                     &kp MINUS                 &kp EQUAL                 &kp H               &kp COMMA              &kp DOT  &kp RALT   &trans
+&trans  &kp BSLH   &kp LBKT   &kp RBKT                  &kp GRAVE                     &kp MINUS                 &kp EQUAL                 &kp H               &kp COMMA              &kp DOT    &kp RALT   &trans
                               &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
@@ -631,8 +618,8 @@
             bindings = <
         &trans  &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))     &kp LC(MINUS)                 &kp LC(LS(MINUS))         &kp C_VOL_UP  &kp C_PREV          &kp C_PP               &kp C_NEXT        &trans
         &trans  &kp LS(LA(DOWN))       &lrlMo LA(LS(H)) LA(LS(F12))  &tdSelectCoppingRL A A        &tdSelectCoppingLR A A    &kp C_VOL_DN  &sk RGUI            &sk RALT               &sk RCTRL         &sk RSHFT
-&trans  &trans  &trans                 &trans                        &scfw_r_to_l                  &scfw_l_to_r              &kp C_MUTE    &kp C_BRI_DN        &kp C_BRI_UP           &kp RC(C_BRI_DN)  &kp RC(C_BRI_UP)  &trans
-                                    &th_kp_kp_hp LGUI DELETE      &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB         &mo ADJ  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
+&trans  &trans  &trans                 &trans                        &scfw_r_to_l                  &scfw_l_to_r              &kp C_MUTE    &kp LC(C_BRI_DN)    &kp LC(C_BRI_UP)       &kp RC(C_BRI_DN)  &kp RC(C_BRI_UP)  &trans
+                                       &th_kp_kp_hp LGUI DELETE      &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &mo ADJ       &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
