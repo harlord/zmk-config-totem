@@ -677,8 +677,8 @@
             label = "ADJ";
             bindings = <
              &bt_0       &bt_1       &usb_clear_all OUT_USB BT_CLR_ALL   &trans            &trans                    &trans             &trans          &trans          &trans     &trans
-             &trans      &bt trans   &trans                              &trans            &trans                    &trans             &trans          &trans          &trans     &trans
-&bootloader  &sys_reset  &bt trans   &trans                              &trans            &trans                    &trans             &trans          &trans          &trans     &sys_reset  &bootloader
+             &trans      &trans   &trans                                 &trans            &trans                    &trans             &trans          &trans          &trans     &trans
+&bootloader  &sys_reset  &trans   &trans                                 &trans            &trans                    &trans             &trans          &trans          &trans     &sys_reset  &bootloader
                                      &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
