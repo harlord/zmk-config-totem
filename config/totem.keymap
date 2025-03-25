@@ -361,8 +361,8 @@
         bt_hold_0: bt_hold_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "BT_HOLD_0";
-            bindings = <&bt_select_0>, <&kp>;
-            #binding-cells = <1>;
+            bindings = <&bt_select_0>, <&kp BT_CLR>;
+            #binding-cells = <0>;
             tapping-term-ms = <1000>;
         };
 
@@ -371,14 +371,14 @@
             label = "BT_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&bt_hold_1 BT_CLR>, <&bt BT_DISC 1>;
+            bindings = <&bt_hold_1>, <&bt BT_DISC 1>;
         };
 
         bt_hold_1: bt_hold_1 {
             compatible = "zmk,behavior-hold-tap";
             label = "BT_HOLD_1";
-            bindings = <&bt_select_1>, <&kp>;
-            #binding-cells = <1>;
+            bindings = <&bt_select_1>, <&kp BT_CLR>;
+            #binding-cells = <0>;
             tapping-term-ms = <1000>;
         };
 
