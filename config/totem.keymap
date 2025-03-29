@@ -362,7 +362,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "BT_HOLD_0";
             bindings = <&bt_select_0>, <&kp BT_CLR>;
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <1000>;
         };
 
@@ -378,7 +378,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "BT_HOLD_1";
             bindings = <&bt_select_1>, <&kp BT_CLR>;
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <1000>;
         };
 
