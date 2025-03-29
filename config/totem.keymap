@@ -349,7 +349,7 @@
         };
 */
 
-        
+        /*
         bt_select: bt_select {
             compatible = "zmk,behavior-macro-one-param";
             label = "BT_SELECT";
@@ -360,7 +360,7 @@
                 <&macro_tap>,
                 <&bt BT_SEL MACRO_PLACEHOLDER>;
         };
-        
+        */
     };
 
     behaviors {
@@ -384,7 +384,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "BT_HOLD_0";
             #binding-cells = <2>;
-            bindings = <&bt_select>, <&kp>;
+            bindings = <&bt BT_SEL>, <&kp>;
             tapping-term-ms = <1000>;
         };
 
