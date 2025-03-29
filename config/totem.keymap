@@ -351,14 +351,14 @@
 
         bt_select: bt_select {
             compatible = "zmk,behavior-macro-one-param";
+            label = "BT_SELECT";
             #binding-cells = <1>;
             bindings =
                 <&macro_tap &out OUT_BLE>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_param_1to1>,
                 <&macro_tap>,
-                <&bt BT_SEL MACRO_PLACEHOLDER>,
-            label = "BT_SELECT";
+                <&bt BT_SEL MACRO_PLACEHOLDER>;
         };
     };
 
