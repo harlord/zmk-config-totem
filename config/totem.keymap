@@ -334,18 +334,31 @@
                 <&kp LG(C)>;
         };
 
+/*
         bt_select_0: bt_select_0 {
             label = "BT_SELECT_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 0>;
         };
-
         bt_select_1: bt_select_1 {
             label = "BT_SELECT_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 1>;
+        };
+*/
+
+        bt_select: bt_select {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap &out OUT_BLE>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_param_1to1>,
+                <&macro_tap>,
+                <&bt BT_SEL MACRO_PLACEHOLDER>,
+            label = "BT_SELECT";
         };
     };
 
@@ -355,15 +368,7 @@
             label = "BT_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&bt_hold_0 BT_CLR>, <&bt BT_DISC 0>;
-        };
-
-        bt_hold_0: bt_hold_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BT_HOLD_0";
-            bindings = <&bt_select_0>, <&kp BT_CLR>;
-            #binding-cells = <2>;
-            tapping-term-ms = <1000>;
+            bindings = <&bt_hold 0 BT_CLR>, <&bt BT_DISC 0>;
         };
 
         bt_1: bt_1 {
@@ -371,16 +376,33 @@
             label = "BT_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&bt_hold_1>, <&bt BT_DISC 1>;
+            bindings = <&bt_hold 0 BT_CLR>, <&bt BT_DISC 0>;
         };
 
-        bt_hold_1: bt_hold_1 {
+        bt_hold: bt_hold {
             compatible = "zmk,behavior-hold-tap";
-            label = "BT_HOLD_1";
-            bindings = <&bt_select_1>, <&kp BT_CLR>;
+            label = "BT_HOLD_0";
+            #binding-cells = <2>;
+            bindings = <&bt_select>, <&kp>;
+            tapping-term-ms = <1000>;
+        };
+
+/*
+        bt_hold_0: bt_hold_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BT_HOLD_0";
+            bindings = <&bt_select_0>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <1000>;
         };
+        bt_hold_1: bt_hold_1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BT_HOLD_1";
+            bindings = <&bt_select_1>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <1000>;
+        };
+*/
 
         usb_clear_all: usb_clear_all {
             compatible = "zmk,behavior-hold-tap";
