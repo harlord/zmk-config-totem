@@ -349,16 +349,18 @@
         };
 */
 
+        
         bt_select: bt_select {
             compatible = "zmk,behavior-macro-one-param";
             label = "BT_SELECT";
             #binding-cells = <1>;
             bindings =
                 <&macro_tap &out OUT_BLE>,
-                <&macro_param_1to1>,
+                <&macro_param_1to2>,
                 <&macro_tap>,
                 <&bt BT_SEL MACRO_PLACEHOLDER>;
         };
+        
     };
 
     behaviors {
@@ -375,7 +377,7 @@
             label = "BT_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&bt_hold 0 BT_CLR>, <&bt BT_DISC 0>;
+            bindings = <&bt_hold 1 BT_CLR>, <&bt BT_DISC 1>;
         };
 
         bt_hold: bt_hold {
