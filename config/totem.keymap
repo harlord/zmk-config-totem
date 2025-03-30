@@ -355,10 +355,10 @@
             label = "BT_SELECT";
             #binding-cells = <1>;
             bindings =
-                <&macro_tap &out OUT_BLE>,
-                <&macro_param_1to2>,
                 <&macro_tap>,
-                <&bt BT_SEL MACRO_PLACEHOLDER>;
+                <&out OUT_BLE>,
+                <&macro_tap>,
+                <&bt BT_SEL 0>;
         };
         
     };
