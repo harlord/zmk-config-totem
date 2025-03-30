@@ -339,13 +339,13 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = 
-            <&macro_tap>,
-            <&out OUT_BLE>,
+            //<&macro_tap>,
+            //<&out OUT_BLE>,
         <&kp 1>,
-            <&macro_param_1to2>,
-            <&macro_wait_time 200>,
-            <&macro_tap>,
-            <&bt BT_SEL MACRO_PLACEHOLDER>,
+            //<&macro_param_1to2>,
+            //<&macro_wait_time 200>,
+            //<&macro_tap>,
+            //<&bt BT_SEL MACRO_PLACEHOLDER>,
         <&kp 2>;
         };
 
@@ -354,18 +354,18 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = 
-            <&macro_param_1to1>,
-            <&macro_tap>,
-            <&bt_select_c MACRO_PLACEHOLDER>,
+            //<&macro_param_1to1>,
+            //<&macro_tap>,
+            //<&bt_select_c MACRO_PLACEHOLDER>,
         <&kp 3>,
-            <&macro_wait_time 200>,
-            <&macro_tap>,
-            <&bt BT_CLR>,
+            //<&macro_wait_time 200>,
+            //<&macro_tap>,
+            //<&bt BT_CLR>,
         <&kp 4>,
             <&macro_wait_time 200>,
-            <&macro_param_1to1>,
-            <&macro_tap>,
-            <&bt_select_c MACRO_PLACEHOLDER>,
+            //<&macro_param_1to1>,
+            //<&macro_tap>,
+            //<&bt_select_c MACRO_PLACEHOLDER>,
         <&kp 5>;
         };
     };
