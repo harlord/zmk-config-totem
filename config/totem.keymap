@@ -345,15 +345,35 @@
             <&macro_tap>,
             <&bt BT_SEL MACRO_PLACEHOLDER>;
         };
+
+        bt_pairing_c: bt_pairing_c {
+            label = "BT_PAIRING_C";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = 
+            <&macro_param_1to1>,
+            <&macro_tap>,
+            <&bt_select_c MACRO_PLACEHOLDER>,
+            <&macro_tap>,
+            <&bt BT_CLR>;
+        };
     };
 
     behaviors {
+        bt_hold_c: bt_hold_c {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BT_HOLD_M";
+            #binding-cells = <2>;
+            bindings = <&bt_pairing_c>, <&bt_select_c>;
+            tapping-term-ms = <1000>;
+        };
+        
         bt_0: bt_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "BT_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&bt_select_c 0>, <&bt BT_DISC 0>;
+            bindings = <&bt_hold_c 0>, <&bt BT_DISC 0>;
         };
 
         bt_1: bt_1 {
@@ -361,7 +381,7 @@
             label = "BT_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&bt_select_c 1>, <&bt BT_DISC 1>;
+            bindings = <&bt_hold_c 1>, <&bt BT_DISC 1>;
         };
 
         tog_on: toggle_layer_on_only {
@@ -650,10 +670,10 @@
         adjust_layer {
             label = "ADJ";
             bindings = <
-             &bt_0       &bt_1       &bt_0                     &out OUT_USB                  &bt BT_CLR                &trans                    &trans              &trans                 &trans  &trans
-             &trans      &bt BT_NXT  &trans                    &bt BT_CLR_ALL                &bt BT_CLR_ALL            &trans                    &trans              &trans                 &trans  &trans
-&bootloader  &sys_reset  &bt BT_PRV  &trans                    &trans                        &trans                    &trans                    &trans              &trans                 &trans  &sys_reset  &bootloader
-                                     &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
+             &bt_0        &bt_1    &out OUT_USB   &trans   &trans                                                        &trans    &trans    &trans     &trans  &trans
+             &trans       &trans   &trans         &trans   &trans                                                        &trans    &trans    &trans     &trans  &trans
+&bootloader  &sys_reset   &trans   &trans         &trans   &trans                                                        &trans    &trans    &trans     &trans  &sys_reset  &bootloader
+               &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB       &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
