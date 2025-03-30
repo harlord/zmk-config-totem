@@ -369,7 +369,7 @@
             label = "BT_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&bt_hold X X>, <&bt BT_DISC 0>;
+            bindings = <&bt_hold_m>, <&bt BT_DISC 0>;
         };
 
         bt_1: bt_1 {
@@ -377,12 +377,12 @@
             label = "BT_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&bt_hold X X>, <&bt BT_DISC 1>;
+            bindings = <&bt_hold_m>, <&bt BT_DISC 1>;
         };
 
-        bt_hold: bt_hold {
+        bt_hold_m: bt_hold_m {
             compatible = "zmk,behavior-hold-tap";
-            label = "BT_HOLD_0";
+            label = "BT_HOLD_M";
             #binding-cells = <2>;
             bindings = <&bt BT_SEL 1>, <&kp BT_CLR>;
             tapping-term-ms = <1000>;
