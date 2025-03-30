@@ -369,7 +369,7 @@
             label = "BT_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&bt_hold_m>, <&bt BT_DISC 0>;
+            bindings = <&bt_hold_m BT_SEL 0>, <&bt BT_DISC 0>;
         };
 
         bt_1: bt_1 {
@@ -377,7 +377,7 @@
             label = "BT_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&bt_hold_m>, <&bt BT_DISC 1>;
+            bindings = <&bt_hold_m BT_SEL 1>, <&bt BT_DISC 1>;
         };
 
         bt_hold_m: bt_hold_m {
