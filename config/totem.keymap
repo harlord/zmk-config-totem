@@ -357,11 +357,7 @@
             <&bt_select_c MACRO_PLACEHOLDER>,
             <&macro_wait_time 200>,
             <&macro_tap>,
-            <&bt BT_CLR>,
-            <&macro_wait_time 200>,
-            <&macro_param_1to1>,
-            <&macro_tap>,
-            <&bt_select_c MACRO_PLACEHOLDER>;
+            <&bt BT_CLR>;
         };
     };
 
