@@ -430,10 +430,10 @@
             #binding-cells = <0>;
             bindings = 
             <&macro_tap>,
-            <&bt_disc_0>,
+            <&bt_select_c 0>,
             <&macro_wait_time 20>,
             <&macro_tap>,
-            <&bt_select_c 0>;
+            <&bt_disc_0>;
         };
 
         bt_select_disc_1: bt_select_disc_1 {
@@ -442,10 +442,10 @@
             #binding-cells = <0>;
             bindings = 
             <&macro_tap>,
-            <&bt_disc_1>,
+            <&bt_select_c 1>,
             <&macro_wait_time 20>,
             <&macro_tap>,
-            <&bt_select_c 1>;
+            <&bt_disc_1>;
         };
 
         bt_select_disc_2: bt_select_disc_2 {
@@ -454,10 +454,10 @@
             #binding-cells = <0>;
             bindings = 
             <&macro_tap>,
-            <&bt_disc_2>,
+            <&bt_select_c 2>,
             <&macro_wait_time 20>,
             <&macro_tap>,
-            <&bt_select_c 2>;
+            <&bt_disc_2>;
         };
 
         bt_select_disc_3: bt_select_disc_3 {
@@ -466,10 +466,10 @@
             #binding-cells = <0>;
             bindings = 
             <&macro_tap>,
-            <&bt_disc_3>,
+            <&bt_select_c 3>,
             <&macro_wait_time 20>,
             <&macro_tap>,
-            <&bt_select_c 3>;
+            <&bt_disc_3>;
         };
 
         bt_select_disc_4: bt_select_disc_4 {
@@ -478,10 +478,10 @@
             #binding-cells = <0>;
             bindings = 
             <&macro_tap>,
-            <&bt_disc_4>,
+            <&bt_select_c 4>,
             <&macro_wait_time 20>,
             <&macro_tap>,
-            <&bt_select_c 4>;
+            <&bt_disc_4>;
         };
 
         bt_select_c: bt_select_c {
