@@ -340,14 +340,11 @@
             #binding-cells = <1>;
             bindings = 
             <&macro_tap>,
-            //<&out OUT_BLE>,
-        <&kp x>,
-            //<&macro_param_1to2>,
-            <&macro_param_1to1>,
+            <&out OUT_BLE>,
+            <&macro_param_1to2>,
             <&macro_wait_time 200>,
             <&macro_tap>,
-            //<&bt BT_SEL MACRO_PLACEHOLDER>,
-        <&kp MACRO_PLACEHOLDER>;
+            <&bt BT_SEL MACRO_PLACEHOLDER>;
         };
 
         bt_pairing_c: bt_pairing_c {
@@ -357,17 +354,14 @@
             bindings = 
             <&macro_param_1to1>,
             <&macro_tap>,
-            //<&bt_select_c MACRO_PLACEHOLDER>,
-        <&kp MACRO_PLACEHOLDER>,
+            <&bt_select_c MACRO_PLACEHOLDER>,
             <&macro_wait_time 200>,
             <&macro_tap>,
-            //<&bt BT_CLR>,
-        <&kp 4>,
+            <&bt BT_CLR>,
             <&macro_wait_time 200>,
             <&macro_param_1to1>,
             <&macro_tap>,
-            //<&bt_select_c MACRO_PLACEHOLDER>,
-        <&kp MACRO_PLACEHOLDER>;
+            <&bt_select_c MACRO_PLACEHOLDER>;
         };
     };
 
@@ -385,7 +379,8 @@
             label = "BT_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&bt_select_c 1>, <&bt BT_DISC 1>, <&bt_pairing_c 1>;
+            bindings = <&kp A>, <&kp B>, <&kp C>;
+            //bindings = <&bt_select_c 1>, <&bt BT_DISC 1>, <&bt_pairing_c 1>;
         };
 
         tog_on: toggle_layer_on_only {
