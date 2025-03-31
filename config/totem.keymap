@@ -334,10 +334,64 @@
                 <&kp LG(C)>;
         };
 
-        bt_select_c: bt_select_c {
-            label = "BT_SELECT_C";
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
+        bt_disc_0: bt_disc_0 {
+            label = "BT_DISC_0";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+            <&macro_tap>,
+            <&bt BT_DISC 1>,
+            <&macro_wait_time 20>,
+            <&macro_tap>,
+            <&bt BT_DISC 2>,
+            <&macro_wait_time 20>,
+            <&macro_tap>,
+            <&bt BT_DISC 3>,
+            <&macro_wait_time 20>,
+            <&macro_tap>,
+            <&bt BT_DISC 4>;
+        };
+
+        bt_disc_1: bt_disc_1 {
+            label = "BT_DISC_1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+            <&macro_tap>,
+            <&bt BT_DISC 0>,
+            <&macro_wait_time 20>,
+            <&macro_tap>,
+            <&bt BT_DISC 2>,
+            <&macro_wait_time 20>,
+            <&macro_tap>,
+            <&bt BT_DISC 3>,
+            <&macro_wait_time 20>,
+            <&macro_tap>,
+            <&bt BT_DISC 4>;
+        };
+
+        bt_disc_2: bt_disc_2 {
+            label = "BT_DISC_2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+            <&macro_tap>,
+            <&bt BT_DISC 0>,
+            <&macro_wait_time 20>,
+            <&macro_tap>,
+            <&bt BT_DISC 1>,
+            <&macro_wait_time 20>,
+            <&macro_tap>,
+            <&bt BT_DISC 3>,
+            <&macro_wait_time 20>,
+            <&macro_tap>,
+            <&bt BT_DISC 4>;
+        };
+
+        bt_disc_3: bt_disc_3 {
+            label = "BT_DISC_3";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings = 
             <&macro_tap>,
             <&bt BT_DISC 0>,
@@ -349,11 +403,44 @@
             <&bt BT_DISC 2>,
             <&macro_wait_time 20>,
             <&macro_tap>,
-            <&bt BT_DISC 3>,
+            <&bt BT_DISC 4>;
+        };
+
+        bt_disc_4: bt_disc_4 {
+            label = "BT_DISC_4";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+            <&macro_tap>,
+            <&bt BT_DISC 0>,
             <&macro_wait_time 20>,
             <&macro_tap>,
-            <&bt BT_DISC 4>,
+            <&bt BT_DISC 1>,
             <&macro_wait_time 20>,
+            <&macro_tap>,
+            <&bt BT_DISC 2>,
+            <&macro_wait_time 20>,
+            <&macro_tap>,
+            <&bt BT_DISC 3>;
+        };
+
+        bt_select_disc_0: bt_select_disc_0 {
+            label = "BT_SELECT_DISC_C";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+            <&macro_tap>,
+            <&bt_disc_0>,
+            <&macro_wait_time 20>,
+            <&macro_tap>,
+            <&bt_select_c 0>;
+        };
+
+        bt_select_c: bt_select_c {
+            label = "BT_SELECT_C";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = 
             <&macro_tap>,
             <&out OUT_BLE>,
             <&macro_param_1to2>,
@@ -382,7 +469,7 @@
             label = "BT_0";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&bt_select_c 0>, <&bt BT_DISC 0>, <&bt_pairing_c 0>;
+            bindings = <&bt_select_disc_0>, <&bt BT_DISC 0>, <&bt_pairing_c 0>;
         };
 
         bt_1: bt_1 {
