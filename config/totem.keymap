@@ -338,186 +338,185 @@
             label = "BT_DISC_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-            <&macro_tap>,
-            <&bt BT_DISC 1>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_DISC 2>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_DISC 3>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_DISC 4>;
+            bindings =
+                <&macro_tap>,
+                <&bt BT_DISC 1>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_DISC 2>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_DISC 3>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_DISC 4>;
         };
 
         bt_disc_1: bt_disc_1 {
             label = "BT_DISC_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-            <&macro_tap>,
-            <&bt BT_DISC 0>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_DISC 2>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_DISC 3>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_DISC 4>;
+            bindings =
+                <&macro_tap>,
+                <&bt BT_DISC 0>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_DISC 2>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_DISC 3>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_DISC 4>;
         };
 
         bt_disc_2: bt_disc_2 {
             label = "BT_DISC_2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-            <&macro_tap>,
-            <&bt BT_DISC 0>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_DISC 1>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_DISC 3>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_DISC 4>;
+            bindings =
+                <&macro_tap>,
+                <&bt BT_DISC 0>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_DISC 1>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_DISC 3>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_DISC 4>;
         };
 
         bt_disc_3: bt_disc_3 {
             label = "BT_DISC_3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-            <&macro_tap>,
-            <&bt BT_DISC 0>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_DISC 1>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_DISC 2>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_DISC 4>;
+            bindings =
+                <&macro_tap>,
+                <&bt BT_DISC 0>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_DISC 1>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_DISC 2>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_DISC 4>;
         };
 
         bt_disc_4: bt_disc_4 {
             label = "BT_DISC_4";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-            <&macro_tap>,
-            <&bt BT_DISC 0>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_DISC 1>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_DISC 2>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_DISC 3>;
+            bindings =
+                <&macro_tap>,
+                <&bt BT_DISC 0>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_DISC 1>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_DISC 2>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_DISC 3>;
         };
 
         bt_select_disc_0: bt_select_disc_0 {
             label = "BT_SELECT_DISC_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-            <&macro_tap>,
-            <&bt_select_c 0>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt_disc_0>;
+            bindings =
+                <&macro_tap>,
+                <&bt_select_c 0>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt_disc_0>;
         };
 
         bt_select_disc_1: bt_select_disc_1 {
             label = "BT_SELECT_DISC_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-            <&macro_tap>,
-            <&bt_select_c 1>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt_disc_1>;
+            bindings =
+                <&macro_tap>,
+                <&bt_select_c 1>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt_disc_1>;
         };
 
         bt_select_disc_2: bt_select_disc_2 {
             label = "BT_SELECT_DISC_2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-            <&macro_tap>,
-            <&bt_select_c 2>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt_disc_2>;
+            bindings =
+                <&macro_tap>,
+                <&bt_select_c 2>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt_disc_2>;
         };
 
         bt_select_disc_3: bt_select_disc_3 {
             label = "BT_SELECT_DISC_3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-            <&macro_tap>,
-            <&bt_select_c 3>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt_disc_3>;
+            bindings =
+                <&macro_tap>,
+                <&bt_select_c 3>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt_disc_3>;
         };
 
         bt_select_disc_4: bt_select_disc_4 {
             label = "BT_SELECT_DISC_4";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-            <&macro_tap>,
-            <&bt_select_c 4>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt_disc_4>;
+            bindings =
+                <&macro_tap>,
+                <&bt_select_c 4>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt_disc_4>;
         };
 
         bt_select_c: bt_select_c {
             label = "BT_SELECT_C";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = 
-            <&macro_tap>,
-            <&out OUT_BLE>,
-            <&macro_param_1to2>,
-            <&macro_wait_time 200>,
-            <&macro_tap>,
-            <&bt BT_SEL MACRO_PLACEHOLDER>;
+            bindings =
+                <&macro_tap>,
+                <&out OUT_BLE &macro_param_1to2>,
+                <&macro_wait_time 200>,
+                <&macro_tap>,
+                <&bt BT_SEL MACRO_PLACEHOLDER>;
         };
 
         bt_pairing_c: bt_pairing_c {
             label = "BT_PAIRING_C";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = 
-            <&macro_param_1to1>,
-            <&macro_tap>,
-            <&bt_select_c MACRO_PLACEHOLDER>,
-            <&macro_wait_time 20>,
-            <&macro_tap>,
-            <&bt BT_CLR>;
+            bindings =
+                <&macro_param_1to1>,
+                <&macro_tap>,
+                <&bt_select_c MACRO_PLACEHOLDER>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&bt BT_CLR>;
         };
     };
 
-    behaviors {        
+    behaviors {
         bt_0: bt_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "BT_0";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&bt_select_disc_0>, <&bt BT_DISC 0>, <&bt_pairing_c 0>;
+            bindings = <&bt_select_disc_0>, <&out OUT_USB>, <&bt_pairing_c 0>;
         };
 
         bt_1: bt_1 {
@@ -525,7 +524,7 @@
             label = "BT_1";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&bt_select_disc_1>, <&bt BT_DISC 1>, <&bt_pairing_c 1>;
+            bindings = <&bt_select_disc_1>, <&out OUT_USB>, <&bt_pairing_c 1>;
         };
 
         bt_2: bt_2 {
@@ -533,7 +532,7 @@
             label = "BT_2";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&bt_select_disc_2>, <&bt BT_DISC 2>, <&bt_pairing_c 2>;
+            bindings = <&bt_select_disc_2>, <&out OUT_USB>, <&bt_pairing_c 2>;
         };
 
         bt_3: bt_3 {
@@ -541,7 +540,7 @@
             label = "BT_3";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&bt_select_disc_3>, <&bt BT_DISC 3>, <&bt_pairing_c 3>;
+            bindings = <&bt_select_disc_3>, <&out OUT_USB>, <&bt_pairing_c 3>;
         };
 
         bt_4: bt_4 {
@@ -549,9 +548,8 @@
             label = "BT_4";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&bt_select_disc_4>, <&bt BT_DISC 4>, <&bt_pairing_c 4>;
+            bindings = <&bt_select_disc_4>, <&out OUT_USB>, <&bt_pairing_c 4>;
         };
-
 
         tog_on: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
@@ -819,10 +817,10 @@
         layer_direcaacc {
             label = "DIRECTACC";
             bindings = <
-        &trans  &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))     &kp LC(MINUS)                 &kp LC(LS(MINUS))         &kp C_VOL_UP  &kp C_PREV                 &kp C_PP                   &kp C_NEXT    &trans
-        &trans  &kp LS(LA(DOWN))       &lrlMo LA(LS(H)) LA(LS(F12))  &tdSelectCoppingRL A A        &tdSelectCoppingLR A A    &kp C_VOL_DN  &sk RGUI                   &sk RALT                   &sk RCTRL     &sk RSHFT
-&trans  &trans  &trans                 &trans                        &scfw_r_to_l                  &scfw_l_to_r              &kp C_MUTE    &scondary_bright C_BRI_DN  &scondary_bright C_BRI_UP  &kp C_BRI_DN  &kp C_BRI_UP  &trans
-                                       &th_kp_kp_hp LGUI DELETE      &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &mo ADJ       &space LCTRL SPACE         &th_kp_kp_hp LALT ESC
+        &trans    &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))     &kp LC(MINUS)                 &kp LC(LS(MINUS))         &kp C_VOL_UP  &kp C_PREV          &kp C_PP               &kp C_NEXT  &trans
+        &trans    &kp LS(LA(DOWN))       &lrlMo LA(LS(H)) LA(LS(F12))  &tdSelectCoppingRL A A        &tdSelectCoppingLR A A    &kp C_VOL_DN  &sk RGUI            &sk RALT               &sk RCTRL   &sk RSHFT
+&trans  &mkp MB4  &mkp MB3               &mkp LCLK                     &mkp RCLK                     &scfw_l_to_r              &kp C_MUTE    &kp C_BRI_DN        &kp C_BRI_UP           &bt_0       &bt_1      &bt_2
+                                         &th_kp_kp_hp LGUI DELETE      &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &mo ADJ       &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
@@ -839,10 +837,10 @@
         adjust_layer {
             label = "ADJ";
             bindings = <
-             &bt_0           &bt_1     &bt_2     &bt_3    &bt_4                                                         &trans    &trans    &trans     &trans    &trans
-             &out OUT_USB    &trans    &trans    &trans   &trans                                                        &trans    &trans    &trans     &trans    &trans
-&bootloader  &sys_reset      &trans    &trans    &trans   &trans                                                        &trans    &trans    &trans     &trans    &sys_reset  &bootloader
-               &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB       &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
+             &bt_0         &bt_1   &bt_2                     &bt_3                         &bt_4                     &trans                    &trans              &trans                 &trans  &trans
+             &out OUT_USB  &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans                 &trans  &trans
+&bootloader  &sys_reset    &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans                 &trans  &sys_reset  &bootloader
+                                   &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
