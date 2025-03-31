@@ -370,7 +370,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BT_0";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <1000>;
             bindings = <&bt_select_c 0>, <&bt BT_DISC 0>, <&bt_pairing_c 0>;
         };
 
@@ -378,7 +378,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BT_1";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <1000>;
             bindings = <&kp A>, <&kp B>, <&kp C>;
             //bindings = <&bt_select_c 1>, <&bt BT_DISC 1>, <&bt_pairing_c 1>;
         };
