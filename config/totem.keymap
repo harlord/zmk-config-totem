@@ -379,8 +379,7 @@
             label = "BT_1";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&kp A>, <&kp B>, <&kp C>;
-            //bindings = <&bt_select_c 1>, <&bt BT_DISC 1>, <&bt_pairing_c 1>;
+            bindings = <&bt_select_c 1>, <&bt BT_DISC 1>, <&bt_pairing_c 1>;
         };
 
         tog_on: toggle_layer_on_only {
