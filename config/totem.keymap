@@ -691,6 +691,14 @@
             bindings = <&mo>, <&kp>;
         };
 
+        th_kp_sl_hp: th_kp_sl_hp {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&sl>;
+        };
+
         lm_homerow: lm_homerow {
             compatible = "zmk,behavior-hold-tap";
             flavor = "hold-preferred";
@@ -757,10 +765,10 @@
         base_layer {
             label = "BASE";
             bindings = <
-            &kp Q  &kp W  &kp F                    &kp P                        &kp B                          &kp J                          &kp L                 &kp U                     &kp Y    &kp SQT
-            &kp A  &kp R  &kp S                    &kp T                        &kp G                          &kp M                          &kp N                 &kp E                     &kp I    &kp O
-&caps_word  &kp Z  &kp X  &kp C                    &kp D                        &kp V                          &kp K                          &kp H                 &kp COMMA                 &kp DOT  &mo NAVOVERR  &kp BSLH
-                          &lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE  &base_th_mo_kp_hp LOWER TAB    &base_th_mo_kp_hp RAISE ENTER  &spacelm LCTRL SPACE  &th_kp_sl_tp LALT TILDEL
+                           &kp Q  &kp W  &kp F                    &kp P                        &kp B                          &kp J                          &kp L                 &kp U                     &kp Y    &kp SQT
+                           &kp A  &kp R  &kp S                    &kp T                        &kp G                          &kp M                          &kp N                 &kp E                     &kp I    &kp O
+&th_kp_sl_hp LSHFT TILDEL  &kp Z  &kp X  &kp C                    &kp D                        &kp V                          &kp K                          &kp H                 &kp COMMA                 &kp DOT  &mo NAVOVERR  &th_kp_sl_hp LSHFT TILDEL
+                             &lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE  &base_th_mo_kp_hp LOWER TAB    &base_th_mo_kp_hp RAISE ENTER  &spacelm LCTRL SPACE  &th_kp_sl_tp LALT TILDEL
             >;
         };
 
