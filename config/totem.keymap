@@ -267,8 +267,9 @@
             tap-ms = <0>;
             #binding-cells = <1>;
             bindings =
+                //<&macro_tap>,
+               // <&kp BACKSPACE>,
                 <&macro_tap>,
-                <&kp BACKSPACE>,
                 <&macro_param_1to1>,
                 <&mc_enne MACRO_PLACEHOLDER>;
         };
@@ -985,7 +986,7 @@
                &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
                &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
        &trans  &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans  &trans
-                                   &trans  &mc_ennesd N  &trans          &trans  &trans  &trans
+                                   &trans  &mc_ennesd P  &trans          &trans  &trans  &trans
             >;
         };
     };
