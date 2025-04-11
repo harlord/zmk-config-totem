@@ -38,7 +38,6 @@
 #define TILDESHIFTO 14
 #define TILDESHIFTU 15
 #define TILDESHIFTENNE 16
-#define TILDESHIFTENNE 17
 #define THUMB_HOLDING_TIME 200 // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds) a thumb key to activate a layer.  Shorter holds are treated as taps.
 #define THUMB_REPEAT_DECAY_BASE 120 // "tap then hold" for key auto-repeat
 #define THUMB_REPEAT_DECAY 190 // "tap then hold" for key auto-repeat
@@ -267,8 +266,8 @@
             tap-ms = <0>;
             #binding-cells = <1>;
             bindings =
-                //<&macro_tap>,
-               // <&kp BACKSPACE>,
+                <&macro_tap>,
+                <&kp BACKSPACE>,
                 <&macro_tap>,
                 <&macro_param_1to1>,
                 <&mc_enne MACRO_PLACEHOLDER>;
@@ -986,7 +985,7 @@
                &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
                &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
        &trans  &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans  &trans
-                                   &trans  &mc_ennesd P  &trans          &trans  &trans  &trans
+                                   &trans    &mc_ennesd N  &trans          &trans  &trans  &trans
             >;
         };
     };
