@@ -912,7 +912,7 @@
         &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &tilde U  &trans    &trans
         &tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &enne N             &tilde E  &tilde I  &tilde O
 &trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
-                            &th_kp_kp_hp LGUI DELETE  &tsd  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
+                            &th_kp_kp_hp LGUI DELETE  &tsd A  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
             >;
         };
     };
