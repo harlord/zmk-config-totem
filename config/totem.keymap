@@ -261,7 +261,7 @@
                 <&mc_tilde MACRO_PLACEHOLDER>;
         };
 
-        mc_ennesd: mac_tilde_shift_delete {
+        mc_ennesd: mac_enne_shift_delete {
             compatible = "zmk,behavior-macro-one-param";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -932,60 +932,60 @@
         layer_tildeshifta {
             label = "TILDESHIFTA";
             bindings = <
-        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &mc_tilde U  &trans    &trans
-        &mc_tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &mc_enne N             &mc_tilde E  &mc_tilde I  &mc_tilde O
-&trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
-                            &th_kp_kp_hp LGUI DELETE  &mc_tsd A  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
+               &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
+               &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
+       &trans  &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans  &trans
+                                   &trans  &mc_tsd A   &trans             &trans  &trans  &trans
             >;
         };
 
         layer_tildeshifte {
             label = "TILDESHIFTE";
             bindings = <
-        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &mc_tilde U  &trans    &trans
-        &mc_tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &mc_enne N             &mc_tilde E  &mc_tilde I  &mc_tilde O
-&trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
-                            &th_kp_kp_hp LGUI DELETE  &mc_tsd E  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
+               &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
+               &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
+       &trans  &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans  &trans
+                                   &trans  &mc_tsd E   &trans             &trans  &trans  &trans
             >;
         };
 
         layer_tildeshifti {
             label = "TILDESHIFTI";
             bindings = <
-        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &mc_tilde U  &trans    &trans
-        &mc_tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &mc_enne N             &mc_tilde E  &mc_tilde I  &mc_tilde O
-&trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
-                            &th_kp_kp_hp LGUI DELETE  &mc_tsd I  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
+               &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
+               &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
+       &trans  &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans  &trans
+                                   &trans  &mc_tsd I   &trans             &trans  &trans  &trans
             >;
         };
 
         layer_tildeshifto {
             label = "TILDESHIFTO";
             bindings = <
-        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &mc_tilde U  &trans    &trans
-        &mc_tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &mc_enne N             &mc_tilde E  &mc_tilde I  &mc_tilde O
-&trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
-                            &th_kp_kp_hp LGUI DELETE  &mc_tsd O  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
+               &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
+               &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
+       &trans  &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans  &trans
+                                   &trans  &mc_tsd O   &trans             &trans  &trans  &trans
             >;
         };
 
         layer_tildeshiftu {
             label = "TILDESHIFTU";
             bindings = <
-        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &mc_tilde U  &trans    &trans
-        &mc_tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &mc_enne N             &mc_tilde E  &mc_tilde I  &mc_tilde O
-&trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
-                            &th_kp_kp_hp LGUI DELETE  &mc_tsd U  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
+               &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
+               &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
+       &trans  &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans  &trans
+                                   &trans  &mc_tsd U  &trans             &trans  &trans  &trans
             >;
         };
 
         layer_tildeshiftenne {
             label = "TILDESHIFTENNE";
             bindings = <
-        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &mc_tilde U  &trans    &trans
-        &mc_tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &mc_enne N             &mc_tilde E  &mc_tilde I  &mc_tilde O
-&trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
-                            &th_kp_kp_hp LGUI DELETE  &mc_ennesd N  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
+               &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
+               &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans
+       &trans  &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans  &trans
+                                   &trans  &mc_ennesd N  &trans          &trans  &trans  &trans
             >;
         };
     };
