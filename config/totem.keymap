@@ -32,7 +32,12 @@
 #define ADJ  8
 #define TVP1 9
 #define TVP2 10
-#define TILDESHIFT 11
+#define TILDESHIFTA 11
+#define TILDESHIFTE 12
+#define TILDESHIFTI 13
+#define TILDESHIFTO 14
+#define TILDESHIFTU 15
+#define TILDESHIFTENNE 16
 #define THUMB_HOLDING_TIME 200 // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds) a thumb key to activate a layer.  Shorter holds are treated as taps.
 #define THUMB_REPEAT_DECAY_BASE 120 // "tap then hold" for key auto-repeat
 #define THUMB_REPEAT_DECAY 190 // "tap then hold" for key auto-repeat
@@ -182,9 +187,6 @@
 
         COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
         COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
-
-        //TILDE SHIFT
-        COMBOTS(tilde_shift_a, &tsd A, 10 33)// A SHIFT
     };
 
     macros {
@@ -203,9 +205,8 @@
                 <&kp G &kp I &kp F>;
         };
 
-        // tilde
-
-        tilde: tilde {
+        // mc_tilde
+        mc_tilde: mc_tilde {
             label = "&TILDE";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -216,9 +217,8 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
 
-        // enne
-
-        enne: enne {
+        // mc_enne
+        mc_enne: mc_enne {
             label = "&ENNE";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -227,7 +227,7 @@
                 <&kp LA(N) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
 
-        lmts: lm_mac_tilde_shift {
+        mc_ts: mc_mac_tilde_shift {
             compatible = "zmk,behavior-macro-two-param";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -248,7 +248,7 @@
                 <&kp MACRO_PLACEHOLDER>;
         };
 
-        tsd: mac_tilde_shift_delete {
+        mc_tsd: mac_tilde_shift_delete {
             compatible = "zmk,behavior-macro-one-param";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -257,7 +257,7 @@
                 <&macro_tap>,
                 <&kp BACKSPACE>,
                 <&macro_param_1to1>,
-                <&tilde MACRO_PLACEHOLDER>;
+                <&mc_tilde MACRO_PLACEHOLDER>;
         };
 
         lm_mac_homerow: lm_mac_homerow {
@@ -809,8 +809,8 @@
         base_layer {
             label = "BASE";
             bindings = <
-                           &kp Q  &kp W  &kp F                    &kp P                        &kp B                          &kp J                          &kp L                 &lmts TILDESHIFT U                     &kp Y    &kp SQT
-            &lmts TILDESHIFT A    &kp R  &kp S                    &kp T                        &kp G                          &kp M                          &kp N                 &lmts TILDESHIFT E                     &lmts TILDESHIFT I    &lmts TILDESHIFT O
+                           &kp Q  &kp W  &kp F                    &kp P                        &kp B                          &kp J                          &kp L                 &mc_ts TILDESHIFTU U                     &kp Y    &kp SQT
+            &mc_ts TILDESHIFTA A    &kp R  &kp S                    &kp T                        &kp G                          &kp M                          &kp N                 &mc_ts TILDESHIFTE E                     &mc_ts TILDESHIFTI I    &mc_ts TILDESHIFTO O
 &th_kp_sl_hp LSHFT TILDEL  &kp Z  &kp X  &kp C                    &kp D                        &kp V                          &kp K                          &kp H                 &kp COMMA                 &kp DOT  &mo NAVOVERR  &th_kp_sl_hp LSHFT TILDEL
                              &lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE  &base_th_mo_kp_hp LOWER TAB    &base_th_mo_kp_hp RAISE ENTER  &spacelm LCTRL SPACE  &th_kp_sl_tp LALT TILDEL
             >;
@@ -859,8 +859,8 @@
         layer_tildel {
             label = "TILDEL";
             bindings = <
-        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &tilde U  &trans    &trans
-        &tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &enne N             &tilde E  &tilde I  &tilde O
+        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &mc_tilde U  &trans    &trans
+        &mc_tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &mc_enne N             &mc_tilde E  &mc_tilde I  &mc_tilde O
 &trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
                             &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
             >;
@@ -916,13 +916,53 @@
             >;
         };
 
-         layer_tildeshift {
-            label = "TILDESHIFT";
+        layer_tildeshifta {
+            label = "TILDESHIFTA";
             bindings = <
-        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &tilde U  &trans    &trans
-        &tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &enne N             &tilde E  &tilde I  &tilde O
+        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &mc_tilde U  &trans    &trans
+        &mc_tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &mc_enne N             &mc_tilde E  &mc_tilde I  &mc_tilde O
 &trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
-                            &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
+                            &th_kp_kp_hp LGUI DELETE  &mc_tsd A  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
+            >;
+        };
+
+        layer_tildeshifte {
+            label = "TILDESHIFTE";
+            bindings = <
+        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &mc_tilde U  &trans    &trans
+        &mc_tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &mc_enne N             &mc_tilde E  &mc_tilde I  &mc_tilde O
+&trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
+                            &th_kp_kp_hp LGUI DELETE  &mc_tsd E  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
+            >;
+        };
+
+        layer_tildeshifti {
+            label = "TILDESHIFTI";
+            bindings = <
+        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &mc_tilde U  &trans    &trans
+        &mc_tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &mc_enne N             &mc_tilde E  &mc_tilde I  &mc_tilde O
+&trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
+                            &th_kp_kp_hp LGUI DELETE  &mc_tsd I  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
+            >;
+        };
+
+        layer_tildeshifto {
+            label = "TILDESHIFTO";
+            bindings = <
+        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &mc_tilde U  &trans    &trans
+        &mc_tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &mc_enne N             &mc_tilde E  &mc_tilde I  &mc_tilde O
+&trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
+                            &th_kp_kp_hp LGUI DELETE  &mc_tsd O  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
+            >;
+        };
+
+        layer_tildeshiftu {
+            label = "TILDESHIFTU";
+            bindings = <
+        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &mc_tilde U  &trans    &trans
+        &mc_tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &mc_enne N             &mc_tilde E  &mc_tilde I  &mc_tilde O
+&trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
+                            &th_kp_kp_hp LGUI DELETE  &mc_tsd U  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
             >;
         };
     };
