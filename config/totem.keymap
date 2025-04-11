@@ -38,6 +38,7 @@
 #define TILDESHIFTO 14
 #define TILDESHIFTU 15
 #define TILDESHIFTENNE 16
+#define TILDESHIFTENNE 17
 #define THUMB_HOLDING_TIME 200 // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds) a thumb key to activate a layer.  Shorter holds are treated as taps.
 #define THUMB_REPEAT_DECAY_BASE 120 // "tap then hold" for key auto-repeat
 #define THUMB_REPEAT_DECAY 190 // "tap then hold" for key auto-repeat
@@ -258,6 +259,18 @@
                 <&kp BACKSPACE>,
                 <&macro_param_1to1>,
                 <&mc_tilde MACRO_PLACEHOLDER>;
+        };
+
+        mc_ennesd: mac_tilde_shift_delete {
+            compatible = "zmk,behavior-macro-one-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&kp BACKSPACE>,
+                <&macro_param_1to1>,
+                <&mc_enne MACRO_PLACEHOLDER>;
         };
 
         lm_mac_homerow: lm_mac_homerow {
@@ -963,6 +976,16 @@
         &mc_tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &mc_enne N             &mc_tilde E  &mc_tilde I  &mc_tilde O
 &trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
                             &th_kp_kp_hp LGUI DELETE  &mc_tsd U  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
+            >;
+        };
+
+        layer_tildeshiftenne {
+            label = "TILDESHIFTENNE";
+            bindings = <
+        &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &mc_tilde U  &trans    &trans
+        &mc_tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &mc_enne N             &mc_tilde E  &mc_tilde I  &mc_tilde O
+&trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
+                            &th_kp_kp_hp LGUI DELETE  &mc_ennesd N  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
             >;
         };
     };
