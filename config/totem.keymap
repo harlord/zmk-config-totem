@@ -81,6 +81,13 @@
     key-positions = <KEYPOS>; \
     layers = <ADJ>; \
   };
+#define COMBOTS(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    timeout-ms = <500>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <TILDESHIFT>; \
+  };
 
 / {
     combos {
@@ -175,6 +182,9 @@
 
         COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
         COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
+
+        //TILDE SHIFT
+        COMBOTS(tilde_shift_a, &tsd A, 10 33)// A SHIFT
     };
 
     macros {
@@ -799,8 +809,8 @@
         base_layer {
             label = "BASE";
             bindings = <
-                           &kp Q  &kp W  &kp F                    &kp P                        &kp B                          &kp J                          &kp L                 &kp U                     &kp Y    &kp SQT
-            &lmts TILDESHIFT A    &kp R  &kp S                    &kp T                        &kp G                          &kp M                          &kp N                 &kp E                     &kp I    &kp O
+                           &kp Q  &kp W  &kp F                    &kp P                        &kp B                          &kp J                          &kp L                 &lmts TILDESHIFT U                     &kp Y    &kp SQT
+            &lmts TILDESHIFT A    &kp R  &kp S                    &kp T                        &kp G                          &kp M                          &kp N                 &lmts TILDESHIFT E                     &lmts TILDESHIFT I    &lmts TILDESHIFT O
 &th_kp_sl_hp LSHFT TILDEL  &kp Z  &kp X  &kp C                    &kp D                        &kp V                          &kp K                          &kp H                 &kp COMMA                 &kp DOT  &mo NAVOVERR  &th_kp_sl_hp LSHFT TILDEL
                              &lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE  &base_th_mo_kp_hp LOWER TAB    &base_th_mo_kp_hp RAISE ENTER  &spacelm LCTRL SPACE  &th_kp_sl_tp LALT TILDEL
             >;
@@ -912,7 +922,7 @@
         &kp LA(N1)  &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans              &tilde U  &trans    &trans
         &tilde A    &trans  &trans                    &trans                        &trans                    &trans                    &enne N             &tilde E  &tilde I  &tilde O
 &trans  &trans      &trans  &trans                    &trans                        &trans                    &trans                    &trans              &trans    &trans    &kp LA(LS(FSLH))  &trans
-                            &th_kp_kp_hp LGUI DELETE  &tsd A  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
+                            &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &kp ESC
             >;
         };
     };
