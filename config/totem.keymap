@@ -778,7 +778,7 @@
             compatible = "zmk,behavior-hold-tap";
             flavor = "hold-preferred";
             tapping-term-ms = <THUMB_HOLDING_TIME>;
-            quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+            //quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
             #binding-cells = <2>;
             hold-trigger-on-release;
             bindings = <&kp>, <&kp>;
@@ -816,7 +816,7 @@
             compatible = "zmk,behavior-hold-tap";
             flavor = "hold-preferred";
             tapping-term-ms = <THUMB_HOLDING_TIME>;
-            quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
+            //quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
             hold-trigger-on-release; // wait for other home row mods
             #binding-cells = <2>;
             bindings = <&lm_mac_homerow>, <&kp>;
@@ -827,7 +827,7 @@
             flavor =
             SPACE_HOLDING_TYPE;
             tapping-term-ms = <300>;
-            quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
+            //quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
             #binding-cells = <2>;
             require-prior-idle-ms = <80>;
             hold-trigger-on-release;
@@ -860,16 +860,6 @@
             flavor = "tap-preferred";
             bindings = <&gpfind>, <&kp>;
         };
-
-        th_kp_sl_tp: th_kp_sl_tp {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "tap-preferred";
-            tapping-term-ms = <THUMB_HOLDING_TIME>;
-            quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-            hold-trigger-on-release; // wait for other home row mods
-            #binding-cells = <2>;
-            bindings = <&lm_mac_homerow>, <&sl>;
-        };
     };
 
     keymap {
@@ -881,7 +871,7 @@
           &mc_ts TILDESHIFTEXC Q    &kp W  &kp F                    &kp P                        &kp B                          &kp J                          &kp L                        &mc_ts TILDESHIFTU U                     &kp Y                    &kp SQT
             &mc_ts TILDESHIFTA A    &kp R  &kp S                    &kp T                        &kp G                          &kp M                          &mc_ts TILDESHIFTENNE N      &mc_ts TILDESHIFTE E                     &mc_ts TILDESHIFTI I     &mc_ts TILDESHIFTO O
 &th_kp_sl_hp LSHFT TILDEL  &kp Z    &kp X  &kp C                    &kp D                        &kp V                          &kp K                          &kp H                        &kp COMMA                                &kp DOT                  &mc_mo NAVOVERR TILDESHIFTQUES          &th_kp_sl_hp LSHFT TILDEL
-                             &lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE  &base_th_mo_kp_hp LOWER TAB    &base_th_mo_kp_hp RAISE ENTER  &spacelm LCTRL SPACE  &th_kp_sl_tp LALT TILDEL
+                             &lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE  &base_th_mo_kp_hp LOWER TAB    &base_th_mo_kp_hp RAISE ENTER  &spacelm LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
