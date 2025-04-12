@@ -240,7 +240,7 @@
                 <&kp LA(N) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
 
-        mc_ts: mc_mac_tilde_shift {
+        mc_ts: mc_ts {
             compatible = "zmk,behavior-macro-two-param";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -273,7 +273,7 @@
                 <&mc_tilde MACRO_PLACEHOLDER>;
         };
 
-        mc_mo: mc_mac_tilde_shift {
+        mc_mo: mc_mo {
             compatible = "zmk,behavior-macro-two-param";
             wait-ms = <0>;
             tap-ms = <0>;
