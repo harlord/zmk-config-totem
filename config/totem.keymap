@@ -314,8 +314,6 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp BACKSPACE>,
-                <&macro_tap>,
                 <&kp LA(LS(FSLH))>;
         };
 
