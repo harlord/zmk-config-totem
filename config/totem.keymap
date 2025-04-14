@@ -62,7 +62,7 @@
   };
 #define RCOMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
-    timeout-ms = <1000>; \
+    timeout-ms = <2000>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <NAVOVERR DIRECTACC HOMEROW RAISE LOWER FUNC>; \
