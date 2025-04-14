@@ -62,17 +62,17 @@
   };
 #define RCOMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
-    timeout-ms = <500>; \
+    timeout-ms = <1000>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <NAVOVERR DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 #define NAVBACOMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
-    timeout-ms = <150>; \
+    timeout-ms = <200>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <NAVOVERR LOWER>; \
+    layers = <NAVOVERR>; \
   };
 #define COMBODIRECTACC(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
