@@ -60,19 +60,27 @@
     slow-release; \
     layers = <BASE>; \
   };
-#define RCOMBO(NAME, BINDINGS, KEYPOS) \
+#define RCOMBOACT(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
     timeout-ms = <2000>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <NAVOVERR DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    slow-release; \
+    layers = <NAVOVERR TILDESHIFTQUES DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+  };
+#define RCOMBO(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    timeout-ms = <500>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <NAVOVERR TILDESHIFTQUES DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 #define NAVBACOMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
     timeout-ms = <200>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <NAVOVERR>; \
+    layers = <NAVOVERR TILDESHIFTQUES>; \
   };
 #define COMBODIRECTACC(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -142,13 +150,13 @@
         //      32 33 34         35 36 37
         //LEFT HAND
 
-        RCOMBO(comb_wf, &kp ESC, 0 1 2)// Q W F
-        RCOMBO(comb_fp, &kp SPACE, 1 2 3)// W F P
-        RCOMBO(comb_pb, &kp ENTER, 3 4)// P B
+        RCOMBOACT(comb_wf, &kp ESC, 0 1 2)// Q W F
+        RCOMBOACT(comb_fp, &kp SPACE, 1 2 3)// W F P
+        RCOMBOACT(comb_pb, &kp ENTER, 3 4)// P B
 
-        RCOMBO(comb_tg, &kp TAB, 24 25)// C D
-        RCOMBO(comb_cd, &kp BACKSPACE, 22 23 24)// X C D
-        RCOMBO(comb_xc, &kp DELETE, 21 22 23)// Z X C
+        RCOMBOACT(comb_tg, &kp TAB, 24 25)// DV
+        RCOMBOACT(comb_cd, &kp BACKSPACE, 22 23 24)// X C D
+        RCOMBOACT(comb_xc, &kp DELETE, 21 22 23)// Z X C
 
         RCOMBO(comb_gv, &kp MINUS, 14 25)// G V
         RCOMBO(comb_td, &kp GRAVE, 13 24)// T D 
