@@ -60,6 +60,14 @@
     slow-release; \
     layers = <BASE>; \
   };
+#define COMBOL(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    timeout-ms = <2000>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    slow-release; \
+    layers = <BASE NAVOVERR TILDESHIFTQUES DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+  };
 #define RCOMBOACT(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
     timeout-ms = <2000>; \
@@ -204,7 +212,7 @@
 
         // CAPS
 
-        RCOMBOACT(capsWords, &caps_word,  20 31)
+        COMBOL(capsWords, &caps_word,  20 31)
     };
 
     macros {
