@@ -203,8 +203,8 @@
         COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
 
         // CAPS
-        
-        COMBO(capsWords, &caps_word,  20 31)
+
+        RCOMBOACT(capsWords, &caps_word,  20 31)
     };
 
     macros {
