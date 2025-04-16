@@ -335,10 +335,10 @@
                 <&macro_tap>,
                 <&kp LA(N1)>,
                 <&macro_press>,
-                <&sk LSHFT>,
+                <&mo RAISE>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&sk LSHFT>;
+                <&mo RAISE>;
         };
 
         lm_mac_homerow: lm_mac_homerow {
