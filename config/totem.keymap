@@ -314,14 +314,14 @@
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <0>;
-            bindings = 
-            <&macro_tap>, 
-            <&kp LA(LS(FSLH))>,
-            <&macro_press>, 
-            <&sk LSHFT>,
-            <&macro_pause_for_release>,
-            <&macro_release>,
-            <&sk LSHFT>;
+            bindings =
+                <&macro_tap>,
+                <&kp LA(LS(FSLH))>,
+                <&macro_press>,
+                <&sk LSHFT>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&sk LSHFT>;
         };
 
         mc_ecxd: mc_ecxd {
@@ -334,7 +334,7 @@
                 <&kp BACKSPACE>,
                 <&macro_tap>,
                 <&kp LA(N1)>,
-                <&macro_press>, 
+                <&macro_press>,
                 <&sk LSHFT>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
@@ -878,6 +878,14 @@
             flavor = "tap-preferred";
             bindings = <&gpfind>, <&kp>;
         };
+
+        nav_esc: nav_esc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NAV_ESC";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo 4>, <&kp ESC>;
+        };
     };
 
     keymap {
@@ -886,10 +894,10 @@
         base_layer {
             label = "BASE";
             bindings = <
-         &mc_ts TILDESHIFTEXC Q  &kp W  &kp F                    &kp P                        &kp B                          &kp J                          &kp L                    &mc_ts TILDESHIFTU U   &kp Y                 &kp SQT
-         &mc_ts TILDESHIFTA A    &kp R  &kp S                    &kp T                        &kp G                          &kp M                          &mc_ts TILDESHIFTENNE N  &mc_ts TILDESHIFTE E   &mc_ts TILDESHIFTI I  &mc_ts TILDESHIFTO O
-&kp ESC  &kp Z                   &kp X  &kp C                    &kp D                        &kp V                          &kp K                          &kp H                    &kp COMMA              &kp DOT               &mc_mo NAVOVERR TILDESHIFTQUES  &kp BACKSPACE
-                                        &lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE  &base_th_mo_kp_hp LOWER TAB    &base_th_mo_kp_hp RAISE ENTER  &spacelm LCTRL SPACE     &lm_homerow LALT ESC
+          &mc_ts TILDESHIFTEXC Q  &kp W  &kp F                    &kp P                        &kp B                          &kp J                          &kp L                    &mc_ts TILDESHIFTU U  &kp Y                 &kp SQT
+          &mc_ts TILDESHIFTA A    &kp R  &kp S                    &kp T                        &kp G                          &kp M                          &mc_ts TILDESHIFTENNE N  &mc_ts TILDESHIFTE E  &mc_ts TILDESHIFTI I  &mc_ts TILDESHIFTO O
+&nav_esc  &kp Z                   &kp X  &kp C                    &kp D                        &kp V                          &kp K                          &kp H                    &kp COMMA             &kp DOT               &mc_mo NAVOVERR TILDESHIFTQUES  &kp BACKSPACE
+                                         &lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE  &base_th_mo_kp_hp LOWER TAB    &base_th_mo_kp_hp RAISE ENTER  &spacelm LCTRL SPACE     &lm_homerow LALT ESC
             >;
         };
 
@@ -907,7 +915,7 @@
             label = "RAISE";
             bindings = <
         &kp EXCL           &kp AT             &kp HASH                  &kp DLLR                      &kp PRCNT                 &kp CARET                 &kp AMPS            &kp STAR               &kp LPAR         &kp RPAR
-        &lrlMo LSHFT PIPE  &lrlMo LCTRL LBRC  &lrlMo LALT RBRC         &lrlMo LCTRL TILDE            &kp UNDER                 &kp PLUS                  &lrrMo RGUI COLON   &lrrMo RALT LT         &lrrMo RCTRL GT  &lrrMo RSHFT QUESTION
+        &lrlMo LSHFT PIPE  &lrlMo LCTRL LBRC  &lrlMo LALT RBRC          &lrlMo LCTRL TILDE            &kp UNDER                 &kp PLUS                  &lrrMo RGUI COLON   &lrrMo RALT LT         &lrrMo RCTRL GT  &lrrMo RSHFT QUESTION
 &trans  &kp BSLH           &kp LBKT           &kp RBKT                  &kp GRAVE                     &kp MINUS                 &kp EQUAL                 &kp SEMI            &kp COMMA              &kp DOT          &lrrMo RALT FSLH       &trans
                                               &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
