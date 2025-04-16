@@ -883,8 +883,8 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NAV_ESC";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo 4>, <&kp ESC>;
+            tapping-term-ms = <500>;
+            bindings = <&mo 4>, <&none>, <&kp ESC>;
         };
     };
 
