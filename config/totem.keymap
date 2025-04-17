@@ -964,10 +964,10 @@
         layer_func {
             label = "FUNC";
             bindings = <
-          &kp F1     &kp F2          &kp F3                    &kp F4                        &kp F5                    &kp F6                    &kp F7              &kp F8                 &kp F9           &kp F10
-          &sk LSHFT  &sk LCTRL       &sk LALT                  &sk LGUI                      &kp F11                   &kp F12                   &sk RGUI            &sk RALT               &sk RGUI         &sk RSHFT
-&nav_esc  &sk LALT   &msc SCRL_LEFT  &msc SCRL_DOWN            &msc SCRL_RIGHT               &kp F11                   &kp F12                   &mmv MOVE_LEFT      &mmv MOVE_DOWN         &mmv MOVE_RIGHT  &sk RALT   &kp BACKSPACE
-                                     &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
+          &kp F1     &kp F2     &kp F3                    &kp F4                        &kp F5                    &kp F6                    &kp F7              &kp F8                 &kp F9    &kp F10
+          &sk LSHFT  &sk LCTRL  &sk LALT                  &sk LGUI                      &kp F11                   &kp F12                   &sk RGUI            &sk RALT               &sk RGUI  &sk RSHFT
+&nav_esc  &none      &none      &none                     &none                         &kp F11                   &kp F12                   &none               &none                  &none     &none      &kp BACKSPACE
+                                &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space LCTRL SPACE  &th_kp_kp_hp LALT ESC
             >;
         };
 
