@@ -907,7 +907,7 @@
             label = "NAVOVERR";
             bindings = <
           &kp F1          &kp F2          &kp F3                    &kp F4                        &kp F5                    &kp F6                    &kp F7              &kp F8                 &kp F9          &kp F10
-          &sk LSHFT       &sk LCTRL       &sk LALT                  &sk LGUI                      &kp F11                   &kp F12                   &kp F12             &lrrMo RGUI N          &kp UP          &lrrMo RCTRL I  &kp RSHFT
+          &sk LSHFT       &sk LCTRL       &sk LALT                  &sk LGUI                      &kp F11                   &kp F12                   &lrrMo RGUI N          &kp UP          &lrrMo RCTRL I  &kp RSHFT
 &lrlMo LALT ESC  &none        &none      &none                     &none                         &caps_word                    &kp CAPS                     &kp LEFT            &kp DOWN               &kp RIGHT       &kp RALT        &lrrMo LALT  BACKSPACE
                                           &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC
             >;
