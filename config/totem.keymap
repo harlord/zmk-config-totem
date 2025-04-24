@@ -880,9 +880,9 @@
         lower_layer {
             label = "LOWER";
             bindings = <
-                 &kp N1     &kp N2     &kp N3                    &kp N4                        &kp N5                    &kp N6                    &kp N7                 &kp N8                  &kp N9     &kp N0
-                 &kp LSHFT  &kp LCTRL  &kp LALT                  &kp LGUI                      &kp CAPS                  &caps_word                &kp RGUI               &kp RALT                &kp RCTRL  &kp RSHFT
-&lrlMo LALT ESC  &kp BSLH   &kp LBKT   &kp RBKT                  &kp GRAVE                     &kp MINUS                 &kp EQUAL                 &kp H                  &kp COMMA               &kp DOT    &kp SLASH  &kp BACKSPACE
+                 &kp N1             &kp N2             &kp N3                    &kp N4                        &kp N5                    &kp N6                    &kp N7                 &kp N8                  &kp N9           &kp N0
+                 &lrlMo LSHFT PIPE  &lrlMo LCTRL LBRC  &lrlMo LALT RBRC          &lrlMo LCTRL TILDE            &kp UNDER                 &kp PLUS                  &lrrMo RGUI COLON      &lrrMo RALT LT          &lrrMo RCTRL GT  &lrrMo RSHFT QUESTION
+&lrlMo LALT ESC  &kp BSLH           &kp LBKT           &kp RBKT                  &kp GRAVE                     &kp MINUS                 &kp EQUAL                 &kp H                  &kp COMMA               &kp DOT          &kp SLASH                &kp BACKSPACE
                                        &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC
             >;
         };
