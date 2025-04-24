@@ -870,9 +870,9 @@
         base_layer {
             label = "BASE";
             bindings = <
-                 &mc_ts TILDESHIFTEXC Q  &kp W  &kp F                    &kp P                        &kp B                          &kp J                          &kp L                    &mc_ts TILDESHIFTU U   &kp Y                 &kp SQT
-                 &mc_ts TILDESHIFTA A    &kp R  &kp S                    &kp T                        &kp G                          &kp M                          &mc_ts TILDESHIFTENNE N  &mc_ts TILDESHIFTE E   &mc_ts TILDESHIFTI I  &mc_ts TILDESHIFTO O
-&lrlMo LALT ESC  &kp Z                   &kp X  &kp C                    &kp D                        &kp V                          &kp K                          &kp H                    &kp COMMA              &kp DOT               &mc_ts TILDESHIFTQUES SLASH  &lm_homerow LALT BACKSPACE
+                      &mc_ts TILDESHIFTEXC Q  &kp W  &kp F                    &kp P                        &kp B                          &kp J                          &kp L                    &mc_ts TILDESHIFTU U   &kp Y                 &kp SQT
+                      &mc_ts TILDESHIFTA A    &kp R  &kp S                    &kp T                        &kp G                          &kp M                          &mc_ts TILDESHIFTENNE N  &mc_ts TILDESHIFTE E   &mc_ts TILDESHIFTI I  &mc_ts TILDESHIFTO O
+&lm_homerow LALT ESC  &kp Z                   &kp X  &kp C                    &kp D                        &kp V                          &kp K                          &kp H                    &kp COMMA              &kp DOT               &mc_ts TILDESHIFTQUES SLASH  &lm_homerow LALT BACKSPACE
                                                 &lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE  &base_th_mo_kp_hp LOWER TAB    &base_th_mo_kp_hp RAISE ENTER  &spacelm NAVOVERR SPACE  &lm_homerow LCTRL ESC
             >;
         };
