@@ -872,7 +872,7 @@
             bindings = <
                       &mc_ts TILDESHIFTEXC Q  &kp W  &kp F                    &kp P                        &kp B                          &kp J                          &kp L                    &mc_ts TILDESHIFTU U   &kp Y                 &kp SQT
                       &mc_ts TILDESHIFTA A    &kp R  &kp S                    &kp T                        &kp G                          &kp M                          &mc_ts TILDESHIFTENNE N  &mc_ts TILDESHIFTE E   &mc_ts TILDESHIFTI I  &mc_ts TILDESHIFTO O
-&lm_homerow LALT ESC  &kp Z                   &kp X  &kp C                    &kp D                        &kp V                          &kp K                          &kp H                    &kp COMMA              &kp DOT               &lm_homerow LEFT_ALT SLASH  &lm_homerow LALT BACKSPACE
+&lm_homerow LALT ESC  &kp Z                   &kp X  &kp C                    &kp D                        &kp V                          &kp K                          &kp H                    &kp COMMA              &kp DOT               &lm_homerow LEFT_ALT SLASH  &lm_homerow LGUI BACKSPACE
                                                      &lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE  &base_th_mo_kp_hp LOWER TAB    &base_th_mo_kp_hp RAISE ENTER  &spacelm NAVOVERR SPACE  &lm_homerow LCTRL ESC
             >;
         };
@@ -882,7 +882,7 @@
             bindings = <
                  &kp N1             &kp N2             &kp N3                    &kp N4                        &kp N5                    &kp N6                    &kp N7                 &kp N8                  &kp N9           &kp N0
                  &lrlMo LSHFT PIPE  &lrlMo LCTRL LBRC  &lrlMo LALT RBRC          &lrlMo LCTRL TILDE            &kp UNDER                 &kp PLUS                  &lrrMo RGUI COLON      &lrrMo RALT LT          &lrrMo RCTRL GT  &lrrMo RSHFT QUESTION
-&lrlMo LALT ESC  &kp BSLH           &kp LBKT           &kp RBKT                  &kp GRAVE                     &kp MINUS                 &kp EQUAL                 &kp H                  &kp COMMA               &kp DOT          &kp SLASH              &kp BACKSPACE
+&lrlMo LALT ESC  &kp BSLH           &kp LBKT           &kp RBKT                  &kp GRAVE                     &kp MINUS                 &kp EQUAL                 &kp H                  &kp COMMA               &kp DOT          &kp SLASH              &lrrMo LGUI BACKSPACE
                                                        &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC
             >;
         };
@@ -892,7 +892,7 @@
             bindings = <
                  &kp EXCL           &kp AT             &kp HASH                  &kp DLLR                      &kp PRCNT                 &kp CARET                 &kp AMPS               &kp STAR                &kp LPAR         &kp RPAR
                  &lrlMo LSHFT PIPE  &lrlMo LCTRL LBRC  &lrlMo LALT RBRC          &lrlMo LCTRL TILDE            &kp UNDER                 &kp PLUS                  &lrrMo RGUI COLON      &lrrMo RALT LT          &lrrMo RCTRL GT  &lrrMo RSHFT QUESTION
-&lrlMo LALT ESC  &kp BSLH           &kp LBKT           &kp RBKT                  &kp GRAVE                     &kp MINUS                 &kp EQUAL                 &kp SEMI               &kp COMMA               &kp DOT          &kp SLASH              &lrrMo LALT BACKSPACE
+&lrlMo LALT ESC  &kp BSLH           &kp LBKT           &kp RBKT                  &kp GRAVE                     &kp MINUS                 &kp EQUAL                 &kp SEMI               &kp COMMA               &kp DOT          &kp SLASH              &lrrMo RGUI BACKSPACE
                                                        &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC
             >;
         };
@@ -902,7 +902,7 @@
             bindings = <
                  &kp Q           &kp W           &kp F                     &kp P                         &kp B                     &kp J                     &kp L                  &kp U                   &kp Y           &kp SQT
                  &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S             &lrlMo LGUI T                 &kp G                     &kp M                     &lrrMo RGUI N          &lrrMo RALT E           &lrrMo RCTRL I  &lrrMo RSHFT O
-&lrlMo LALT ESC  &kp Z           &kp X           &kp C                     &kp D                         &kp V                     &kp K                     &kp H                  &kp COMMA               &kp DOT         &lrrMo RALT FSLH  &lrrMo LALT BACKSPACE
+&lrlMo LALT ESC  &kp Z           &kp X           &kp C                     &kp D                         &kp V                     &kp K                     &kp H                  &kp COMMA               &kp DOT         &lrrMo RALT FSLH  &lrrMo LGUI BACKSPACE
                                                  &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC
             >;
         };
@@ -912,7 +912,7 @@
             bindings = <
                  &kp F1     &kp F2     &kp F3                    &kp F4                        &kp F5                    &kp F6                    &kp F7                 &kp F8                  &kp F9          &kp F10
                  &sk LSHFT  &sk LCTRL  &sk LALT                  &sk LGUI                      &kp F11                   &kp F12                   &lrrMo RGUI N          &kp UP                  &lrrMo RCTRL I  &kp RSHFT
-&lrlMo LALT ESC  &none      &none      &none                     &none                         &caps_word                &kp CAPS                  &kp LEFT               &kp DOWN                &kp RIGHT       &kp RALT   &lrrMo LALT BACKSPACE
+&lrlMo LALT ESC  &none      &none      &none                     &none                         &caps_word                &kp CAPS                  &kp LEFT               &kp DOWN                &kp RIGHT       &kp RALT   &lrrMo LGUI BACKSPACE
                                        &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC
             >;
         };
@@ -942,7 +942,7 @@
             bindings = <
                  &kp F1     &kp F2     &kp F3                    &kp F4                        &kp F5                    &kp F6                    &kp F7                 &kp F8                  &kp F9    &kp F10
                  &sk LSHFT  &sk LCTRL  &sk LALT                  &sk LGUI                      &kp F11                   &kp F12                   &sk RGUI               &sk RALT                &sk RGUI  &sk RSHFT
-&lrlMo LALT ESC  &none      &none      &none                     &none                         &kp F11                   &kp F12                   &none                  &none                   &none     &none      &lrrMo LALT BACKSPACE
+&lrlMo LALT ESC  &none      &none      &none                     &none                         &kp F11                   &kp F12                   &none                  &none                   &none     &none      &lrrMo LGUI BACKSPACE
                                        &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC
             >;
         };
