@@ -186,8 +186,8 @@
 
         //THUMBS
 
-        COMBO(delete_space, &mo HOMEROW, 37 36)// ENTER SPACE
-        COMBO(bkspace_delete2, &mo DIRECTACC, 33 32)// BKSPACE TAB
+        COMBO(delete_space, &mo HOMEROW, 37 35)// ENTER SPACE
+        COMBO(bkspace_delete2, &mo DIRECTACC, 34 32)// BKSPACE TAB
         COMBO(delete_enter, &sl FUNC, 32 37)// TAB ENTER
         //NavOverR
 
