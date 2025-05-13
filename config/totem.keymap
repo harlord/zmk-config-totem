@@ -925,7 +925,7 @@
 &trans  &trans       &trans  &trans                    &trans                        &trans                    &trans                    &trans                 &trans       &trans       &kp LA(LS(FSLH))  &trans
                              &th_mo_kp_hp LOWER TAB   &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &space LCTRL SPACE  &th_mo_kp_hp NAVOVERR ESC    &th_mo_kp_hp RAISE ENTER 
             >;
-        };&space LCTRL SPACE  &th_mo_kp_hp NAVOVERR ESC    &th_mo_kp_hp RAISE ENTER M
+        };
 
         layer_direcaacc {
             label = "DIRECTACC";
