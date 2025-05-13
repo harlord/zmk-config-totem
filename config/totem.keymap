@@ -186,9 +186,9 @@
 
         //THUMBS
 
-        COMBO(delete_space, &mo HOMEROW, 35 36)// ENTER SPACE
-        COMBO(bkspace_delete2, &mo DIRECTACC, 33 34)// BKSPACE TAB
-        COMBO(delete_enter, &sl FUNC, 34 35)// TAB ENTER
+        COMBO(delete_space, &mo HOMEROW, 37 36)// ENTER SPACE
+        COMBO(bkspace_delete2, &mo DIRECTACC, 33 32)// BKSPACE TAB
+        COMBO(delete_enter, &sl FUNC, 32 37)// TAB ENTER
         //NavOverR
 
         NAVBACOMBO(pg_0, &kp HOME, 27 28)// H , 
@@ -873,7 +873,7 @@
                       &mc_ts TILDESHIFTEXC Q  &kp W  &kp F                    &kp P                        &kp B                          &kp J                          &kp L                    &mc_ts TILDESHIFTU U   &kp Y                 &kp SQT
                       &mc_ts TILDESHIFTA A    &kp R  &kp S                    &kp T                        &kp G                          &kp M                          &mc_ts TILDESHIFTENNE N  &mc_ts TILDESHIFTE E   &mc_ts TILDESHIFTI I  &mc_ts TILDESHIFTO O
 &lm_homerow LALT ESC  &kp Z                   &kp X  &kp C                    &kp D                        &kp V                          &kp K                          &kp H                    &kp COMMA              &kp DOT               &lm_homerow LEFT_ALT SLASH  &lm_homerow LGUI BACKSPACE
-                                                     &lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE  &base_th_mo_kp_hp LOWER TAB    &base_th_mo_kp_hp RAISE ENTER  &spacelm NAVOVERR SPACE  &lm_homerow LCTRL ESC
+                                                  &base_th_mo_kp_hp LOWER TAB   &lm_homerow LGUI DELETE  &lm_homerow LSHFT BACKSPACE       &spacelm NAVOVERR SPACE  &lm_homerow LCTRL ESC    &base_th_mo_kp_hp RAISE ENTER
             >;
         };
 
@@ -881,9 +881,9 @@
             label = "LOWER";
             bindings = <
                  &kp N1             &kp N2             &kp N3                    &kp N4                        &kp N5                    &kp N6                    &kp N7                 &kp N8                  &kp N9           &kp N0
-                 &lrlMo LSHFT PIPE  &lrlMo LCTRL LBRC  &lrlMo LALT RBRC          &lrlMo LCTRL TILDE            &kp UNDER                 &kp PLUS                  &lrrMo RGUI COLON      &lrrMo RALT LT          &lrrMo RCTRL GT  &lrrMo RSHFT QUESTION
+                 &kp LSHFT   &kp LBRC  &kp LALT          &kp LCTRL            &kp UNDER                 &kp PLUS                  &kp RGUI      &kp RALT          &kp RCTRL  &kp RSHFT
 &lrlMo LALT ESC  &kp BSLH           &kp LBKT           &kp RBKT                  &kp GRAVE                     &kp MINUS                 &kp EQUAL                 &kp H                  &kp COMMA               &kp DOT          &kp SLASH              &lrrMo LGUI BACKSPACE
-                                                       &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC
+                                                     &th_mo_kp_hp LOWER TAB   &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE    &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC    &th_mo_kp_hp RAISE ENTER  
             >;
         };
 
@@ -893,7 +893,7 @@
                  &kp EXCL           &kp AT             &kp HASH                  &kp DLLR                      &kp PRCNT                 &kp CARET                 &kp AMPS               &kp STAR                &kp LPAR         &kp RPAR
                  &lrlMo LSHFT PIPE  &lrlMo LCTRL LBRC  &lrlMo LALT RBRC          &lrlMo LCTRL TILDE            &kp UNDER                 &kp PLUS                  &lrrMo RGUI COLON      &lrrMo RALT LT          &lrrMo RCTRL GT  &lrrMo RSHFT QUESTION
 &lrlMo LALT ESC  &kp BSLH           &kp LBKT           &kp RBKT                  &kp GRAVE                     &kp MINUS                 &kp EQUAL                 &kp SEMI               &kp COMMA               &kp DOT          &kp SLASH              &lrrMo RGUI BACKSPACE
-                                                       &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC
+                                                        &th_mo_kp_hp LOWER TAB   &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE       &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC  &th_mo_kp_hp RAISE ENTER
             >;
         };
 
@@ -903,7 +903,7 @@
                  &kp Q           &kp W           &kp F                     &kp P                         &kp B                     &kp J                     &kp L                  &kp U                   &kp Y           &kp SQT
                  &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S             &lrlMo LGUI T                 &kp G                     &kp M                     &lrrMo RGUI N          &lrrMo RALT E           &lrrMo RCTRL I  &lrrMo RSHFT O
 &lrlMo LALT ESC  &kp Z           &kp X           &kp C                     &kp D                         &kp V                     &kp K                     &kp H                  &kp COMMA               &kp DOT         &lrrMo RALT FSLH  &lrrMo LGUI BACKSPACE
-                                                 &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC
+                                                 &th_mo_kp_hp LOWER TAB   &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC   &th_mo_kp_hp RAISE ENTER
             >;
         };
 
@@ -913,7 +913,7 @@
                  &kp F1     &kp F2     &kp F3                    &kp F4                        &kp F5                    &kp F6                    &kp F7                 &kp F8                  &kp F9          &kp F10
                  &sk LSHFT  &sk LCTRL  &sk LALT                  &sk LGUI                      &kp F11                   &kp F12                   &lrrMo RGUI N          &kp UP                  &lrrMo RCTRL I  &kp RSHFT
 &lrlMo LALT ESC  &none      &none      &none                     &none                         &caps_word                &kp CAPS                  &kp LEFT               &kp DOWN                &kp RIGHT       &kp RALT   &lrrMo LGUI BACKSPACE
-                                       &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC
+                                       &th_mo_kp_hp LOWER TAB   &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC   &th_mo_kp_hp RAISE ENTER
             >;
         };
 
@@ -923,7 +923,7 @@
         &kp LA(N1)   &trans  &trans                    &kp LS(LA(N2))                &trans                    &trans                    &trans                 &mc_tilde U  &trans       &trans
         &mc_tilde A  &trans  &trans                    &trans                        &trans                    &trans                    &mc_enne N             &mc_tilde E  &mc_tilde I  &mc_tilde O
 &trans  &trans       &trans  &trans                    &trans                        &trans                    &trans                    &trans                 &trans       &trans       &kp LA(LS(FSLH))  &trans
-                             &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space NAVOVERR SPACE  &kp ESC
+                             &th_mo_kp_hp LOWER TAB   &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &space NAVOVERR SPACE  &kp ESC   &th_mo_kp_hp RAISE ENTER
             >;
         };
 
@@ -933,7 +933,7 @@
            &lrlMo LA(LS(H)) LA(LS(F12))  &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))  &kp LC(MINUS)                 &kp LC(LS(MINUS))         &kp C_VOL_UP  &kp C_PREV             &kp C_PP                &kp C_NEXT  &trans
            &mkp MB5                      &mkp MB4               &mkp RCLK                  &mkp LCLK                     &tdSelectCoppingLR A A    &kp C_VOL_DN  &sk RGUI               &sk RALT                &sk RCTRL   &sk RSHFT
 &mc_sleep  &trans                        &trans                 &trans                     &trans                        &scfw_l_to_r              &kp C_MUTE    &kp C_BRI_DN           &kp C_BRI_UP            &bt_0       &bt_1      &bt_2
-                                                                &th_kp_kp_hp LGUI DELETE   &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &mo ADJ       &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC
+                                                                &th_mo_kp_hp LOWER TAB     &th_kp_kp_hp LGUI DELETE   &th_kp_kp_hp LSHFT BACKSPACE    &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC    &mo ADJ
             >;
         };
 
@@ -943,7 +943,7 @@
                  &kp F1     &kp F2     &kp F3                    &kp F4                        &kp F5                    &kp F6                    &kp F7                 &kp F8                  &kp F9    &kp F10
                  &sk LSHFT  &sk LCTRL  &sk LALT                  &sk LGUI                      &kp F11                   &kp F12                   &sk RGUI               &sk RALT                &sk RGUI  &sk RSHFT
 &lrlMo LALT ESC  &none      &none      &none                     &none                         &kp F11                   &kp F12                   &none                  &none                   &none     &none      &lrrMo LGUI BACKSPACE
-                                       &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC
+                                      &th_mo_kp_hp LOWER TAB    &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC   &th_mo_kp_hp RAISE ENTER
             >;
         };
 
@@ -953,7 +953,7 @@
              &bt_0         &bt_1   &bt_2                     &bt_3                         &bt_4                     &trans                    &trans                 &trans                  &trans  &trans
              &out OUT_USB  &trans  &trans                    &trans                        &trans                    &trans                    &trans                 &trans                  &trans  &trans
 &bootloader  &sys_reset    &trans  &trans                    &trans                        &trans                    &trans                    &trans                 &trans                  &trans  &sys_reset  &bootloader
-                                   &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp LOWER TAB    &th_mo_kp_hp RAISE ENTER  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC
+                                   &th_mo_kp_hp LOWER TAB    &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE  &space NAVOVERR SPACE  &th_kp_kp_hp LCTRL ESC  &th_mo_kp_hp RAISE ENTER
             >;
         };
 
@@ -983,7 +983,7 @@
         &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &mc_tsd A  &trans    &trans  &trans  &trans
+                       &trans     &trans  &mc_tsd A  &trans  &trans  &trans
             >;
         };
 
@@ -993,7 +993,7 @@
         &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &mc_tsd E  &trans    &trans  &trans  &trans
+                        &trans    &trans  &mc_tsd E  &trans  &trans  &trans
             >;
         };
 
@@ -1003,7 +1003,7 @@
         &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &mc_tsd I  &trans    &trans  &trans  &trans
+                       &trans    &trans  &mc_tsd I   &trans  &trans  &trans
             >;
         };
 
@@ -1013,7 +1013,7 @@
         &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &mc_tsd O  &trans    &trans  &trans  &trans
+                        &trans   &trans  &mc_tsd O   &trans  &trans  &trans
             >;
         };
 
@@ -1023,7 +1023,7 @@
         &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &mc_tsd U  &trans    &trans  &trans  &trans
+                       &mc_tsd U   &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -1033,7 +1033,7 @@
         &trans  &trans  &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &mc_ennesd N  &trans    &trans  &trans  &trans
+                       &trans    &trans  &mc_ennesd N   &trans  &trans  &trans
             >;
         };
 
@@ -1043,7 +1043,7 @@
         &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &mc_ecxd  &trans  &trans
+                        &trans  &trans  &trans   &trans  &trans   &mc_ecxd
             >;
         };
 
@@ -1053,7 +1053,7 @@
         &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &kp QUESTION  &trans
-                        &trans  &mc_quesd  &trans    &trans  &trans  &trans
+                        &trans    &trans  &mc_quesd  &trans  &trans  &trans
             >;
         };
     };
