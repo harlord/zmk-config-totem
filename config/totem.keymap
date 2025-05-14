@@ -40,7 +40,7 @@
 #define TILDESHIFTENNE 16
 #define TILDESHIFTEXC 17
 #define TILDESHIFTQUES 18
-#define THUMB_HOLDING_TIME 200 // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds) a thumb key to activate a layer.  Shorter holds are treated as taps.
+#define THUMB_HOLDING_TIME 170 // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds) a thumb key to activate a layer.  Shorter holds are treated as taps.
 #define THUMB_REPEAT_DECAY_BASE 50 // "tap then hold" for key auto-repeat
 #define THUMB_REPEAT_DECAY 190 // "tap then hold" for key auto-repeat
 #define SPACE_HOLDING_TYPE "balanced"
@@ -779,7 +779,7 @@
             compatible = "zmk,behavior-hold-tap";
             flavor =
             SPACE_HOLDING_TYPE;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <THUMB_HOLDING_TIME>;
             quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
             #binding-cells = <2>;
             require-prior-idle-ms = <80>;
@@ -791,7 +791,7 @@
             compatible = "zmk,behavior-hold-tap";
             flavor =
             SPACE_HOLDING_TYPE;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <THUMB_HOLDING_TIME>;
             quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
             #binding-cells = <2>;
             require-prior-idle-ms = <80>;
