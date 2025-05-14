@@ -10,6 +10,10 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
+
+//git add . && git commit -m 'adjust time thumbhold' && git push
+
+
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
 
@@ -879,7 +883,7 @@
             bindings = <
                  &kp N1     &kp N2    &kp N3                  &kp N4                    &kp N5                          &kp N6              &kp N7                     &kp N8                    &kp N9     &kp N0
                  &kp LSHFT  &kp LBRC  &kp LALT                &kp LCTRL                 &kp UNDER                       &kp PLUS            &kp RGUI                   &kp RALT                  &kp RCTRL  &kp RSHFT
-&lrlMo LALT ESC  &kp BSLH   &kp LBKT  &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp EQUAL           &kp H                      &kp COMMA                 &kp DOT    &kp SLASH  &lrrMo LGUI BACKSPACE
+&lrlMo LALT ESC  &kp BSLH   &kp LBKT  &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp EQUAL           &kp SEMI                   &kp COMMA                 &kp DOT    &kp SLASH  &lrrMo LGUI BACKSPACE
                                       &th_mo_kp_hp LOWER TAB  &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE    &space LCTRL SPACE  &th_mo_kp_hp NAVOVERR ESC  &th_mo_kp_hp RAISE ENTER
             >;
         };
