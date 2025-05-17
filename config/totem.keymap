@@ -71,14 +71,14 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     slow-release; \
-    layers = <NAVOVERR TILDESHIFTQUES DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE NAVOVERR TILDESHIFTQUES DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 #define RCOMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
     timeout-ms = <500>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <NAVOVERR TILDESHIFTQUES DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE NAVOVERR TILDESHIFTQUES DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 #define NAVBACOMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
