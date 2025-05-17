@@ -78,6 +78,7 @@
     timeout-ms = <500>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
+    require-prior-idle-ms = <150>; \
     layers = <BASE NAVOVERR TILDESHIFTQUES DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 #define NAVBACOMBO(NAME, BINDINGS, KEYPOS) \
