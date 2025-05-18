@@ -205,6 +205,94 @@
 
         COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
         COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
+
+        c-hr-thumb-ar {
+            bindings = <&kp LS(LCTRL)>;
+            key-positions = <33 10 11>;
+            layers = <11 19 20 21>;
+            slow-release;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-ars {
+            bindings = <&kp LS(LA(LCTRL))>;
+            key-positions = <33 10 11 12>;
+            layers = <11 19 20 21>;
+            slow-release;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-arst {
+            bindings = <&kp LS(LA(LG(LCTRL)))>;
+            key-positions = <33 10 11 12 13>;
+            layers = <11 19 20 21>;
+            slow-release;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-art {
+            bindings = <&kp LS(LC(LCMD))>;
+            key-positions = <33 10 11 13>;
+            layers = <11 19 20 21>;
+            slow-release;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-ast {
+            bindings = <&kp LS(LA(LCMD))>;
+            key-positions = <33 10 13 12>;
+            layers = <11 19 20 21>;
+            slow-release;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-rst {
+            bindings = <&kp LA(LC(LCMD))>;
+            key-positions = <33 13 12 11>;
+            layers = <11 19 20 21>;
+            slow-release;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-at {
+            bindings = <&kp LS(LCMD)>;
+            key-positions = <33 13 10>;
+            layers = <11 19 20 21>;
+            slow-release;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-st {
+            bindings = <&kp LA(LCMD)>;
+            key-positions = <33 12 13>;
+            layers = <11 19 20 21>;
+            slow-release;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-rs {
+            bindings = <&kp LC(LALT)>;
+            key-positions = <33 12 11>;
+            layers = <11 19 20 21>;
+            slow-release;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-rt {
+            bindings = <&kp LC(LCMD)>;
+            key-positions = <33 13 11>;
+            layers = <11 19 20 21>;
+            slow-release;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-as {
+            bindings = <&kp LS(LALT)>;
+            key-positions = <33 10 12>;
+            layers = <11 19 20 21>;
+            slow-release;
+            timeout-ms = <2000>;
+        };
     };
 
     macros {
@@ -1063,43 +1151,41 @@
         layer_tildeshiftques {
             label = "TILDESHIFTQUES";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &kp QUESTION  &trans
+        &trans  &trans  &trans  &trans    &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans    &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans       &trans  &trans  &trans  &trans  &kp QUESTION  &trans
                         &trans  &kp LALT  &mc_quesd    &trans  &trans  &trans
             >;
         };
 
-                layer_tildeshiftr {
+        layer_tildeshiftr {
             label = "TILDESHIFTR";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LCTRL  &trans       &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LCTRL  &trans    &trans  &trans  &trans
             >;
         };
 
         layer_tildeshifts {
             label = "TILDESHIFTS";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LSHFT  &trans       &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &trans    &trans  &trans  &trans
             >;
         };
 
         layer_tildeshiftt {
             label = "TILDESHIFTT";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LGUI  &trans       &trans  &trans  &trans
+        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LGUI  &trans    &trans  &trans  &trans
             >;
         };
-
-
     };
 };
