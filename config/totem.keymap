@@ -1081,10 +1081,10 @@
         layer_tildeshifta {
             label = "TILDESHIFTA";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &mc_tsd A    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
 
@@ -1151,10 +1151,10 @@
         layer_tildeshiftques {
             label = "TILDESHIFTQUES";
             bindings = <
-        &trans  &trans  &trans  &trans    &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans    &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans       &trans  &trans  &trans  &trans  &kp QUESTION  &trans
-                        &trans  &kp LALT  &mc_quesd    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &kp QUESTION  &trans
+                        &trans  &trans  &mc_quesd    &trans  &trans  &trans
             >;
         };
 
@@ -1171,10 +1171,10 @@
         layer_tildeshifts {
             label = "TILDESHIFTS";
             bindings = <
-        &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LSHFT  &trans    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LALT  &trans    &trans  &trans  &trans
             >;
         };
 
