@@ -41,6 +41,9 @@
 #define TILDESHIFTENNE 16
 #define TILDESHIFTEXC 17
 #define TILDESHIFTQUES 18
+#define TILDESHIFTR 19
+#define TILDESHIFTS 20
+#define TILDESHIFTT 21
 #define THUMB_HOLDING_TIME 220 // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds) a thumb key to activate a layer.  Shorter holds are treated as taps.
 #define THUMB_HOLDING_TIME_SHORT 150
 #define THUMB_REPEAT_DECAY_BASE 50 // "tap then hold" for key auto-repeat
@@ -1063,8 +1066,40 @@
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &kp QUESTION  &trans
-                        &trans  &trans  &mc_quesd    &trans  &trans  &trans
+                        &trans  &kp LALT  &mc_quesd    &trans  &trans  &trans
             >;
         };
+
+                layer_tildeshiftr {
+            label = "TILDESHIFTR";
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LCTRL  &trans       &trans  &trans  &trans
+            >;
+        };
+
+        layer_tildeshifts {
+            label = "TILDESHIFTS";
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &trans       &trans  &trans  &trans
+            >;
+        };
+
+        layer_tildeshiftt {
+            label = "TILDESHIFTT";
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LGUI  &trans       &trans  &trans  &trans
+            >;
+        };
+
+
     };
 };
