@@ -46,7 +46,7 @@
 #define TILDESHIFTT 21
 #define THUMB_HOLDING_TIME 220 // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds) a thumb key to activate a layer.  Shorter holds are treated as taps.
 #define THUMB_HOLDING_TIME_SHORT 150
-#define THUMB_REPEAT_DECAY_BASE 50 // "tap then hold" for key auto-repeat
+#define THUMB_REPEAT_DECAY_BASE 0 // "tap then hold" for key auto-repeat
 #define THUMB_REPEAT_DECAY 190 // "tap then hold" for key auto-repeat
 #define SPACE_HOLDING_TYPE "balanced"
 
