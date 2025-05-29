@@ -45,6 +45,7 @@
 #define TILDESHIFTS 20
 #define TILDESHIFTT 21
 #define DACCTHUMB 22
+#define NUMBERS 23
 
 #define THUMB_HOLDING_TIME 220 // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds) a thumb key to activate a layer.  Shorter holds are treated as taps.
 #define THUMB_HOLDING_TIME_SHORT 150
@@ -980,7 +981,16 @@
             label = "TD_NAV_ESC";
             #binding-cells = <0>;
             tapping-term-ms = <500>;
-            bindings = <&mo 4>, <&kp ESC>;
+            bindings = <&td_nav_num>, <&kp ESC>;
+        };
+
+        td_nav_num: td_nav_num {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&tog_on>;
         };
 
         hb_daccthumb: hb_daccthumb {
@@ -991,6 +1001,20 @@
             flavor = "balanced";
             tapping-term-ms = <250>;
             hold-trigger-key-positions = < LEFT_THUMB_KEYS RIGHT_THUMB_KEYS >;
+        };
+
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <NUMBERS>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+        };
+
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <NUMBERS>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
         };
     };
 
@@ -1226,6 +1250,17 @@
                         &kp LC(MINUS)     &kp LC(LS(MINUS))   &lrlMo LA(LS(H)) LA(LS(F12))      &trans  &trans  &trans
             >;
         };
+
+        layer_numbers {
+            label = "NUMBERS";
+            bindings = <
+                  &kp EXCL           &kp AT             &kp HASH                &kp DLLR                  &kp PRCNT                       &kp MINUS          &kp N7                    &kp N8                   &kp N9           &kp STAR
+                  &kp LSHFT          &kp LCTRL          &kp LALT                &kp LGUI                  &kp COMMA                       &kp DOT            &kp N4                    &kp N5                   &kp N6           &kp N0
+&lrlMo LALT LALT  &kp BSLH           &kp LBKT           &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp PLUS           &kp N1                    &kp N2                   &kp N3           &kp SLASH              &lrrMo LGUI LGUI
+                                                        &th_mo_kp_hp RAISE TAB  &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE    &space LCTRL SPACE  &tog_off  &th_kp_kp_hp LALT ENTER
+            >;
+        };
+
 
     };
 };
