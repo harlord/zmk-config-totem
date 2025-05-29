@@ -990,7 +990,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <250>;
-            hold-trigger-key-positions = < LEFT_THUMB_KEYS RIGHT_THUMB_KEYS >
+            hold-trigger-key-positions = < LEFT_THUMB_KEYS RIGHT_THUMB_KEYS >;
         };
     };
 
