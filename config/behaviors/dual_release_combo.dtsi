@@ -5,7 +5,7 @@
             /* Two cell parameters: <slow_binding quick_binding> */
             #binding-cells = <2>;
             label = "DUAL_RELEASE_COMBO";
-            bindings = <&kp A>, <&kp LEFT>;
+            bindings = <&mo>, <&kp>;
             key-positions = <27 35>;
         };
     };
