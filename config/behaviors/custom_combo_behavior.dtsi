@@ -9,7 +9,9 @@
         custom_combo: custom_combo {
             compatible = "zmk,behavior-custom-combo";
             #binding-cells = <2>;
-            bindings = <&kp>, <&mo>;
+            bindings = <&mo>, <&kp>;
+            quick-release-binding = <1>;  // The second binding (index 1) releases immediately
+            hold-release-binding = <0>;   // The first binding (index 0) stays active until all keys are released
             label = "CUSTOM_COMBO";
         };
     };
