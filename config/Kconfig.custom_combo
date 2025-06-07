@@ -1,0 +1,16 @@
+menuconfig ZMK_CUSTOM_COMBO
+    bool "Custom Combo Support"
+    default y
+    select ZMK_BEHAVIOR
+    help
+      Enable support for custom combo behavior with mixed release timing.
+
+if ZMK_CUSTOM_COMBO
+
+config ZMK_CUSTOM_COMBO_MAX_KEYS
+    int "Maximum number of keys in a custom combo"
+    default 10
+    help
+      Maximum number of keys that can be pressed simultaneously in a custom combo.
+
+endif # ZMK_CUSTOM_COMBO 
