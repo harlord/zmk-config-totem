@@ -15,15 +15,14 @@
          * - Second binding is held until all keys are released
          */
         custom_combo: custom_combo {
-            compatible = "zmk,behavior-custom-combo";
+            compatible = "zmk,behavior-combo";
             #binding-cells = <2>;
             bindings = <&kp>, <&mo>;
             timeout-ms = <2000>;
             require-prior-idle-ms = <150>;
             layers = <0x0 0x18>; // BASE (0) and DRAGTHUMB (24)
             label = "CUSTOM_COMBO";
-            quick-release;
-            hold-release;
+            slow-release;
         };
     };
 }; 
