@@ -1,0 +1,5 @@
+name: dual_release_combo
+build:
+  cmake: .
+  dts:
+    bindings: dts/bindings 
