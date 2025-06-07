@@ -11,6 +11,8 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 // git add . && git commit -m 'adjust time thumbhold' && git push
 
+#include "behaviors/dual_release_combo.dtsi"
+
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
 
@@ -378,19 +380,11 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             timeout-ms = <2000>;
         };
 
-        c-left-nav-inv-s-quick {
-            bindings = <&kp LEFT>;
+        c-left-nav-inv-s {
+            bindings = <&dual_release_combo &mo LOWER &kp LEFT>;
             key-positions = <27 35>;
             layers = <BASE DRAGTHUMB>;
             timeout-ms = <2000>;
-        };
-
-        c-left-nav-inv-s-hold {
-            bindings = <&mo LOWER>;
-            key-positions = <27 35>;
-            layers = <BASE DRAGTHUMB>;
-            timeout-ms = <2000>;
-            slow-release;
         };
     };
 
