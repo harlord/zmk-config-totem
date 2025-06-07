@@ -392,7 +392,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             #binding-cells = <2>;
             bindings = <&kp LEFT &mo LOWER>;
             key-positions = <27 35>;
-            layers = <BASE DRAGTHUMB>; // BASE and DRAGTHUMB
+            layers = <0x0 0x18>; // BASE (0) and DRAGTHUMB (24)
             timeout-ms = <2000>;
             require-prior-idle-ms = <150>;
         };
