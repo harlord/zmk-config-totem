@@ -369,7 +369,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         };
 
          c-right-nav-inv {
-            bindings = <&kp RIGTH>;
+            bindings = <&kp RIGHT>;
             key-positions = <29 35>;
             layers = <BASE DRAGTHUMB>;
             timeout-ms = <2000>;
