@@ -1,0 +1,16 @@
+/*
+ * Copyright (c) 2024 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/ {
+    behaviors {
+        custom_combo: custom_combo {
+            compatible = "zmk,behavior-custom-combo";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&mo>;
+            label = "CUSTOM_COMBO";
+        };
+    };
+}; 
