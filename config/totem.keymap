@@ -380,13 +380,13 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         };
 
         c-left-nav-inv-s {
-            compatible = "zmk,behavior-custom-combo";
-            #binding-cells = <2>;
+            compatible = "zmk,behavior-combo";
             bindings = <&mo LOWER>, <&kp LEFT>;
             key-positions = <27 35>;
             layers = <BASE DRAGTHUMB>;
             timeout-ms = <2000>;
             require-prior-idle-ms = <150>;
+            slow-release;
         };
     };
 
