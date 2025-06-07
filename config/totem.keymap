@@ -382,7 +382,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         c-left-nav-inv-s {
             compatible = "zmk,behavior-custom-combo";
             #binding-cells = <2>;
-            bindings = <&custom_combo LEFT LOWER>;
+            bindings = <&kp LEFT>, <&mo LOWER>;
             key-positions = <27 35>;
             layers = <0x0 0x18>; // BASE (0) and DRAGTHUMB (24)
             timeout-ms = <2000>;

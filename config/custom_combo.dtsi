@@ -22,6 +22,8 @@
             require-prior-idle-ms = <150>;
             layers = <0x0 0x18>; // BASE (0) and DRAGTHUMB (24)
             label = "CUSTOM_COMBO";
+            quick-release;
+            hold-release;
         };
     };
 }; 
