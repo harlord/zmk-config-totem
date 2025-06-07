@@ -17,10 +17,9 @@
 #include <zmk/keymap.h>
 
 struct custom_combo_config {
-    uint32_t quick_release_binding;
-    uint32_t hold_release_binding;
-    struct zmk_behavior_binding quick_binding;
-    struct zmk_behavior_binding hold_binding;
+    struct zmk_behavior_binding binding;
+    uint32_t quick_release;
+    uint32_t slow_release;
 };
 
 struct custom_combo_state {
@@ -41,8 +40,7 @@ static int on_custom_combo_binding_pressed(struct zmk_behavior_binding *binding,
 
     if (!state->active) {
         // Activate both bindings on first key press
-        zmk_behavior_keymap_binding_pressed(&config->hold_binding, event);
-        zmk_behavior_keymap_binding_pressed(&config->quick_binding, event);
+        zmk_behavior_keymap_binding_pressed(&config->binding, event);
         state->active = true;
     }
     state->pressed_count++;
@@ -59,13 +57,12 @@ static int on_custom_combo_binding_released(struct zmk_behavior_binding *binding
     
     if (state->pressed_count == 0) {
         // Release both bindings when all keys are released
-        zmk_behavior_keymap_binding_released(&config->hold_binding, event);
-        zmk_behavior_keymap_binding_released(&config->quick_binding, event);
+        zmk_behavior_keymap_binding_released(&config->binding, event);
         state->active = false;
         state->first_key_released = false;
-    } else if (!state->first_key_released) {
+    } else if (!state->first_key_released && config->quick_release) {
         // Release only the quick binding when first key is released
-        zmk_behavior_keymap_binding_released(&config->quick_binding, event);
+        zmk_behavior_keymap_binding_released(&config->binding, event);
         state->first_key_released = true;
     }
 
@@ -79,16 +76,12 @@ static const struct behavior_driver_api custom_combo_driver_api = {
 
 #define CUSTOM_COMBO_INST(n) \
     static struct custom_combo_config custom_combo_config_##n = { \
-        .quick_release_binding = 1, \
-        .hold_release_binding = 0, \
-        .quick_binding = { \
-            .behavior_dev = DT_INST_PROP(n, quick_binding), \
-            .param1 = DT_INST_PROP(n, quick_param1), \
+        .binding = { \
+            .behavior_dev = DT_INST_PROP(n, binding), \
+            .param1 = DT_INST_PROP(n, param1), \
         }, \
-        .hold_binding = { \
-            .behavior_dev = DT_INST_PROP(n, hold_binding), \
-            .param1 = DT_INST_PROP(n, hold_param1), \
-        }, \
+        .quick_release = DT_INST_PROP(n, quick_release), \
+        .slow_release = DT_INST_PROP(n, slow_release), \
     }; \
     static struct custom_combo_state custom_combo_state_##n = { \
         .active = false, \

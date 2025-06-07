@@ -379,14 +379,22 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             timeout-ms = <2000>;
         };
 
-        c-left-nav-inv-s {
-            compatible = "zmk,behavior-custom-combo";
-            #binding-cells = <2>;
-            bindings = <&mo LOWER>, <&kp LEFT>;
-            key-positions = <33 34>;
-            layers = <0>;
-            timeout-ms = <50>;
+        c-left-nav-inv-s-quick {
+            bindings = <&kp LEFT>;
+            key-positions = <27 35>;
+            layers = <BASE DRAGTHUMB>;
+            timeout-ms = <2000>;
             require-prior-idle-ms = <100>;
+            quick-release;
+        };
+
+        c-left-nav-inv-s-hold {
+            bindings = <&mo LOWER>;
+            key-positions = <27 35>;
+            layers = <BASE DRAGTHUMB>;
+            timeout-ms = <2000>;
+            require-prior-idle-ms = <100>;
+            slow-release;
         };
     };
 
