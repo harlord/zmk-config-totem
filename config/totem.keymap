@@ -363,21 +363,21 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
 
         c-down-nav-inv {
             bindings = <&kp DOWN>;
-            key-positions = <17 35>;
+            key-positions = <28 35>;
+            layers = <BASE DRAGTHUMB>;
+            timeout-ms = <2000>;
+        };
+
+         c-right-nav-inv {
+            bindings = <&kp RIGTH>;
+            key-positions = <29 35>;
             layers = <BASE DRAGTHUMB>;
             timeout-ms = <2000>;
         };
 
         c-left-nav-inv {
             bindings = <&kp LEFT>;
-            key-positions = <17 35>;
-            layers = <BASE DRAGTHUMB>;
-            timeout-ms = <2000>;
-        };
-
-        c-right-nav-inv {
-            bindings = <&kp RIGTH>;
-            key-positions = <17 35>;
+            key-positions = <27 35>;
             layers = <BASE DRAGTHUMB>;
             timeout-ms = <2000>;
         };
