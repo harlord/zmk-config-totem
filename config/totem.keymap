@@ -383,8 +383,6 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             key-positions = <27 35>;
             layers = <BASE DRAGTHUMB>;
             timeout-ms = <2000>;
-            require-prior-idle-ms = <100>;
-            quick-release;
         };
 
         c-left-nav-inv-s-hold {
@@ -392,7 +390,6 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             key-positions = <27 35>;
             layers = <BASE DRAGTHUMB>;
             timeout-ms = <2000>;
-            require-prior-idle-ms = <100>;
             slow-release;
         };
     };
