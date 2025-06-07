@@ -9,10 +9,9 @@
         custom_combo: custom_combo {
             compatible = "zmk,behavior-custom-combo";
             #binding-cells = <2>;
-            quick-binding = <&kp>;
-            quick-param1 = <LEFT>;
-            hold-binding = <&mo>;
-            hold-param1 = <LOWER>;
+            bindings = <&mo>, <&kp>;
+            quick-release-binding = <1>;
+            hold-release-binding = <0>;
             label = "CUSTOM_COMBO";
         };
     };
