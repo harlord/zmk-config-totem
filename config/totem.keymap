@@ -355,28 +355,28 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
 
 
         c-up-nav-inv {
-            bindings = <&kd UP>;
+            bindings = <&kp UP>;
             key-positions = <17 35>;
             layers = <BASE DRAGTHUMB>;
             timeout-ms = <2000>;
         };
 
         c-down-nav-inv {
-            bindings = <&kd DOWN>;
+            bindings = <&kp DOWN>;
             key-positions = <17 35>;
             layers = <BASE DRAGTHUMB>;
             timeout-ms = <2000>;
         };
 
         c-left-nav-inv {
-            bindings = <&kd LEFT>;
+            bindings = <&kp LEFT>;
             key-positions = <17 35>;
             layers = <BASE DRAGTHUMB>;
             timeout-ms = <2000>;
         };
 
         c-right-nav-inv {
-            bindings = <&kd RIGTH>;
+            bindings = <&kp RIGTH>;
             key-positions = <17 35>;
             layers = <BASE DRAGTHUMB>;
             timeout-ms = <2000>;
