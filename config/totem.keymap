@@ -378,13 +378,14 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             timeout-ms = <2000>;
         };
 
-        c-left-nav-inv {
-            bindings = <&kp LEFT>;
-            key-positions = <27 35>;
-            layers = <BASE DRAGTHUMB>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <2000>;
-        };
+        //c-left-nav-inv {
+        //    bindings = <&kp LEFT>;
+        //    key-positions = <27 35>;
+        //    layers = <BASE DRAGTHUMB>;
+        //    require-prior-idle-ms = <150>;
+        //    timeout-ms = <2000>;
+        //};
+        
         c-left-nav-inv-s {
             bindings = <&mo LOWER>;
             key-positions = <27 35>;
@@ -814,7 +815,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&mo DRAGTHUMB &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&mo fbg &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER &mo DRAGTHUMB>;
