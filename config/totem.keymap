@@ -69,7 +69,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
     si se unde up+SPACE, se presiona kp UP y se activa NAVOVERR
         bh con triggers solo para 
     si se deja presionando up+SPACE, se mantiene presionado kp UP y se deja activado NAVOVERR
-    se libera up y se deja presionado SPACE, se release kp UP y se queda activado NAVOVERR
+    si se libera up y se deja presionado SPACE, se release kp UP y se queda activado NAVOVERR
         si sepresiona cualquier otra NAVOVERR, se acciona el usual key definido en ese layer
     si de libera up y SPACE, se release kp UP y se suelta el mo NAVOVERR para que se quede activo BASE
 
@@ -358,6 +358,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             bindings = <&kp UP>;
             key-positions = <17 35>;
             layers = <BASE DRAGTHUMB>;
+            require-prior-idle-ms = <150>;
             timeout-ms = <2000>;
         };
 
@@ -365,13 +366,15 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             bindings = <&kp DOWN>;
             key-positions = <28 35>;
             layers = <BASE DRAGTHUMB>;
+            require-prior-idle-ms = <150>;
             timeout-ms = <2000>;
         };
 
-         c-right-nav-inv {
+        c-right-nav-inv {
             bindings = <&kp RIGHT>;
             key-positions = <29 35>;
             layers = <BASE DRAGTHUMB>;
+            require-prior-idle-ms = <150>;
             timeout-ms = <2000>;
         };
 
@@ -379,6 +382,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             bindings = <&kp LEFT>;
             key-positions = <27 35>;
             layers = <BASE DRAGTHUMB>;
+            require-prior-idle-ms = <150>;
             timeout-ms = <2000>;
         };
     };
@@ -802,10 +806,10 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&macro_param_1to1 &mo DRAGTHUMB &macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&mo DRAGTHUMB &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&macro_param_2to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &mo DRAGTHUMB>;
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &mo DRAGTHUMB>;
         };
     };
 
