@@ -11,6 +11,7 @@ include: base.yaml
 
 properties:
   "#binding-cells":
+    type: int
     const: 0
     description: |
       This behaviour is referenced without additional cells.
