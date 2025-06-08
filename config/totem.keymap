@@ -384,7 +384,6 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         c-left-nav-inv-s-debug {
             bindings      = <&dual_rl_debug>;
             key-positions = <27 35>;
-            slow-release;
             layers        = <BASE DRAGTHUMB>;
             timeout-ms    = <2000>;
         };
