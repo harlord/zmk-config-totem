@@ -381,15 +381,6 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             timeout-ms = <2000>;
         };
 
-
-/* DEBUG - are positions 27 + 35 correct? */
-        combo_debug_27_35 {
-            timeout-ms   = <2000>;
-            bindings     = <&kp X &kp Y>;   /* first X then Y */
-            key-positions = <27 35>;
-            layers       = <BASE DRAGTHUMB>;          /* or <BASE NAVOVERR> etc. */
-        };
-
         c-left-nav-inv-s-debug {
             bindings      = <&dual_rl_debug>;
             key-positions = <27 35>;
