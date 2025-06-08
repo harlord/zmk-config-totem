@@ -11,9 +11,8 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 // git add . && git commit -m 'adjust time thumbhold' && git push
 
-#include "behaviors/dual_release_combo.dtsi"
-
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
+
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
 
 /* On demand includes */
@@ -49,6 +48,8 @@
 #define DACCTHUMB 22
 #define NUMBERS 23
 #define DRAGTHUMB 24
+
+#include "behaviors/dual_release_combo.dtsi"
 
 //RAISE
 //NAVOVERR
