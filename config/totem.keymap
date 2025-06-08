@@ -390,12 +390,12 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             layers       = <BASE DRAGTHUMB>;          /* or <BASE NAVOVERR> etc. */
         };
 
-        //c-left-nav-inv-s {
-        //    bindings = <&dual_release_combo>;
-        //    key-positions = <27 35>;
-        //    layers = <BASE DRAGTHUMB>;
-        //    timeout-ms = <2000>;
-        //};
+        c-left-nav-inv-s-debug {
+            bindings      = <&dual_rl_debug>;
+            key-positions = <27 35>;
+            layers        = <BASE DRAGTHUMB>;
+            timeout-ms    = <2000>;
+        };
     };
 
     macros {
@@ -1098,8 +1098,15 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             flavor = "tap-preferred";
             bindings = <&mo>, <&tog_on>;
         };
-    };
 
+        dual_rl_debug: dual_release_combo {
+            compatible      = "zmk,behavior-dual-release-combo";
+            #binding-cells  = <0>;
+            /* slow = "X", quick = "Y"  */
+            bindings        = <&kp X>, <&kp Y>;
+            key-positions   = <27 35>;   /* same positions as the combo */
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
