@@ -21,3 +21,8 @@ properties:
     required: true
     description: |
       Two phandles describing: 0 – slow-release binding, 1 – quick-release binding.
+
+  key-positions:
+    type: array
+    required: true
+    description: List of key position numbers that form the combo.
