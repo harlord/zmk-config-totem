@@ -3,9 +3,9 @@
         dual_release_combo: dual_release_combo {
             compatible = "zmk,behavior-dual-release-combo";
             /* Two cell parameters: <slow_binding quick_binding> */
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             label = "DUAL_RELEASE_COMBO";
-            bindings = <&mo>, <&kp>;
+            bindings = <&mo LOWER>, <&kp LEFT>;
             key-positions = <27 35>;
         };
     };

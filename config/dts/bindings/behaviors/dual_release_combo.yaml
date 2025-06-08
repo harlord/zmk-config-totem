@@ -1,7 +1,5 @@
 # SPDX-License-Identifier: MIT
 ---
-title: Dual Release Combo Behavior
-
 description: |
   Custom ZMK behavior that presses two bindings when its combo fires.
   The *quick* binding is released on the first key-up of the combo while
@@ -13,8 +11,6 @@ include: base.yaml
 
 properties:
   "#binding-cells":
-    const: 2
+    const: 0
     description: |
-      Number of cells in a binding.  Must be **2** where:
-        0 – slow-release binding
-        1 – quick-release binding 
+      This behaviour is referenced without additional cells.
