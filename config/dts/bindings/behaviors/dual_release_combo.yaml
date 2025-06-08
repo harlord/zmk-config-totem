@@ -15,3 +15,10 @@ properties:
     const: 0
     description: |
       This behaviour is referenced without additional cells.
+
+  bindings:
+    type: phandles
+    required: true
+    description: |
+      Two phandles describing: 0 – slow-release binding, 1 – quick-release binding.
+    size: 2
