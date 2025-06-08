@@ -17,8 +17,7 @@ properties:
       This behaviour is referenced without additional cells.
 
   bindings:
-    type: phandles
+    type: phandle-array
     required: true
     description: |
       Two phandles describing: 0 – slow-release binding, 1 – quick-release binding.
-    size: 2
