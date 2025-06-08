@@ -96,6 +96,7 @@ static int drc_event_listener(const struct zmk_event_header *eh) {
                     };                                                                    \
                     zmk_behavior_keymap_binding_released(&cfg->quick_binding, dummy);      \
                     state->quick_released = true;                                         \
+                    LOG_INF("DualRel: release quick");                                          \
                 }                                                                         \
                 if (state->pressed_left > 0) {                                            \
                     state->pressed_left--;                                                \
@@ -106,6 +107,7 @@ static int drc_event_listener(const struct zmk_event_header *eh) {
                         };                                                                \
                         zmk_behavior_keymap_binding_released(&cfg->slow_binding, dummy);   \
                         state->active = false;                                            \
+                        LOG_INF("DualRel: release slow");                                          \
                     }                                                                     \
                 }                                                                         \
             }                                                                             \
