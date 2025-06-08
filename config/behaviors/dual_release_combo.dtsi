@@ -1,6 +1,3 @@
-#include <zephyr/logging/log.h>
-LOG_MODULE_REGISTER(dual_rl_combo, CONFIG_ZMK_LOG_LEVEL);
-
 / {
     behaviors {
         dual_release_combo: dual_release_combo {
