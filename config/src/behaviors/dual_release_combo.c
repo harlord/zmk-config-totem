@@ -34,7 +34,6 @@ struct drc_state {
 
 static int drc_binding_pressed(struct zmk_behavior_binding *binding,
                                struct zmk_behavior_binding_event event) {
-    LOG_INF("combo-pressed: inst=%p", binding->behavior_dev);
     const struct device *dev = device_get_binding(binding->behavior_dev);
     struct drc_state *state = dev->data;
     const struct drc_config *cfg = dev->config;
@@ -90,8 +89,7 @@ static int drc_event_listener(const struct zmk_event_header *eh) {
             ;                                                                             \
         } else {                                                                          \
             if (ev->state == false) { /* released */                                      \
-                if (!state->quick_released) {   
-                    LOG_DBG("release quick");       /* first key-up */                                          \
+                if (!state->quick_released) {                                             \
                     /* Release quick binding now */                                       \
                     struct zmk_behavior_binding_event dummy = {                           \
                         .timestamp = ev->timestamp,                                       \
@@ -99,8 +97,7 @@ static int drc_event_listener(const struct zmk_event_header *eh) {
                     zmk_behavior_keymap_binding_released(&cfg->quick_binding, dummy);      \
                     state->quick_released = true;                                         \
                 }                                                                         \
-                if (state->pressed_left > 0) {   
-                    LOG_DBG("release slow");        /* last key-up  */                                         \
+                if (state->pressed_left > 0) {                                            \
                     state->pressed_left--;                                                \
                     if (state->pressed_left == 0) {                                       \
                         /* All keys released – release slow binding */                    \
