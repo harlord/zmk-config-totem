@@ -134,17 +134,15 @@ static const struct behavior_driver_api drc_driver_api = {
     static const int32_t keypos_##n[] = DT_INST_PROP(n, key_positions);                \
     static const struct drc_config drc_cfg_##n = {                                     \
         .slow_binding = {                                                              \
-            .behavior_dev = DT_PHA_BY_IDX(DT_DRV_INST(n), bindings, 0, phandle),        \
-            .param1 = DT_PROP_BY_IDX(DT_PHANDLE_BY_IDX(DT_DRV_INST(n), bindings, 0), reg, 0), \
+            .behavior_dev = DT_INST_PROP_BY_IDX(n, bindings, 0, phandle), \
+            .param1 = DT_INST_PROP_BY_IDX(n, bindings, 0, cells), \
         },                                                                             \
         .quick_binding = {                                                             \
-            .behavior_dev = DT_PHA_BY_IDX(DT_DRV_INST(n), bindings, 1, phandle),        \
-            .param1 = DT_PROP_BY_IDX(DT_PHANDLE_BY_IDX(DT_DRV_INST(n), bindings, 1), reg, 0), \
+            .behavior_dev = DT_INST_PROP_BY_IDX(n, bindings, 1, phandle), \
+            .param1 = DT_INST_PROP_BY_IDX(n, bindings, 1, cells), \
         },                                                                             \
         .key_positions = keypos_##n,                                                   \
         .num_positions = DT_INST_PROP_LEN(n, key_positions),                           \
     };                                                                                 \
     DEVICE_DT_INST_DEFINE(n, NULL, NULL, &drc_state_##n, &drc_cfg_##n, APPLICATION,    \
-                          CONFIG_KERNEL_INIT_PRIORITY_DEFAULT, &drc_driver_api);
-
-DT_INST_FOREACH_STATUS_OKAY(DUAL_RELEASE_COMBO_INST) 
+                          CONFIG_KERNEL_INIT_PRIORITY_DEFAULT, &drc_driver_api); 
