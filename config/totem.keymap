@@ -400,7 +400,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
                 <&kp ESC>;
         };
 
-        gif: gif {
+        gif: gif {      
             label = "giphy";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
