@@ -136,12 +136,12 @@ static const struct behavior_driver_api drc_driver_api = {
     static const int32_t keypos_##n[] = DT_INST_PROP(n, key_positions);                \
     static const struct drc_config drc_cfg_##n = {                                     \
         .slow_binding = {                                                              \
-            .behavior_dev = DT_INST_PROP_BY_IDX(n, bindings, 0, phandle), \
-            .param1 = DT_INST_PROP_BY_IDX(n, bindings, 0, cells), \
+            .behavior_dev = DT_PHANDLE_BY_IDX(DT_DRV_INST(n), bindings, 0), \
+            .param1 = DT_PHA_BY_IDX(DT_DRV_INST(n), bindings, 0, param1), \
         },                                                                             \
         .quick_binding = {                                                             \
-            .behavior_dev = DT_INST_PROP_BY_IDX(n, bindings, 1, phandle), \
-            .param1 = DT_INST_PROP_BY_IDX(n, bindings, 1, cells), \
+            .behavior_dev = DT_PHANDLE_BY_IDX(DT_DRV_INST(n), bindings, 1), \
+            .param1 = DT_PHA_BY_IDX(DT_DRV_INST(n), bindings, 1, param1), \
         },                                                                             \
         .key_positions = keypos_##n,                                                   \
         .num_positions = DT_INST_PROP_LEN(n, key_positions),                           \
