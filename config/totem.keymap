@@ -48,6 +48,8 @@
 #define NUMBERS 23
 #define DRAGTHUMB 24
 
+#include "combos/drag-mod.dtsi"
+
 //RAISE
 //NAVOVERR
 //DRAGCOMMAND
@@ -259,93 +261,6 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
         COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
 
-        c-hr-thumb-ar {
-            bindings = <&kp LS(LCTRL)>;
-            key-positions = <33 10 11>;
-            layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
-            slow-release;
-            timeout-ms = <2000>;
-        };
-
-        c-hr-thumb-ars {
-            bindings = <&kp LS(LA(LCTRL))>;
-            key-positions = <33 10 11 12>;
-            layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
-            slow-release;
-            timeout-ms = <2000>;
-        };
-
-        c-hr-thumb-arst {
-            bindings = <&kp LS(LA(LG(LCTRL)))>;
-            key-positions = <33 10 11 12 13>;
-            layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
-            slow-release;
-            timeout-ms = <2000>;
-        };
-
-        c-hr-thumb-art {
-            bindings = <&kp LS(LC(LCMD))>;
-            key-positions = <33 10 11 13>;
-            layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
-            slow-release;
-            timeout-ms = <2000>;
-        };
-
-        c-hr-thumb-ast {
-            bindings = <&kp LS(LA(LCMD))>;
-            key-positions = <33 10 13 12>;
-            layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
-            slow-release;
-            timeout-ms = <2000>;
-        };
-
-        c-hr-thumb-rst {
-            bindings = <&kp LA(LC(LCMD))>;
-            key-positions = <33 13 12 11>;
-            layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
-            slow-release;
-            timeout-ms = <2000>;
-        };
-
-        c-hr-thumb-at {
-            bindings = <&kp LS(LCMD)>;
-            key-positions = <33 13 10>;
-            layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
-            slow-release;
-            timeout-ms = <2000>;
-        };
-
-        c-hr-thumb-st {
-            bindings = <&kp LA(LCMD)>;
-            key-positions = <33 12 13>;
-            layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
-            slow-release;
-            timeout-ms = <2000>;
-        };
-
-        c-hr-thumb-rs {
-            bindings = <&kp LC(LALT)>;
-            key-positions = <33 12 11>;
-            layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
-            slow-release;
-            timeout-ms = <2000>;
-        };
-
-        c-hr-thumb-rt {
-            bindings = <&kp LC(LCMD)>;
-            key-positions = <33 13 11>;
-            layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
-            slow-release;
-            timeout-ms = <2000>;
-        };
-
-        c-hr-thumb-as {
-            bindings = <&kp LS(LALT)>;
-            key-positions = <33 10 12>;
-            layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
-            slow-release;
-            timeout-ms = <2000>;
-        };
 
         /// NAVIGATION inverted
         //     0  1  2  3  4     5  6  7  8  9
