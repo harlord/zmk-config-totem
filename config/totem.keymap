@@ -58,7 +58,10 @@
 //
 //cmd+TAB<>RAISE  //shift+BKSPACE<>TILDES(with top DRAGTHUMB low Home Row Mod)          //ctrl+SPC<>NUMBERS(require-prior-idle-ms or NONE or FUNC)  //NAVOVERR+ENT<>alt
 //
-//cmd+TAB<>DRAGTHUMB(DIRECTACC only when DRAGTHUMB not activated)   //shift+BKSPACE<>RAISE         //ctrl+SPC<>TILDES   //NAVOVERR+ENT<>alt
+//cmd+TAB<>DRAGTHUMB(inverted LOWER only when DRAGTHUMB not activated)   //shift+BKSPACE<>RAISE         //ctrl+SPC<>TILDES   //NAVOVERR+ENT<>alt
+//
+//cmd+TAB<>DRAGTHUMB(inverted NUMBERS and DIRECTACC in low row only when DRAGTHUMB not activated)   //shift+BKSPACE<>RAISE         //Media Adj+SPC<>TILDES   //NAVOVERR(with top func)+ENT<>alt
+//
 //BKSPACE+SPC<>FUNC
 //BKSPACE+ENT<>NUMBERS
 //TAB+ENT<>Media Adj
@@ -90,6 +93,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
     #include "combos/combos.dtsi"
     #include "behaviors/behaviors.dtsi"
     #include "macros/macros.dtsi"
+    #include "settings.dtsi"
 
     keymap {
         compatible = "zmk,keymap";
@@ -325,5 +329,12 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             >;
         };
 
+    };
+
+    /* Example instance of the long-vs-quick combo helper. Adjust timing as desired. */
+    combo_long_quick_demo: combo_long_quick {
+        compatible = "zmk,combo-long-quick";
+        quick-ms = <60>;   /* ≤60 ms = QUICK */
+        long-ms  = <600>;  /* ≥600 ms = LONG  */
     };
 };

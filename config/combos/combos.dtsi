@@ -72,7 +72,7 @@
   
 
 combos {
-    compatible = "zmk,combos";
+    compatible = "zmk,combo_long_quick";
     // testgrave {
     //     bindings = <&kp GRAVE>;
     //     key-positions = <13 24>;
