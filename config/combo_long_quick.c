@@ -7,7 +7,6 @@
 #define DT_DRV_COMPAT zmk_combo_long_quick
 
 #include <zephyr/device.h>
-#include <zephyr/logging/log.h>
 #include <zephyr/sys/dlist.h>
 #include <zephyr/sys/util.h>
 #include <zephyr/kernel.h>
@@ -22,23 +21,6 @@
 #include <zmk/matrix.h>
 #include <zmk/keymap.h>
 #include <zmk/virtual_key_position.h>
-
-LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
-
-#if DT_HAS_COMPAT_STATUS_OKAY(DT_DRV_COMPAT)
-
-#if CONFIG_ZMK_COMBO_MAX_KEYS_PER_COMBO > 0
-
-#warning                                                                                           \
-    "CONFIG_ZMK_COMBO_MAX_KEYS_PER_COMBO is deprecated, and is auto-calculated from the devicetree now."
-
-#endif
-
-#if CONFIG_ZMK_COMBO_MAX_COMBOS_PER_KEY > 0
-
-#warning "CONFIG_ZMK_COMBO_MAX_COMBOS_PER_KEY is deprecated, and is auto-calculated."
-
-#endif
 
 #define COMBOS_KEYS_BYTE_ARRAY(node_id)                                                            \
     uint8_t _CONCAT(combo_prop_, node_id)[DT_PROP_LEN(node_id, key_positions)];
@@ -197,7 +179,7 @@ static int filter_candidates(int32_t position) {
         }
     }
 
-    LOG_DBG("combo matches after filter %d", matches);
+    //LOG_DBG("combo matches after filter %d", matches);
     return matches;
 }
 
@@ -242,9 +224,9 @@ static int filter_timed_out_candidates(int64_t timestamp) {
         }
     }
 
-    LOG_DBG(
-        "after filtering out timed out combo candidates: remaining_candidates=%d timestamp=%lld",
-        remaining_candidates, timestamp);
+    // LOG_DBG(
+    //     "after filtering out timed out combo candidates: remaining_candidates=%d timestamp=%lld",
+    //     remaining_candidates, timestamp);
 
     return remaining_candidates;
 }
@@ -266,11 +248,11 @@ static int release_pressed_keys() {
     for (int i = 0; i < count; i++) {
         struct zmk_position_state_changed_event *ev = &pressed_keys[i];
         if (i == 0) {
-            LOG_DBG("combo: releasing position event %d", ev->data.position);
+            //LOG_DBG("combo: releasing position event %d", ev->data.position);
             ZMK_EVENT_RELEASE(*ev);
         } else {
             // reprocess events (see tests/combo/fully-overlapping-combos-3 for why this is needed)
-            LOG_DBG("combo: reraising position event %d", ev->data.position);
+           // LOG_DBG("combo: reraising position event %d", ev->data.position);
             ZMK_EVENT_RAISE(*ev);
         }
     }
@@ -330,9 +312,9 @@ static struct active_combo *store_active_combo(int32_t combo_idx) {
             return &active_combos[i];
         }
     }
-    LOG_ERR("Unable to store combo; already %d active. Increase "
-            "CONFIG_ZMK_COMBO_MAX_PRESSED_COMBOS",
-            CONFIG_ZMK_COMBO_MAX_PRESSED_COMBOS);
+    // LOG_ERR("Unable to store combo; already %d active. Increase "
+    //         "CONFIG_ZMK_COMBO_MAX_PRESSED_COMBOS",
+    //         CONFIG_ZMK_COMBO_MAX_PRESSED_COMBOS);
     return NULL;
 }
 
@@ -430,7 +412,7 @@ static int position_state_down(const zmk_event_t *ev, struct zmk_position_state_
         num_candidates = filter_candidates(data->position);
     }
 
-    LOG_DBG("combo: capturing position event %d", data->position);
+    //LOG_DBG("combo: capturing position event %d", data->position);
     int ret = capture_pressed_key(data);
     update_timeout_task();
 
@@ -478,11 +460,11 @@ static void combo_timeout_handler(struct k_work *item) {
         return;
     }
     if (filter_timed_out_candidates(timeout_task_timeout_at) == 0) {
-        LOG_DBG("CLEANUP!");
+       // LOG_DBG("CLEANUP!");
         cleanup();
     }
 
-    LOG_DBG("ABOUT TO UPDATE IN TIMEOUT");
+   // LOG_DBG("ABOUT TO UPDATE IN TIMEOUT");
     update_timeout_task();
 }
 
@@ -526,7 +508,7 @@ static int combo_init(void) {
     }
 
     k_work_init_delayable(&timeout_task, combo_timeout_handler);
-    LOG_WRN("Have %d combos!", ARRAY_SIZE(combos));
+    //LOG_WRN("Have %d combos!", ARRAY_SIZE(combos));
     for (int i = 0; i < ARRAY_SIZE(combos); i++) {
         initialize_combo(i);
     }
@@ -534,5 +516,3 @@ static int combo_init(void) {
 }
 
 SYS_INIT(combo_init, APPLICATION, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
-
-#endif

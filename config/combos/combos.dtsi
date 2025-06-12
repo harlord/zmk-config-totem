@@ -71,7 +71,7 @@
   };
   
 
-combos {
+combo_long_quick {
     compatible = "zmk,combo_long_quick";
     // testgrave {
     //     bindings = <&kp GRAVE>;
