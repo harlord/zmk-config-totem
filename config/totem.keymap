@@ -22,6 +22,8 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#include "combos/combos_dragmod.dtsi"
+
 #define BASE 0
 #define LOWER  1
 #define RAISE  2
@@ -88,7 +90,6 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
 
 / {
     #include "combos/combos.dtsi"
-    #include "combos/combos_dragmod.dtsi"
     #include "behaviors/behaviors.dtsi"
     #include "macros/macros.dtsi"
 
