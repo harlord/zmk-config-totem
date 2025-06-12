@@ -1,6 +1,4 @@
- 
-combos {
-   compatible = "zmk,combos";
+&combos {
    c-hr-thumb-ar {
        bindings = <&kp LS(LCTRL)>;
        key-positions = <33 10 11>;
