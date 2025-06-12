@@ -86,12 +86,11 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
 #define THUMB_REPEAT_DECAY 190 // "tap then hold" for key auto-repeat
 #define SPACE_HOLDING_TYPE "balanced"   
 
-#include "combos/combos.dtsi"
-#include "combos/combos_dragmod.dtsi"
-#include "behaviors/behaviors.dtsi"
-#include "macros/macros.dtsi"
-
 / {
+    #include "combos/combos.dtsi"
+    #include "combos/combos_dragmod.dtsi"
+    #include "behaviors/behaviors.dtsi"
+    #include "macros/macros.dtsi"
 
     keymap {
         compatible = "zmk,keymap";
