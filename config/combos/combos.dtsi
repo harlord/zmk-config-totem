@@ -71,8 +71,8 @@
   };
   
 
-combo_long_quick {
-    compatible = "zmk,combo_long_quick";
+combos {
+    compatible = "zmk,combos";
     // testgrave {
     //     bindings = <&kp GRAVE>;
     //     key-positions = <13 24>;
