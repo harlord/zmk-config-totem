@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: harlord
-      url-base: https://github.com/harlord
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
   projects:
     - name: zmk
-      remote: harlord
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
   self:
