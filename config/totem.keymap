@@ -191,7 +191,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans       &mc_tsd A  &trans  &trans
+                        &trans  &trans  &trans       &trans  &mc_tsd A  &trans
             >;
         };
 
@@ -201,7 +201,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans      &mc_tsd E  &trans  &trans
+                        &trans  &trans  &trans      &trans  &mc_tsd E  &trans
             >;
         };
 
@@ -211,7 +211,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans      &mc_tsd I  &trans  &trans
+                        &trans  &trans  &trans      &trans  &mc_tsd I  &trans
             >;
         };
 
@@ -221,7 +221,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans       &mc_tsd O  &trans  &trans
+                        &trans  &trans  &trans       &trans  &mc_tsd O  &trans
             >;
         };
 
@@ -231,7 +231,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans       &mc_tsd U  &trans  &trans
+                        &trans  &trans  &trans       &trans  &mc_tsd U  &trans
             >;
         };
 
@@ -241,17 +241,17 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans       &mc_ennesd N  &trans  &trans
+                        &trans  &trans  &trans       &trans  &mc_ennesd N  &trans
             >;
         };
 
         layer_tildeshiftques {
             label = "TILDESHIFTQUES";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans       &trans     &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans       &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans     &trans  &trans  &trans  &kp QUESTION  &trans
-                        &trans  &trans  &trans       &mc_quesd  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &kp QUESTION  &trans
+                        &trans  &trans  &trans       &trans  &mc_quesd  &trans
             >;
         };
 
