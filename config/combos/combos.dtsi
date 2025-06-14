@@ -52,6 +52,14 @@
     key-positions = <KEYPOS 34>; \
     layers = <BASE>; \
   };
+
+#define kcl(BINDINGS, KEYPOS) \
+  combo_##KEYPOS { \
+    timeout-ms = <200>; \
+    bindings = <&km BINDINGS LOWER>; \
+    key-positions = <KEYPOS 34>; \
+    layers = <BASE>; \
+  };
   
 
 combos {
@@ -268,7 +276,8 @@ combos {
    kcr(BSLH, 21)  kcr(LBKT, 22)  kcr(RBKT, 23)  kcr(GRAVE, 24)  kcr(MINUS, 25)      kcr(EQUAL, 26)  kcr(SEMI, 27)   kcr(COMMA, 28)  kcr(DOT, 29)  kcr(SLASH, 30)              
 
    // LOWER
- &kp N1     &kp N2     &kp N3                  &kp N4                    &kp N5                          &kp N6              &kp N7                     &kp N8                    &kp N9     &kp N0
- &kp LSHFT  &kp LCTRL  &kp LALT                &kp LGUI                  &kp UNDER                       &kp PLUS            &kp RGUI                   &kp UP                    &kp RCTRL  &kp RSHFT
- &kp BSLH   &kp LBKT   &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp EQUAL           &kp LEFT                   &kp DOWN                  &kp RIGHT  &lrrMo RALT SLASH  &lrrMo LGUI LGUI
+   kcl(N1, 0)     kcl(N2, 1)     kcl(N3, 2)     kcl(N4, 3)      kcl(N5, 4)          kcl(N6, 5)      kcl(N7, 6)     kcl(N8, 7)     kcl(N9, 8)      kcl(N0, 9)
+   kcl(BSLH, 21)  kcl(LBKT, 22)  kcl(RBKT, 23)  kcl(GRAVE, 24)  kcl(MINUS, 25)      kcl(EQUAL, 26)  kcl(LEFT, 27)  kcl(DOWN, 28)  kcl(RIGHT, 29)  kcl(SLASH, 30)
+
+
 };
