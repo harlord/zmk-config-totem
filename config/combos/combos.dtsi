@@ -50,6 +50,7 @@
     timeout-ms = <2000>; \
     bindings = <&kmr BINDINGS>; \
     key-positions = <KEYPOS 34>; \
+    slow-release; \
     layers = <BASE>; \
   };
 
@@ -58,6 +59,7 @@
     timeout-ms = <2000>; \
     bindings = <&km BINDINGS LOWER>; \
     key-positions = <KEYPOS 33>; \
+    slow-release; \
     layers = <BASE>; \
   };
   
