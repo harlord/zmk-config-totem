@@ -62,11 +62,12 @@
     key-positions = <KEYPOS>; \
     layers = <ADJ>; \
   };
-#define COMBOKC(NAME, BINDINGS, KEYPOS) \
-  combo_##NAME { \
+
+#define COMBOKC(BINDINGS, KEYPOS) \
+  combo_##BINDINGS { \
     timeout-ms = <1000>; \
-    bindings = <BINDINGS>; \
-    key-positions = <KEYPOS>; \
+    bindings = <&kmr BINDINGS>; \
+    key-positions = <KEYPOS 34>; \
     layers = <TILDESHIFT>; \
   };
   
@@ -279,7 +280,7 @@ combos {
     //        32 33 34         35 36 37
 
    /////////////////////// RAISE
-   //COMBOKC(RAISE0Q, &km RAISE EXCL, 0 34)
+   COMBOKC(EXCL, 0)
    //COMBOKC(RAISE1W, &km RAISE AT, 1 34)
    //COMBOKC(RAISE2F, &km RAISE HASH, 2 34)
    //COMBOKC(RAISE3P, &km RAISE DLLR, 3 34)
