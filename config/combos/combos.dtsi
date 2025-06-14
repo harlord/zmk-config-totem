@@ -48,7 +48,7 @@
 #define kcr(BINDINGS, KEYPOS) \
   combo_raise_##KEYPOS { \
     timeout-ms = <2000>; \
-    bindings = <&kmr BINDINGS>; \
+    bindings = <&km BINDINGS RAISE>; \
     key-positions = <KEYPOS 34>; \
     slow-release; \
     layers = <BASE>; \
