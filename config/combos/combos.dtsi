@@ -62,7 +62,7 @@
     key-positions = <KEYPOS>; \
     layers = <ADJ>; \
   };
-#define kc(NAME, BINDINGS, KEYPOS) \
+#define COMBOKC(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
     timeout-ms = <1000>; \
     bindings = <BINDINGS>; \
@@ -279,29 +279,37 @@ combos {
     //        32 33 34         35 36 37
 
    /////////////////////// RAISE
-   kc(RAISE0Q, &km RAISE EXCL, 0 34)
-   kc(RAISE1W, &km RAISE AT, 1 34)
-   kc(RAISE2F, &km RAISE HASH, 2 34)
-   kc(RAISE3P, &km RAISE DLLR, 3 34)
-   kc(RAISE4B, &km RAISE PRCNT, 4 34)
-   kc(RAISE5J, &km RAISE CARET, 5 34)
-   kc(RAISE6L, &km RAISE AMPS, 6 34)
-   kc(RAISE7U, &km RAISE STAR, 7 34)
-   kc(RAISE8Y, &km RAISE LPAR, 8 34)
-   kc(RAISE9SQT, &km RAISE RPAR, 9 34)
+   //COMBOKC(RAISE0Q, &km RAISE EXCL, 0 34)
+   //COMBOKC(RAISE1W, &km RAISE AT, 1 34)
+   //COMBOKC(RAISE2F, &km RAISE HASH, 2 34)
+   //COMBOKC(RAISE3P, &km RAISE DLLR, 3 34)
+   //COMBOKC(RAISE4B, &km RAISE PRCNT, 4 34)
+   //COMBOKC(RAISE5J, &km RAISE CARET, 5 34)
+   //COMBOKC(RAISE6L, &km RAISE AMPS, 6 34)
+   //COMBOKC(RAISE7U, &km RAISE STAR, 7 34)
+   //COMBOKC(RAISE8Y, &km RAISE LPAR, 8 34)
+   //COMBOKC(RAISE9SQT, &km RAISE RPAR, 9 34)
    //
-   kc(RAISE10A, &km RAISE PIPE, 10 34)
-   kc(RAISE11R, &km RAISE LBRC, 11 34)
-   kc(RAISE12S, &km RAISE RBRC, 12 34)
-   kc(RAISE13T, &km RAISE TILDE, 13 34)
-   kc(RAISE14G, &km RAISE UNDER, 14 34)
-   kc(RAISE15M, &km RAISE PLUS, 15 34)
-   kc(RAISE16N, &km RAISE COLON, 16 34)
-   kc(RAISE17E, &km RAISE LT, 17 34)
-   kc(RAISE18I, &km RAISE GT, 18 34)
-   kc(RAISE19O, &km RAISE QUESTION, 19 34)
+   //COMBOKC(RAISE10A, &km RAISE PIPE, 10 34)
+   //COMBOKC(RAISE11R, &km RAISE LBRC, 11 34)
+   //COMBOKC(RAISE12S, &km RAISE RBRC, 12 34)
+   //COMBOKC(RAISE13T, &km RAISE TILDE, 13 34)
+   //COMBOKC(RAISE14G, &km RAISE UNDER, 14 34)
+   //COMBOKC(RAISE15M, &km RAISE PLUS, 15 34)
+   //COMBOKC(RAISE16N, &km RAISE COLON, 16 34)
+   //COMBOKC(RAISE17E, &km RAISE LT, 17 34)
+   //COMBOKC(RAISE18I, &km RAISE GT, 18 34)
+   //COMBOKC(RAISE19O, &km RAISE QUESTION, 19 34)
+
    //
 
+ COMBOKC_RAISE0Q {
+       bindings = <&km RAISE EXCL>;
+       key-positions = <0 34>;
+       layers = <BASE>;
+       slow-release;
+       timeout-ms = <2000>;
+   };
 
 
 
