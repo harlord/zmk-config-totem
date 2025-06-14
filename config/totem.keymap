@@ -37,14 +37,10 @@
 #define TILDESHIFTO 12
 #define TILDESHIFTU 13
 #define TILDESHIFTENNE 14
-#define TILDESHIFTEXC 15
-#define TILDESHIFTQUES 16
-#define TILDESHIFTR 17
-#define TILDESHIFTS 18
-#define TILDESHIFTT 19
-#define DACCTHUMB 20
-#define NUMBERS 21
-#define DRAGTHUMB 22
+#define TILDESHIFTQUES 15
+#define DACCTHUMB 16
+#define NUMBERS 17
+#define DRAGTHUMB 18
 
 //RAISE
 //NAVOVERR
@@ -102,7 +98,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         base_layer {
             label = "BASE";
             bindings = <
-                             &mc_ts TILDESHIFTEXC Q  &kd W  &kd F                    &kd P                              &kd B                               &kd J                 &kd L                    &mc_ts TILDESHIFTU U           &kd Y                 &kd SQT
+                             &kd Q  &kd W  &kd F                    &kd P                              &kd B                               &kd J                 &kd L                    &mc_ts TILDESHIFTU U           &kd Y                 &kd SQT
                              &mc_ts TILDESHIFTA A    &kd R  &kd S                    &kd T                              &kd G                               &kd M                 &mc_ts TILDESHIFTENNE N  &mc_ts TILDESHIFTE E           &mc_ts TILDESHIFTI I  &mc_ts TILDESHIFTO O
 &lm_homerow_short LALT LALT  &kd Z                   &kd X  &kd C                    &kd D                              &kd V                               &kd K                 &kd H                    &kd COMMA                      &kd DOT               &kd SLASH             &lm_homerow LGUI LGUI
                                                      &base_th_mo_kp_hp RAISE DELETE  &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB          &base_th_mo_kp_hp NAVOVERR ENTER  &spacelm LCTRL SPACE  &lm_homerow_short LALT ENTER
@@ -192,30 +188,30 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         layer_tildeshifta {
             label = "TILDESHIFTA";
             bindings = <
-        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans       &mc_tsd A  &trans  &trans
             >;
         };
 
         layer_tildeshifte {
             label = "TILDESHIFTE";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &mc_tsd E    &mo LOWER  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans      &mc_tsd E  &trans  &trans
             >;
         };
 
         layer_tildeshifti {
             label = "TILDESHIFTI";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &mc_tsd I    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans      &mc_tsd I  &trans  &trans
             >;
         };
 
@@ -225,7 +221,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &mc_tsd O    &trans  &trans  &trans
+                        &trans  &trans  &trans       &mc_tsd O  &trans  &trans
             >;
         };
 
@@ -235,67 +231,27 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &mc_tsd U    &trans  &trans  &trans
+                        &trans  &trans  &trans       &mc_tsd U  &trans  &trans
             >;
         };
 
         layer_tildeshiftenne {
             label = "TILDESHIFTENNE";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &mc_ennesd N    &trans  &trans  &trans
-            >;
-        };
-
-        layer_tildeshiftexc {
-            label = "TILDESHIFTEXC";
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &mc_ecxd
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans       &mc_ennesd N  &trans  &trans
             >;
         };
 
         layer_tildeshiftques {
             label = "TILDESHIFTQUES";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &kp QUESTION  &trans
-                        &trans  &trans  &mc_quesd    &trans  &trans  &trans
-            >;
-        };
-
-        layer_tildeshiftr {
-            label = "TILDESHIFTR";
-            bindings = <
-        &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LCTRL  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        layer_tildeshifts {
-            label = "TILDESHIFTS";
-            bindings = <
-        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LALT  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        layer_tildeshiftt {
-            label = "TILDESHIFTT";
-            bindings = <
-        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LGUI  &trans    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans       &trans     &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans       &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans     &trans  &trans  &trans  &kp QUESTION  &trans
+                        &trans  &trans  &trans       &mc_quesd  &trans  &trans
             >;
         };
 
