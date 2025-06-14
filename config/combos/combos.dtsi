@@ -270,10 +270,7 @@ combos {
     //        32 33 34         35 36 37
 
    /////////////////////// RAISE
-   kcr(EXCL, 0)
-   kcr(AT, 1)
-   kcr(HASH, 2)
-   kcr(DLLR, 3)
+   kcr(EXCL, 0)  kcr(AT, 1)  kcr(HASH, 2)  kcr(DLLR, 3)
    kcr(PRCNT, 4)
    kcr(CARET, 5)
    kcr(AMPS, 6)
