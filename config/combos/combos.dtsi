@@ -63,7 +63,7 @@
     layers = <ADJ>; \
   };
 
-#define COMBOKC(BINDINGS, KEYPOS) \
+#define kcr(BINDINGS, KEYPOS) \
   combo_##BINDINGS { \
     timeout-ms = <1000>; \
     bindings = <&kmr BINDINGS>; \
@@ -280,31 +280,31 @@ combos {
     //        32 33 34         35 36 37
 
    /////////////////////// RAISE
-   COMBOKC(EXCL, 0)
-   //COMBOKC(RAISE1W, &km RAISE AT, 1 34)
-   //COMBOKC(RAISE2F, &km RAISE HASH, 2 34)
-   //COMBOKC(RAISE3P, &km RAISE DLLR, 3 34)
-   //COMBOKC(RAISE4B, &km RAISE PRCNT, 4 34)
-   //COMBOKC(RAISE5J, &km RAISE CARET, 5 34)
-   //COMBOKC(RAISE6L, &km RAISE AMPS, 6 34)
-   //COMBOKC(RAISE7U, &km RAISE STAR, 7 34)
-   //COMBOKC(RAISE8Y, &km RAISE LPAR, 8 34)
-   //COMBOKC(RAISE9SQT, &km RAISE RPAR, 9 34)
+   kcr(EXCL, 0)
+   //kcr(RAISE1W, &km RAISE AT, 1 34)
+   //kcr(RAISE2F, &km RAISE HASH, 2 34)
+   //kcr(RAISE3P, &km RAISE DLLR, 3 34)
+   //kcr(RAISE4B, &km RAISE PRCNT, 4 34)
+   //kcr(RAISE5J, &km RAISE CARET, 5 34)
+   //kcr(RAISE6L, &km RAISE AMPS, 6 34)
+   //kcr(RAISE7U, &km RAISE STAR, 7 34)
+   //kcr(RAISE8Y, &km RAISE LPAR, 8 34)
+   //kcr(RAISE9SQT, &km RAISE RPAR, 9 34)
    //
-   //COMBOKC(RAISE10A, &km RAISE PIPE, 10 34)
-   //COMBOKC(RAISE11R, &km RAISE LBRC, 11 34)
-   //COMBOKC(RAISE12S, &km RAISE RBRC, 12 34)
-   //COMBOKC(RAISE13T, &km RAISE TILDE, 13 34)
-   //COMBOKC(RAISE14G, &km RAISE UNDER, 14 34)
-   //COMBOKC(RAISE15M, &km RAISE PLUS, 15 34)
-   //COMBOKC(RAISE16N, &km RAISE COLON, 16 34)
-   //COMBOKC(RAISE17E, &km RAISE LT, 17 34)
-   //COMBOKC(RAISE18I, &km RAISE GT, 18 34)
-   //COMBOKC(RAISE19O, &km RAISE QUESTION, 19 34)
+   //kcr(RAISE10A, &km RAISE PIPE, 10 34)
+   //kcr(RAISE11R, &km RAISE LBRC, 11 34)
+   //kcr(RAISE12S, &km RAISE RBRC, 12 34)
+   //kcr(RAISE13T, &km RAISE TILDE, 13 34)
+   //kcr(RAISE14G, &km RAISE UNDER, 14 34)
+   //kcr(RAISE15M, &km RAISE PLUS, 15 34)
+   //kcr(RAISE16N, &km RAISE COLON, 16 34)
+   //kcr(RAISE17E, &km RAISE LT, 17 34)
+   //kcr(RAISE18I, &km RAISE GT, 18 34)
+   //kcr(RAISE19O, &km RAISE QUESTION, 19 34)
 
    //
 
- COMBOKC_RAISE0Q {
+ kcr_RAISE0Q {
        bindings = <&km RAISE EXCL>;
        key-positions = <0 34>;
        layers = <BASE>;
