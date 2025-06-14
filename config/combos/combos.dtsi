@@ -47,7 +47,7 @@
 
 #define kcr(BINDINGS, KEYPOS) \
   combo_raise_##KEYPOS { \
-    timeout-ms = <200>; \
+    timeout-ms = <2000>; \
     bindings = <&kmr BINDINGS>; \
     key-positions = <KEYPOS 34>; \
     layers = <BASE>; \
@@ -55,9 +55,9 @@
 
 #define kcl(BINDINGS, KEYPOS) \
   combo_lower_##KEYPOS { \
-    timeout-ms = <200>; \
+    timeout-ms = <2000>; \
     bindings = <&km BINDINGS LOWER>; \
-    key-positions = <KEYPOS 34>; \
+    key-positions = <KEYPOS 33>; \
     layers = <BASE>; \
   };
   
