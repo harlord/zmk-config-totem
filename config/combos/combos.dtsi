@@ -271,9 +271,9 @@ combos {
     //        32 33 34         35 36 37
 
    // RAISE 
-   kcr(EXCL,0)   kcr(AT,1)     kcr(HASH,2)   kcr(DLLR,3)    kcr(PRCNT,4)       kcr(CARET,5)   kcr(AMPS,6)    kcr(STAR,7)    kcr(LPAR,8)  kcr(RPAR,9) 
-   kcr(PIPE,10)  kcr(LBRC,11)  kcr(RBRC,12)  kcr(TILDE,13)  kcr(UNDER,14)      kcr(PLUS,15)   kcr(COLON,16)  kcr(LT,17)     kcr(GT,18)   kcr(QUESTION,19)
-   //kcr(BSLH,21)  kcr(LBKT,22)  kcr(RBKT,23)  kcr(GRAVE,24)  kcr(MINUS,25)      kcr(EQUAL,26)  kcr(SEMI,27)   kcr(COMMA,28)  kcr(DOT,29)  kcr(SLASH,30)              
+   kcr(EXCL, 0)   kcr(AT, 1)     kcr(HASH, 2)   kcr(DLLR, 3)    kcr(PRCNT, 4)       kcr(CARET, 5)   kcr(AMPS, 6)    kcr(STAR, 7)    kcr(LPAR, 8)  kcr(RPAR, 9) 
+   //kcr(PIPE, 10)  kcr(LBRC, 11)  kcr(RBRC, 12)  kcr(TILDE, 13)  kcr(UNDER, 14)      kcr(PLUS, 15)   kcr(COLON, 16)  kcr(LT, 17)     kcr(GT, 18)   kcr(QUESTION, 19)
+   //kcr(BSLH, 21)  kcr(LBKT, 22)  kcr(RBKT, 23)  kcr(GRAVE, 24)  kcr(MINUS, 25)      kcr(EQUAL, 26)  kcr(SEMI, 27)   kcr(COMMA, 28)  kcr(DOT, 29)  kcr(SLASH, 30)              
 
    
 };
