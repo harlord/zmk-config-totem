@@ -279,7 +279,7 @@ combos {
    kcr(AMPS, 6 34)
    kcr(STAR, 7 34)
    kcr(LPAR, 8 34)
-   kcr(r RPAR, 9 34)
+   kcr(RPAR, 9 34)
    
    kcr(PIPE, 10 34)
    kcr(LBRC, 11 34)
