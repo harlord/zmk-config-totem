@@ -53,9 +53,9 @@
  //   layers = <BASE>; \
  // };
 
-#define KCR(name, keycode, pos0) \
-combo_##name { \
-    bindings = <&kmr keycode>; \
+#define kcr(keycode, pos0) \
+combo_##keycode { \
+    bindings = <keycode>; \
     key-positions = <pos0 34>; \
     layers = <BASE>; \
     slow-release; \
@@ -271,7 +271,7 @@ combos {
     //        32 33 34         35 36 37
 
    /////////////////////// RAISE
-   KCR(EXCL, EXCL, 0)
+   kcr(&kmr EXCL, 0)
    //kcr(RAISE1W, &km RAISE AT, 1 34)
    //kcr(RAISE2F, &km RAISE HASH, 2 34)
    //kcr(RAISE3P, &km RAISE DLLR, 3 34)
