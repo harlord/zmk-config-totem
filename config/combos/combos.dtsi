@@ -304,13 +304,13 @@ combos {
 
    //
 
- kcr_RAISE0Q {
-       bindings = <&km RAISE EXCL>;
-       key-positions = <0 34>;
-       layers = <BASE>;
-       slow-release;
-       timeout-ms = <2000>;
-   };
+// kcr_RAISE0Q {
+//       bindings = <&km RAISE EXCL>;
+//       key-positions = <0 34>;
+ //      layers = <BASE>;
+//       slow-release;
+//       timeout-ms = <2000>;
+ //  };
 
 
 
