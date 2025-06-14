@@ -53,14 +53,13 @@
 //    layers = <BASE>; \
 //  };
 
-#define kcr(name, keycode, pos0) \
-combo_##name { \
-    bindings = <keycode>; \
-    key-positions = <pos0 34>; \
+#define kc(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    timeout-ms = <200>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
     layers = <BASE>; \
-    slow-release; \
-    timeout-ms = <2000>; \
-};
+  };
   
 
 combos {
@@ -271,27 +270,27 @@ combos {
     //        32 33 34         35 36 37
 
    /////////////////////// RAISE
-   kcr(EXCL, &kmr EXCL, 0)
-   //kcr(RAISE1W, &km RAISE AT, 1 34)
-   //kcr(RAISE2F, &km RAISE HASH, 2 34)
-   //kcr(RAISE3P, &km RAISE DLLR, 3 34)
-   //kcr(RAISE4B, &km RAISE PRCNT, 4 34)
-   //kcr(RAISE5J, &km RAISE CARET, 5 34)
-   //kcr(RAISE6L, &km RAISE AMPS, 6 34)
-   //kcr(RAISE7U, &km RAISE STAR, 7 34)
-   //kcr(RAISE8Y, &km RAISE LPAR, 8 34)
-   //kcr(RAISE9SQT, &km RAISE RPAR, 9 34)
-   //
-   //kcr(RAISE10A, &km RAISE PIPE, 10 34)
-   //kcr(RAISE11R, &km RAISE LBRC, 11 34)
-   //kcr(RAISE12S, &km RAISE RBRC, 12 34)
-   //kcr(RAISE13T, &km RAISE TILDE, 13 34)
-   //kcr(RAISE14G, &km RAISE UNDER, 14 34)
-   //kcr(RAISE15M, &km RAISE PLUS, 15 34)
-   //kcr(RAISE16N, &km RAISE COLON, 16 34)
-   //kcr(RAISE17E, &km RAISE LT, 17 34)
-   //kcr(RAISE18I, &km RAISE GT, 18 34)
-   //kcr(RAISE19O, &km RAISE QUESTION, 19 34)
+   kc(RAISE0Q, &km RAISE EXCL, 0 34)
+   kc(RAISE1W, &km RAISE AT, 1 34)
+   kc(RAISE2F, &km RAISE HASH, 2 34)
+   kc(RAISE3P, &km RAISE DLLR, 3 34)
+   kc(RAISE4B, &km RAISE PRCNT, 4 34)
+   kc(RAISE5J, &km RAISE CARET, 5 34)
+   kc(RAISE6L, &km RAISE AMPS, 6 34)
+   kc(RAISE7U, &km RAISE STAR, 7 34)
+   kc(RAISE8Y, &km RAISE LPAR, 8 34)
+   kc(RAISE9SQT, &km RAISE RPAR, 9 34)
+   
+   kc(RAISE10A, &km RAISE PIPE, 10 34)
+   kc(RAISE11R, &km RAISE LBRC, 11 34)
+   kc(RAISE12S, &km RAISE RBRC, 12 34)
+   kc(RAISE13T, &km RAISE TILDE, 13 34)
+   kc(RAISE14G, &km RAISE UNDER, 14 34)
+   kc(RAISE15M, &km RAISE PLUS, 15 34)
+   kc(RAISE16N, &km RAISE COLON, 16 34)
+   kc(RAISE17E, &km RAISE LT, 17 34)
+   kc(RAISE18I, &km RAISE GT, 18 34)
+   kc(RAISE19O, &km RAISE QUESTION, 19 34)
 
    //
 
