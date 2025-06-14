@@ -279,7 +279,16 @@ combos {
     //        32 33 34         35 36 37
 
    /////////////////////// RAISE
-   kcr(EXCL, 0)  kcr(AT, 1)  kcr(HASH, 2)  kcr(DLLR, 3)  kcr(PRCNT, 4)         kcr(CARET, 5)  kcr(AMPS, 6)  kcr(STAR, 7)  kcr(LPAR, 8)  kcr(RPAR, 9)
+   kcr(EXCL, 0)  
+   kcr(AT, 1) 
+    kcr(HASH, 2)  
+    kcr(DLLR, 3)  
+    kcr(PRCNT, 4)         
+    kcr(CARET, 5)  
+    kcr(AMPS, 6)  
+    kcr(STAR, 7)  
+    kcr(LPAR, 8)  
+    kcr(RPAR, 9)
    //
    //kcr(RAISE10A, &km RAISE PIPE, 10 34)
    //kcr(RAISE11R, &km RAISE LBRC, 11 34)
