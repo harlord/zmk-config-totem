@@ -53,8 +53,8 @@
 //    layers = <BASE>; \
 //  };
 
-#define kc(NAME, BINDINGS, KEYPOS) \
-  combo_##NAME { \
+#define kcr(BINDINGS, KEYPOS) \
+  combo_##KEYPOS { \
     timeout-ms = <200>; \
     bindings = <&kmr BINDINGS>; \
     key-positions = <KEYPOS 34>; \
@@ -270,7 +270,7 @@ combos {
     //        32 33 34         35 36 37
 
    /////////////////////// RAISE
-   kc(RAISE0Q, EXCL, 0)
+   kcr(EXCL, 0)
    //kc(RAISE1W, &kmr AT, 1 34)
    //kc(RAISE2F, &kmr HASH, 2 34)
    //kc(RAISE3P, &kmr DLLR, 3 34)
