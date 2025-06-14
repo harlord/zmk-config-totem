@@ -45,7 +45,7 @@
     layers = <ADJ>; \
   };
 
-//#define kcr(BINDINGS, KEYPOS) \
+//#define kp(BINDINGS, KEYPOS) \
 //  combo_##BINDINGS { \
 //    timeout-ms = <1000>; \
 //    bindings = <BINDINGS>; \
@@ -53,7 +53,7 @@
 //    layers = <BASE>; \
 //  };
 
-#define kcr(BINDINGS, KEYPOS) \
+#define kp(BINDINGS, KEYPOS) \
   combo_##KEYPOS { \
     timeout-ms = <200>; \
     bindings = <&kmr BINDINGS>; \
@@ -65,7 +65,7 @@
 combos {
     compatible = "zmk,combos";
     // testgrave {
-    //     bindings = <kcr(GRAVE>;
+    //     bindings = <kp(GRAVE>;
     //     key-positions = <13 24>;
     // };
     // top {
@@ -109,45 +109,45 @@ combos {
 
 
     //LEFT HAND
-    RCOMBOACT(comb_wf, kcr(ESC, 0 1 2)// Q W F
-    RCOMBOACT(comb_fp, kcr(SPACE, 1 2 3)// W F P
-    RCOMBOACT(comb_pb, kcr(ENTER, 3 4)// P B
-    RCOMBOACT(comb_pb_2, kcr(ENTER, 12 3 13)// SPT
-    RCOMBOACT(comb_tg_2, kcr(TAB, 23 13 24)// CDT
-    RCOMBOACT(comb_tg, kcr(TAB, 24 25)// DV
-    RCOMBOACT(comb_cd, kcr(BACKSPACE, 22 23 24)// X C D
-    RCOMBOACT(comb_xc, kcr(DELETE, 21 22 23)// Z X C
-    RCOMBO(comb_gv, kcr(MINUS, 14 25)// G V
-    RCOMBO(comb_td, kcr(GRAVE, 13 24)// T D 
-    RCOMBO(comb_sc, kcr(RBKT, 12 23)// S C
-    RCOMBO(comb_rx, kcr(LBKT, 11 22)// R X
-    RCOMBO(comb_az, kcr(BSLH, 10 21)// A Z
+    RCOMBOACT(comb_wf, kp(ESC, 0 1 2)// Q W F
+    RCOMBOACT(comb_fp, kp(SPACE, 1 2 3)// W F P
+    RCOMBOACT(comb_pb, kp(ENTER, 3 4)// P B
+    RCOMBOACT(comb_pb_2, kp(ENTER, 12 3 13)// SPT
+    RCOMBOACT(comb_tg_2, kp(TAB, 23 13 24)// CDT
+    RCOMBOACT(comb_tg, kp(TAB, 24 25)// DV
+    RCOMBOACT(comb_cd, kp(BACKSPACE, 22 23 24)// X C D
+    RCOMBOACT(comb_xc, kp(DELETE, 21 22 23)// Z X C
+    RCOMBO(comb_gv, kp(MINUS, 14 25)// G V
+    RCOMBO(comb_td, kp(GRAVE, 13 24)// T D 
+    RCOMBO(comb_sc, kp(RBKT, 12 23)// S C
+    RCOMBO(comb_rx, kp(LBKT, 11 22)// R X
+    RCOMBO(comb_az, kp(BSLH, 10 21)// A Z
     //RIGHT HAND
-    RCOMBO(requal, kcr(EQUAL, 15 26)
-    RCOMBO(rsemi, kcr(SEMI, 16 27)
-    RCOMBO(SEMI, kcr(COMMA, 17 28)
-    RCOMBO(COLON, kcr(DOT, 18 29)
-    RCOMBO(FSLH, kcr(FSLH, 19 30)
+    RCOMBO(requal, kp(EQUAL, 15 26)
+    RCOMBO(rsemi, kp(SEMI, 16 27)
+    RCOMBO(SEMI, kp(COMMA, 17 28)
+    RCOMBO(COLON, kp(DOT, 18 29)
+    RCOMBO(FSLH, kp(FSLH, 19 30)
     //NUMBERS
-    RCOMBO(NUM1, kcr(N1, 0 10)
-    RCOMBO(NUM2, kcr(N2, 1 11)
-    RCOMBO(NUM3, kcr(N3, 2 12)
-    RCOMBO(NUM4, kcr(N4, 3 13)
-    RCOMBO(NUM5, kcr(N5, 4 14)
-    RCOMBO(NUM6, kcr(N6, 5 15)
-    RCOMBO(NUM7, kcr(N7, 6 16)
-    RCOMBO(NUM8, kcr(N8, 7 17) 
-    RCOMBO(NUM9, kcr(N9, 8 18)
-    RCOMBO(NUM0, kcr(N0, 9 19)
+    RCOMBO(NUM1, kp(N1, 0 10)
+    RCOMBO(NUM2, kp(N2, 1 11)
+    RCOMBO(NUM3, kp(N3, 2 12)
+    RCOMBO(NUM4, kp(N4, 3 13)
+    RCOMBO(NUM5, kp(N5, 4 14)
+    RCOMBO(NUM6, kp(N6, 5 15)
+    RCOMBO(NUM7, kp(N7, 6 16)
+    RCOMBO(NUM8, kp(N8, 7 17) 
+    RCOMBO(NUM9, kp(N9, 8 18)
+    RCOMBO(NUM0, kp(N0, 9 19)
     //THUMBS
     COMBO(delete_space, &mo HOMEROW, 37 35)// ENTER SPACE
     COMBO(bkspace_delete2, &mo DIRECTACC, 34 32)// BKSPACE TAB
     COMBO(delete_enter, &sl FUNC, 32 37)// TAB ENTER
     //NavOverR
-    NAVBACOMBO(pg_0, kcr(HOME, 27 28)// H , 
-    NAVBACOMBO(pg_1, kcr(END, 28 29)// , .
-    NAVBACOMBO(pg_4, kcr(PG_UP, 27 18)// , H 
-    NAVBACOMBO(pg_5, kcr(PG_DN, 18 29)// H .
+    NAVBACOMBO(pg_0, kp(HOME, 27 28)// H , 
+    NAVBACOMBO(pg_1, kp(END, 28 29)// , .
+    NAVBACOMBO(pg_4, kp(PG_UP, 27 18)// , H 
+    NAVBACOMBO(pg_5, kp(PG_DN, 18 29)// H .
     // ADJUST
     COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
     COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
@@ -158,28 +158,28 @@ combos {
     //20  21 22 23 24 25    26 27 28 29 30  31
     //        32 33 34         35 36 37
     c-up-nav-inv {
-        bindings = <&mo NAVOVERR>, <kcr(UP>;
+        bindings = <&mo NAVOVERR>, <kp(UP>;
         key-positions = <17 35>;
         layers = <BASE DRAGTHUMB>;
         slow-release;
         timeout-ms = <2000>;
     };
     c-down-nav-inv {
-        bindings = <&mo NAVOVERR>, <kcr(DOWN>;
+        bindings = <&mo NAVOVERR>, <kp(DOWN>;
         key-positions = <28 35>;
         layers = <BASE DRAGTHUMB>;
         slow-release;
         timeout-ms = <2000>;
     };
     c-right-nav-inv {
-        bindings = <&mo NAVOVERR>, <kcr(RIGHT>;
+        bindings = <&mo NAVOVERR>, <kp(RIGHT>;
         key-positions = <29 35>;
         layers = <BASE DRAGTHUMB>;
         slow-release;
         timeout-ms = <2000>;
     };
     c-left-nav-inv-s-quick {
-        bindings = <&mo NAVOVERR>, <kcr(LEFT>;
+        bindings = <&mo NAVOVERR>, <kp(LEFT>;
         key-positions = <27 35>;
         layers = <BASE DRAGTHUMB>;
         slow-release;
@@ -188,77 +188,77 @@ combos {
 
     //////////////////////////////////////
     c-hr-thumb-ar {
-       bindings = <kcr(LS(LCTRL)>;
+       bindings = <kp(LS(LCTRL)>;
        key-positions = <33 10 11>;
        layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-ars {
-       bindings = <kcr(LS(LA(LCTRL))>;
+       bindings = <kp(LS(LA(LCTRL))>;
        key-positions = <33 10 11 12>;
        layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-arst {
-       bindings = <kcr(LS(LA(LG(LCTRL)))>;
+       bindings = <kp(LS(LA(LG(LCTRL)))>;
        key-positions = <33 10 11 12 13>;
        layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-art {
-       bindings = <kcr(LS(LC(LCMD))>;
+       bindings = <kp(LS(LC(LCMD))>;
        key-positions = <33 10 11 13>;
        layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-ast {
-       bindings = <kcr(LS(LA(LCMD))>;
+       bindings = <kp(LS(LA(LCMD))>;
        key-positions = <33 10 13 12>;
        layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-rst {
-       bindings = <kcr(LA(LC(LCMD))>;
+       bindings = <kp(LA(LC(LCMD))>;
        key-positions = <33 13 12 11>;
        layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-at {
-       bindings = <kcr(LS(LCMD)>;
+       bindings = <kp(LS(LCMD)>;
        key-positions = <33 13 10>;
        layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-st {
-       bindings = <kcr(LA(LCMD)>;
+       bindings = <kp(LA(LCMD)>;
        key-positions = <33 12 13>;
        layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-rs {
-       bindings = <kcr(LC(LALT)>;
+       bindings = <kp(LC(LALT)>;
        key-positions = <33 12 11>;
        layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-rt {
-       bindings = <kcr(LC(LCMD)>;
+       bindings = <kp(LC(LCMD)>;
        key-positions = <33 13 11>;
        layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-as {
-       bindings = <kcr(LS(LALT)>;
+       bindings = <kp(LS(LALT)>;
        key-positions = <33 10 12>;
        layers = <BASE TILDESHIFTA TILDESHIFTR TILDESHIFTS TILDESHIFTT>;
        slow-release;
@@ -272,8 +272,8 @@ combos {
 
    // RAISE 
    kcr(EXCL, 0)   kcr(AT, 1)     kcr(HASH, 2)   kcr(DLLR, 3)    kcr(PRCNT, 4)       kcr(CARET, 5)   kcr(AMPS, 6)    kcr(STAR, 7)    kcr(LPAR, 8)  kcr(RPAR, 9) 
-   //kcr(PIPE, 10)  kcr(LBRC, 11)  kcr(RBRC, 12)  kcr(TILDE, 13)  kcr(UNDER, 14)      kcr(PLUS, 15)   kcr(COLON, 16)  kcr(LT, 17)     kcr(GT, 18)   kcr(QUESTION, 19)
-   //kcr(BSLH, 21)  kcr(LBKT, 22)  kcr(RBKT, 23)  kcr(GRAVE, 24)  kcr(MINUS, 25)      kcr(EQUAL, 26)  kcr(SEMI, 27)   kcr(COMMA, 28)  kcr(DOT, 29)  kcr(SLASH, 30)              
+   kcr(PIPE, 10)  kcr(LBRC, 11)  kcr(RBRC, 12)  kcr(TILDE, 13)  kcr(UNDER, 14)      kcr(PLUS, 15)   kcr(COLON, 16)  kcr(LT, 17)     kcr(GT, 18)   kcr(QUESTION, 19)
+   kcr(BSLH, 21)  kcr(LBKT, 22)  kcr(RBKT, 23)  kcr(GRAVE, 24)  kcr(MINUS, 25)      kcr(EQUAL, 26)  kcr(SEMI, 27)   kcr(COMMA, 28)  kcr(DOT, 29)  kcr(SLASH, 30)              
 
    
 };
