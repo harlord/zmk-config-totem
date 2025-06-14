@@ -90,9 +90,11 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
 #define SPACE_HOLDING_TYPE "balanced"   
 
 / {
-    #include "combos/combos.dtsi"
-    #include "behaviors/behaviors.dtsi"
     #include "macros/macros.dtsi"
+    #include "behaviors/behaviors.dtsi"
+    #include "combos/combos.dtsi"
+   
+
 
     keymap {
         compatible = "zmk,keymap";
