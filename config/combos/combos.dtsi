@@ -63,6 +63,7 @@
     layers = <ADJ>; \
   };
 
+
 #define kcr(NAME, KEYPOS) \
   combo_##NAME { \
     timeout-ms = <1000>; \
@@ -274,6 +275,7 @@ combos {
        slow-release;
        timeout-ms = <2000>;
    };
+   
     //     0  1  2  3  4     5  6  7  8  9
     //    10 11 12 13 14    15 16 17 18 19
     //20  21 22 23 24 25    26 27 28 29 30  31
@@ -308,13 +310,13 @@ combos {
 
 
 
- &kp EXCL           &kp AT             &kp HASH                &kp DLLR                  &kp PRCNT                       &kp CARET           &kp AMPS                   &kp STAR                  &kp LPAR         &kp RPAR
- &lrlMo LSHFT PIPE  &lrlMo LCTRL LBRC  &lrlMo LALT RBRC        &lrlMo LCTRL TILDE        &kp UNDER                       &kp PLUS            &lrrMo RGUI COLON          &lrrMo RALT LT            &lrrMo RCTRL GT  &lrrMo RSHFT QUESTION
- &kp BSLH           &kp LBKT           &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp EQUAL           &kp SEMI                   &kp COMMA                 &kp DOT          &kp SLASH              
+ //&kp EXCL           &kp AT             &kp HASH                &kp DLLR                  &kp PRCNT                       &kp CARET           &kp AMPS                   &kp STAR                  &kp LPAR         &kp RPAR
+ //&lrlMo LSHFT PIPE  &lrlMo LCTRL LBRC  &lrlMo LALT RBRC        &lrlMo LCTRL TILDE        &kp UNDER                       &kp PLUS            &lrrMo RGUI COLON          &lrrMo RALT LT            &lrrMo RCTRL GT  &lrrMo RSHFT QUESTION
+ //&kp BSLH           &kp LBKT           &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp EQUAL           &kp SEMI                   &kp COMMA                 &kp DOT          &kp SLASH              
 
 
- &mc_ts TILDESHIFTEXC Q  &kd W  &kd F                        &kd P                          &kd B                                &kd J                 &kd L                    &mc_ts TILDESHIFTU U           &kd Y                 &kd SQT
- &mc_ts TILDESHIFTA A    &kd R  &kd S                        &kd T                          &kd G                                &kd M                 &mc_ts TILDESHIFTENNE N  &mc_ts TILDESHIFTE E           &mc_ts TILDESHIFTI I  &mc_ts TILDESHIFTO O
- &kd Z                   &kd X  &kd C                        &kd D                          &kd V                                &kd K                 &kd H                    &kd COMMA                      &kd DOT               &kd SLASH 
+ //&mc_ts TILDESHIFTEXC Q  &kd W  &kd F                        &kd P                          &kd B                                &kd J                 &kd L                    &mc_ts TILDESHIFTU U           &kd Y                 &kd SQT
+ //&mc_ts TILDESHIFTA A    &kd R  &kd S                        &kd T                          &kd G                                &kd M                 &mc_ts TILDESHIFTENNE N  &mc_ts TILDESHIFTE E           &mc_ts TILDESHIFTI I  &mc_ts TILDESHIFTO O
+ //&kd Z                   &kd X  &kd C                        &kd D                          &kd V                                &kd K                 &kd H                    &kd COMMA                      &kd DOT               &kd SLASH 
 
 };
