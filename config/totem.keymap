@@ -60,7 +60,7 @@
 //
 //cmd+TAB<>DRAGTHUMB(inverted LOWER only when DRAGTHUMB not activated)   //shift+BKSPACE<>RAISE         //ctrl+SPC<>TILDES   //NAVOVERR+ENT<>alt
 //
-//cmd+TAB<>DRAGTHUMB(inverted NUMBERS and DIRECTACC in low row only when DRAGTHUMB not activated)   //shift+BKSPACE<>RAISE         //Media Adj+SPC<>TILDES   //NAVOVERR(with top func)+ENT<>alt
+//cmd+TAB<>DRAGTHUMB(inverted NUMBERS and DIRECTACC in low row only when DRAGTHUMB not activated)   //shift+BKSPACE<>RAISE         //Media Adj(idle 500)+SPC<>TILDES   //NAVOVERR(with top func)+ENT<>alt
 //
 //BKSPACE+SPC<>FUNC
 //BKSPACE+ENT<>NUMBERS
