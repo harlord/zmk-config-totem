@@ -57,7 +57,7 @@
   combo_##NAME { \
     timeout-ms = <200>; \
     bindings = <BINDINGS>; \
-    key-positions = <KEYPOS>; \
+    key-positions = <KEYPOS 34>; \
     layers = <BASE>; \
   };
   
@@ -270,7 +270,7 @@ combos {
     //        32 33 34         35 36 37
 
    /////////////////////// RAISE
-   kc(RAISE0Q, &kmr EXCL, 0 34)
+   kc(RAISE0Q, &kmr EXCL, 0)
    kc(RAISE1W, &kmr AT, 1 34)
    kc(RAISE2F, &kmr HASH, 2 34)
    kc(RAISE3P, &kmr DLLR, 3 34)
