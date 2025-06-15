@@ -27,20 +27,17 @@
 #define RAISE  2
 #define HOMEROW 3
 #define NAVOVERR 4
-#define TILDEL 5
-#define DIRECTACC 6
-#define FUNC 7
-#define ADJ  8
-#define TILDESHIFTA 9
-#define TILDESHIFTE 10
-#define TILDESHIFTI 11
-#define TILDESHIFTO 12
-#define TILDESHIFTU 13
-#define TILDESHIFTENNE 14
-#define TILDESHIFTQUES 15
-#define DACCTHUMB 16
-#define NUMBERS 17
-#define DRAGTHUMB 18
+#define DIRECTACC 5
+#define FUNC 6
+#define ADJ  7
+#define TILDESHIFTA 8
+#define TILDESHIFTE 9
+#define TILDESHIFTI 10
+#define TILDESHIFTO 11
+#define TILDESHIFTU 12
+#define TILDESHIFTENNE 13
+#define TILDESHIFTQUES 14
+#define NUMBERS 15
 
 //RAISE
 //NAVOVERR
@@ -66,7 +63,6 @@
 //shift+alt<>NUMBERS
 //cmd+shift+TAB<>DRAGCOMMAND
 
-//use kd to DRAGTHUMB
 // - with combo from 
 
 /*
@@ -98,9 +94,9 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         base_layer {
             label = "BASE";
             bindings = <
-                             &kd Q  &kd W  &kd F                    &kd P                              &kd B                               &kd J                 &kd L                    &mc_ts TILDESHIFTU U           &kd Y                 &kd SQT
-                             &mc_ts TILDESHIFTA A    &kd R  &kd S                    &kd T                              &kd G                               &kd M                 &mc_ts TILDESHIFTENNE N  &mc_ts TILDESHIFTE E           &mc_ts TILDESHIFTI I  &mc_ts TILDESHIFTO O
-&lm_homerow_short LALT LALT  &kd Z                   &kd X  &kd C                    &kd D                              &kd V                               &kd K                 &kd H                    &kd COMMA                      &kd DOT               &kd SLASH             &lm_homerow LGUI LGUI
+                             &kp Q  &kp W  &kp F                    &kp P                              &kp B                               &kp J                 &kp L                    &mc_ts TILDESHIFTU U           &kp Y                 &kp SQT
+                             &mc_ts TILDESHIFTA A    &kp R  &kp S                    &kp T                              &kp G                               &kp M                 &mc_ts TILDESHIFTENNE N  &mc_ts TILDESHIFTE E           &mc_ts TILDESHIFTI I  &mc_ts TILDESHIFTO O
+&lm_homerow_short LALT LALT  &kp Z                   &kp X  &kp C                    &kp D                              &kp V                               &kp K                 &kp H                    &kp COMMA                      &kp DOT               &kp SLASH             &lm_homerow LGUI LGUI
                                                      &base_th_mo_kp_hp RAISE DELETE  &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB          &base_th_mo_kp_hp NAVOVERR ENTER  &spacelm LCTRL SPACE  &lm_homerow_short LALT ENTER
             >;
         };
@@ -142,16 +138,6 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
                   &sk LSHFT  &sk LCTRL  &sk LALT                &sk LGUI                  &kp F11                         &kp F12             &lrrMo RGUI N              &kp UP                    &lrrMo RCTRL I  &kp RSHFT
 &lrlMo LALT LALT  &none      &none      &none                   &none                     &caps_word                      &kp CAPS            &kp LEFT                   &kp DOWN                  &kp RIGHT       &kp RALT   &lrrMo LGUI LGUI
                                         &th_mo_kp_hp RAISE TAB  &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE    &space LCTRL SPACE  &th_mo_kp_hp NAVOVERR ESC  &th_kp_kp_hp LALT ENTER
-            >;
-        };
-
-        layer_tildel {
-            label = "TILDEL";
-            bindings = <
-        &kp LA(N1)   &trans  &trans                  &kp LS(LA(N2))            &trans                          &trans              &trans                     &mc_tilde U               &trans       &trans
-        &mc_tilde A  &trans  &trans                  &trans                    &trans                          &trans              &mc_enne N                 &mc_tilde E               &mc_tilde I  &mc_tilde O
-&trans  &trans       &trans  &trans                  &trans                    &trans                          &trans              &trans                     &trans                    &trans       &kp LA(LS(FSLH))  &trans
-                             &th_mo_kp_hp RAISE TAB  &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE    &space LCTRL SPACE  &th_mo_kp_hp NAVOVERR ESC  &th_kp_kp_hp LALT ENTER
             >;
         };
 
@@ -255,16 +241,6 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             >;
         };
 
-        layer_daccthumb {
-            label = "DACCTHUMB";
-            bindings = <
-        &trans  &trans  &trans            &trans              &trans                            &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans            &trans              &trans                            &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans            &trans              &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-                        &kp LC(MINUS)     &kp LC(LS(MINUS))   &lrlMo LA(LS(H)) LA(LS(F12))      &trans  &trans  &trans
-            >;
-        };
-
         layer_numbers {
             label = "NUMBERS";
             bindings = <
@@ -275,23 +251,5 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             >;
         };
 
-
-        layer_dragthumb {
-            label = "DRAGTHUMB";
-            bindings = <
-        &trans  &trans  &trans  &trans    &trans        &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans    &trans        &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans        &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans        &mo LOWER  &trans  &trans
-            >;
-        };
-
-    };
-
-    /* Example instance of the long-vs-quick combo helper. Adjust timing as desired. */
-    combo_long_quick_demo: combo_long_quick {
-        compatible = "zmk,combo-long-quick";
-        quick-ms = <60>;   /* ≤60 ms = QUICK */
-        long-ms  = <600>;  /* ≥600 ms = LONG  */
     };
 };

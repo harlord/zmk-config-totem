@@ -8,20 +8,7 @@ macros {
             <&macro_tap_time 20>,
             <&kp ESC>;
     };
-    gif: gif {
-        label = "giphy";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings =
-            <&macro_press>,
-            <&kp LSHFT>,
-            <&macro_tap>,
-            <&kp N2>,
-            <&macro_release>,
-            <&kp LSHFT>,
-            <&macro_tap>,
-            <&kp G &kp I &kp F>;
-    };
+
     // mc_tilde
     mc_tilde: mc_tilde {
         label = "&TILDE";
@@ -365,10 +352,10 @@ macros {
         #binding-cells = <1>;
         bindings =
             <&macro_press>,
-            <&mo DRAGTHUMB &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+            <&mo HOMEROW &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
             <&macro_pause_for_release>,
             <&macro_release>,
-            <&macro_param_1to1 &kp MACRO_PLACEHOLDER &mo DRAGTHUMB>;
+            <&macro_param_1to1 &kp MACRO_PLACEHOLDER &mo HOMEROW>;
     };
 
     km: km {
