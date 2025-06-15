@@ -15,7 +15,7 @@
 
 #define RIGHT_THUMB_KEYS          \
                         35 36 37         
-                        
+
 behaviors {
     hb_daccthumb: hb_daccthumb {
         compatible = "zmk,behavior-hold-tap";
@@ -174,7 +174,7 @@ behaviors {
         #binding-cells = <2>;
         require-prior-idle-ms = <80>;
         hold-trigger-on-release;
-        bindings = <&kp>, <&kp>;
+        bindings = <&mo>, <&kp>;
     };
     spacelm: thumb_layer_access_spacebarlm {
         compatible = "zmk,behavior-hold-tap";
@@ -185,7 +185,7 @@ behaviors {
         #binding-cells = <2>;
         require-prior-idle-ms = <80>;
         hold-trigger-on-release;
-        bindings = <&kp>, <&kp>;
+        bindings = <&mo>, <&kp>;
     };
     th_kp_sl_hp: th_kp_sl_hp {
         compatible = "zmk,behavior-hold-tap";
