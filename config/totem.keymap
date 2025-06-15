@@ -1,14 +1,3 @@
-//
-//                                                        ▀▀▀▀▀     ▀▀▀▀▀          ▀▀█▀▀
-//                                                        ▄▀▀▀▄  ▄  ▄▀▀▀▄  ▄  ▄▀▀▀▄  █  ▄▀▀▀▄
-//                                                        █   █  █  █   █  █  █   █  █  █   █
-//                                                         ▀▀▀   █   ▀▀▀   █   ▀▀▀   ▀   ▀▀▀
-//                                                               █      ▄▄▄█▄▄▄    █   █  
-//                                                               ▀      █  █  █     █▄█
-//                                                             ▀▀▀▀▀    █  █  █      ▀
-//                                                                      ▀  ▀  ▀
-//
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 // git add . && git commit -m 'adjust time thumbhold' && git push
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
@@ -45,15 +34,15 @@
 //NUMBERS
 //TILDES + DIRECTACC
 
-//cmd+TAB<>DRAGCOMMAND  //shift+BKSPACE<>TILDES(with some DIRECTACC)          //ctrl+SPC<>NUMBERS(require-prior-idle-ms)  //alt+ENT<>NAVOVERR(with top numbers)
+//cmd+TAB<>DRAGCOMMAND  //shift+BKSPACE<>TILDES(with some DIRECTACC)              //ctrl+SPC<>NUMBERS(require-prior-idle-ms)  //alt+ENT<>NAVOVERR(with top numbers)
 //missing top funcs
-//cmd+TAB<>RAISE  //shift+BKSPACE<>TILDES(with some DIRECTACC)          //ctrl+SPC<>NUMBERS(require-prior-idle-ms or NONE or FUNC)  //alt+ENT<>NAVOVERR(with nav and top numbers, maybe LOWER with nav)
+//cmd+TAB<>RAISE  //shift+BKSPACE<>TILDES(with some DIRECTACC)              //ctrl+SPC<>NUMBERS(require-prior-idle-ms or NONE or FUNC)  //alt+ENT<>NAVOVERR(with nav and top numbers, maybe LOWER with nav)
 //
-//cmd+TAB<>RAISE  //shift+BKSPACE<>TILDES(with top DRAGTHUMB low Home Row Mod)          //ctrl+SPC<>NUMBERS(require-prior-idle-ms or NONE or FUNC)  //NAVOVERR+ENT<>alt
+//cmd+TAB<>RAISE  //shift+BKSPACE<>TILDES(with top DRAGTHUMB low Home Row Mod)              //ctrl+SPC<>NUMBERS(require-prior-idle-ms or NONE or FUNC)  //NAVOVERR+ENT<>alt
 //
-//cmd+TAB<>DRAGTHUMB(inverted LOWER only when DRAGTHUMB not activated)   //shift+BKSPACE<>RAISE         //ctrl+SPC<>TILDES   //NAVOVERR+ENT<>alt
+//cmd+TAB<>DRAGTHUMB(inverted LOWER only when DRAGTHUMB not activated)   //shift+BKSPACE<>RAISE               //ctrl+SPC<>TILDES   //NAVOVERR+ENT<>alt
 //
-//cmd+TAB<>DRAGTHUMB(inverted NUMBERS and DIRECTACC in low row only when DRAGTHUMB not activated)   //shift+BKSPACE<>RAISE         //Media Adj(idle 500)+SPC<>TILDES   //NAVOVERR(with top func)+ENT<>alt
+//cmd+TAB<>DRAGTHUMB(inverted NUMBERS and DIRECTACC in low row only when DRAGTHUMB not activated)   //shift+BKSPACE<>RAISE            //Media Adj(idle 500)+SPC<>TILDES   //NAVOVERR(with top func)+ENT<>alt
 //
 //BKSPACE+SPC<>FUNC
 //BKSPACE+ENT<>NUMBERS
