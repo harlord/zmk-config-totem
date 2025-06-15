@@ -49,7 +49,7 @@
   combo_raise_##KEYPOS { \
     timeout-ms = <2000>; \
     bindings = <&km BINDINGS RAISE>; \
-    key-positions = <KEYPOS 34>; \
+    key-positions = <KEYPOS 33>; \
     slow-release; \
     layers = <BASE>; \
   };
@@ -58,7 +58,7 @@
   combo_lower_##KEYPOS { \
     timeout-ms = <2000>; \
     bindings = <&km BINDINGS LOWER>; \
-    key-positions = <KEYPOS 33>; \
+    key-positions = <KEYPOS 34>; \
     slow-release; \
     layers = <BASE>; \
   };
@@ -67,7 +67,7 @@
 combos {
     compatible = "zmk,combos";
     // testgrave {
-    //     bindings = <&kp  GRAVE>;
+    //     bindings = <&kd GRAVE>;
     //     key-positions = <13 24>;
     // };
     // top {
@@ -161,79 +161,79 @@ combos {
    
     //////////////////////////////////////
     c-hr-thumb-ar {
-       bindings = <&kd  LS(LCTRL)>;
-       key-positions = <33 10 11>;
+       bindings = <&kd LS(LCTRL)>;
+       key-positions = <34 10 11>;
        layers = <BASE>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-ars {
-       bindings = <&kd  LS(LA(LCTRL))>;
-       key-positions = <33 10 11 12>;
+       bindings = <&kd LS(LA(LCTRL))>;
+       key-positions = <34 10 11 12>;
        layers = <BASE>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-arst {
-       bindings = <&kd  LS(LA(LG(LCTRL)))>;
-       key-positions = <33 10 11 12 13>;
+       bindings = <&kd LS(LA(LG(LCTRL)))>;
+       key-positions = <34 10 11 12 13>;
        layers = <BASE>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-art {
-       bindings = <&kd  LS(LC(LCMD))>;
-       key-positions = <33 10 11 13>;
-       layers = <BASE HOMEROW>;
+       bindings = <&kd LS(LC(LCMD))>;
+       key-positions = <34 10 11 13>;
+       layers = <BASE>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-ast {
-       bindings = <&kd  LS(LA(LCMD))>;
-       key-positions = <33 10 13 12>;
-       layers = <BASE HOMEROW>;
+       bindings = <&kd LS(LA(LCMD))>;
+       key-positions = <34 10 13 12>;
+       layers = <BASE>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-rst {
-       bindings = <&kd  LA(LC(LCMD))>;
-       key-positions = <33 13 12 11>;
-       layers = <BASE HOMEROW>;
+       bindings = <&kd LA(LC(LCMD))>;
+       key-positions = <34 13 12 11>;
+       layers = <BASE>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-at {
-       bindings = <&kd  LS(LCMD)>;
-       key-positions = <33 13 10>;
-       layers = <BASE HOMEROW>;
+       bindings = <&kd LS(LCMD)>;
+       key-positions = <34 13 10>;
+       layers = <BASE>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-st {
-       bindings = <&kd  LA(LCMD)>;
-       key-positions = <33 12 13>;
-       layers = <BASE HOMEROW>;
+       bindings = <&kd LA(LCMD)>;
+       key-positions = <34 12 13>;
+       layers = <BASE>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-rs {
-       bindings = <&kd  LC(LALT)>;
-       key-positions = <33 12 11>;
-       layers = <BASE HOMEROW>;
+       bindings = <&kd LC(LALT)>;
+       key-positions = <34 12 11>;
+       layers = <BASE>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-rt {
-       bindings = <&kd  LC(LCMD)>;
-       key-positions = <33 13 11>;
-       layers = <BASE HOMEROW>;
+       bindings = <&kd LC(LCMD)>;
+       key-positions = <34 13 11>;
+       layers = <BASE>;
        slow-release;
        timeout-ms = <2000>;
    };
    c-hr-thumb-as {
-       bindings = <&kd  LS(LALT)>;
-       key-positions = <33 10 12>;
-       layers = <BASE HOMEROW>;
+       bindings = <&kd LS(LALT)>;
+       key-positions = <34 10 12>;
+       layers = <BASE>;
        slow-release;
        timeout-ms = <2000>;
    };
