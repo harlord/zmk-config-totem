@@ -113,6 +113,11 @@
 // check if mo KDL_A_10 remain activated when macro on release. 
 // otherwise on hold with cmd, macro for on press shoult sticky layer on and sticky layer of on release
 
+/ {
+    #include "macros/macros_general.dtsi"
+    #include "behaviors/behaviors_general.dtsi"
+    #include "combos/combos_general.dtsi"
+
     keymap {
         compatible = "zmk,keymap";
 
