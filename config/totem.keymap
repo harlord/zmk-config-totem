@@ -62,6 +62,8 @@
 //
 //cmd+TAB<>DRAGTHUMB(inverted NUMBERS and DIRECTACC in low row only when DRAGTHUMB not activated)   //shift+BKSPACE<>RAISE         //Media Adj(idle 500)+SPC<>TILDES   //NAVOVERR(with top func)+ENT<>alt
 //
+//cmd+TAB<>DRAGTHUMB  //shift+BKSPACE         //NAVOVERR+SPC<>TILDES   //RAISE+ENT<>alt
+//
 //BKSPACE+SPC<>FUNC
 //BKSPACE+ENT<>NUMBERS
 //TAB+ENT<>Media Adj
