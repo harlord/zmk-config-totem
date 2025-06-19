@@ -62,7 +62,7 @@
 //
 //cmd+TAB<>DRAGTHUMB(inverted NUMBERS and DIRECTACC in low row only when DRAGTHUMB not activated)   //shift+BKSPACE<>RAISE         //Media Adj(idle 500)+SPC<>TILDES   //NAVOVERR(with top func)+ENT<>alt
 //
-//cmd+TAB<>DRAGTHUMB  //shift+BKSPACE         //NAVOVERR+SPC<>TILDES   //RAISE+ENT<>alt
+//cmd+TAB<>DRAGTHUMB  //shift+BKSPACE<>TILDES         //NAVOVERR(balanced)+SPC   //alt+ENT<>RAISE
 //
 //BKSPACE+SPC<>FUNC
 //BKSPACE+ENT<>NUMBERS
@@ -71,7 +71,7 @@
 //shift+ctrl<>FUNC
 //shift+alt<>NUMBERS
 //cmd+shift+TAB<>DRAGCOMMAND
-
+//
 //use kd to DRAGTHUMB
 // - with combo from 
 
@@ -334,10 +334,9 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
 
     };
 
-    /* Example instance of the long-vs-quick combo helper. Adjust timing as desired. */
-    combo_long_quick_demo: combo_long_quick {
-        compatible = "zmk,combo-long-quick";
-        quick-ms = <60>;   /* ≤60 ms = QUICK */
-        long-ms  = <600>;  /* ≥600 ms = LONG  */
+    leader1: leader1 {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+            usb { sequence = <U S B>; bindings = <&kp X>; };
     };
 };
