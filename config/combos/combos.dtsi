@@ -53,7 +53,7 @@
     slow-release; \
     layers = <BASE>; \
   };
-  
+
 #define kcu(BINDINGS, KEYPOS) \
   combo_raise_##KEYPOS { \
     timeout-ms = <2000>; \
@@ -257,7 +257,7 @@ combos {
    kcr(PIPE, 10)  kcr(LBRC, 11)  kcr(RBRC, 12)  kcr(TILDE, 13)  kcr(UNDER, 14)      kcr(PLUS, 15)   kcr(COLON, 16)  kcr(LT, 17)     kcr(GT, 18)   kcr(QUESTION, 19)
    kcr(BSLH, 21)  kcr(LBKT, 22)  kcr(RBKT, 23)  kcr(GRAVE, 24)  kcr(MINUS, 25)      kcr(EQUAL, 26)  kcr(SEMI, 27)   kcr(COMMA, 28)  kcr(DOT, 29)  kcr(SLASH, 30)              
 
-   kcu(EXCL, U)
+   //kcu(EXCL, U)
 
    // LOWER
    kcl(N1, 0)     kcl(N2, 1)     kcl(N3, 2)     kcl(N4, 3)      kcl(N5, 4)          kcl(N6, 5)      kcl(N7, 6)     kcl(N8, 7)     kcl(N9, 8)      kcl(N0, 9)
