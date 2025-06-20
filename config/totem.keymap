@@ -95,6 +95,7 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
     #include "macros/macros.dtsi"
     #include "behaviors/behaviors.dtsi"
     #include "combos/combos.dtsi"
+    #include "leader.dtsi"
    
 
 
@@ -332,11 +333,5 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
             >;
         };
 
-    };
-
-    leader1: leader1 {
-            compatible = "zmk,behavior-leader-key";
-            #binding-cells = <0>;
-            usb { sequence = <U S B>; bindings = <&kp X>; };
     };
 };
