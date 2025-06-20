@@ -105,9 +105,9 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
         base_layer {
             label = "BASE";
             bindings = <
-                             &mc_ts TILDESHIFTEXC Q  &kd W  &kd F                    &kd P                              &kd B                               &kd J                 &kd L                    &mc_ts TILDESHIFTU U           &kd Y                 &kd SQT
-                             &mc_ts TILDESHIFTA A    &kd R  &kd S                    &kd T                              &kd G                               &kd M                 &mc_ts TILDESHIFTENNE N  &mc_ts TILDESHIFTE E           &mc_ts TILDESHIFTI I  &mc_ts TILDESHIFTO O
-&lm_homerow_short LALT LALT  &kd Z                   &kd X  &kd C                    &kd D                              &kd V                               &kd K                 &kd H                    &kd COMMA                      &kd DOT               &kd SLASH             &lm_homerow LGUI LGUI
+                             &mc_ts TILDESHIFTEXC Q  &kp W  &kp F                    &kp P                              &kp B                               &kp J                 &kp L                    &mc_ts TILDESHIFTU U           &kp Y                 &kp SQT
+                             &mc_ts TILDESHIFTA A    &kp R  &kp S                    &kp T                              &kp G                               &kp M                 &mc_ts TILDESHIFTENNE N  &mc_ts TILDESHIFTE E           &mc_ts TILDESHIFTI I  &mc_ts TILDESHIFTO O
+&lm_homerow_short LALT LALT  &kp Z                   &kp X  &kp C                    &kp D                              &kp V                               &kp K                 &kp H                    &kp COMMA                      &kp DOT               &kp SLASH             &lm_homerow LGUI LGUI
                                                      &base_th_mo_kp_hp RAISE DELETE  &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB          &base_th_mo_kp_hp NAVOVERR ENTER  &spacelm LCTRL SPACE  &lm_homerow_short LALT ENTER
             >;
         };
