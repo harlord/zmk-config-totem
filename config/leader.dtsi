@@ -15,4 +15,6 @@
     };
 
 /* German umlauts */
-ZMK_LEADER_SEQUENCE(de_ae,      &kp X,         U S B)  
+ZMK_LEADER_SEQUENCE(de_ae,      &kp X,         A)  
+ZMK_LEADER_SEQUENCE(de_ae2,      &kp X,         U S B)  
+ZMK_LEADER_SEQUENCE(de_ae3,      &kp X,         E I) 
