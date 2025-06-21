@@ -256,7 +256,7 @@ layer_kdl_y_8 {
                         &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
- */
+/*
 layer_kdl_sqt_9 {
      label = "KDL_SQT_9";
             bindings = <
