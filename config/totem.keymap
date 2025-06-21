@@ -126,6 +126,13 @@
 // check if mo KDL_A_10 remain activated when macro on release. 
 // otherwise on hold with cmd, macro for on press shoult sticky layer on and sticky layer of on release
 
+&mt {
+    quick-tap-ms = <100>;
+    global-quick-tap;
+    flavor = "tap-preferred";
+    tapping-term-ms = <170>;
+};
+
 / {
     #include "macros/macros_general.dtsi"
     #include "behaviors/behaviors_general.dtsi"
