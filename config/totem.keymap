@@ -143,7 +143,17 @@
 
     keymap {
         compatible = "zmk,keymap";
-
+ base_layer {
+            label = "BASE";
+            bindings = <
+                             &kp Q     &kp W    &kp F    &kp P   &kp B                                                      &kp J    &kp L    &kp U         &kp Y      &kp SQT
+                             &kp A     &kp R    &kp S    &kp T   &kp G                                                      &kp M    &kp N    &kp E         &kp I      &kp O
+&lm_homerow_short LALT LALT  &kp Z     &kp X    &kp C    &kp D   &kp V                                                      &kp K    &kp H    &kp COMMA     &kp DOT    &kp SLASH    &lm_homerow LGUI LGUI
+                                                            &base_th_mo_kp_hp RAISE TAB  &lm_homerow_short LGUI DELETE  &lm_homerow_short LSHFT BACKSPACE    &spacelm LCTRL SPACE  &td_nav_esc              &lm_homerow_short LALT ENTER
+            >;
+        };
+        
+/*
         base_layer {
             label = "BASE";
             bindings = <
@@ -153,7 +163,7 @@
                                                             &base_th_mo_kp_hp RAISE TAB  &lm_homerow_short LGUI DELETE  &lm_homerow_short LSHFT BACKSPACE    &spacelm LCTRL SPACE  &td_nav_esc              &lm_homerow_short LALT ENTER
             >;
         };
-/*
+
          layer_KDL_Q_0 {
             label = "KDL_Q_0";
             bindings = <
