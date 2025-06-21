@@ -13,7 +13,7 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     slow-release; \
-    layers = <BASE NAVOVERR KDL_SLH_30 DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE NAVOVERR DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 #define RCOMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -21,14 +21,14 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     require-prior-idle-ms = <150>; \
-    layers = <BASE NAVOVERR KDL_SLH_30 DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE NAVOVERR DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 #define NAVBACOMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
     timeout-ms = <200>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <NAVOVERR KDL_SLH_30>; \
+    layers = <NAVOVERR>; \
   };
 #define COMBODIRECTACC(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
