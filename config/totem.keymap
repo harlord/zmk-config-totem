@@ -137,7 +137,7 @@
                              &kh Q KDL_Q_0      &kh W KDL_W_1     &kh F KDL_F_2     &kh P KDL_P_3    &kh B KDL_B_4                   &kh J KDL_J_5     &kh L KDL_L_6      &kh U KDL_U_7           &kh Y KDL_Y_8        &kh SQT KDL_SQT_9
                              &kh A KDL_A_10     &kh R KDL_R_11    &kh S KDL_S_12    &kh T KDL_T_13   &kh G KDL_G_14                  &kh M KDL_M_15    &kh N KDL_NN_16    &kh E KDL_E_17          &kh I KDL_I_18       &kh O KDL_O_19
 &lm_homerow_short LALT LALT  &kh Z KDL_Z_21     &kh X KDL_X_22    &kh C KDL_C_23    &kh D KDL_D_24   &kh V KDL_V_25                  &kh K KDL_K_26    &kh H KDL_H_27     &kh COMMA KDL_COM_28    &kh DOT KDL_DOT_29   &kh SLASH KDL_SLH_30    &lm_homerow LGUI LGUI
-                                                            &base_th_mo_kp_hp RAISE TAB  &lm_homerow_short LGUI DELETE  &lm_homerow_short LSHFT BACKSPACE    &spacelm LCTRL SPACE  &kt_off NUMBERS              &lm_homerow_short LALT ENTER
+                                                            &base_th_mo_kp_hp RAISE TAB  &lm_homerow_short LGUI DELETE  &lm_homerow_short LSHFT BACKSPACE    &spacelm LCTRL SPACE  &to BASE              &lm_homerow_short LALT ENTER
             >;
         };
 
@@ -525,11 +525,12 @@ layer_kdl_slh_30 {
         layer_numbers {
             label = "NUMBERS";
             bindings = <
-                  &kp EXCL           &kp AT             &kp HASH                &kp DLLR                  &kp PRCNT                       &kp MINUS          &kp N7                    &kp N8                   &kp N9           &kp STAR
+                  &kp EXCL           &kp AT             &kp HASH                &kp DLLR                  &kp PRCNT                       &kp MINUS          &kp N7                    &kp Z                   &kp X           &kp Y
                   &kp LSHFT          &kp LCTRL          &kp LALT                &kp LGUI                  &kp COMMA                       &kp DOT            &kp N4                    &kp N5                   &kp N6           &kp N0
 &lrlMo LALT LALT  &kp BSLH           &kp LBKT           &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp PLUS           &kp N1                    &kp N2                   &kp N3           &kp SLASH              &lrrMo LGUI LGUI
                                                         &th_mo_kp_hp RAISE TAB  &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE    &space LCTRL SPACE  &to BASE  &th_kp_kp_hp LALT ENTER
             >;
         };
+
     };
 };
