@@ -29,9 +29,8 @@
 #define KDL_U_7 8
 #define KDL_Y_8 9
 #define KDL_SQT_9 10
-/*
 #define KDL_A_10 11
-
+/*
 #define KDL_R_11 12
 #define KDL_S_12 13
 #define KDL_T_13 14
@@ -148,7 +147,7 @@
             label = "BASE";
             bindings = <
                              &kh KDL_Q_0 Q      &kh KDL_W_1 W     &kh KDL_F_2 F     &kh KDL_P_3 P    &kh KDL_B_4 B                   &kh KDL_J_5 J     &kh KDL_L_6 L      &kh KDL_U_7 U           &kh KDL_Y_8 Y        &kh KDL_SQT_9 SQT
-                             &kp A     &kp R    &kp S    &kp T   &kp G                                                      &kp M    &kp N    &kp E         &kp I      &kp O
+                             &kh KDL_A_10 A     &kp R    &kp S    &kp T   &kp G                                                      &kp M    &kp N    &kp E         &kp I      &kp O
 &lm_homerow_short LALT LALT  &kp Z     &kp X    &kp C    &kp D   &kp V                                                      &kp K    &kp H    &kp COMMA     &kp DOT    &kp SLASH    &lm_homerow LGUI LGUI
                                                             &base_th_mo_kp_hp RAISE TAB  &lm_homerow_short LGUI DELETE  &lm_homerow_short LSHFT BACKSPACE    &spacelm LCTRL SPACE  &td_nav_esc              &lm_homerow_short LALT ENTER
             >;
