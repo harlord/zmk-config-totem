@@ -21,9 +21,9 @@
 
 #define KDL_Q_0 1
 #define KDL_W_1 2  
-/*
 #define KDL_F_2 3
 #define KDL_P_3 4
+/*
 #define KDL_B_4 5
 #define KDL_J_5 6
 #define KDL_L_6 7
@@ -147,7 +147,7 @@
  base_layer {
             label = "BASE";
             bindings = <
-                             &kh KDL_Q_0 Q      &kh KDL_W_1 W     &kp F     &kp P    &kp B                                                       &kp J     &kp L      &kp U           &kp Y        &kp   SQT
+                             &kh KDL_Q_0 Q      &kh KDL_W_1 W     &kh KDL_F_2 F     &kh KDL_P_3 P    &kp B                                                       &kp J     &kp L      &kp U           &kp Y        &kp   SQT
                              &kp A     &kp R    &kp S    &kp T   &kp G                                                      &kp M    &kp N    &kp E         &kp I      &kp O
 &lm_homerow_short LALT LALT  &kp Z     &kp X    &kp C    &kp D   &kp V                                                      &kp K    &kp H    &kp COMMA     &kp DOT    &kp SLASH    &lm_homerow LGUI LGUI
                                                             &base_th_mo_kp_hp RAISE TAB  &lm_homerow_short LGUI DELETE  &lm_homerow_short LSHFT BACKSPACE    &spacelm LCTRL SPACE  &td_nav_esc              &lm_homerow_short LALT ENTER
@@ -186,7 +186,7 @@ layer_kdl_w_1 {
                         &trans  &kp LSHFT  &mc_tsd A    &trans  &kp AT  &trans
             >;
         };
- /*
+ 
 layer_kdl_f_2 {
      label = "KDL_F_2";
             bindings = <
@@ -206,7 +206,7 @@ layer_kdl_p_3 {
                         &trans  &kp LSHFT  &mc_tsd A    &trans  &kp PRCNT  &trans
             >;
         };
- 
+/*
 layer_kdl_b_4 {
      label = "KDL_B_4";
             bindings = <
