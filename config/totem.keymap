@@ -52,7 +52,6 @@
 #define KDL_DOT_29 29
 #define KDL_SLH_30 30
 
-/*
 #define DRAGMOD 31
 
 #define LOWER  32
@@ -63,18 +62,6 @@
 #define FUNC 37
 #define ADJ  38
 #define NUMBERS 39
-*/
-
-#define DRAGMOD 31
-
-#define LOWER  32
-#define RAISE  33
-#define HOMEROW 34
-#define NAVOVERR 5
-#define DIRECTACC 6
-#define FUNC 7
-#define ADJ  8
-#define NUMBERS 9
 
 //RAISE
 //NAVOVERR
