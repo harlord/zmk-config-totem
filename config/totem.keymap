@@ -62,11 +62,6 @@
 #define ADJ  38
 #define NUMBERS 39
 
-
-#include "combos/combos_general.dtsi"
-#include "macros/macros_general.dtsi"
-#include "behaviors/behaviors_general.dtsi"
-
 //RAISE
 //NAVOVERR
 //DRAGCOMMAND
