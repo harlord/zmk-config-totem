@@ -459,10 +459,10 @@ layer_kdl_dot_29 {
 layer_kdl_slh_30 {
             label = "KDL_SLH_30";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &kp QUESTION  &trans
-                        &trans  &trans  &mc_quesd    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
 
