@@ -305,7 +305,7 @@
             tapping-term-ms = <500>;
             bindings = <&mo 4>, <&none>, <&kp ESC>;
         };
-
+/*
         td_nav_esc: td_nav_esc {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAV_ESC";
@@ -322,4 +322,5 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&tog_on>;
         };
+        */
     };
