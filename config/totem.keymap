@@ -18,20 +18,24 @@
 
 #define BASE 0
 // Key Drag Layers
-
 #define KDL_Q_0 1
+/*
 #define KDL_W_1 2  
 #define KDL_F_2 3
 #define KDL_P_3 4
 #define KDL_B_4 5
 #define KDL_J_5 6
 #define KDL_L_6 7
+*/
+
 #define KDL_U_7 8
+
+/*
 #define KDL_Y_8 9
 #define KDL_SQT_9 10
-/*
-#define KDL_A_10 11
+*/
 
+#define KDL_A_10 11
 #define KDL_R_11 12
 #define KDL_S_12 13
 #define KDL_T_13 14
@@ -41,6 +45,8 @@
 #define KDL_E_17 18
 #define KDL_I_18 19
 #define KDL_O_19 20
+
+/*
 #define KDL_Z_21 21
 #define KDL_X_22 22
 #define KDL_C_23 23
@@ -50,8 +56,10 @@
 #define KDL_H_27 27
 #define KDL_COM_28 28
 #define KDL_DOT_29 29
-#define KDL_SLH_30 30
 */
+
+#define KDL_SLH_30 30
+
 #define DRAGMOD 31
 
 #define LOWER  32
@@ -134,9 +142,9 @@
  base_layer {
             label = "BASE";
             bindings = <
-                             &kh Q KDL_Q_0      &kh W KDL_W_1     &kh F KDL_F_2     &kh P KDL_P_3    &kh B KDL_B_4                   &kh J KDL_J_5     &kh L KDL_L_6      &kh U KDL_U_7           &kh Y KDL_Y_8        &kh SQT KDL_SQT_9
-                             &kp A      &kp R     &kp S     &kp T    &kp G                   &kp M     &kp N     &kp E           &kp I        &kp O 
-&lm_homerow_short LALT LALT  &kp Z      &kp X     &kp C     &kp D    &kp V                   &kp K     &kp H      &kp COMMA     &kp DOT    &kp SLASH     &lm_homerow LGUI LGUI
+                               &kh Q KDL_Q_0       &kp W             &kp F             &kp P            &kp B                           &kp J             &kp L              &kh U KDL_U_7           &kp Y                &kp SQT
+                               &kh A KDL_A_10      &kh R KDL_R_11    &kh S KDL_S_12    &kh T KDL_T_13   &kh G KDL_G_14                  &kh M KDL_M_15    &kh N KDL_NN_16    &kh E KDL_E_17          &kh I KDL_I_18       &kh O KDL_O_19
+&lm_homerow_short LALT LALT    &kp Z               &kp X             &kp C             &kp D            &kp V                           &kp K             &kp H              &kp COMMA               &kp DOT              &kp SLASH          &lm_homerow LGUI LGUI
                                                             &base_th_mo_kp_hp RAISE TAB  &lm_homerow_short LGUI DELETE  &lm_homerow_short LSHFT BACKSPACE    &spacelm LCTRL SPACE  &to BASE              &lm_homerow_short LALT ENTER
             >;
         };
@@ -151,7 +159,7 @@
             >;
         };
 
-
+/*
 layer_kdl_w_1 {
      label = "KDL_W_1";
             bindings = <
@@ -211,7 +219,8 @@ layer_kdl_l_6 {
                         &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
- 
+ */
+
 layer_kdl_u_7 {
             label = "KDL_U_7";
             bindings = <
@@ -232,6 +241,7 @@ layer_kdl_y_8 {
             >;
         };
 
+/*
 layer_kdl_sqt_9 {
      label = "KDL_SQT_9";
             bindings = <
@@ -241,7 +251,6 @@ layer_kdl_sqt_9 {
                         &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
-/*
 layer_kdl_a_10 {
             label = "KDL_A_10";
             bindings = <
@@ -251,6 +260,7 @@ layer_kdl_a_10 {
                         &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
+*/
 
 layer_kdl_r_11 {
             label = "KDL_R_11";
@@ -342,6 +352,7 @@ layer_kdl_o_19 {
             >;
         };
 
+/*
 layer_kdl_z_21 {
             label = "KDL_Z_21";
             bindings = <
@@ -431,6 +442,7 @@ layer_kdl_dot_29 {
                         &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
+*/
 
 layer_kdl_slh_30 {
             label = "KDL_SLH_30";
@@ -441,7 +453,7 @@ layer_kdl_slh_30 {
                         &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
-*/
+
         layer_DRAGMOD {
             label = "DRAGMOD";
             bindings = <
