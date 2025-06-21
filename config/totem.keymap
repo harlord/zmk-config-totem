@@ -66,11 +66,11 @@
 #define NUMBERS 39
 */
 
-#define DRAGMOD 1
+#define DRAGMOD 31
 
-#define LOWER  2
-#define RAISE  3
-#define HOMEROW 4
+#define LOWER  32
+#define RAISE  33
+#define HOMEROW 34
 #define NAVOVERR 5
 #define DIRECTACC 6
 #define FUNC 7
