@@ -55,7 +55,7 @@
   };
 
 #define kcu(BINDINGS, KEYPOS) \
-  combo_raise_##KEYPOS { \
+  combo_unique_##KEYPOS { \
     timeout-ms = <2000>; \
     bindings = <&km BINDINGS RAISE>; \
     key-positions = <KEYPOS>; \
