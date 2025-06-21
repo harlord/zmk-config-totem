@@ -541,7 +541,7 @@ layer_kdl_slh_30 {
                   &kp EXCL           &kp AT             &kp HASH                &kp DLLR                  &kp PRCNT                       &kp MINUS          &kp N7                    &kp N8                   &kp N9           &kp STAR
                   &kp LSHFT          &kp LCTRL          &kp LALT                &kp LGUI                  &kp COMMA                       &kp DOT            &kp N4                    &kp N5                   &kp N6           &kp N0
 &lrlMo LALT LALT  &kp BSLH           &kp LBKT           &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp PLUS           &kp N1                    &kp N2                   &kp N3           &kp SLASH              &lrrMo LGUI LGUI
-                                                        &th_mo_kp_hp RAISE TAB  &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE    &space LCTRL SPACE  &tog_off NUMBERS  &th_kp_kp_hp LALT ENTER
+                                                        &th_mo_kp_hp RAISE TAB  &th_kp_kp_hp LGUI DELETE  &th_kp_kp_hp LSHFT BACKSPACE    &space LCTRL SPACE  &to BASE  &th_kp_kp_hp LALT ENTER
             >;
         };
     };
