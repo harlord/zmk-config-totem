@@ -109,6 +109,20 @@
 // |_ on release
 // |__ kt_off PIPE 
 
+// for RAISE
+// when kp A 
+// |_ macro 
+// |__ on_press 
+// |___ behavior bh_kt_on
+// |____ on tap
+// |_____ kp A
+// |____ on hold with cmd
+// |_____ mo KDL_A_10
+// |_____ kt_on PIPE 
+// |_ on release
+// |__ kt_off PIPE 
+
+
 
 // check if mo KDL_A_10 remain activated when macro on release. 
 // otherwise on hold with cmd, macro for on press shoult sticky layer on and sticky layer of on release
@@ -124,15 +138,105 @@
         base_layer {
             label = "BASE";
             bindings = <
-                             &mc_ts KDL_Q_0 Q      &kd W    &kd F                        &kd P                          &kd B                                &kd J                 &kd L                    &mc_ts KDL_U_7 U           &kd Y                 &kd SQT
-                             &mc_ts KDL_A_10 A     &kd R    &kd S                        &kd T                          &kd G                                &kd M                 &mc_ts KDL_NN_16 N  &mc_ts KDL_E_17 E           &mc_ts KDL_I_18 I  &mc_ts KDL_O_19 O
-&lm_homerow_short LALT LALT  &kd Z                 &kd X    &kd C                        &kd D                          &kd V                                &kd K                 &kd H                    &kd COMMA                      &kd DOT               &kd SLASH             &lm_homerow LGUI LGUI
+                             &kh KDL_Q_0 Q      &kh KDL_W_1 W     &kh KDL_F_2 F     &kh KDL_P_3 P    &kh KDL_B_4 B                                                       &kh KDL_J_5 J     &kh KDL_L_6 L      &kh KDL_U_7 U           &kh KDL_Y_8 Y        &kd KDL_SQT_9 SQT
+                             &kh KDL_A_10 A     &kh KDL_R_11 R    &kh KDL_S_12 S    &kh KDL_T_13 T   &kh KDL_G_14 G                                                      &kh KDL_M_15 M    &kh KDL_NN_16 N    &kh KDL_E_17 E          &kh KDL_I_18 I       &kh KDL_O_19 O
+&lm_homerow_short LALT LALT  &kh KDL_Z_21 Z     &kh KDL_X_22 X    &kh KDL_C_23 C    &kh KDL_D_24 D   &kh KDL_V_25 V                                                      &kh KDL_K_26 K    &kh KDL_H_27 H     &kh KDL_COM_28 COMMA    &kd KDL_DOT_29 DOT   &kd KDL_SLH_30 SLASH    &lm_homerow LGUI LGUI
                                                             &base_th_mo_kp_hp RAISE TAB  &lm_homerow_short LGUI DELETE  &lm_homerow_short LSHFT BACKSPACE    &spacelm LCTRL SPACE  &td_nav_esc              &lm_homerow_short LALT ENTER
             >;
         };
 
-        layer_kdl_q_0 {
+         layer_KDL_Q_0 {
             label = "KDL_Q_0";
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &kp EXCL  &trans
+            >;
+        };
+
+layer_kdl_w_1 {
+     label = "KDL_W_1";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &kp AT  &trans
+            >;
+        };
+ 
+layer_kdl_f_2 {
+     label = "KDL_F_2";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &kp HASH  &trans
+            >;
+        };
+ 
+layer_kdl_p_3 {
+     label = "KDL_P_3";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &kp PRCNT  &trans
+            >;
+        };
+ 
+layer_kdl_b_4 {
+     label = "KDL_B_4";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &kp DLLR  &trans
+            >;
+        };
+ 
+layer_kdl_j_5 {
+     label = "KDL_J_5";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &kp CARET  &trans
+            >;
+        };
+ 
+layer_kdl_l_6 {
+     label = "KDL_L_6";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_u_7 {
+            label = "KDL_U_7";
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &mc_tsd U    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_y_8 {
+     label = "KDL_Y_8";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_sqt_9 {
+     label = "KDL_SQT_9";
             bindings = <
         &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
@@ -141,40 +245,9 @@
             >;
         };
 
-KDL_W_1 2  
-KDL_F_2 3
-KDL_P_3 4
-KDL_B_4 5
-KDL_J_5 6
-KDL_L_6 7
-KDL_U_7 8
-KDL_Y_8 9
-KDL_SQT_9 10
-
-KDL_A_10 11
-KDL_R_11 12
-KDL_S_12 13
-KDL_T_13 14
-KDL_G_14 15
-KDL_M_15 16
-KDL_NN_16 17
-KDL_E_17 18
-KDL_I_18 19
-KDL_O_19 20
-
-KDL_Z_21 21
-KDL_X_22 22
-KDL_C_23 23
-KDL_D_24 24
-KDL_V_25 25
-KDL_K_26 26
-KDL_H_27 27
-KDL_COM_28 28
-KDL_DOT_29 29
-KDL_SLH_30 30
 
 
-        layer_kdl_a_10 {
+layer_kdl_a_10 {
             label = "KDL_A_10";
             bindings = <
         &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
@@ -183,8 +256,68 @@ KDL_SLH_30 30
                         &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
-
-        layer_kdl_e_17 {
+ 
+layer_kdl_r_11 {
+            label = "KDL_R_11";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LCTRL  &trans    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_s_12 {
+            label = "KDL_S_12";
+            bindings = <
+        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LALT  &trans    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_t_13 {
+            label = "KDL_T_13";
+            bindings = <
+        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LGUI  &trans    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_g_14 {
+     label = "KDL_G_14";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_m_15 {
+     label = "KDL_M_15";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_nn_16 {
+            label = "KDL_NN_16";
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &mc_ennesd N    &trans  &trans  &trans
+            >;
+        };
+ 
+ layer_kdl_e_17 {
             label = "KDL_E_17";
             bindings = <
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
@@ -193,8 +326,8 @@ KDL_SLH_30 30
                         &trans  &trans  &mc_tsd E    &mo LOWER  &trans  &trans
             >;
         };
-
-        layer_kdl_i_18 {
+ 
+layer_kdl_i_18 {
             label = "KDL_I_18";
             bindings = <
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
@@ -203,8 +336,8 @@ KDL_SLH_30 30
                         &trans  &trans  &mc_tsd I    &trans  &trans  &trans
             >;
         };
-
-        layer_kdl_o_19 {
+ 
+layer_kdl_o_19 {
             label = "KDL_O_19";
             bindings = <
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
@@ -214,73 +347,103 @@ KDL_SLH_30 30
             >;
         };
 
-        layer_kdl_u_7 {
-            label = "KDL_U_7";
+layer_kdl_z_21 {
+     label = "KDL_Z_21";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &mc_tsd U    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
-
-        layer_kdl_nn_16 {
-            label = "KDL_NN_16";
+ 
+layer_kdl_x_22 {
+     label = "KDL_X_22";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &mc_ennesd N    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
-
-        layer_KDL_Q_0 {
-            label = "KDL_Q_0";
+ 
+layer_kdl_c_23 {
+     label = "KDL_C_23";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &mc_ecxd
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
-
-        layer_kdl_slh_30 {
+ 
+layer_kdl_d_24 {
+     label = "KDL_D_24";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_v_25 {
+     label = "KDL_V_25";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_k_26 {
+     label = "KDL_K_26";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_h_27 {
+     label = "KDL_H_27";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_com_28 {
+     label = "KDL_COM_28";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_dot_29 {
+     label = "KDL_DOT_29";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_slh_30 {
             label = "KDL_SLH_30";
             bindings = <
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &kp QUESTION  &trans
                         &trans  &trans  &mc_quesd    &trans  &trans  &trans
-            >;
-        };
-
-        layer_kdl_r_11 {
-            label = "KDL_R_11";
-            bindings = <
-        &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LCTRL  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        layer_kdl_s_12 {
-            label = "KDL_S_12";
-            bindings = <
-        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LALT  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        layer_kdl_t_13 {
-            label = "KDL_T_13";
-            bindings = <
-        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LGUI  &trans    &trans  &trans  &trans
             >;
         };
 

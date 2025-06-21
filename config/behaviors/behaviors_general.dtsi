@@ -33,9 +33,9 @@
    
     behaviors {
 
-        bh_kt_on:  bh_kt_on {
+        kh: kh {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&kt_on>, <&kp>;
+            bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <250>;

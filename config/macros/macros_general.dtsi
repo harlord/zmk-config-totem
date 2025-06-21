@@ -435,9 +435,42 @@
             #binding-cells = <2>;
             bindings =
                 <&macro_press>,
-                <&mo DRAGMOD &macro_param_1to1 &macro_param_2to2 &bh_kt_on MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+                <&mo KDL_Q_0 &macro_param_1to1 &macro_param_2to2 &bh_kt_on MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER &mo DRAGMOD>;
         };
+
+
+//   kdm_q_0:
+//   kdm_w_1: 
+//   kdm_f_2:
+//   kdm_p_3:
+//   kdm_b_4:
+//   kdm_j_5:
+//   kdm_l_6:
+//   kdm_u_7:
+//   kdm_y_8:
+// kdm_sqt_9:
+//  kdm_a_10:
+//  kdm_r_11:
+//  kdm_s_12:
+//  kdm_t_13:
+//  kdm_g_14:
+//  kdm_m_15:
+// kdm_nn_16:
+//  kdm_e_17:
+//  kdm_i_18:
+//  kdm_o_19:
+//  kdm_z_21:
+//  kdm_x_22:
+//  kdm_c_23:
+//  kdm_d_24:
+//  kdm_v_25:
+//  kdm_k_26:
+//  kdm_h_27:
+//kdm_com_28:
+//kdm_dot_29:
+//kdm_slh_30:
+
     };
