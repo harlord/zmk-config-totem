@@ -90,7 +90,6 @@ al presionar up, se queda esperando por SPACE mo DRAGTHUMB,
 #define THUMB_REPEAT_DECAY_BASE 0 // "tap then hold" for key auto-repeat
 #define THUMB_REPEAT_DECAY 190 // "tap then hold" for key auto-repeat
 #define SPACE_HOLDING_TYPE "balanced"   
-#include "leader.dtsi"
 
 / {
     #include "macros/macros.dtsi"
