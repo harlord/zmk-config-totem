@@ -18,6 +18,7 @@
 
 #define BASE 0
 // Key Drag Layers
+/* 
 #define KDL_Q_0 1
 #define KDL_W_1 2  
 #define KDL_F_2 3
@@ -61,6 +62,18 @@
 #define FUNC 37
 #define ADJ  38
 #define NUMBERS 39
+*/
+
+#define DRAGMOD 1
+
+#define LOWER  2
+#define RAISE  3
+#define HOMEROW 4
+#define NAVOVERR 5
+#define DIRECTACC 6
+#define FUNC 7
+#define ADJ  8
+#define NUMBERS 9
 
 //RAISE
 //NAVOVERR
@@ -140,7 +153,7 @@
                                                             &base_th_mo_kp_hp RAISE TAB  &lm_homerow_short LGUI DELETE  &lm_homerow_short LSHFT BACKSPACE    &spacelm LCTRL SPACE  &td_nav_esc              &lm_homerow_short LALT ENTER
             >;
         };
-
+/*
          layer_KDL_Q_0 {
             label = "KDL_Q_0";
             bindings = <
@@ -442,7 +455,7 @@ layer_kdl_slh_30 {
                         &trans  &trans  &mc_quesd    &trans  &trans  &trans
             >;
         };
-
+*/
         layer_DRAGMOD {
             label = "DRAGMOD";
             bindings = <
