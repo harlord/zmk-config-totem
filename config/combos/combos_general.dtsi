@@ -52,7 +52,7 @@
     layers = <TILDESHIFT>; \
   };
 
-/ {
+
     combos {
         compatible = "zmk,combos";
 
