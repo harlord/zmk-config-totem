@@ -28,8 +28,8 @@
 #define KDL_L_6 7
 #define KDL_U_7 8
 #define KDL_Y_8 9
-/*
 #define KDL_SQT_9 10
+/*
 #define KDL_A_10 11
 
 #define KDL_R_11 12
@@ -231,7 +231,7 @@ layer_kdl_y_8 {
                         &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
-/*
+
 layer_kdl_sqt_9 {
      label = "KDL_SQT_9";
             bindings = <
@@ -241,7 +241,7 @@ layer_kdl_sqt_9 {
                         &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
-
+/*
 layer_kdl_a_10 {
             label = "KDL_A_10";
             bindings = <
