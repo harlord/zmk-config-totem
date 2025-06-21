@@ -40,8 +40,8 @@
 #define KDL_E_17 18
 #define KDL_I_18 19
 #define KDL_O_19 20
-/*
 #define KDL_Z_21 21
+/*
 #define KDL_X_22 22
 #define KDL_C_23 23
 #define KDL_D_24 24
@@ -148,7 +148,7 @@
             bindings = <
                              &kh KDL_Q_0 Q      &kh KDL_W_1 W     &kh KDL_F_2 F     &kh KDL_P_3 P    &kh KDL_B_4 B                   &kh KDL_J_5 J     &kh KDL_L_6 L      &kh KDL_U_7 U           &kh KDL_Y_8 Y        &kh KDL_SQT_9 SQT
                              &kh KDL_A_10 A     &kh KDL_R_11 R    &kh KDL_S_12 S    &kh KDL_T_13 T   &kh KDL_G_14 G                  &kh KDL_M_15 M    &kh KDL_NN_16 N    &kh KDL_E_17 E          &kh KDL_I_18 I       &kh KDL_O_19 O
-&lm_homerow_short LALT LALT  &kp Z     &kp X    &kp C    &kp D   &kp V                                                      &kp K    &kp H    &kp COMMA     &kp DOT    &kp SLASH    &lm_homerow LGUI LGUI
+&lm_homerow_short LALT LALT  &kh KDL_Z_21 Z     &kp X    &kp C    &kp D   &kp V                                                      &kp K    &kp H    &kp COMMA     &kp DOT    &kp SLASH    &lm_homerow LGUI LGUI
                                                             &base_th_mo_kp_hp RAISE TAB  &lm_homerow_short LGUI DELETE  &lm_homerow_short LSHFT BACKSPACE    &spacelm LCTRL SPACE  &td_nav_esc              &lm_homerow_short LALT ENTER
             >;
         };
@@ -365,9 +365,9 @@ layer_kdl_o_19 {
                         &trans  &trans  &mc_tsd O    &trans  &trans  &trans
             >;
         };
-/*
+
 layer_kdl_z_21 {
-     label = "KDL_Z_21";
+            label = "KDL_Z_21";
             bindings = <
         &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
@@ -375,7 +375,7 @@ layer_kdl_z_21 {
                         &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
-
+/*
 layer_kdl_x_22 {
      label = "KDL_X_22";
             bindings = <
