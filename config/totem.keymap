@@ -147,24 +147,12 @@
  base_layer {
             label = "BASE";
             bindings = <
-                             &kh KDL_Q_0 Q      &kh KDL_W_1 W     &kh KDL_F_2 F     &kh KDL_P_3 P    &kh KDL_B_4 B                   &kh KDL_J_5 J     &kh KDL_L_6 L      &kh KDL_U_7 U           &kh KDL_Y_8 Y        &kh KDL_SQT_9 SQT
-                             &kh KDL_A_10 A     &kh KDL_R_11 R    &kh KDL_S_12 S    &kh KDL_T_13 T   &kh KDL_G_14 G                  &kh KDL_M_15 M    &kh KDL_NN_16 N    &kh KDL_E_17 E          &kh KDL_I_18 I       &kh KDL_O_19 O
-&lm_homerow_short LALT LALT  &kh KDL_Z_21 Z     &kh KDL_X_22 X    &kh KDL_C_23 C    &kh KDL_D_24 D   &kh KDL_V_25 V                  &kh KDL_K_26 K    &kh KDL_H_27 H     &kh KDL_COM_28 COMMA    &kh KDL_DOT_29 DOT   &kh KDL_SLH_30 SLASH    &lm_homerow LGUI LGUI
+                             &kh Q KDL_Q_0      &kh W KDL_W_1     &kh F KDL_F_2     &kh P KDL_P_3    &kh B KDL_B_4                   &kh J KDL_J_5     &kh L KDL_L_6      &kh U KDL_U_7           &kh Y KDL_Y_8        &kh SQT KDL_SQT_9
+                             &kh A KDL_A_10     &kh R KDL_R_11    &kh S KDL_S_12    &kh T KDL_T_13   &kh G KDL_G_14                  &kh M KDL_M_15    &kh_16 N KDL_NN    &kh E KDL_E_17          &kh I KDL_I_18       &kh O KDL_O_19
+&lm_homerow_short LALT LALT  &kh Z KDL_Z_21     &kh X KDL_X_22    &kh C KDL_C_23    &kh D KDL_D_24   &kh V KDL_V_25                  &kh K KDL_K_26    &kh H KDL_H_27     &kh COMMA KDL_COM_28    &kh DOT KDL_DOT_29   &kh SLASH KDL_SLH_30    &lm_homerow LGUI LGUI
                                                             &base_th_mo_kp_hp RAISE TAB  &lm_homerow_short LGUI DELETE  &lm_homerow_short LSHFT BACKSPACE    &spacelm LCTRL SPACE  &td_nav_esc              &lm_homerow_short LALT ENTER
             >;
         };
-
-/*
-        base_layer {
-            label = "BASE";
-            bindings = <
-                             &kh KDL_Q_0 Q      &kh KDL_W_1 W     &kh KDL_F_2 F     &kh KDL_P_3 P    &kh KDL_B_4 B                                                       &kh KDL_J_5 J     &kh KDL_L_6 L      &kh KDL_U_7 U           &kh KDL_Y_8 Y        &kd KDL_SQT_9 SQT
-                             &kh KDL_A_10 A     &kh KDL_R_11 R    &kh KDL_S_12 S    &kh KDL_T_13 T   &kh KDL_G_14 G                                                      &kh KDL_M_15 M    &kh KDL_NN_16 N    &kh KDL_E_17 E          &kh KDL_I_18 I       &kh KDL_O_19 O
-&lm_homerow_short LALT LALT  &kh KDL_Z_21 Z     &kh KDL_X_22 X    &kh KDL_C_23 C    &kh KDL_D_24 D   &kh KDL_V_25 V                                                      &kh KDL_K_26 K    &kh KDL_H_27 H     &kh KDL_COM_28 COMMA    &kd KDL_DOT_29 DOT   &kd KDL_SLH_30 SLASH    &lm_homerow LGUI LGUI
-                                                            &base_th_mo_kp_hp RAISE TAB  &lm_homerow_short LGUI DELETE  &lm_homerow_short LSHFT BACKSPACE    &spacelm LCTRL SPACE  &td_nav_esc              &lm_homerow_short LALT ENTER
-            >;
-        };
-*/
 
          layer_KDL_Q_0 {
             label = "KDL_Q_0";

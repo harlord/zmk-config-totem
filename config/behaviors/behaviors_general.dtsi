@@ -28,7 +28,7 @@
 
         kh: kh {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&kp>;
+            bindings = <&kp>, <&mo>;
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <250>;
