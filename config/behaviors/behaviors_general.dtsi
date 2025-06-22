@@ -30,7 +30,8 @@
             #binding-cells = <0>;
             pblead { sequence = <P B>; bindings = <&kp X>; };
             jllead { sequence = <J L>; bindings = <&kp Y>; };
-            uylead { sequence = <U Y>; bindings = <&kp K>; };
+            uylead { sequence = <U Y>; bindings = <&kp X>; };
+            khlead { sequence = <K H>; bindings = <&kp X>; };
         };
 
 
