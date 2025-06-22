@@ -94,7 +94,7 @@ layer_kdl_r_11 {
         &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LCTRL  &trans    &trans  &trans  &trans
+                        &trans  &trans     &kp LCTRL    &trans  &trans  &trans
             >;
         };
  
@@ -104,17 +104,17 @@ layer_kdl_s_12 {
         &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LALT  &trans    &trans  &trans  &trans
+                        &trans  &trans    &kp LALT  &trans  &trans  &trans
             >;
         };
  
 layer_kdl_t_13 {
             label = "KDL_T_13";
             bindings = <
-        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LGUI  &trans    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &kp LGUI    &trans  &trans  &trans
             >;
         };
  
@@ -124,7 +124,7 @@ layer_kdl_g_14 {
         &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LSHFT  &trans    &trans  &trans  &trans
+                        &trans  &trans     &trans       &trans  &trans  &trans
             >;
         };
  
@@ -134,36 +134,36 @@ layer_kdl_m_15 {
         &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LSHFT  &trans    &trans  &trans  &trans
+                        &trans  &trans     &trans       &trans  &trans  &trans
             >;
         };
  
 layer_kdl_nn_16 {
             label = "KDL_NN_16";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &mc_ennesd N    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans        &trans      &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans        &trans      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans        &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &mc_ennesd N  &trans      &trans  &trans  &trans
             >;
         };
  
  layer_kdl_e_17 {
             label = "KDL_E_17";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &mc_bkctilde E  &trans    &mo LOWER  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &mc_bkctilde E &trans    &mo LOWER  &trans  &trans
             >;
         };
  
 layer_kdl_i_18 {
             label = "KDL_I_18";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &mc_bkctilde I  &trans    &trans  &trans  &trans
             >;
         };
@@ -171,10 +171,10 @@ layer_kdl_i_18 {
 layer_kdl_o_19 {
             label = "KDL_O_19";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &mc_bkctilde O  &trans    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &mc_bkctilde O   &trans    &trans  &trans  &trans
             >;
         };
 
