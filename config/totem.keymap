@@ -30,15 +30,14 @@
 #define KDL_I_18 11
 #define KDL_O_19 12
 #define KDL_SLH_30 13
-#define DRAGMOD 14
-#define LOWER  15
-#define RAISE  16
-#define HOMEROW 17
-#define NAVOVERR 18
-#define DIRECTACC 19
-#define FUNC 20
-#define ADJ  21
-#define NUMBERS 22
+#define LOWER  14
+#define RAISE  15
+#define HOMEROW 16
+#define NAVOVERR 17
+#define DIRECTACC 18
+#define FUNC 19
+#define ADJ  20
+#define NUMBERS 21
 
 / {
     #include "macros/macros_general.dtsi"
@@ -83,7 +82,7 @@ layer_kdl_a_10 {
         &trans  &trans  &trans  &trans   &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans   &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans   &trans       &trans  &trans  &trans  &trans  &trans  &trans
-               &trans  &mc_bkctilde A  &kp LSHFT     &trans  &trans  &trans
+               &trans  &mc_bkctilde A  &lm_mac_homerow LSHFT     &trans  &trans  &trans
             >;
         };
 
@@ -94,7 +93,7 @@ layer_kdl_r_11 {
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &kp LCTRL    &trans  &trans  &trans
+                        &trans  &trans  &lm_mac_homerow LCTRL    &trans  &trans  &trans
             >;
         };
  
@@ -104,7 +103,7 @@ layer_kdl_s_12 {
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &kp LALT  &trans  &trans  &trans
+                        &trans  &trans  &lm_mac_homerow LALT  &trans  &trans  &trans
             >;
         };
  
@@ -114,7 +113,7 @@ layer_kdl_t_13 {
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &kp LGUI    &trans  &trans  &trans
+                        &trans  &trans  &lm_mac_homerow LGUI    &trans  &trans  &trans
             >;
         };
  
@@ -188,16 +187,6 @@ layer_kdl_slh_30 {
             >;
         };
 
-        layer_DRAGMOD {
-            label = "DRAGMOD";
-            bindings = <
-        &trans  &trans  &trans  &trans    &trans        &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans    &trans        &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans        &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans        &mo LOWER  &trans  &trans
-            >;
-        };
-
         lower_layer {
             label = "LOWER";
             bindings = <
@@ -231,9 +220,9 @@ layer_kdl_slh_30 {
         layer_navoverr {
             label = "NAVOVERR";
             bindings = <
-                  &kp N1     &kp N2     &kp N3                  &kp N4                    &kp N5                          &kp N6              &kp N7                     &kp N8                    &kp N9          &kp N0
-                  &sk LSHFT  &sk LCTRL  &sk LALT                &sk LGUI                  &kp F11                         &kp F12             &lrrMo RGUI N              &kp UP                    &lrrMo RCTRL I  &kp RSHFT
-&lrlMo LALT LALT  &none      &none      &none                   &none                     &caps_word                      &kp CAPS            &kp LEFT                   &kp DOWN                  &kp RIGHT       &kp RALT   &lrrMo LGUI LGUI
+                  &kp N1          &kp N2          &kp N3                  &kp N4                         &kp N5                          &kp N6              &kp N7                     &kp N8                    &kp N9          &kp N0
+                  &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S           &lrlMo LGUI T                  &kp F11                         &kp F12             &lrrMo RGUI N              &kp UP                    &lrrMo RCTRL I  &kp RSHFT
+&lrlMo LALT LALT  &none          &none            &none                   &none                          &caps_word                      &kp CAPS            &kp LEFT                   &kp DOWN                  &kp RIGHT       &kp RALT   &lrrMo LGUI LGUI
                                         &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space NAVOVERR SPACE  &trans
             >;
         };

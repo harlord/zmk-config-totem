@@ -116,54 +116,6 @@
         //        32 33 34         35 36 37
 
 
-        ////////////////////
-        //START Navigation//
-        ////////////////////
-/*
-        c-up-nav-inv {
-            bindings = <&kp UP>;
-            key-positions = <17 35>;
-            layers = <BASE DRAGMOD>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <2000>;
-        };
-
-        c-down-nav-inv {
-            bindings = <&kp DOWN>;
-            key-positions = <28 35>;
-            layers = <BASE DRAGMOD>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <2000>;
-        };
-
-        c-right-nav-inv {
-            bindings = <&kp RIGHT>;
-            key-positions = <29 35>;
-            layers = <BASE DRAGMOD>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <2000>;
-        };
-
-        c-left-nav-inv-s-quick {
-            bindings = <&kp LEFT>;
-            key-positions = <27 35>;
-            layers = <BASE DRAGMOD>;
-            timeout-ms = <2000>;
-        };
-
-        c-left-nav-inv-s-hold {
-            bindings = <&mo LOWER>;
-            key-positions = <27 35>;
-            layers = <BASE DRAGMOD>;
-            timeout-ms = <2000>;
-            slow-release;
-        };
-*/
-        //////////////////
-        //END Navigation//
-        //////////////////
-
-
         /////////////////
         //START Dragmod//
         /////////////////
