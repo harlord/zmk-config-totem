@@ -170,7 +170,7 @@
 
         c-hr-thumb-ar {
             bindings = <&kp LS(LCTRL)>;
-            key-positions = <33 10 11>;
+            key-positions = <34 10 11>;
             layers = <BASE KDL_A_10 KDL_R_11 KDL_S_12 KDL_T_13>;
             slow-release;
             timeout-ms = <2000>;
@@ -178,7 +178,7 @@
 
         c-hr-thumb-ars {
             bindings = <&kp LS(LA(LCTRL))>;
-            key-positions = <33 10 11 12>;
+            key-positions = <34 10 11 12>;
             layers = <BASE KDL_A_10 KDL_R_11 KDL_S_12 KDL_T_13>;
             slow-release;
             timeout-ms = <2000>;
@@ -186,7 +186,7 @@
 
         c-hr-thumb-arst {
             bindings = <&kp LS(LA(LG(LCTRL)))>;
-            key-positions = <33 10 11 12 13>;
+            key-positions = <34 10 11 12 13>;
             layers = <BASE KDL_A_10 KDL_R_11 KDL_S_12 KDL_T_13>;
             slow-release;
             timeout-ms = <2000>;
@@ -194,7 +194,7 @@
 
         c-hr-thumb-art {
             bindings = <&kp LS(LC(LCMD))>;
-            key-positions = <33 10 11 13>;
+            key-positions = <34 10 11 13>;
             layers = <BASE KDL_A_10 KDL_R_11 KDL_S_12 KDL_T_13>;
             slow-release;
             timeout-ms = <2000>;
@@ -202,7 +202,7 @@
 
         c-hr-thumb-ast {
             bindings = <&kp LS(LA(LCMD))>;
-            key-positions = <33 10 13 12>;
+            key-positions = <34 10 13 12>;
             layers = <BASE KDL_A_10 KDL_R_11 KDL_S_12 KDL_T_13>;
             slow-release;
             timeout-ms = <2000>;
@@ -210,7 +210,7 @@
 
         c-hr-thumb-rst {
             bindings = <&kp LA(LC(LCMD))>;
-            key-positions = <33 13 12 11>;
+            key-positions = <34 13 12 11>;
             layers = <BASE KDL_A_10 KDL_R_11 KDL_S_12 KDL_T_13>;
             slow-release;
             timeout-ms = <2000>;
@@ -218,7 +218,7 @@
 
         c-hr-thumb-at {
             bindings = <&kp LS(LCMD)>;
-            key-positions = <33 13 10>;
+            key-positions = <34 13 10>;
             layers = <BASE KDL_A_10 KDL_R_11 KDL_S_12 KDL_T_13>;
             slow-release;
             timeout-ms = <2000>;
@@ -226,7 +226,7 @@
 
         c-hr-thumb-st {
             bindings = <&kp LA(LCMD)>;
-            key-positions = <33 12 13>;
+            key-positions = <34 12 13>;
             layers = <BASE KDL_A_10 KDL_R_11 KDL_S_12 KDL_T_13>;
             slow-release;
             timeout-ms = <2000>;
@@ -234,7 +234,7 @@
 
         c-hr-thumb-rs {
             bindings = <&kp LC(LALT)>;
-            key-positions = <33 12 11>;
+            key-positions = <34 12 11>;
             layers = <BASE KDL_A_10 KDL_R_11 KDL_S_12 KDL_T_13>;
             slow-release;
             timeout-ms = <2000>;
@@ -242,7 +242,7 @@
 
         c-hr-thumb-rt {
             bindings = <&kp LC(LCMD)>;
-            key-positions = <33 13 11>;
+            key-positions = <34 13 11>;
             layers = <BASE KDL_A_10 KDL_R_11 KDL_S_12 KDL_T_13>;
             slow-release;
             timeout-ms = <2000>;
@@ -250,7 +250,7 @@
 
         c-hr-thumb-as {
             bindings = <&kp LS(LALT)>;
-            key-positions = <33 10 12>;
+            key-positions = <34 10 12>;
             layers = <BASE KDL_A_10 KDL_R_11 KDL_S_12 KDL_T_13>;
             slow-release;
             timeout-ms = <2000>;
