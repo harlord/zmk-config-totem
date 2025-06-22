@@ -223,11 +223,10 @@
             flavor =
             SPACE_HOLDING_TYPE;
             tapping-term-ms = <THUMB_HOLDING_TIME>;
-            quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+            //quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
             #binding-cells = <2>;
-            require-prior-idle-ms = <80>;
-            hold-trigger-on-release;
-            bindings = <&kp>, <&kp>;
+            require-prior-idle-ms = <50>;
+            bindings = <&mo>, <&kp>;
         };
 
         spacelm: thumb_layer_access_spacebarlm {
@@ -235,11 +234,10 @@
             flavor =
             SPACE_HOLDING_TYPE;
             tapping-term-ms = <THUMB_HOLDING_TIME>;
-            quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
+            //quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
             #binding-cells = <2>;
-            require-prior-idle-ms = <80>;
-            hold-trigger-on-release;
-            bindings = <&kp>, <&kp>;
+            require-prior-idle-ms = <50>;
+            bindings = <&mo>, <&kp>;
         };
 
         th_kp_sl_hp: th_kp_sl_hp {

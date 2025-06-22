@@ -55,47 +55,6 @@
 
     combos {
         compatible = "zmk,combos";
-
-        // testgrave {
-        //     bindings = <&kp GRAVE>;
-        //     key-positions = <13 24>;
-        // };
-        // top {
-        //     bindings = <&none>;
-        //     key-positions = <0 1 2 3 4>;
-        // };
-        // mid {
-        //     bindings = <&none>;
-        //     key-positions = <10 11 12 13 14>;
-        // };
-        // bottom {
-        //     bindings = <&none>;
-        //     key-positions = <21 22 23 24 25>;
-        // };
-        // topr {
-        //     bindings = <&none>;
-        //     key-positions = <5 6 7 8 9>;
-        // };
-        // midr {
-        //     bindings = <&none>;
-        //     key-positions = <15 16 17 18 19>;
-        // };
-        // bottomr {
-        //     bindings = <&none>;
-        //     key-positions = <26 27 28 29 30>;
-        // };
-        // thumb {
-        //     bindings = <&none>;
-        //     key-positions = <32 33 34>;
-        // };
-        // thumbr {
-        //     bindings = <&none>;
-        //     key-positions = <36 37 35>;
-        // };
-        //     0  1  2  3  4     5  6  7  8  9
-        //    10 11 12 13 14    15 16 17 18 19
-        //20  21 22 23 24 25    26 27 28 29 30  31
-        //        32 33 34         35 36 37
         //LEFT HAND
 
         RCOMBOACT(comb_wf, &kp ESC, 0 1 2)// Q W F
@@ -134,9 +93,11 @@
 
         //THUMBS
 
-        COMBO(delete_space, &mo HOMEROW, 37 35)// ENTER SPACE
-        COMBO(bkspace_delete2, &mo DIRECTACC, 34 32)// BKSPACE TAB
-        COMBO(delete_enter, &sl FUNC, 32 37)// TAB ENTER
+        //COMBO(delete_space, &mo HOMEROW, 37 35)// ENTER SPACE
+        //COMBO(bkspace_delete2, &mo DIRECTACC, 34 32)// BKSPACE TAB
+        //COMBO(delete_enter, &sl FUNC, 32 37)// TAB ENTER
+        COMBO(bkspace_spaceqq, &mo NUMBERS, 33 36)// BKSPACE SPACE
+        COMBO(bkspace_enter, &mo FUNC, 33 35)// BKSPACE ENTER
         //NavOverR
 
         NAVBACOMBO(pg_0, &kp HOME, 27 28)// H , 
@@ -149,13 +110,16 @@
         //COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
 
 
-        /// NAVIGATION inverted
         //     0  1  2  3  4     5  6  7  8  9
         //    10 11 12 13 14    15 16 17 18 19
         //20  21 22 23 24 25    26 27 28 29 30  31
         //        32 33 34         35 36 37
 
 
+        ////////////////////
+        //START Navigation//
+        ////////////////////
+/*
         c-up-nav-inv {
             bindings = <&kp UP>;
             key-positions = <17 35>;
@@ -194,10 +158,16 @@
             timeout-ms = <2000>;
             slow-release;
         };
+*/
+        //////////////////
+        //END Navigation//
+        //////////////////
 
 
-        ////////////
-/*
+        /////////////////
+        //START Dragmod//
+        /////////////////
+
         c-hr-thumb-ar {
             bindings = <&kp LS(LCTRL)>;
             key-positions = <33 10 11>;
@@ -286,5 +256,8 @@
             timeout-ms = <2000>;
         };
 
-*/
+        ///////////////
+        //END Dragmod//
+        ///////////////
+
     };
