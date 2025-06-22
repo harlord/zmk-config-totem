@@ -50,9 +50,9 @@
  base_layer {
             label = "BASE";
             bindings = <
-                               &kh KDL_Q_0 Q       &kp W             &kp F             &kp P            &kp B                           &kp J             &kp L              &kh KDL_U_7 U           &kp Y                &kp SQT
-                               &kh KDL_A_10 A      &kh KDL_R_11 R    &kh KDL_S_12 S    &kh KDL_T_13 T   &kh KDL_G_14 G                  &kh KDL_M_15 M    &kh KDL_NN_16 N    &kh KDL_E_17 E          &kh KDL_I_18 I       &kh KDL_O_19 O
-&lm_homerow_short LALT LALT    &kp Z               &kp X             &kp C             &kp D            &kp V                           &kp K             &kp H              &kp COMMA               &kp DOT              &kp SLASH          &lm_homerow LGUI LGUI
+                               &kh KDL_Q_0 Q         &kp W             &kp F             &kp P            &kp B                           &kp J             &kp L              &mc_tilde KDL_U_7 U           &kp Y                      &kp SQT
+                               &mc_tilde KDL_A_10 A  &kh KDL_R_11 R    &kh KDL_S_12 S    &kh KDL_T_13 T   &kh KDL_G_14 G                  &kh KDL_M_15 M    &kh KDL_NN_16 N    &mc_tilde KDL_E_17 E          &mc_tilde KDL_I_18 I       & KDL_O_19 O
+&lm_homerow_short LALT LALT    &kp Z                 &kp X             &kp C             &kp D            &kp V                           &kp K             &kp H              &kp COMMA                     &kp DOT                    &kp SLASH             &lm_homerow LGUI LGUI
                                                             &base_th_mo_kp_hp RAISE TAB  &lm_homerow_short LGUI DELETE  &lm_homerow_short LSHFT BACKSPACE    &spacelm LCTRL SPACE  &to BASE              &lm_homerow_short LALT ENTER
             >;
         };
@@ -73,7 +73,7 @@ layer_kdl_u_7 {
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &mc_tilde U  &trans    &trans  &trans  &trans
+                        &trans  &mc_bkctilde U  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -83,7 +83,7 @@ layer_kdl_a_10 {
         &trans  &trans  &trans  &trans       &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans       &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans       &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &mc_tilde A  &kp LSHFT     &trans  &trans  &trans
+                        &trans  &mc_bkctilde A  &kp LSHFT     &trans  &trans  &trans
             >;
         };
 
@@ -124,7 +124,7 @@ layer_kdl_g_14 {
         &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
+                        &trans  &kp LSHFT  &trans    &trans  &trans  &trans
             >;
         };
  
@@ -134,7 +134,7 @@ layer_kdl_m_15 {
         &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
+                        &trans  &kp LSHFT  &trans    &trans  &trans  &trans
             >;
         };
  
@@ -154,7 +154,7 @@ layer_kdl_nn_16 {
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &mc_tsd E    &mo LOWER  &trans  &trans
+                        &trans  &mc_bkctilde E  &trans    &mo LOWER  &trans  &trans
             >;
         };
  
@@ -164,7 +164,7 @@ layer_kdl_i_18 {
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &mc_tsd I    &trans  &trans  &trans
+                        &trans  &mc_bkctilde I  &trans    &trans  &trans  &trans
             >;
         };
  
@@ -174,7 +174,7 @@ layer_kdl_o_19 {
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &mc_tsd O    &trans  &trans  &trans
+                        &trans  &mc_bkctilde O  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -184,7 +184,7 @@ layer_kdl_slh_30 {
         &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
+                        &trans  &kp LSHFT  &trans   &trans  &trans  &trans
             >;
         };
 
