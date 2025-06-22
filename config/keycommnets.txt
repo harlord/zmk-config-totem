@@ -169,15 +169,6 @@ layer_kdl_sqt_9 {
                         &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
             >;
         };
-layer_kdl_a_10 {
-            label = "KDL_A_10";
-            bindings = <
-        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LSHFT  &mc_tsd A    &trans  &trans  &trans
-            >;
-        };
 
 */
 

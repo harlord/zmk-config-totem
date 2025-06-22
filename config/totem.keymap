@@ -73,9 +73,20 @@ layer_kdl_u_7 {
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &mc_tsd U  &trans    &trans  &trans  &trans
+                        &trans  &mc_tilde U  &trans    &trans  &trans  &trans
             >;
         };
+
+layer_kdl_a_10 {
+            label = "KDL_A_10";
+            bindings = <
+        &trans  &trans  &trans  &trans       &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans       &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &mc_tilde A  &kp LSHFT     &trans  &trans  &trans
+            >;
+        };
+
 
 layer_kdl_r_11 {
             label = "KDL_R_11";
