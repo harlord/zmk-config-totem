@@ -1,0 +1,268 @@
+
+
+/*
+#define KDL_W_1 2  
+#define KDL_F_2 3
+#define KDL_P_3 4
+#define KDL_B_4 5
+#define KDL_J_5 6
+#define KDL_L_6 7
+*/
+
+/*
+#define KDL_Y_8 9
+#define KDL_SQT_9 10
+*/
+
+/*
+#define KDL_Z_21 21
+#define KDL_X_22 22
+#define KDL_C_23 23
+#define KDL_D_24 24
+#define KDL_V_25 25
+#define KDL_K_26 26
+#define KDL_H_27 27
+#define KDL_COM_28 28
+#define KDL_DOT_29 29
+*/
+
+//RAISE
+//NAVOVERR
+//DRAGCOMMAND
+//NUMBERS
+//TILDES + DIRECTACC
+
+//cmd+TAB<>DRAGCOMMAND  //shift+BKSPACE<>TILDES(with some DIRECTACC)          //ctrl+SPC<>NUMBERS(require-prior-idle-ms)  //alt+ENT<>NAVOVERR(with top numbers)
+//missing top funcs
+//any RAISE+cmd<>RAISE  //any TILDES(with some DIRECTACC)+shift<>TILDES(with some DIRECTACC)          //any NAVOVERR+ctrl<>NAVOVERR  //any NUMBERS(require-prior-idle-ms with top numbers)+alt<>NUMBERS
+//shift+ctrl<>FUNC
+//shift+alt<>NUMBERS
+//A|S|R|T+cmd+shift<>DRAGCOMMAND
+
+//cmd+TAB+!DRAGCOMMAND   //shift+BCKS+!RAISE                //NUMBERS+SPC+!TILDES   //LOWERNAV+ENT+!alt
+
+// for RAISE
+// when kp A 
+// |_ macro 
+// |__ on_press 
+// |___ mo KDL_A_10
+// |___ behavior bh_kt_on
+// |____ on tap
+// |_____ kp A
+// |____ on hold with cmd
+// |_____ kt_on PIPE 
+// |_ on release
+// |__ kt_off PIPE 
+
+// for RAISE
+// when kp A 
+// |_ macro 
+// |__ on_press 
+// |___ behavior bh_kt_on
+// |____ on tap
+// |_____ kp A
+// |____ on hold with cmd
+// |_____ mo KDL_A_10
+// |_____ kt_on PIPE 
+// |_ on release
+// |__ kt_off PIPE 
+
+// for RAISE
+// when kp A 
+// |_ macro 
+// |__ on_press 
+// |___ behavior bh_kt_on
+// |____ on tap
+// |_____ kp A
+// |____ on hold with cmd
+// |_____ mo KDL_A_10
+// |_____ kt_on PIPE 
+// |_ on release
+// |__ kt_off PIPE 
+
+// check if mo KDL_A_10 remain activated when macro on release. 
+// otherwise on hold with cmd, macro for on press shoult sticky layer on and sticky layer of on release
+
+ 
+ /*
+
+layer_kdl_w_1 {
+     label = "KDL_W_1";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tilde A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_f_2 {
+     label = "KDL_F_2";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tilde A    &trans  &trans  &trans
+            >;
+        };
+
+layer_kdl_p_3 {
+     label = "KDL_P_3";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tilde A    &trans  &trans  &trans
+            >;
+        };
+
+layer_kdl_b_4 {
+     label = "KDL_B_4";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tilde A    &trans  &kp DLLR  &trans
+            >;
+        };
+ 
+layer_kdl_j_5 {
+     label = "KDL_J_5";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tilde A    &trans  &kp CARET  &trans
+            >;
+        };
+
+layer_kdl_l_6 {
+     label = "KDL_L_6";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &mc_tilde A  &kp LSHFT    &trans  &trans  &trans
+            >;
+        };
+
+
+ */
+ 
+ /*
+
+layer_kdl_y_8 {
+     label = "KDL_Y_8";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &mc_tilde A  &kp LSHFT    &trans  &trans  &trans
+            >;
+        };
+layer_kdl_sqt_9 {
+     label = "KDL_SQT_9";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tilde A    &trans  &trans  &trans
+            >;
+        };
+
+*/
+
+/*
+
+layer_kdl_z_21 {
+            label = "KDL_Z_21";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tilde A    &trans  &trans  &trans
+            >;
+        };
+
+layer_kdl_x_22 {
+     label = "KDL_X_22";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tilde A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_c_23 {
+     label = "KDL_C_23";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tilde A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_d_24 {
+     label = "KDL_D_24";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tilde A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_v_25 {
+     label = "KDL_V_25";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tilde A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_k_26 {
+     label = "KDL_K_26";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tilde A    &trans  &trans  &trans
+            >;
+        };
+ 
+layer_kdl_h_27 {
+     label = "KDL_H_27";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tilde A    &trans  &trans  &trans
+            >;
+        };
+
+layer_kdl_com_28 {
+     label = "KDL_COM_28";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tilde A    &trans  &trans  &trans
+            >;
+        };
+
+layer_kdl_dot_29 {
+     label = "KDL_DOT_29";
+            bindings = <
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LSHFT  &mc_tilde A    &trans  &trans  &trans
+            >;
+        };
+
+
+*/
