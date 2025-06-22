@@ -50,8 +50,8 @@
  base_layer {
             label = "BASE";
             bindings = <
-                               &kh Q KDL_Q_0       &kp W             &kp F             &kp P            &kp B                           &kp J             &kp L              &kh U KDL_U_7           &kp Y                &kp SQT
-                               &kh A KDL_A_10      &kh R KDL_R_11    &kh S KDL_S_12    &kh T KDL_T_13   &kh G KDL_G_14                  &kh M KDL_M_15    &kh N KDL_NN_16    &kh E KDL_E_17          &kh I KDL_I_18       &kh O KDL_O_19
+                               &kh KDL_Q_0 Q       &kp W             &kp F             &kp P            &kp B                           &kp J             &kp L              &kh KDL_U_7 U           &kp Y                &kp SQT
+                               &kh KDL_A_10 A      &kh KDL_R_11 R    &kh KDL_S_12 S    &kh KDL_T_13 T   &kh KDL_G_14 G                  &kh KDL_M_15 M    &kh KDL_NN_16 N    &kh KDL_E_17 E          &kh KDL_I_18 I       &kh KDL_O_19 O
 &lm_homerow_short LALT LALT    &kp Z               &kp X             &kp C             &kp D            &kp V                           &kp K             &kp H              &kp COMMA               &kp DOT              &kp SLASH          &lm_homerow LGUI LGUI
                                                             &base_th_mo_kp_hp RAISE TAB  &lm_homerow_short LGUI DELETE  &lm_homerow_short LSHFT BACKSPACE    &spacelm LCTRL SPACE  &to BASE              &lm_homerow_short LALT ENTER
             >;
