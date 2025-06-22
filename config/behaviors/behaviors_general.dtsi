@@ -25,6 +25,14 @@
 
    
     behaviors {
+        leader1: leader1 {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+            pblead { sequence = <P B>; bindings = <&kp X>; };
+            jllead { sequence = <J L>; bindings = <&kp Y>; };
+            uylead { sequence = <U Y>; bindings = <&kp K>; };
+        };
+
 
         kh: kh {
             compatible = "zmk,behavior-hold-tap";
