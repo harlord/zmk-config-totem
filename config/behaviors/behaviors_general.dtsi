@@ -30,7 +30,7 @@
             compatible = "zmk,behavior-hold-tap";
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <250>;
             hold-trigger-key-positions = < LEFT_HAND_KEYS RIGHT_HAND_KEYS >;
         };
