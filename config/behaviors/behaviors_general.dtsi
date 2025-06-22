@@ -225,7 +225,7 @@
             tapping-term-ms = <THUMB_HOLDING_TIME>;
             //quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
             #binding-cells = <2>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <80>;
             bindings = <&mo>, <&kp>;
         };
 
@@ -236,7 +236,7 @@
             tapping-term-ms = <THUMB_HOLDING_TIME>;
             //quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
             #binding-cells = <2>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <80>;
             bindings = <&mo>, <&kp>;
         };
 
