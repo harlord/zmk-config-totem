@@ -23,6 +23,9 @@
 #define RIGHT_THUMB_KEYS          \
                         35 36 37 
 
+#define INV_RIGHT_THUMB_KEYS          \
+                        35 37 
+
    
     behaviors {
         kh: kh {
@@ -31,7 +34,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <550>;
-            hold-trigger-key-positions = < LEFT_THUMB_KEYS RIGHT_THUMB_KEYS >;
+            hold-trigger-key-positions = < LEFT_THUMB_KEYS INV_RIGHT_THUMB_KEYS >;
         };
 
         kt_on: key_toggle_on_only {
