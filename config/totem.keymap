@@ -54,7 +54,7 @@
                                &kh KDL_Q_0 Q         &kp W             &kp F             &kp P            &kp B                           &kp J             &kp L              &kh KDL_U_7 U           &kp Y                &kp SQT
                                &kh KDL_A_10 A        &kh KDL_R_11 R    &kh KDL_S_12 S    &kh KDL_T_13 T   &kh KDL_G_14 G                  &kh KDL_M_15 M    &kh KDL_NN_16 N    &kh KDL_E_17 E          &kh KDL_I_18 I       &kh KDL_O_19 O
 &lm_homerow_short LALT LALT    &kp Z                 &kp X             &kp C             &kp D            &kp V                           &kp K             &kp H              &kp COMMA               &kp DOT              &kp SLASH             &lm_homerow LGUI LGUI
-                                                 &trans  &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB                &base_th_mo_kp_hp RAISE ENTER  &spacelm NAVOVERR SPACE  &trans
+                                                &trans  &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB                &base_th_mo_kp_hp RAISE ENTER  &spacelm NAVOVERR SPACE  &trans
             >;
         };
 
