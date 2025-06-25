@@ -53,7 +53,7 @@
   };
 #define COMBODM(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
-    timeout-ms = <10>; \
+    timeout-ms = <1>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <BASE>; \
