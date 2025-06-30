@@ -1081,13 +1081,7 @@ zephyr_udc0: &usbd {
 };
 # 0 "<command-line>" 2
 # 1 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 1
-
-
-
-
-
-
-
+# 30 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap"
 # 1 "/Users/haroldhernandez/totem/zmk-config-totem/zmk/app/dts/behaviors/mouse_keys.dtsi" 1 3 4
 
 
@@ -1171,7 +1165,7 @@ zephyr_udc0: &usbd {
     };
 };
 # 10 "/Users/haroldhernandez/totem/zmk-config-totem/zmk/app/dts/behaviors/mouse_keys.dtsi" 2 3 4
-# 9 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
+# 31 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
 # 1 "/Users/haroldhernandez/totem/zmk-config-totem/zmk/app/include/dt-bindings/zmk/mouse.h" 1 3 4
 
 
@@ -1189,7 +1183,7 @@ zephyr_udc0: &usbd {
 
        
 # 10 "/Users/haroldhernandez/totem/zmk-config-totem/zmk/app/include/dt-bindings/zmk/mouse.h" 2 3 4
-# 10 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
+# 32 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
 # 1 "/Users/haroldhernandez/totem/zmk-config-totem/zmk/app/dts/behaviors.dtsi" 1 3 4
 
 
@@ -1874,13 +1868,13 @@ zephyr_udc0: &usbd {
 };
 # 10 "/Users/haroldhernandez/totem/zmk-config-totem/zmk/app/dts/behaviors/mouse_keys.dtsi" 2 3 4
 # 31 "/Users/haroldhernandez/totem/zmk-config-totem/zmk/app/dts/behaviors.dtsi" 2 3 4
-# 11 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
+# 33 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
 # 1 "/Users/haroldhernandez/totem/zmk-config-totem/zmk/app/include/dt-bindings/zmk/bt.h" 1 3 4
-# 12 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
+# 34 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
 
 # 1 "/Users/haroldhernandez/totem/zmk-config-totem/zmk/app/include/dt-bindings/zmk/outputs.h" 1 3 4
-# 14 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
-# 33 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap"
+# 36 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
+# 55 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap"
 / {
 # 1 "/Users/haroldhernandez/totem/zmk-config-totem/config/macros/macros_general.dtsi" 1
  macros {
@@ -1953,7 +1947,7 @@ zephyr_udc0: &usbd {
                 <&sk (((((0x07) << 16) | (0xE1))))>;
         };
 
-        lm_mac_homerow: lm_mac_homerow {
+        mhr: mhr {
             compatible = "zmk,behavior-macro-one-param";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -2247,9 +2241,9 @@ zephyr_udc0: &usbd {
         };
 
     };
-# 35 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
+# 57 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
 # 1 "/Users/haroldhernandez/totem/zmk-config-totem/config/behaviors/behaviors_general.dtsi" 1
-# 30 "/Users/haroldhernandez/totem/zmk-config-totem/config/behaviors/behaviors_general.dtsi"
+# 29 "/Users/haroldhernandez/totem/zmk-config-totem/config/behaviors/behaviors_general.dtsi"
     behaviors {
         bt_0: bt_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -2399,7 +2393,6 @@ zephyr_udc0: &usbd {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             tapping-term-ms = <220>;
-
             #binding-cells = <2>;
             require-prior-idle-ms = <80>;
             bindings = <&mo>, <&kp>;
@@ -2417,20 +2410,16 @@ zephyr_udc0: &usbd {
             compatible = "zmk,behavior-hold-tap";
             flavor = "hold-preferred";
             tapping-term-ms = <220>;
-            quick-tap-ms = <0>;
-            hold-trigger-on-release;
             #binding-cells = <2>;
-            bindings = <&lm_mac_homerow>, <&kp>;
+            bindings = <&mhr>, <&kp>;
         };
 
         lm_homerow_short: lm_homerow_short {
             compatible = "zmk,behavior-hold-tap";
             flavor = "hold-preferred";
             tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            hold-trigger-on-release;
             #binding-cells = <2>;
-            bindings = <&lm_mac_homerow>, <&kp>;
+            bindings = <&mhr>, <&kp>;
         };
 
         tdSelectCoppingRL: tdSelectCoppingRL {
@@ -2468,9 +2457,9 @@ zephyr_udc0: &usbd {
             bindings = <&mo 4>, <&none>, <&kp (((((0x07) << 16) | (0x29))))>;
         };
     };
-# 36 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
+# 58 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
 # 1 "/Users/haroldhernandez/totem/zmk-config-totem/config/combos/combos_general.dtsi" 1
-# 106 "/Users/haroldhernandez/totem/zmk-config-totem/config/combos/combos_general.dtsi"
+# 120 "/Users/haroldhernandez/totem/zmk-config-totem/config/combos/combos_general.dtsi"
     combos {
         compatible = "zmk,combos";
 
@@ -2511,13 +2500,6 @@ zephyr_udc0: &usbd {
 
 
 
-
-
-
-        combo_bkspace_spaceqq { timeout-ms = <199>; bindings = <&mo 8>; key-positions = <33 36>; slow-release; layers = <0>; };
-        combo_bkspace_enter { timeout-ms = <199>; bindings = <&mo 6>; key-positions = <33 35>; slow-release; layers = <0>; };
-
-
         combo_pg_0 { timeout-ms = <200>; bindings = <&kp ((((0x07) << 16) | (0x4A)))>; key-positions = <27 28>; layers = <4>; };
         combo_pg_1 { timeout-ms = <200>; bindings = <&kp ((((0x07) << 16) | (0x4D)))>; key-positions = <28 29>; layers = <4>; };
         combo_pg_4 { timeout-ms = <200>; bindings = <&kp (((((0x07) << 16) | (0x4B))))>; key-positions = <27 18>; layers = <4>; };
@@ -2526,7 +2508,7 @@ zephyr_udc0: &usbd {
 
         combo_adj_tog_on { timeout-ms = <500>; bindings = <&tog_on 7>; key-positions = <0 1 2 3>; layers = <5>; };
         combo_adj_tog_off { timeout-ms = <500>; bindings = <&tog_off 7>; key-positions = <0 1 2 3>; layers = <7>; };
-# 173 "/Users/haroldhernandez/totem/zmk-config-totem/config/combos/combos_general.dtsi"
+# 180 "/Users/haroldhernandez/totem/zmk-config-totem/config/combos/combos_general.dtsi"
         c-hr-thumb-ar {
             bindings = <&kp (0x02 << 24 | (((((0x07) << 16) | (0xE0)))))>;
             key-positions = <34 10 11>;
@@ -2620,25 +2602,21 @@ zephyr_udc0: &usbd {
 
 
 
-ctkspa_0 { timeout-ms = <2000>; bindings = <&mo 5>, <&kp (0x04 << 24 | (((((0x07) << 16) | (0x1E)))))>; key-positions = <0 33>; key-positions-leader = <0>; slow-release; }; cbks_7 { timeout-ms = <2000>; bindings = <&mc_bkctilde ((((0x07) << 16) | (0x18)))>; key-positions = <7 33>; key-positions-leader = <7>; };
-cbks_10 { timeout-ms = <2000>; bindings = <&mc_bkctilde ((((0x07) << 16) | (0x04)))>; key-positions = <10 33>; key-positions-leader = <10>; }; ctkspa_12 { timeout-ms = <2000>; bindings = <&mo 5>, <&mo 5>; key-positions = <12 33>; key-positions-leader = <12>; slow-release; }; ctkspa_13 { timeout-ms = <2000>; bindings = <&mo 5>, <&mo 8>; key-positions = <13 33>; key-positions-leader = <13>; slow-release; }; cbks_16 { timeout-ms = <2000>; bindings = <&mc_ennesd ((((0x07) << 16) | (0x11)))>; key-positions = <16 33>; key-positions-leader = <16>; }; cbks_17 { timeout-ms = <2000>; bindings = <&mc_bkctilde ((((0x07) << 16) | (0x08)))>; key-positions = <17 33>; key-positions-leader = <17>; }; cbks_18 { timeout-ms = <2000>; bindings = <&mc_bkctilde ((((0x07) << 16) | (0x0C)))>; key-positions = <18 33>; key-positions-leader = <18>; }; cbks_19 { timeout-ms = <2000>; bindings = <&mc_bkctilde ((((0x07) << 16) | (0x12)))>; key-positions = <19 33>; key-positions-leader = <19>; };
-ctkspa_21 { timeout-ms = <2000>; bindings = <&mo 5>, <&lrlMo (0x04 << 24 | (0x02 << 24 | ((((0x07) << 16) | (0x0B))))) (0x04 << 24 | (0x02 << 24 | ((((0x07) << 16) | (0x45)))))>; key-positions = <21 33>; key-positions-leader = <21>; slow-release; }; ctkspa_22 { timeout-ms = <2000>; bindings = <&mo 5>, <&td_find_s_ht ((((0x07) << 16) | (0x04))) (0x08 << 24 | ((((0x07) << 16) | (0x09))))>; key-positions = <22 33>; key-positions-leader = <22>; slow-release; }; ctkspa_23 { timeout-ms = <2000>; bindings = <&mo 5>, <&td_find_g_ht ((((0x07) << 16) | (0x04))) (0x08 << 24 | (0x02 << 24 | ((((0x07) << 16) | (0x09)))))>; key-positions = <23 33>; key-positions-leader = <23>; slow-release; }; ctkspa_24 { timeout-ms = <2000>; bindings = <&mo 5>, <&kp (0x01 << 24 | (0x02 << 24 | ((((0x07) << 16) | (0x2D)))))>; key-positions = <24 33>; key-positions-leader = <24>; slow-release; }; ctkspa_25 { timeout-ms = <2000>; bindings = <&mo 5>, <&kp (0x01 << 24 | ((((0x07) << 16) | (0x2D))))>; key-positions = <25 33>; key-positions-leader = <25>; slow-release; }; ctkspa_30 { timeout-ms = <2000>; bindings = <&mo 5>, <&kp (0x02 << 24 | (0x04 << 24 | ((((0x07) << 16) | (0x38)))))>; key-positions = <30 33>; key-positions-leader = <30>; slow-release; };
+cbks_0 { timeout-ms = <2000>; bindings = <&kp (0x04 << 24 | (((((0x07) << 16) | (0x1E)))))>; key-positions = <0 33>; key-positions-leader = <0>; }; cbks_7 { timeout-ms = <2000>; bindings = <&mc_bkctilde ((((0x07) << 16) | (0x18)))>; key-positions = <7 33>; key-positions-leader = <7>; };
+cbks_10 { timeout-ms = <2000>; bindings = <&mc_bkctilde ((((0x07) << 16) | (0x04)))>; key-positions = <10 33>; key-positions-leader = <10>; }; ctkspal_12 { timeout-ms = <2000>; bindings = <&mo 5>; key-positions = <12 33>; key-positions-leader = <12>; slow-release; }; ctkspal_13 { timeout-ms = <2000>; bindings = <&mo 8>; key-positions = <13 33>; key-positions-leader = <13>; slow-release; }; cbks_16 { timeout-ms = <2000>; bindings = <&mc_ennesd ((((0x07) << 16) | (0x11)))>; key-positions = <16 33>; key-positions-leader = <16>; }; cbks_17 { timeout-ms = <2000>; bindings = <&mc_bkctilde ((((0x07) << 16) | (0x08)))>; key-positions = <17 33>; key-positions-leader = <17>; }; cbks_18 { timeout-ms = <2000>; bindings = <&mc_bkctilde ((((0x07) << 16) | (0x0C)))>; key-positions = <18 33>; key-positions-leader = <18>; }; cbks_19 { timeout-ms = <2000>; bindings = <&mc_bkctilde ((((0x07) << 16) | (0x12)))>; key-positions = <19 33>; key-positions-leader = <19>; };
+ctkspa_21 { timeout-ms = <2000>; bindings = <&mo 5>, <&lrlMo (0x04 << 24 | (0x02 << 24 | ((((0x07) << 16) | (0x0B))))) (0x04 << 24 | (0x02 << 24 | ((((0x07) << 16) | (0x45)))))>; key-positions = <21 33>; key-positions-leader = <21>; slow-release; }; ctkspa_22 { timeout-ms = <2000>; bindings = <&mo 5>, <&td_find_s_ht ((((0x07) << 16) | (0x04))) (0x08 << 24 | ((((0x07) << 16) | (0x09))))>; key-positions = <22 33>; key-positions-leader = <22>; slow-release; }; ctkspa_23 { timeout-ms = <2000>; bindings = <&mo 5>, <&td_find_g_ht ((((0x07) << 16) | (0x04))) (0x08 << 24 | (0x02 << 24 | ((((0x07) << 16) | (0x09)))))>; key-positions = <23 33>; key-positions-leader = <23>; slow-release; }; ctkspa_24 { timeout-ms = <2000>; bindings = <&mo 5>, <&kp (0x01 << 24 | (0x02 << 24 | ((((0x07) << 16) | (0x2D)))))>; key-positions = <24 33>; key-positions-leader = <24>; slow-release; }; ctkspa_25 { timeout-ms = <2000>; bindings = <&mo 5>, <&kp (0x01 << 24 | ((((0x07) << 16) | (0x2D))))>; key-positions = <25 33>; key-positions-leader = <25>; slow-release; }; cbks_30 { timeout-ms = <2000>; bindings = <&kp (0x02 << 24 | (0x04 << 24 | ((((0x07) << 16) | (0x38)))))>; key-positions = <30 33>; key-positions-leader = <30>; };
 
 
 ctab_0 { timeout-ms = <2000>; bindings = <&mo 1>, <&kp (((((0x07) << 16) | (0x1E))))>; key-positions = <0 34>; key-positions-leader = <0>; slow-release; }; ctab_1 { timeout-ms = <2000>; bindings = <&mo 1>, <&kp (((((0x07) << 16) | (0x1F))))>; key-positions = <1 34>; key-positions-leader = <1>; slow-release; }; ctab_2 { timeout-ms = <2000>; bindings = <&mo 1>, <&kp (((((0x07) << 16) | (0x20))))>; key-positions = <2 34>; key-positions-leader = <2>; slow-release; }; ctab_3 { timeout-ms = <2000>; bindings = <&mo 1>, <&kp (((((0x07) << 16) | (0x21))))>; key-positions = <3 34>; key-positions-leader = <3>; slow-release; }; ctab_4 { timeout-ms = <2000>; bindings = <&mo 1>, <&kp (((((0x07) << 16) | (0x22))))>; key-positions = <4 34>; key-positions-leader = <4>; slow-release; }; ctab_5 { timeout-ms = <2000>; bindings = <&mo 1>, <&kp (((((0x07) << 16) | (0x23))))>; key-positions = <5 34>; key-positions-leader = <5>; slow-release; }; ctab_6 { timeout-ms = <2000>; bindings = <&mo 1>, <&kp (((((0x07) << 16) | (0x24))))>; key-positions = <6 34>; key-positions-leader = <6>; slow-release; }; ctab_7 { timeout-ms = <2000>; bindings = <&mo 1>, <&kp (((((0x07) << 16) | (0x25))))>; key-positions = <7 34>; key-positions-leader = <7>; slow-release; }; ctab_8 { timeout-ms = <2000>; bindings = <&mo 1>, <&kp (((((0x07) << 16) | (0x26))))>; key-positions = <8 34>; key-positions-leader = <8>; slow-release; }; ctab_9 { timeout-ms = <2000>; bindings = <&mo 1>, <&kp (((((0x07) << 16) | (0x27))))>; key-positions = <9 34>; key-positions-leader = <9>; slow-release; };
-ctabd_10 { timeout-ms = <2000>; bindings = <&lm_mac_homerow (((((0x07) << 16) | (0xE1))))>; key-positions = <10 34>; key-positions-leader = <10>; slow-release; }; ctabd_11 { timeout-ms = <2000>; bindings = <&lm_mac_homerow (((((0x07) << 16) | (0xE0))))>; key-positions = <11 34>; key-positions-leader = <11>; slow-release; }; ctabd_12 { timeout-ms = <2000>; bindings = <&lm_mac_homerow (((((0x07) << 16) | (0xE2))))>; key-positions = <12 34>; key-positions-leader = <12>; slow-release; }; ctabd_13 { timeout-ms = <2000>; bindings = <&lm_mac_homerow (((((0x07) << 16) | (0xE3))))>; key-positions = <13 34>; key-positions-leader = <13>; slow-release; };
+ctabd_10 { timeout-ms = <2000>; bindings = <&mhr (((((0x07) << 16) | (0xE1))))>; key-positions = <10 34>; key-positions-leader = <10>; slow-release; }; ctabd_11 { timeout-ms = <2000>; bindings = <&mhr (((((0x07) << 16) | (0xE0))))>; key-positions = <11 34>; key-positions-leader = <11>; slow-release; }; ctabd_12 { timeout-ms = <2000>; bindings = <&mhr (((((0x07) << 16) | (0xE2))))>; key-positions = <12 34>; key-positions-leader = <12>; slow-release; }; ctabd_13 { timeout-ms = <2000>; bindings = <&mhr (((((0x07) << 16) | (0xE3))))>; key-positions = <13 34>; key-positions-leader = <13>; slow-release; };
 
 
 cent_0 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x1E)))))>; key-positions = <0 35>; key-positions-leader = <0>; slow-release; }; cent_1 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x1F)))))>; key-positions = <1 35>; key-positions-leader = <1>; slow-release; }; cent_2 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp ((0x02 << 24 | (((0x07) << 16) | (0x20))))>; key-positions = <2 35>; key-positions-leader = <2>; slow-release; }; cent_3 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x21)))))>; key-positions = <3 35>; key-positions-leader = <3>; slow-release; }; cent_4 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x22)))))>; key-positions = <4 35>; key-positions-leader = <4>; slow-release; }; cent_5 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp ((0x02 << 24 | (((0x07) << 16) | (0x23))))>; key-positions = <5 35>; key-positions-leader = <5>; slow-release; }; cent_6 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x24)))))>; key-positions = <6 35>; key-positions-leader = <6>; slow-release; }; cent_7 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x25)))))>; key-positions = <7 35>; key-positions-leader = <7>; slow-release; }; cent_8 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x26)))))>; key-positions = <8 35>; key-positions-leader = <8>; slow-release; }; cent_9 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x27)))))>; key-positions = <9 35>; key-positions-leader = <9>; slow-release; };
 cent_10 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp ((0x02 << 24 | (((0x07) << 16) | (0x31))))>; key-positions = <10 35>; key-positions-leader = <10>; slow-release; }; cent_11 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x2F)))))>; key-positions = <11 35>; key-positions-leader = <11>; slow-release; }; cent_12 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x30)))))>; key-positions = <12 35>; key-positions-leader = <12>; slow-release; }; cent_13 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp ((0x02 << 24 | (((0x07) << 16) | (0x35))))>; key-positions = <13 35>; key-positions-leader = <13>; slow-release; }; cent_14 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x2D)))))>; key-positions = <14 35>; key-positions-leader = <14>; slow-release; }; cent_15 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp ((0x02 << 24 | (((0x07) << 16) | (0x2E))))>; key-positions = <15 35>; key-positions-leader = <15>; slow-release; }; cent_16 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp ((0x02 << 24 | (((0x07) << 16) | (0x33))))>; key-positions = <16 35>; key-positions-leader = <16>; slow-release; }; cent_17 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x36)))))>; key-positions = <17 35>; key-positions-leader = <17>; slow-release; }; cent_18 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x37)))))>; key-positions = <18 35>; key-positions-leader = <18>; slow-release; }; cent_19 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp ((0x02 << 24 | (((0x07) << 16) | (0x38))))>; key-positions = <19 35>; key-positions-leader = <19>; slow-release; };
 cent_21 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((((0x07) << 16) | (0x31))))>; key-positions = <21 35>; key-positions-leader = <21>; slow-release; }; cent_22 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((((0x07) << 16) | (0x2F))))>; key-positions = <22 35>; key-positions-leader = <22>; slow-release; }; cent_23 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((((0x07) << 16) | (0x30))))>; key-positions = <23 35>; key-positions-leader = <23>; slow-release; }; cent_24 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp ((((0x07) << 16) | (0x35)))>; key-positions = <24 35>; key-positions-leader = <24>; slow-release; }; cent_25 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp ((((0x07) << 16) | (0x2D)))>; key-positions = <25 35>; key-positions-leader = <25>; slow-release; }; cent_26 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp ((((0x07) << 16) | (0x2E)))>; key-positions = <26 35>; key-positions-leader = <26>; slow-release; }; cent_27 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((((0x07) << 16) | (0x33))))>; key-positions = <27 35>; key-positions-leader = <27>; slow-release; }; cent_28 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp ((((0x07) << 16) | (0x36)))>; key-positions = <28 35>; key-positions-leader = <28>; slow-release; }; cent_29 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp (((((0x07) << 16) | (0x37))))>; key-positions = <29 35>; key-positions-leader = <29>; slow-release; }; cent_30 { timeout-ms = <2000>; bindings = <&mo 2>, <&kp ((((0x07) << 16) | (0x38)))>; key-positions = <30 35>; key-positions-leader = <30>; slow-release; };
-
-
-cspc_0 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x1E)))))>; key-positions = <0 36>; require-prior-idle-ms = <250>; key-positions-leader = <0>; slow-release; }; cspc_1 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x1F)))))>; key-positions = <1 36>; require-prior-idle-ms = <250>; key-positions-leader = <1>; slow-release; }; cspc_2 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp ((0x02 << 24 | (((0x07) << 16) | (0x20))))>; key-positions = <2 36>; require-prior-idle-ms = <250>; key-positions-leader = <2>; slow-release; }; cspc_3 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x21)))))>; key-positions = <3 36>; require-prior-idle-ms = <250>; key-positions-leader = <3>; slow-release; }; cspc_4 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x22)))))>; key-positions = <4 36>; require-prior-idle-ms = <250>; key-positions-leader = <4>; slow-release; }; cspc_5 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp ((((0x07) << 16) | (0x2E)))>; key-positions = <5 36>; require-prior-idle-ms = <250>; key-positions-leader = <5>; slow-release; }; cspc_6 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((((0x07) << 16) | (0x24))))>; key-positions = <6 36>; require-prior-idle-ms = <250>; key-positions-leader = <6>; slow-release; }; cspc_7 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((((0x07) << 16) | (0x23))))>; key-positions = <7 36>; require-prior-idle-ms = <250>; key-positions-leader = <7>; slow-release; }; cspc_8 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((((0x07) << 16) | (0x25))))>; key-positions = <8 36>; require-prior-idle-ms = <250>; key-positions-leader = <8>; slow-release; }; cspc_9 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((0x02 << 24 | (((0x07) << 16) | (0x25)))))>; key-positions = <9 36>; require-prior-idle-ms = <250>; key-positions-leader = <9>; slow-release; };
-cspc_10 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((((0x07) << 16) | (0xE1))))>; key-positions = <10 36>; require-prior-idle-ms = <250>; key-positions-leader = <10>; slow-release; }; cspc_11 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((((0x07) << 16) | (0xE0))))>; key-positions = <11 36>; require-prior-idle-ms = <250>; key-positions-leader = <11>; slow-release; }; cspc_12 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((((0x07) << 16) | (0xE2))))>; key-positions = <12 36>; require-prior-idle-ms = <250>; key-positions-leader = <12>; slow-release; }; cspc_13 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((((0x07) << 16) | (0xE3))))>; key-positions = <13 36>; require-prior-idle-ms = <250>; key-positions-leader = <13>; slow-release; }; cspc_14 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp ((((0x07) << 16) | (0x36)))>; key-positions = <14 36>; require-prior-idle-ms = <250>; key-positions-leader = <14>; slow-release; }; cspc_15 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((((0x07) << 16) | (0x37))))>; key-positions = <15 36>; require-prior-idle-ms = <250>; key-positions-leader = <15>; slow-release; }; cspc_16 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((((0x07) << 16) | (0x21))))>; key-positions = <16 36>; require-prior-idle-ms = <250>; key-positions-leader = <16>; slow-release; }; cspc_17 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((((0x07) << 16) | (0x22))))>; key-positions = <17 36>; require-prior-idle-ms = <250>; key-positions-leader = <17>; slow-release; }; cspc_18 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((((0x07) << 16) | (0x23))))>; key-positions = <18 36>; require-prior-idle-ms = <250>; key-positions-leader = <18>; slow-release; }; cspc_19 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((((0x07) << 16) | (0x27))))>; key-positions = <19 36>; require-prior-idle-ms = <250>; key-positions-leader = <19>; slow-release; };
-cspc_21 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((((0x07) << 16) | (0x31))))>; key-positions = <21 36>; require-prior-idle-ms = <250>; key-positions-leader = <21>; slow-release; };
+# 294 "/Users/haroldhernandez/totem/zmk-config-totem/config/combos/combos_general.dtsi"
     };
-# 37 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
+# 59 "/Users/haroldhernandez/totem/zmk-config-totem/config/totem.keymap" 2
 
     keymap {
         compatible = "zmk,keymap";
@@ -2725,7 +2703,7 @@ cspc_21 { timeout-ms = <2000>; bindings = <&mo 8>, <&kp (((((0x07) << 16) | (0x3
         layer_numbers {
             label = "NUMBERS";
             bindings = <
-                  &kp (((0x02 << 24 | (((0x07) << 16) | (0x1E))))) &kp (((0x02 << 24 | (((0x07) << 16) | (0x1F))))) &kp ((0x02 << 24 | (((0x07) << 16) | (0x20)))) &kp (((0x02 << 24 | (((0x07) << 16) | (0x21))))) &kp (((0x02 << 24 | (((0x07) << 16) | (0x22))))) &kp ((((0x07) << 16) | (0x2D))) &kp (((((0x07) << 16) | (0x24)))) &kp ((((0x07) << 16) | (0x1D))) &kp ((((0x07) << 16) | (0x1B))) &kp ((((0x07) << 16) | (0x1C)))
+                  &kp (((0x02 << 24 | (((0x07) << 16) | (0x1E))))) &kp (((0x02 << 24 | (((0x07) << 16) | (0x1F))))) &kp ((0x02 << 24 | (((0x07) << 16) | (0x20)))) &kp (((0x02 << 24 | (((0x07) << 16) | (0x21))))) &kp (((0x02 << 24 | (((0x07) << 16) | (0x22))))) &kp ((((0x07) << 16) | (0x2E))) &kp (((((0x07) << 16) | (0x24)))) &kp (((((0x07) << 16) | (0x25)))) &kp (((((0x07) << 16) | (0x26)))) &kp (((0x02 << 24 | (((0x07) << 16) | (0x25)))))
                   &kp (((((0x07) << 16) | (0xE1)))) &kp (((((0x07) << 16) | (0xE0)))) &kp (((((0x07) << 16) | (0xE2)))) &kp (((((0x07) << 16) | (0xE3)))) &kp ((((0x07) << 16) | (0x36))) &kp (((((0x07) << 16) | (0x37)))) &kp (((((0x07) << 16) | (0x21)))) &kp (((((0x07) << 16) | (0x22)))) &kp (((((0x07) << 16) | (0x23)))) &kp (((((0x07) << 16) | (0x27))))
 &lrlMo (((((0x07) << 16) | (0xE2)))) (((((0x07) << 16) | (0xE2)))) &kp (((((0x07) << 16) | (0x31)))) &kp (((((0x07) << 16) | (0x2F)))) &kp (((((0x07) << 16) | (0x30)))) &kp ((((0x07) << 16) | (0x35))) &kp ((((0x07) << 16) | (0x2D))) &kp ((0x02 << 24 | (((0x07) << 16) | (0x2E)))) &kp (((((0x07) << 16) | (0x1E)))) &kp (((((0x07) << 16) | (0x1F)))) &kp (((((0x07) << 16) | (0x20)))) &kp ((((0x07) << 16) | (0x38))) &lrrMo (((((0x07) << 16) | (0xE3)))) (((((0x07) << 16) | (0xE3))))
                                                         &trans &th_kp_kp_hp (((((0x07) << 16) | (0xE1)))) ((((0x07) << 16) | (0x2A))) &th_kp_kp_hp (((((0x07) << 16) | (0xE3)))) ((((0x07) << 16) | (0x2B))) &th_kp_kp_hp (((((0x07) << 16) | (0xE2)))) (((((0x07) << 16) | (0x28)))) &space 4 ((((0x07) << 16) | (0x2C))) &trans

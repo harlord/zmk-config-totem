@@ -1,4 +1,26 @@
 // git add . && git commit -m 'adjust time thumbhold' && git push
+/*
+cd /Users/haroldhernandez/totem/zmk-config-totem 
+source ~/zephyrproject/.venv/bin/activate
+
+   west build -p \
+     -s zmk/app -b seeeduino_xiao_ble -d build/left \
+     -S zmk-usb-logging \
+     -- \
+     -DZMK_CONFIG="${PWD}/config" \
+     -DOVERLAY_CONFIG=${PWD}/config/debug.conf \
+     -DSHIELD=totem_left
+
+
+   west build -p \
+     -s zmk/app -b seeeduino_xiao_ble -d build/right \
+     -S zmk-usb-logging \
+     -- \
+     -DZMK_CONFIG="${PWD}/config" \
+     -DOVERLAY_CONFIG=${PWD}/config/debug.conf \
+     -DSHIELD=totem_right
+
+*/
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
@@ -120,7 +142,7 @@
         layer_numbers {
             label = "NUMBERS";
             bindings = <
-                  &kp EXCL           &kp AT             &kp HASH                &kp DLLR                  &kp PRCNT                       &kp MINUS          &kp N7                    &kp Z                   &kp X           &kp Y
+                  &kp EXCL           &kp AT             &kp HASH                &kp DLLR                  &kp PRCNT                       &kp EQUAL          &kp N7                    &kp N8                   &kp N9           &kp STAR
                   &kp LSHFT          &kp LCTRL          &kp LALT                &kp LGUI                  &kp COMMA                       &kp DOT            &kp N4                    &kp N5                   &kp N6           &kp N0
 &lrlMo LALT LALT  &kp BSLH           &kp LBKT           &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp PLUS           &kp N1                    &kp N2                   &kp N3           &kp SLASH              &lrrMo LGUI LGUI
                                                         &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE  &trans

@@ -68,7 +68,7 @@
                 <&sk LSHFT>;
         };
 
-        lm_mac_homerow: lm_mac_homerow {
+        mhr: mhr {
             compatible = "zmk,behavior-macro-one-param";
             wait-ms = <0>;
             tap-ms = <0>;
