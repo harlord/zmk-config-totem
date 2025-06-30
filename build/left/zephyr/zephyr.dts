@@ -1533,10 +1533,10 @@
 			slow-release;
 			timeout-ms = < 0x7d0 >;
 		};
-		ctaba_0 {
+		ctkspa_0 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mo 0x5 >, < &kp 0x407001e >;
-			key-positions = < 0x0 0x22 >;
+			key-positions = < 0x0 0x21 >;
 			key-positions-leader = < 0x0 >;
 			slow-release;
 		};
@@ -1552,17 +1552,17 @@
 			key-positions = < 0xa 0x21 >;
 			key-positions-leader = < 0xa >;
 		};
-		ctaba_12 {
+		ctkspa_12 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mo 0x5 >, < &mo 0x5 >;
-			key-positions = < 0xc 0x22 >;
+			key-positions = < 0xc 0x21 >;
 			key-positions-leader = < 0xc >;
 			slow-release;
 		};
-		ctaba_13 {
+		ctkspa_13 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mo 0x5 >, < &mo 0x8 >;
-			key-positions = < 0xd 0x22 >;
+			key-positions = < 0xd 0x21 >;
 			key-positions-leader = < 0xd >;
 			slow-release;
 		};
@@ -1590,45 +1590,45 @@
 			key-positions = < 0x13 0x21 >;
 			key-positions-leader = < 0x13 >;
 		};
-		ctaba_21 {
+		ctkspa_21 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mo 0x5 >, < &lrlMo 0x607000b 0x6070045 >;
-			key-positions = < 0x15 0x22 >;
+			key-positions = < 0x15 0x21 >;
 			key-positions-leader = < 0x15 >;
 			slow-release;
 		};
-		ctaba_22 {
+		ctkspa_22 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mo 0x5 >, < &td_find_s_ht 0x70004 0x8070009 >;
-			key-positions = < 0x16 0x22 >;
+			key-positions = < 0x16 0x21 >;
 			key-positions-leader = < 0x16 >;
 			slow-release;
 		};
-		ctaba_23 {
+		ctkspa_23 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mo 0x5 >, < &td_find_g_ht 0x70004 0xa070009 >;
-			key-positions = < 0x17 0x22 >;
+			key-positions = < 0x17 0x21 >;
 			key-positions-leader = < 0x17 >;
 			slow-release;
 		};
-		ctaba_24 {
+		ctkspa_24 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mo 0x5 >, < &kp 0x307002d >;
-			key-positions = < 0x18 0x22 >;
+			key-positions = < 0x18 0x21 >;
 			key-positions-leader = < 0x18 >;
 			slow-release;
 		};
-		ctaba_25 {
+		ctkspa_25 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mo 0x5 >, < &kp 0x107002d >;
-			key-positions = < 0x19 0x22 >;
+			key-positions = < 0x19 0x21 >;
 			key-positions-leader = < 0x19 >;
 			slow-release;
 		};
-		ctaba_30 {
+		ctkspa_30 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mo 0x5 >, < &kp 0x6070038 >;
-			key-positions = < 0x1e 0x22 >;
+			key-positions = < 0x1e 0x21 >;
 			key-positions-leader = < 0x1e >;
 			slow-release;
 		};
