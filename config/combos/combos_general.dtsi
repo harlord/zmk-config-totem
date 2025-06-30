@@ -56,7 +56,7 @@
 #define CBKS(BINDINGS, KEYPOS) \
   cbks_##KEYPOS { \
     timeout-ms = <2000>; \
-    bindings =  <BINDINGS>, <&mo RAISE>; \
+    bindings =  <&mo RAISE>, <BINDINGS>; \
     key-positions = <KEYPOS 33>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
