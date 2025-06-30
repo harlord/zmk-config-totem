@@ -56,11 +56,9 @@
 #define CBKS(BINDINGS, KEYPOS) \
   cbks_##KEYPOS { \
     timeout-ms = <2000>; \
-    bindings =  <&mo RAISE>, <BINDINGS>; \
+    bindings = <BINDINGS>; \
     key-positions = <KEYPOS 33>; \
     key-positions-leader = <KEYPOS>; \
-    slow-release; \
-    layers = <BASE>; \
   };
 #define CTAB(BINDINGS, KEYPOS) \
   ctab_##KEYPOS { \
@@ -69,7 +67,6 @@
     key-positions = <KEYPOS 34>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE>; \
   };
 #define CTABD(BINDINGS, KEYPOS) \
   ctabd_##KEYPOS { \
@@ -78,24 +75,31 @@
     key-positions = <KEYPOS 34>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE>; \
+  };
+#define CTABA(BINDINGS, KEYPOS) \
+  ctaba_##KEYPOS { \
+    timeout-ms = <2000>; \
+    bindings = <&mo DIRECTACC>, <BINDINGS>; \
+    key-positions = <KEYPOS 34>; \
+    key-positions-leader = <KEYPOS>; \
+    slow-release; \
   };
 #define CENT(BINDINGS, KEYPOS) \
   cent_##KEYPOS { \
     timeout-ms = <2000>; \
-    bindings = <&mo LOWER>, <BINDINGS>; \
+    bindings = <&mo RAISE>, <BINDINGS>; \
     key-positions = <KEYPOS 35>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE>; \
   };
 #define CSPC(BINDINGS, KEYPOS) \
   cspc_##KEYPOS { \
     timeout-ms = <2000>; \
-    bindings = <BINDINGS>; \
+    bindings = <&mo NUMBERS>, <BINDINGS>; \
     key-positions = <KEYPOS 36>; \
+    require-prior-idle-ms = <250>; \
     key-positions-leader = <KEYPOS>; \
-    layers = <BASE>; \
+    slow-release; \
   };
 
     combos {
@@ -151,8 +155,8 @@
         NAVBACOMBO(pg_5, &kp PG_DN, 18 29)// H .
         // ADJUST
 
-        //COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
-        //COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
+        COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
+        COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
 
 
         //     0  1  2  3  4     5  6  7  8  9
@@ -257,24 +261,22 @@
         //END Dragmod//
         ///////////////
 
-//shift+BKSPACE<>RAISE 
-CBKS(&kp EXCL, 0)  CBKS(&kp AT, 1)    CBKS(&kp HASH, 2)  CBKS(&kp DLLR, 3)   CBKS(&kp PRCNT, 4)          CBKS(&kp CARET, 5)   CBKS(&kp AMPS, 6)    CBKS(&kp STAR, 7)    CBKS(&kp LPAR, 8)  CBKS(&kp RPAR, 9)
-CBKS(&kp PIPE, 10) CBKS(&kp LBRC, 11) CBKS(&kp RBRC, 12) CBKS(&kp TILDE, 13) CBKS(&kp UNDER, 14)         CBKS(&kp PLUS, 15)   CBKS(&kp COLON, 16)  CBKS(&kp LT, 17)     CBKS(&kp GT, 18)   CBKS(&kp QUESTION, 19)
-CBKS(&kp BSLH, 21) CBKS(&kp LBKT, 22) CBKS(&kp RBKT, 23) CBKS(&kp GRAVE, 24) CBKS(&kp MINUS, 25)         CBKS(&kp EQUAL, 26)  CBKS(&kp SEMI, 27)   CBKS(&kp COMMA, 28)  CBKS(&kp DOT, 29)  CBKS(&kp SLASH, 30)
-
+//shift+BKSPACE<>TILDE 
+CTABA(&kp LA(N1), 0)                                                                                                                                                                                        CBKS(&mc_bkctilde U, 7) 
+CBKS(&mc_bkctilde A, 10)                                                   CTABA(&mo DIRECTACC, 12)              CTABA(&mo NUMBERS, 13)                                              CBKS(&mc_ennesd N, 16)  CBKS(&mc_bkctilde E, 17)  CBKS(&mc_bkctilde I, 18)  CBKS(&mc_bkctilde O, 19)
+CTABA(&lrlMo LA(LS(H)) LA(LS(F12)), 21)  CTABA(&td_find_s_ht A LG(F), 22)  CTABA(&td_find_g_ht A LG(LS(F)), 23)  CTABA(&kp LC(LS(MINUS)), 24)  CTABA(&kp LC(MINUS), 25)                                                                                          CTABA(&kp LS(LA(SLASH)), 30)    
 
 //cmd+TAB<>DRAGTHUMB(inverted LOWER and DIRECTACC in low row only when DRAGTHUMB not activated)    
 CTAB(&kp N1, 0)                          CTAB(&kp N2, 1)                   CTAB(&kp N3, 2)                       CTAB(&kp N4, 3)                  CTAB(&kp N5, 4)                CTAB(&kp N6, 5)  CTAB(&kp N7, 6)  CTAB(&kp N8, 7)  CTAB(&kp N9, 8)  CTAB(&kp N0, 9)
-CTABD(&lm_mac_homerow LSHFT, 10)         CTABD(&lm_mac_homerow LCTRL, 11)  CTABD(&lm_mac_homerow LALT, 12)       CTABD(&lm_mac_homerow LGUI, 13)  CTABD(&mo DIRECTACC, 14)       CTABD(&mo ADJ, 15)
-CTABD(&lrlMo LA(LS(H)) LA(LS(F12)), 21)  CTABD(&td_find_s_ht A LG(F), 22)  CTABD(&td_find_g_ht A LG(LS(F)), 23)  CTABD(&kp LC(LS(MINUS)), 24)     CTAB(&kp LC(MINUS), 25)
+CTABD(&lm_mac_homerow LSHFT, 10)         CTABD(&lm_mac_homerow LCTRL, 11)  CTABD(&lm_mac_homerow LALT, 12)       CTABD(&lm_mac_homerow LGUI, 13)  
 
-//alt+ENT<> 
-CENT(&kp EXCL, 0)   CENT(&kp AT, 1)     CENT(&kp HASH, 2)  CENT(&kp DLLR, 3)   CENT(&kp PRCNT, 4)         CENT(&kp EQUAL, 5)  CENT(&kp N7, 6)    CENT(&kp N6, 7)   CENT(&kp N8, 8)   CENT(&kp STAR, 9)
-CENT(&kp LSHFT, 10) CENT(&kp LCTRL, 11) CENT(&kp LALT, 12) CENT(&kp LGUI, 13)  CENT(&kp COMMA, 14)        CENT(&kp DOT, 15)   CENT(&kp N4, 16)   CENT(&kp N5, 17)  CENT(&kp N6, 18)  CENT(&kp N0, 19)
-CENT(&kp BSLH, 21)  CENT(&kp LBKT, 22)  CENT(&kp RBKT, 23) CENT(&kp GRAVE, 24) CENT(&kp MINUS, 25)        CENT(&kp PLUS, 26)  CENT(&kp N1, 27)   CENT(&kp N2, 28)  CENT(&kp N3, 29)  CENT(&kp SLASH, 30)
+//alt+ENT<>RAISE
+CENT(&kp EXCL, 0)  CENT(&kp AT, 1)    CENT(&kp HASH, 2)  CENT(&kp DLLR, 3)   CENT(&kp PRCNT, 4)          CENT(&kp CARET, 5)   CENT(&kp AMPS, 6)    CENT(&kp STAR, 7)    CENT(&kp LPAR, 8)  CENT(&kp RPAR, 9)
+CENT(&kp PIPE, 10) CENT(&kp LBRC, 11) CENT(&kp RBRC, 12) CENT(&kp TILDE, 13) CENT(&kp UNDER, 14)         CENT(&kp PLUS, 15)   CENT(&kp COLON, 16)  CENT(&kp LT, 17)     CENT(&kp GT, 18)   CENT(&kp QUESTION, 19)
+CENT(&kp BSLH, 21) CENT(&kp LBKT, 22) CENT(&kp RBKT, 23) CENT(&kp GRAVE, 24) CENT(&kp MINUS, 25)         CENT(&kp EQUAL, 26)  CENT(&kp SEMI, 27)   CENT(&kp COMMA, 28)  CENT(&kp DOT, 29)  CENT(&kp SLASH, 30)
 
-//NAVOVERR+SPC<>TILDES
-CSPC(&mc_bkctilde A, 10) CSPC(&mc_bkctilde E, 17) CSPC(&mc_bkctilde I, 18) CSPC(&mc_bkctilde O, 19) CSPC(&mc_bkctilde U, 7) CSPC(&mc_ennesd N, 16)
-
-
+//NAVOVERR+SPC<>NUMBERS
+CSPC(&kp EXCL, 0)   CSPC(&kp AT, 1)     CSPC(&kp HASH, 2)  CSPC(&kp DLLR, 3)   CSPC(&kp PRCNT, 4)         CSPC(&kp EQUAL, 5)  CSPC(&kp N7, 6)    CSPC(&kp N6, 7)   CSPC(&kp N8, 8)   CSPC(&kp STAR, 9)
+CSPC(&kp LSHFT, 10) CSPC(&kp LCTRL, 11) CSPC(&kp LALT, 12) CSPC(&kp LGUI, 13)  CSPC(&kp COMMA, 14)        CSPC(&kp DOT, 15)   CSPC(&kp N4, 16)   CSPC(&kp N5, 17)  CSPC(&kp N6, 18)  CSPC(&kp N0, 19)
+CSPC(&kp BSLH, 21) // CSPC(&kp LBKT, 22)  CSPC(&kp RBKT, 23) CSPC(&kp GRAVE, 24) CSPC(&kp MINUS, 25)        CSPC(&kp PLUS, 26)  CSPC(&kp N1, 27)   CSPC(&kp N2, 28)  CSPC(&kp N3, 29)  CSPC(&kp SLASH, 30)
     };
