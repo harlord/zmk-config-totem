@@ -60,6 +60,14 @@
     key-positions = <KEYPOS 33>; \
     key-positions-leader = <KEYPOS>; \
   };
+#define CTKSPA(BINDINGS, KEYPOS) \
+  ctkspa_##KEYPOS { \
+    timeout-ms = <2000>; \
+    bindings = <&mo DIRECTACC>, <BINDINGS>; \
+    key-positions = <KEYPOS 33>; \
+    key-positions-leader = <KEYPOS>; \
+    slow-release; \
+  };
 #define CTAB(BINDINGS, KEYPOS) \
   ctab_##KEYPOS { \
     timeout-ms = <2000>; \
@@ -76,14 +84,7 @@
     key-positions-leader = <KEYPOS>; \
     slow-release; \
   };
-#define CTABA(BINDINGS, KEYPOS) \
-  ctaba_##KEYPOS { \
-    timeout-ms = <2000>; \
-    bindings = <&mo DIRECTACC>, <BINDINGS>; \
-    key-positions = <KEYPOS 34>; \
-    key-positions-leader = <KEYPOS>; \
-    slow-release; \
-  };
+
 #define CENT(BINDINGS, KEYPOS) \
   cent_##KEYPOS { \
     timeout-ms = <2000>; \
@@ -262,9 +263,9 @@
         ///////////////
 
 //shift+BKSPACE<>TILDE 
-CTABA(&kp LA(N1), 0)                                                                                                                                                                                        CBKS(&mc_bkctilde U, 7) 
-CBKS(&mc_bkctilde A, 10)                                                   CTABA(&mo DIRECTACC, 12)              CTABA(&mo NUMBERS, 13)                                              CBKS(&mc_ennesd N, 16)  CBKS(&mc_bkctilde E, 17)  CBKS(&mc_bkctilde I, 18)  CBKS(&mc_bkctilde O, 19)
-CTABA(&lrlMo LA(LS(H)) LA(LS(F12)), 21)  CTABA(&td_find_s_ht A LG(F), 22)  CTABA(&td_find_g_ht A LG(LS(F)), 23)  CTABA(&kp LC(LS(MINUS)), 24)  CTABA(&kp LC(MINUS), 25)                                                                                          CTABA(&kp LS(LA(SLASH)), 30)    
+CTKSPA(&kp LA(N1), 0)                                                                                                                                                                                        CBKS(&mc_bkctilde U, 7) 
+CBKS(&mc_bkctilde A, 10)                                                   CTKSPA(&mo DIRECTACC, 12)              CTKSPA(&mo NUMBERS, 13)                                              CBKS(&mc_ennesd N, 16)  CBKS(&mc_bkctilde E, 17)  CBKS(&mc_bkctilde I, 18)  CBKS(&mc_bkctilde O, 19)
+CTKSPA(&lrlMo LA(LS(H)) LA(LS(F12)), 21)  CTKSPA(&td_find_s_ht A LG(F), 22)  CTKSPA(&td_find_g_ht A LG(LS(F)), 23)  CTKSPA(&kp LC(LS(MINUS)), 24)  CTKSPA(&kp LC(MINUS), 25)                                                                                          CTKSPA(&kp LS(LA(SLASH)), 30)    
 
 //cmd+TAB<>DRAGTHUMB(inverted LOWER and DIRECTACC in low row only when DRAGTHUMB not activated)    
 CTAB(&kp N1, 0)                          CTAB(&kp N2, 1)                   CTAB(&kp N3, 2)                       CTAB(&kp N4, 3)                  CTAB(&kp N5, 4)                CTAB(&kp N6, 5)  CTAB(&kp N7, 6)  CTAB(&kp N8, 7)  CTAB(&kp N9, 8)  CTAB(&kp N0, 9)
