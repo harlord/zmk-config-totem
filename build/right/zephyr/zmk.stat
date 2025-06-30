@@ -10,7 +10,7 @@ ELF Header:
   Version:                           0x1
   Entry point address:               0x2ea0d
   Start of program headers:          52 (bytes into file)
-  Start of section headers:          6183872 (bytes into file)
+  Start of section headers:          6183744 (bytes into file)
   Flags:                             0x5000400, Version5 EABI, hard-float ABI
   Size of this header:               52 (bytes)
   Size of program headers:           32 (bytes)
@@ -59,16 +59,16 @@ Section Headers:
   [35] .debug_aranges    PROGBITS        00000000 0349e8 0064d0 00      0   0  8
   [36] .debug_info       PROGBITS        00000000 03aeb8 345225 00      0   0  1
   [37] .debug_abbrev     PROGBITS        00000000 3800dd 032ed0 00      0   0  1
-  [38] .debug_line       PROGBITS        00000000 3b2fad 0a6295 00      0   0  1
-  [39] .debug_frame      PROGBITS        00000000 459244 0122ac 00      0   0  4
-  [40] .debug_str        PROGBITS        00000000 46b4f0 02d966 01  MS  0   0  1
-  [41] .debug_loc        PROGBITS        00000000 498e56 0ef9b8 00      0   0  1
-  [42] .debug_ranges     PROGBITS        00000000 588810 025af0 00      0   0  8
-  [43] .ARM.attributes   ARM_ATTRIBUTES  00000000 5ae300 000038 00      0   0  1
+  [38] .debug_line       PROGBITS        00000000 3b2fad 0a6293 00      0   0  1
+  [39] .debug_frame      PROGBITS        00000000 459240 0122ac 00      0   0  4
+  [40] .debug_str        PROGBITS        00000000 46b4ec 02d966 01  MS  0   0  1
+  [41] .debug_loc        PROGBITS        00000000 498e52 0ef9a9 00      0   0  1
+  [42] .debug_ranges     PROGBITS        00000000 588800 025af0 00      0   0  8
+  [43] .ARM.attributes   ARM_ATTRIBUTES  00000000 5ae2f0 000038 00      0   0  1
   [44] .last_section     PROGBITS        0005b8c0 0349c4 000004 00   A  0   0  1
-  [45] .symtab           SYMTAB          00000000 5ae338 022700 10     46 6210  4
-  [46] .strtab           STRTAB          00000000 5d0a38 014ef3 00      0   0  1
-  [47] .shstrtab         STRTAB          00000000 5e592b 000292 00      0   0  1
+  [45] .symtab           SYMTAB          00000000 5ae328 0226e0 10     46 6210  4
+  [46] .strtab           STRTAB          00000000 5d0a08 014ea6 00      0   0  1
+  [47] .shstrtab         STRTAB          00000000 5e58ae 000292 00      0   0  1
 Key to Flags:
   W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
   L (link order), O (extra OS processing required), G (group), T (TLS),
