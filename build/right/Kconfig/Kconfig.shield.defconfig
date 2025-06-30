@@ -1,0 +1,2 @@
+osource "/Users/haroldhernandez/totem/zmk-config-totem/zmk/app/boards/shields/*/Kconfig.defconfig"
+osource "/Users/haroldhernandez/totem/zmk-config-totem/config/boards/shields/*/Kconfig.defconfig"
