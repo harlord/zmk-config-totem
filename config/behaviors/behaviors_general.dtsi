@@ -1,7 +1,6 @@
 
 #define THUMB_HOLDING_TIME 220 // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds) a thumb key to activate a layer.  Shorter holds are treated as taps.
 #define THUMB_HOLDING_TIME_SHORT 150
-#define THUMB_REPEAT_DECAY_BASE 0 // "tap then hold" for key auto-repeat
 #define THUMB_REPEAT_DECAY 190 // "tap then hold" for key auto-repeat
 #define SPACE_HOLDING_TYPE "balanced"
 
@@ -176,7 +175,6 @@
             compatible = "zmk,behavior-hold-tap";
             flavor = SPACE_HOLDING_TYPE;
             tapping-term-ms = <THUMB_HOLDING_TIME>;
-            //quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
             #binding-cells = <2>;
             require-prior-idle-ms = <80>;
             bindings = <&mo>, <&kp>;
@@ -194,20 +192,16 @@
             compatible = "zmk,behavior-hold-tap";
             flavor = "hold-preferred";
             tapping-term-ms = <THUMB_HOLDING_TIME>;
-            quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
-            hold-trigger-on-release; // wait for other home row mods
             #binding-cells = <2>;
-            bindings = <&lm_mac_homerow>, <&kp>;
+            bindings = <&mhr>, <&kp>;
         };
 
         lm_homerow_short: lm_homerow_short {
             compatible = "zmk,behavior-hold-tap";
             flavor = "hold-preferred";
             tapping-term-ms = <THUMB_HOLDING_TIME_SHORT>;
-            quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
-            hold-trigger-on-release; // wait for other home row mods
             #binding-cells = <2>;
-            bindings = <&lm_mac_homerow>, <&kp>;
+            bindings = <&mhr>, <&kp>;
         };
 
         tdSelectCoppingRL: tdSelectCoppingRL {
