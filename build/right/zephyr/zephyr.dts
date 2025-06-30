@@ -1584,7 +1584,7 @@
 		};
 		cbks_0 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x207001e >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x207001e >;
 			key-positions = < 0x0 0x21 >;
 			key-positions-leader = < 0x0 >;
 			slow-release;
@@ -1592,7 +1592,7 @@
 		};
 		cbks_1 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x207001f >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x207001f >;
 			key-positions = < 0x1 0x21 >;
 			key-positions-leader = < 0x1 >;
 			slow-release;
@@ -1600,7 +1600,7 @@
 		};
 		cbks_2 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x2070020 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x2070020 >;
 			key-positions = < 0x2 0x21 >;
 			key-positions-leader = < 0x2 >;
 			slow-release;
@@ -1608,7 +1608,7 @@
 		};
 		cbks_3 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x2070021 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x2070021 >;
 			key-positions = < 0x3 0x21 >;
 			key-positions-leader = < 0x3 >;
 			slow-release;
@@ -1616,7 +1616,7 @@
 		};
 		cbks_4 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x2070022 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x2070022 >;
 			key-positions = < 0x4 0x21 >;
 			key-positions-leader = < 0x4 >;
 			slow-release;
@@ -1624,7 +1624,7 @@
 		};
 		cbks_5 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x2070023 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x2070023 >;
 			key-positions = < 0x5 0x21 >;
 			key-positions-leader = < 0x5 >;
 			slow-release;
@@ -1632,7 +1632,7 @@
 		};
 		cbks_6 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x2070024 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x2070024 >;
 			key-positions = < 0x6 0x21 >;
 			key-positions-leader = < 0x6 >;
 			slow-release;
@@ -1640,7 +1640,7 @@
 		};
 		cbks_7 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x2070025 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x2070025 >;
 			key-positions = < 0x7 0x21 >;
 			key-positions-leader = < 0x7 >;
 			slow-release;
@@ -1648,7 +1648,7 @@
 		};
 		cbks_8 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x2070026 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x2070026 >;
 			key-positions = < 0x8 0x21 >;
 			key-positions-leader = < 0x8 >;
 			slow-release;
@@ -1656,7 +1656,7 @@
 		};
 		cbks_9 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x2070027 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x2070027 >;
 			key-positions = < 0x9 0x21 >;
 			key-positions-leader = < 0x9 >;
 			slow-release;
@@ -1664,7 +1664,7 @@
 		};
 		cbks_10 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x2070031 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x2070031 >;
 			key-positions = < 0xa 0x21 >;
 			key-positions-leader = < 0xa >;
 			slow-release;
@@ -1672,7 +1672,7 @@
 		};
 		cbks_11 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x207002f >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x207002f >;
 			key-positions = < 0xb 0x21 >;
 			key-positions-leader = < 0xb >;
 			slow-release;
@@ -1680,7 +1680,7 @@
 		};
 		cbks_12 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x2070030 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x2070030 >;
 			key-positions = < 0xc 0x21 >;
 			key-positions-leader = < 0xc >;
 			slow-release;
@@ -1688,7 +1688,7 @@
 		};
 		cbks_13 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x2070035 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x2070035 >;
 			key-positions = < 0xd 0x21 >;
 			key-positions-leader = < 0xd >;
 			slow-release;
@@ -1696,7 +1696,7 @@
 		};
 		cbks_14 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x207002d >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x207002d >;
 			key-positions = < 0xe 0x21 >;
 			key-positions-leader = < 0xe >;
 			slow-release;
@@ -1704,7 +1704,7 @@
 		};
 		cbks_15 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x207002e >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x207002e >;
 			key-positions = < 0xf 0x21 >;
 			key-positions-leader = < 0xf >;
 			slow-release;
@@ -1712,7 +1712,7 @@
 		};
 		cbks_16 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x2070033 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x2070033 >;
 			key-positions = < 0x10 0x21 >;
 			key-positions-leader = < 0x10 >;
 			slow-release;
@@ -1720,7 +1720,7 @@
 		};
 		cbks_17 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x2070036 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x2070036 >;
 			key-positions = < 0x11 0x21 >;
 			key-positions-leader = < 0x11 >;
 			slow-release;
@@ -1728,7 +1728,7 @@
 		};
 		cbks_18 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x2070037 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x2070037 >;
 			key-positions = < 0x12 0x21 >;
 			key-positions-leader = < 0x12 >;
 			slow-release;
@@ -1736,7 +1736,7 @@
 		};
 		cbks_19 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x2070038 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x2070038 >;
 			key-positions = < 0x13 0x21 >;
 			key-positions-leader = < 0x13 >;
 			slow-release;
@@ -1744,7 +1744,7 @@
 		};
 		cbks_21 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x70031 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x70031 >;
 			key-positions = < 0x15 0x21 >;
 			key-positions-leader = < 0x15 >;
 			slow-release;
@@ -1752,7 +1752,7 @@
 		};
 		cbks_22 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x7002f >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x7002f >;
 			key-positions = < 0x16 0x21 >;
 			key-positions-leader = < 0x16 >;
 			slow-release;
@@ -1760,7 +1760,7 @@
 		};
 		cbks_23 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x70030 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x70030 >;
 			key-positions = < 0x17 0x21 >;
 			key-positions-leader = < 0x17 >;
 			slow-release;
@@ -1768,7 +1768,7 @@
 		};
 		cbks_24 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x70035 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x70035 >;
 			key-positions = < 0x18 0x21 >;
 			key-positions-leader = < 0x18 >;
 			slow-release;
@@ -1776,7 +1776,7 @@
 		};
 		cbks_25 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x7002d >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x7002d >;
 			key-positions = < 0x19 0x21 >;
 			key-positions-leader = < 0x19 >;
 			slow-release;
@@ -1784,7 +1784,7 @@
 		};
 		cbks_26 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x7002e >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x7002e >;
 			key-positions = < 0x1a 0x21 >;
 			key-positions-leader = < 0x1a >;
 			slow-release;
@@ -1792,7 +1792,7 @@
 		};
 		cbks_27 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x70033 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x70033 >;
 			key-positions = < 0x1b 0x21 >;
 			key-positions-leader = < 0x1b >;
 			slow-release;
@@ -1800,7 +1800,7 @@
 		};
 		cbks_28 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x70036 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x70036 >;
 			key-positions = < 0x1c 0x21 >;
 			key-positions-leader = < 0x1c >;
 			slow-release;
@@ -1808,7 +1808,7 @@
 		};
 		cbks_29 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x70037 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x70037 >;
 			key-positions = < 0x1d 0x21 >;
 			key-positions-leader = < 0x1d >;
 			slow-release;
@@ -1816,7 +1816,7 @@
 		};
 		cbks_30 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x70038 >, < &mo 0x2 >;
+			bindings = < &mo 0x2 >, < &kp 0x70038 >;
 			key-positions = < 0x1e 0x21 >;
 			key-positions-leader = < 0x1e >;
 			slow-release;
