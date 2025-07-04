@@ -696,7 +696,7 @@
 			compatible = "zmk,behavior-transparent";
 			#binding-cells = < 0x0 >;
 			display-name = "Transparent";
-			phandle = < 0x3f >;
+			phandle = < 0x40 >;
 		};
 		none: none {
 			compatible = "zmk,behavior-none";
@@ -766,9 +766,9 @@
 		caps_word: caps_word {
 			compatible = "zmk,behavior-caps-word";
 			#binding-cells = < 0x0 >;
-			continue-list = < 0x207002d 0x7002a 0x7004c >;
+			continue-list = < 0x207002d 0x7002d >;
 			display-name = "Caps Word";
-			phandle = < 0x44 >;
+			phandle = < 0x39 >;
 		};
 		macro_tap: macro_tap {
 			compatible = "zmk,macro-control-mode-tap";
@@ -910,7 +910,7 @@
 			tapping-term-ms = < 0xdc >;
 			quick-tap-ms = < 0xaf >;
 			hold-trigger-on-release;
-			phandle = < 0x3a >;
+			phandle = < 0x3b >;
 		};
 		lrrMo: lrrMo {
 			compatible = "zmk,behavior-hold-tap";
@@ -920,7 +920,7 @@
 			tapping-term-ms = < 0xdc >;
 			quick-tap-ms = < 0xaf >;
 			hold-trigger-on-release;
-			phandle = < 0x41 >;
+			phandle = < 0x42 >;
 		};
 		th_mo_kp_hp: th_mo_kp_hp {
 			compatible = "zmk,behavior-hold-tap";
@@ -939,7 +939,7 @@
 			#binding-cells = < 0x2 >;
 			hold-trigger-on-release;
 			bindings = < &kp >, < &kp >;
-			phandle = < 0x42 >;
+			phandle = < 0x43 >;
 		};
 		space: space {
 			compatible = "zmk,behavior-hold-tap";
@@ -948,7 +948,7 @@
 			#binding-cells = < 0x2 >;
 			require-prior-idle-ms = < 0x50 >;
 			bindings = < &mo >, < &kp >;
-			phandle = < 0x43 >;
+			phandle = < 0x44 >;
 		};
 		spacelm: thumb_layer_access_spacebarlm {
 			compatible = "zmk,behavior-hold-tap";
@@ -957,7 +957,7 @@
 			#binding-cells = < 0x2 >;
 			require-prior-idle-ms = < 0x50 >;
 			bindings = < &mo >, < &kp >;
-			phandle = < 0x40 >;
+			phandle = < 0x41 >;
 		};
 		th_kp_sl_hp: th_kp_sl_hp {
 			compatible = "zmk,behavior-hold-tap";
@@ -972,7 +972,7 @@
 			tapping-term-ms = < 0xdc >;
 			#binding-cells = < 0x2 >;
 			bindings = < &mhr >, < &kp >;
-			phandle = < 0x3e >;
+			phandle = < 0x3f >;
 		};
 		lm_homerow_short: lm_homerow_short {
 			compatible = "zmk,behavior-hold-tap";
@@ -980,7 +980,7 @@
 			tapping-term-ms = < 0x96 >;
 			#binding-cells = < 0x2 >;
 			bindings = < &mhr >, < &kp >;
-			phandle = < 0x3d >;
+			phandle = < 0x3e >;
 		};
 		tdSelectCoppingRL: tdSelectCoppingRL {
 			compatible = "zmk,behavior-hold-tap";
@@ -997,7 +997,7 @@
 			quick_tap_ms = < 0x0 >;
 			flavor = "tap-preferred";
 			bindings = < &pfind >, < &kp >;
-			phandle = < 0x3b >;
+			phandle = < 0x3c >;
 		};
 		td_find_g_ht: td_find_g_ht {
 			compatible = "zmk,behavior-hold-tap";
@@ -1006,7 +1006,7 @@
 			quick_tap_ms = < 0x0 >;
 			flavor = "tap-preferred";
 			bindings = < &gpfind >, < &kp >;
-			phandle = < 0x3c >;
+			phandle = < 0x3d >;
 		};
 		nav_esc: nav_esc {
 			compatible = "zmk,behavior-tap-dance";
@@ -1062,7 +1062,7 @@
 			tap-ms = < 0x0 >;
 			#binding-cells = < 0x1 >;
 			bindings = < &macro_tap >, < &macro_param_1to1 &mc_enne 0x0 >;
-			phandle = < 0x39 >;
+			phandle = < 0x3a >;
 		};
 		mc_quesd: mc_quesd {
 			compatible = "zmk,behavior-macro";
@@ -1533,19 +1533,11 @@
 			key-positions = < 0xa 0x21 >;
 			key-positions-leader = < 0xa >;
 		};
-		ctkspal_12 {
+		cbks_14 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x5 >;
-			key-positions = < 0xc 0x21 >;
-			key-positions-leader = < 0xc >;
-			slow-release;
-		};
-		ctkspal_13 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x8 >;
-			key-positions = < 0xd 0x21 >;
-			key-positions-leader = < 0xd >;
-			slow-release;
+			bindings = < &caps_word >;
+			key-positions = < 0xe 0x21 >;
+			key-positions-leader = < 0xe >;
 		};
 		cbks_16 {
 			timeout-ms = < 0x7d0 >;
@@ -1708,6 +1700,27 @@
 			bindings = < &mhr 0x700e3 >;
 			key-positions = < 0xd 0x22 >;
 			key-positions-leader = < 0xd >;
+			slow-release;
+		};
+		ctabd_14 {
+			timeout-ms = < 0x7d0 >;
+			bindings = < &mhr 0x70039 >;
+			key-positions = < 0xe 0x22 >;
+			key-positions-leader = < 0xe >;
+			slow-release;
+		};
+		ctabd_24 {
+			timeout-ms = < 0x7d0 >;
+			bindings = < &mo 0x8 >;
+			key-positions = < 0x18 0x22 >;
+			key-positions-leader = < 0x18 >;
+			slow-release;
+		};
+		ctabd_25 {
+			timeout-ms = < 0x7d0 >;
+			bindings = < &mo 0x5 >;
+			key-positions = < 0x19 0x22 >;
+			key-positions-leader = < 0x19 >;
 			slow-release;
 		};
 		cent_0 {

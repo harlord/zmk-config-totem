@@ -271,12 +271,13 @@
 
 //shift+BKSPACE<>TILDE 
 CBKS(&kp LA(N1), 0)                                                                                                                                                                                        CBKS(&mc_bkctilde U, 7) 
-CBKS(&mc_bkctilde A, 10)                                                     CBKL(&mo DIRECTACC, 12)             CBKL(&mo NUMBERS, 13)                                              CBKS(&mc_ennesd N, 16)  CBKS(&mc_bkctilde E, 17)  CBKS(&mc_bkctilde I, 18)  CBKS(&mc_bkctilde O, 19)
+CBKS(&mc_bkctilde A, 10)                                                                                                                           CBKS(&caps_word, 14)                                                                                                                                                                                CBKS(&mc_ennesd N, 16)  CBKS(&mc_bkctilde E, 17)  CBKS(&mc_bkctilde I, 18)  CBKS(&mc_bkctilde O, 19)
 CTKSPA(&lrlMo LA(LS(H)) LA(LS(F12)), 21)  CTKSPA(&td_find_s_ht A LG(F), 22)  CTKSPA(&td_find_g_ht A LG(LS(F)), 23)  CTKSPA(&kp LC(LS(MINUS)), 24)  CTKSPA(&kp LC(MINUS), 25)                                                                                    CBKS(&kp LS(LA(SLASH)), 30)    
 
 //cmd+TAB<>DRAGTHUMB(inverted LOWER and DIRECTACC in low row only when DRAGTHUMB not activated)    
-CTAB(&kp N1, 0)                          CTAB(&kp N2, 1)                   CTAB(&kp N3, 2)                       CTAB(&kp N4, 3)                  CTAB(&kp N5, 4)                CTAB(&kp N6, 5)  CTAB(&kp N7, 6)  CTAB(&kp N8, 7)  CTAB(&kp N9, 8)  CTAB(&kp N0, 9)
-CTABD(&mhr LSHFT, 10)         CTABD(&mhr LCTRL, 11)  CTABD(&mhr LALT, 12)       CTABD(&mhr LGUI, 13)  
+CTAB(&kp N1, 0)        CTAB(&kp N2, 1)        CTAB(&kp N3, 2)       CTAB(&kp N4, 3)         CTAB(&kp N5, 4)                CTAB(&kp N6, 5)  CTAB(&kp N7, 6)  CTAB(&kp N8, 7)  CTAB(&kp N9, 8)  CTAB(&kp N0, 9)
+CTABD(&mhr LSHFT, 10)  CTABD(&mhr LCTRL, 11)  CTABD(&mhr LALT, 12)  CTABD(&mhr LGUI, 13)    CTABD(&mhr CLCK, 14)
+                                                                    CTABD(&mo NUMBERS, 24)  CTABD(&mo DIRECTACC, 25)   
 
 //alt+ENT<>RAISE
 CENT(&kp EXCL, 0)  CENT(&kp AT, 1)    CENT(&kp HASH, 2)  CENT(&kp DLLR, 3)   CENT(&kp PRCNT, 4)          CENT(&kp CARET, 5)   CENT(&kp AMPS, 6)    CENT(&kp STAR, 7)    CENT(&kp LPAR, 8)  CENT(&kp RPAR, 9)

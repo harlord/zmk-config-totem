@@ -52,6 +52,10 @@ source ~/zephyrproject/.venv/bin/activate
 
 //shift+BKSPACE<>TILDES //cmd+TAB<>DRAGTHUMB(inverted LOWER and DIRECTACC in low row only when DRAGTHUMB not activated)               //alt+ENT<>RAISE //NAVOVERR+SPC<>TILDES
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
 / {
     #include "macros/macros_general.dtsi"
     #include "behaviors/behaviors_general.dtsi"
