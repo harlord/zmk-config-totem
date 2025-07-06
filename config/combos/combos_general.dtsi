@@ -30,6 +30,13 @@
     key-positions = <KEYPOS>; \
     layers = <NAVOVERR>; \
   };
+#define NAVBACOMBOINV(NAME, BINDINGS, KEYPOS) \
+  comboinv_##NAME { \
+    timeout-ms = <200>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <BASE>; \
+  };
 #define COMBODIRECTACC(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
     timeout-ms = <500>; \
@@ -59,6 +66,25 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS 33>; \
     key-positions-leader = <KEYPOS>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+  };
+#define CBKL(BINDINGS, KEYPOS) \
+  cbkl_##KEYPOS { \
+    timeout-ms = <2000>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS 33>; \
+    key-positions-leader = <KEYPOS>; \
+    slow-release; \
+    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+  };
+#define CBKNUM(BINDINGS, KEYPOS) \
+  cbknum_##KEYPOS { \
+    timeout-ms = <2000>; \
+    bindings = <&mo NAVOVERRLEFT>, <BINDINGS>; \
+    key-positions = <KEYPOS 33>; \
+    key-positions-leader = <KEYPOS>; \
+    slow-release; \
+    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 #define CTKSPA(BINDINGS, KEYPOS) \
   ctkspa_##KEYPOS { \
@@ -67,15 +93,18 @@
     key-positions = <KEYPOS 33>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
+    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
-#define CBKL(BINDINGS, KEYPOS) \
-  ctkspal_##KEYPOS { \
+#define CTKSLW(BINDINGS, KEYPOS) \
+  ctkspa_##KEYPOS { \
     timeout-ms = <2000>; \
-    bindings = <BINDINGS>; \
+    bindings = <&mo LOWER>, <BINDINGS>; \
     key-positions = <KEYPOS 33>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
+    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
+
 #define CTAB(BINDINGS, KEYPOS) \
   ctab_##KEYPOS { \
     timeout-ms = <2000>; \
@@ -83,6 +112,7 @@
     key-positions = <KEYPOS 34>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
+    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 #define CTABD(BINDINGS, KEYPOS) \
   ctabd_##KEYPOS { \
@@ -91,8 +121,25 @@
     key-positions = <KEYPOS 34>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
+    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
-
+#define CTABS(BINDINGS, KEYPOS) \
+  ctabs_##KEYPOS { \
+    timeout-ms = <2000>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS 34>; \
+    key-positions-leader = <KEYPOS>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+  };
+#define CTABDA(BINDINGS, KEYPOS) \
+  ctabda_##KEYPOS { \
+    timeout-ms = <2000>; \
+    bindings = <&mo DIRECTACC>, <BINDINGS>; \
+    key-positions = <KEYPOS 34>; \
+    key-positions-leader = <KEYPOS>; \
+    slow-release; \
+    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+  };
 #define CENT(BINDINGS, KEYPOS) \
   cent_##KEYPOS { \
     timeout-ms = <2000>; \
@@ -100,6 +147,7 @@
     key-positions = <KEYPOS 35>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
+    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 #define CSPC(BINDINGS, KEYPOS) \
   cspc_##KEYPOS { \
@@ -108,6 +156,7 @@
     key-positions = <KEYPOS 36>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
+    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 #define CSPCS(BINDINGS, KEYPOS) \
   cspcs_##KEYPOS { \
@@ -115,6 +164,7 @@
     bindings = <&mo NUMBERS>, <BINDINGS>; \
     key-positions = <KEYPOS 36>; \
     key-positions-leader = <KEYPOS>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 
     combos {
@@ -161,6 +211,11 @@
         NAVBACOMBO(pg_1, &kp END, 28 29)// , .
         NAVBACOMBO(pg_4, &kp PG_UP, 27 18)// , H 
         NAVBACOMBO(pg_5, &kp PG_DN, 18 29)// H .
+
+        NAVBACOMBOINV(pg_0_inv, &kp HOME, 22 23 33)//  
+        NAVBACOMBOINV(pg_1_inv, &kp END, 23 24 33)// 
+        NAVBACOMBOINV(pg_4_inv, &kp PG_UP, 22 12 33)//  
+        NAVBACOMBOINV(pg_5_inv, &kp PG_DN, 12 24 33)// 
         // ADJUST
 
         COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
@@ -270,14 +325,14 @@
         ///////////////
 
 //shift+BKSPACE<>TILDE 
-CBKS(&kp LA(N1), 0)                                                                                                                                                                                        CBKS(&mc_bkctilde U, 7) 
-CBKS(&mc_bkctilde A, 10)                                                                                                                           CBKS(&caps_word, 14)                                                                                                                                                                                CBKS(&mc_ennesd N, 16)  CBKS(&mc_bkctilde E, 17)  CBKS(&mc_bkctilde I, 18)  CBKS(&mc_bkctilde O, 19)
-CTKSPA(&lrlMo LA(LS(H)) LA(LS(F12)), 21)  CTKSPA(&td_find_s_ht A LG(F), 22)  CTKSPA(&td_find_g_ht A LG(LS(F)), 23)  CTKSPA(&kp LC(LS(MINUS)), 24)  CTKSPA(&kp LC(MINUS), 25)                                                                                    CBKS(&kp LS(LA(SLASH)), 30)    
+CBKS(&kp LA(N1), 0)                              CBKL(&mo FUNC, 2)     CBKL(&mo NUMBERS, 3)   CBKL(&mo DIRECTACC, 4)                                                                      CBKS(&mc_bkctilde U, 7) 
+CBKS(&mc_bkctilde A, 10)   CBKNUM(&kp HOME, 11)  CBKNUM(&kp UP, 12)    CBKNUM(&kp END, 13)    CBKNUM(&kp PG_UP, 14)                                               CBKS(&mc_ennesd N, 16)  CBKS(&mc_bkctilde E, 17)  CBKS(&mc_bkctilde I, 18)  CBKS(&mc_bkctilde O, 19)
+                           CBKNUM(&kp LEFT, 22)  CBKNUM(&kp DOWN, 23)  CBKNUM(&kp RIGHT, 24)  CBKNUM(&kp PG_DN, 25)                                                                                                                           CBKS(&kp LS(LA(SLASH)), 30)    
 
 //cmd+TAB<>DRAGTHUMB(inverted LOWER and DIRECTACC in low row only when DRAGTHUMB not activated)    
-CTAB(&kp N1, 0)        CTAB(&kp N2, 1)        CTAB(&kp N3, 2)       CTAB(&kp N4, 3)         CTAB(&kp N5, 4)                CTAB(&kp N6, 5)  CTAB(&kp N7, 6)  CTAB(&kp N8, 7)  CTAB(&kp N9, 8)  CTAB(&kp N0, 9)
-CTABD(&mhr LSHFT, 10)  CTABD(&mhr LCTRL, 11)  CTABD(&mhr LALT, 12)  CTABD(&mhr LGUI, 13)    CTABD(&mhr CLCK, 14)
-                                                                    CTABD(&mo NUMBERS, 24)  CTABD(&mo DIRECTACC, 25)   
+CTAB(&kp N1, 0)                    CTAB(&kp N2, 1)                        CTAB(&kp N3, 2)                            CTAB(&kp N4, 3)               CTAB(&kp N5, 4)                       CTAB(&kp N6, 5)  CTAB(&kp N7, 6)  CTAB(&kp N8, 7)  CTAB(&kp N9, 8)  CTAB(&kp N0, 9)
+CTABD(&mhr LSHFT, 10)              CTABD(&mhr LCTRL, 11)                  CTABD(&mhr LALT, 12)                       CTABD(&mhr LGUI, 13)          CTABD(&kp CAPS, 14)
+CTABDA(&td_find_s_ht A LG(F), 21)  CTABDA(&td_find_g_ht A LG(LS(F)), 22)  CTABDA(&lrlMo LA(LS(H)) LA(LS(F12)), 23)   CTABDA(&kp LC(LS(MINUS)), 24)  CTABDA(&kp LC(MINUS), 25)        
 
 //alt+ENT<>RAISE
 CENT(&kp EXCL, 0)  CENT(&kp AT, 1)    CENT(&kp HASH, 2)  CENT(&kp DLLR, 3)   CENT(&kp PRCNT, 4)          CENT(&kp CARET, 5)   CENT(&kp AMPS, 6)    CENT(&kp STAR, 7)    CENT(&kp LPAR, 8)  CENT(&kp RPAR, 9)
