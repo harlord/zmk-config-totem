@@ -49,6 +49,7 @@ source ~/zephyrproject/.venv/bin/activate
 #define FUNC 6
 #define ADJ  7
 #define NUMBERS 8
+#define NAVOVERRLEFT 9
 
 //shift+BKSPACE<>TILDES //cmd+TAB<>DRAGTHUMB(inverted LOWER and DIRECTACC in low row only when DRAGTHUMB not activated)               //alt+ENT<>RAISE //NAVOVERR+SPC<>TILDES
 
@@ -116,9 +117,9 @@ source ~/zephyrproject/.venv/bin/activate
         layer_direcaacc {
             label = "DIRECTACC";
             bindings = <
-           &lrlMo LA(LS(H)) LA(LS(F12))  &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))  &kp LC(LS(MINUS))  &kp LC(LS(MINUS))               &kp C_VOL_UP        &kp C_PREV                 &kp C_PP      &kp C_NEXT  &trans
-           &kp LSHFT                     &kp LCTRL              &kp LALT                   &kp LGUI           &tdSelectCoppingLR A A          &kp C_VOL_DN        &sk RGUI                   &sk RALT      &sk RCTRL   &sk RSHFT
-&mc_sleep  &lrlMo LA(LS(H)) LA(LS(F12))  &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))  &kp LC(LS(MINUS))  &kp LC(MINUS)                   &kp C_MUTE          &kp C_BRI_DN               &kp C_BRI_UP  &bt_0       &bt_1      &bt_2
+           &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))  &lrlMo LA(LS(H)) LA(LS(F12))  &kp LC(LS(MINUS))  &kp LC(LS(MINUS))               &kp C_VOL_UP        &kp C_PREV                 &kp C_PP      &kp C_NEXT  &trans
+           &kp LSHFT              &kp LCTRL                  &kp LALT                      &kp LGUI           &tdSelectCoppingLR A A          &kp C_VOL_DN        &sk RGUI                   &sk RALT      &sk RCTRL   &sk RSHFT
+&mc_sleep  &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))  &lrlMo LA(LS(H)) LA(LS(F12))  &kp LC(LS(MINUS))  &kp LC(MINUS)                   &kp C_MUTE          &kp C_BRI_DN               &kp C_BRI_UP  &bt_0       &bt_1      &bt_2
                                                                 &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE  &trans
             >;
         };
@@ -150,6 +151,16 @@ source ~/zephyrproject/.venv/bin/activate
                   &kp LSHFT          &kp LCTRL          &kp LALT                &kp LGUI                  &kp COMMA                       &kp DOT            &kp N4                    &kp N5                   &kp N6           &kp N0
 &lrlMo LALT LALT  &kp BSLH           &kp LBKT           &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp PLUS           &kp N1                    &kp N2                   &kp N3           &kp SLASH              &lrrMo LGUI LGUI
                                                         &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE  &trans
+            >;
+        };
+
+        layer_navoverleft {
+            label = "NAVOVERRLEFT";
+            bindings = <
+                   &trans              &trans                     &trans                    &trans          &trans                       &trans          &trans           &trans                  &trans                         &trans     
+                   &trans              &kp HOME                   &kp UP                    &kp END         &kp PG_UP                    &trans          &kp LGUI         &kp LALT                &kp LCTRL                      &kp LSHFT                       
+&lrlMo LALT LALT   &trans              &kp LEFT                   &kp DOWN                  &kp RIGHT       &kp PG_DN                    &trans          &trans           &trans                  &trans                         &trans   &lrrMo LGUI LGUI
+                                        &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE  &trans
             >;
         };
 
