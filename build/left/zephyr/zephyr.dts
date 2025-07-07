@@ -1544,6 +1544,7 @@
 			bindings = < &kp 0x407001e >;
 			key-positions = < 0x0 0x21 >;
 			key-positions-leader = < 0x0 >;
+			key-positions-exclude = < 0x21 >;
 			layers = < 0x0 0x5 0x3 0x2 0x1 0x6 >;
 		};
 		cbkl_2 {
@@ -1575,6 +1576,7 @@
 			bindings = < &mc_bkctilde 0x70018 >;
 			key-positions = < 0x7 0x21 >;
 			key-positions-leader = < 0x7 >;
+			key-positions-exclude = < 0x21 >;
 			layers = < 0x0 0x5 0x3 0x2 0x1 0x6 >;
 		};
 		cbks_10 {
@@ -1582,6 +1584,7 @@
 			bindings = < &mc_bkctilde 0x70004 >;
 			key-positions = < 0xa 0x21 >;
 			key-positions-leader = < 0xa >;
+			key-positions-exclude = < 0x21 >;
 			layers = < 0x0 0x5 0x3 0x2 0x1 0x6 >;
 		};
 		cbknum_11 {
@@ -1621,6 +1624,7 @@
 			bindings = < &mc_ennesd 0x70011 >;
 			key-positions = < 0x10 0x21 >;
 			key-positions-leader = < 0x10 >;
+			key-positions-exclude = < 0x21 >;
 			layers = < 0x0 0x5 0x3 0x2 0x1 0x6 >;
 		};
 		cbks_17 {
@@ -1628,6 +1632,7 @@
 			bindings = < &mc_bkctilde 0x70008 >;
 			key-positions = < 0x11 0x21 >;
 			key-positions-leader = < 0x11 >;
+			key-positions-exclude = < 0x21 >;
 			layers = < 0x0 0x5 0x3 0x2 0x1 0x6 >;
 		};
 		cbks_18 {
@@ -1635,6 +1640,7 @@
 			bindings = < &mc_bkctilde 0x7000c >;
 			key-positions = < 0x12 0x21 >;
 			key-positions-leader = < 0x12 >;
+			key-positions-exclude = < 0x21 >;
 			layers = < 0x0 0x5 0x3 0x2 0x1 0x6 >;
 		};
 		cbks_19 {
@@ -1642,6 +1648,7 @@
 			bindings = < &mc_bkctilde 0x70012 >;
 			key-positions = < 0x13 0x21 >;
 			key-positions-leader = < 0x13 >;
+			key-positions-exclude = < 0x21 >;
 			layers = < 0x0 0x5 0x3 0x2 0x1 0x6 >;
 		};
 		cbknum_22 {
@@ -1681,6 +1688,7 @@
 			bindings = < &kp 0x6070038 >;
 			key-positions = < 0x1e 0x21 >;
 			key-positions-leader = < 0x1e >;
+			key-positions-exclude = < 0x21 >;
 			layers = < 0x0 0x5 0x3 0x2 0x1 0x6 >;
 		};
 		ctab_0 {
