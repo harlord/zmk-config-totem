@@ -66,6 +66,7 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS 33>; \
     key-positions-leader = <KEYPOS>; \
+    key-positions-exclude = <33>; \
     layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 #define CBKL(BINDINGS, KEYPOS) \

@@ -7743,6 +7743,15 @@
 #define DT_N_S_combos_S_cbks_0_P_timeout_ms_EXISTS 1
 #define DT_N_S_combos_S_cbks_0_P_require_prior_idle_ms -1
 #define DT_N_S_combos_S_cbks_0_P_require_prior_idle_ms_EXISTS 1
+#define DT_N_S_combos_S_cbks_0_P_key_positions_exclude {33 /* 0x21 */}
+#define DT_N_S_combos_S_cbks_0_P_key_positions_exclude_IDX_0 33
+#define DT_N_S_combos_S_cbks_0_P_key_positions_exclude_IDX_0_EXISTS 1
+#define DT_N_S_combos_S_cbks_0_P_key_positions_exclude_FOREACH_PROP_ELEM(fn) fn(DT_N_S_combos_S_cbks_0, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_0_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_combos_S_cbks_0, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_0_P_key_positions_exclude_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_combos_S_cbks_0, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_0_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_combos_S_cbks_0, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_0_P_key_positions_exclude_LEN 1
+#define DT_N_S_combos_S_cbks_0_P_key_positions_exclude_EXISTS 1
 #define DT_N_S_combos_S_cbks_0_P_slow_release 0
 #define DT_N_S_combos_S_cbks_0_P_slow_release_EXISTS 1
 #define DT_N_S_combos_S_cbks_0_P_layers {0 /* 0x0 */, 5 /* 0x5 */, 3 /* 0x3 */, 2 /* 0x2 */, 1 /* 0x1 */, 6 /* 0x6 */}
@@ -8070,6 +8079,15 @@
 #define DT_N_S_combos_S_cbks_10_P_timeout_ms_EXISTS 1
 #define DT_N_S_combos_S_cbks_10_P_require_prior_idle_ms -1
 #define DT_N_S_combos_S_cbks_10_P_require_prior_idle_ms_EXISTS 1
+#define DT_N_S_combos_S_cbks_10_P_key_positions_exclude {33 /* 0x21 */}
+#define DT_N_S_combos_S_cbks_10_P_key_positions_exclude_IDX_0 33
+#define DT_N_S_combos_S_cbks_10_P_key_positions_exclude_IDX_0_EXISTS 1
+#define DT_N_S_combos_S_cbks_10_P_key_positions_exclude_FOREACH_PROP_ELEM(fn) fn(DT_N_S_combos_S_cbks_10, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_10_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_combos_S_cbks_10, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_10_P_key_positions_exclude_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_combos_S_cbks_10, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_10_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_combos_S_cbks_10, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_10_P_key_positions_exclude_LEN 1
+#define DT_N_S_combos_S_cbks_10_P_key_positions_exclude_EXISTS 1
 #define DT_N_S_combos_S_cbks_10_P_slow_release 0
 #define DT_N_S_combos_S_cbks_10_P_slow_release_EXISTS 1
 #define DT_N_S_combos_S_cbks_10_P_layers {0 /* 0x0 */, 5 /* 0x5 */, 3 /* 0x3 */, 2 /* 0x2 */, 1 /* 0x1 */, 6 /* 0x6 */}
@@ -8417,6 +8435,15 @@
 #define DT_N_S_combos_S_cbks_16_P_timeout_ms_EXISTS 1
 #define DT_N_S_combos_S_cbks_16_P_require_prior_idle_ms -1
 #define DT_N_S_combos_S_cbks_16_P_require_prior_idle_ms_EXISTS 1
+#define DT_N_S_combos_S_cbks_16_P_key_positions_exclude {33 /* 0x21 */}
+#define DT_N_S_combos_S_cbks_16_P_key_positions_exclude_IDX_0 33
+#define DT_N_S_combos_S_cbks_16_P_key_positions_exclude_IDX_0_EXISTS 1
+#define DT_N_S_combos_S_cbks_16_P_key_positions_exclude_FOREACH_PROP_ELEM(fn) fn(DT_N_S_combos_S_cbks_16, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_16_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_combos_S_cbks_16, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_16_P_key_positions_exclude_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_combos_S_cbks_16, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_16_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_combos_S_cbks_16, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_16_P_key_positions_exclude_LEN 1
+#define DT_N_S_combos_S_cbks_16_P_key_positions_exclude_EXISTS 1
 #define DT_N_S_combos_S_cbks_16_P_slow_release 0
 #define DT_N_S_combos_S_cbks_16_P_slow_release_EXISTS 1
 #define DT_N_S_combos_S_cbks_16_P_layers {0 /* 0x0 */, 5 /* 0x5 */, 3 /* 0x3 */, 2 /* 0x2 */, 1 /* 0x1 */, 6 /* 0x6 */}
@@ -8554,6 +8581,15 @@
 #define DT_N_S_combos_S_cbks_17_P_timeout_ms_EXISTS 1
 #define DT_N_S_combos_S_cbks_17_P_require_prior_idle_ms -1
 #define DT_N_S_combos_S_cbks_17_P_require_prior_idle_ms_EXISTS 1
+#define DT_N_S_combos_S_cbks_17_P_key_positions_exclude {33 /* 0x21 */}
+#define DT_N_S_combos_S_cbks_17_P_key_positions_exclude_IDX_0 33
+#define DT_N_S_combos_S_cbks_17_P_key_positions_exclude_IDX_0_EXISTS 1
+#define DT_N_S_combos_S_cbks_17_P_key_positions_exclude_FOREACH_PROP_ELEM(fn) fn(DT_N_S_combos_S_cbks_17, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_17_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_combos_S_cbks_17, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_17_P_key_positions_exclude_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_combos_S_cbks_17, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_17_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_combos_S_cbks_17, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_17_P_key_positions_exclude_LEN 1
+#define DT_N_S_combos_S_cbks_17_P_key_positions_exclude_EXISTS 1
 #define DT_N_S_combos_S_cbks_17_P_slow_release 0
 #define DT_N_S_combos_S_cbks_17_P_slow_release_EXISTS 1
 #define DT_N_S_combos_S_cbks_17_P_layers {0 /* 0x0 */, 5 /* 0x5 */, 3 /* 0x3 */, 2 /* 0x2 */, 1 /* 0x1 */, 6 /* 0x6 */}
@@ -8691,6 +8727,15 @@
 #define DT_N_S_combos_S_cbks_18_P_timeout_ms_EXISTS 1
 #define DT_N_S_combos_S_cbks_18_P_require_prior_idle_ms -1
 #define DT_N_S_combos_S_cbks_18_P_require_prior_idle_ms_EXISTS 1
+#define DT_N_S_combos_S_cbks_18_P_key_positions_exclude {33 /* 0x21 */}
+#define DT_N_S_combos_S_cbks_18_P_key_positions_exclude_IDX_0 33
+#define DT_N_S_combos_S_cbks_18_P_key_positions_exclude_IDX_0_EXISTS 1
+#define DT_N_S_combos_S_cbks_18_P_key_positions_exclude_FOREACH_PROP_ELEM(fn) fn(DT_N_S_combos_S_cbks_18, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_18_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_combos_S_cbks_18, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_18_P_key_positions_exclude_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_combos_S_cbks_18, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_18_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_combos_S_cbks_18, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_18_P_key_positions_exclude_LEN 1
+#define DT_N_S_combos_S_cbks_18_P_key_positions_exclude_EXISTS 1
 #define DT_N_S_combos_S_cbks_18_P_slow_release 0
 #define DT_N_S_combos_S_cbks_18_P_slow_release_EXISTS 1
 #define DT_N_S_combos_S_cbks_18_P_layers {0 /* 0x0 */, 5 /* 0x5 */, 3 /* 0x3 */, 2 /* 0x2 */, 1 /* 0x1 */, 6 /* 0x6 */}
@@ -8828,6 +8873,15 @@
 #define DT_N_S_combos_S_cbks_19_P_timeout_ms_EXISTS 1
 #define DT_N_S_combos_S_cbks_19_P_require_prior_idle_ms -1
 #define DT_N_S_combos_S_cbks_19_P_require_prior_idle_ms_EXISTS 1
+#define DT_N_S_combos_S_cbks_19_P_key_positions_exclude {33 /* 0x21 */}
+#define DT_N_S_combos_S_cbks_19_P_key_positions_exclude_IDX_0 33
+#define DT_N_S_combos_S_cbks_19_P_key_positions_exclude_IDX_0_EXISTS 1
+#define DT_N_S_combos_S_cbks_19_P_key_positions_exclude_FOREACH_PROP_ELEM(fn) fn(DT_N_S_combos_S_cbks_19, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_19_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_combos_S_cbks_19, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_19_P_key_positions_exclude_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_combos_S_cbks_19, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_19_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_combos_S_cbks_19, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_19_P_key_positions_exclude_LEN 1
+#define DT_N_S_combos_S_cbks_19_P_key_positions_exclude_EXISTS 1
 #define DT_N_S_combos_S_cbks_19_P_slow_release 0
 #define DT_N_S_combos_S_cbks_19_P_slow_release_EXISTS 1
 #define DT_N_S_combos_S_cbks_19_P_layers {0 /* 0x0 */, 5 /* 0x5 */, 3 /* 0x3 */, 2 /* 0x2 */, 1 /* 0x1 */, 6 /* 0x6 */}
@@ -8965,6 +9019,15 @@
 #define DT_N_S_combos_S_cbks_30_P_timeout_ms_EXISTS 1
 #define DT_N_S_combos_S_cbks_30_P_require_prior_idle_ms -1
 #define DT_N_S_combos_S_cbks_30_P_require_prior_idle_ms_EXISTS 1
+#define DT_N_S_combos_S_cbks_30_P_key_positions_exclude {33 /* 0x21 */}
+#define DT_N_S_combos_S_cbks_30_P_key_positions_exclude_IDX_0 33
+#define DT_N_S_combos_S_cbks_30_P_key_positions_exclude_IDX_0_EXISTS 1
+#define DT_N_S_combos_S_cbks_30_P_key_positions_exclude_FOREACH_PROP_ELEM(fn) fn(DT_N_S_combos_S_cbks_30, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_30_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_combos_S_cbks_30, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_30_P_key_positions_exclude_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_combos_S_cbks_30, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_30_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_combos_S_cbks_30, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_30_P_key_positions_exclude_LEN 1
+#define DT_N_S_combos_S_cbks_30_P_key_positions_exclude_EXISTS 1
 #define DT_N_S_combos_S_cbks_30_P_slow_release 0
 #define DT_N_S_combos_S_cbks_30_P_slow_release_EXISTS 1
 #define DT_N_S_combos_S_cbks_30_P_layers {0 /* 0x0 */, 5 /* 0x5 */, 3 /* 0x3 */, 2 /* 0x2 */, 1 /* 0x1 */, 6 /* 0x6 */}
@@ -9102,6 +9165,15 @@
 #define DT_N_S_combos_S_cbks_7_P_timeout_ms_EXISTS 1
 #define DT_N_S_combos_S_cbks_7_P_require_prior_idle_ms -1
 #define DT_N_S_combos_S_cbks_7_P_require_prior_idle_ms_EXISTS 1
+#define DT_N_S_combos_S_cbks_7_P_key_positions_exclude {33 /* 0x21 */}
+#define DT_N_S_combos_S_cbks_7_P_key_positions_exclude_IDX_0 33
+#define DT_N_S_combos_S_cbks_7_P_key_positions_exclude_IDX_0_EXISTS 1
+#define DT_N_S_combos_S_cbks_7_P_key_positions_exclude_FOREACH_PROP_ELEM(fn) fn(DT_N_S_combos_S_cbks_7, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_7_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_combos_S_cbks_7, key_positions_exclude, 0)
+#define DT_N_S_combos_S_cbks_7_P_key_positions_exclude_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_combos_S_cbks_7, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_7_P_key_positions_exclude_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_combos_S_cbks_7, key_positions_exclude, 0, __VA_ARGS__)
+#define DT_N_S_combos_S_cbks_7_P_key_positions_exclude_LEN 1
+#define DT_N_S_combos_S_cbks_7_P_key_positions_exclude_EXISTS 1
 #define DT_N_S_combos_S_cbks_7_P_slow_release 0
 #define DT_N_S_combos_S_cbks_7_P_slow_release_EXISTS 1
 #define DT_N_S_combos_S_cbks_7_P_layers {0 /* 0x0 */, 5 /* 0x5 */, 3 /* 0x3 */, 2 /* 0x2 */, 1 /* 0x1 */, 6 /* 0x6 */}

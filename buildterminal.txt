@@ -279,6 +279,45 @@ child-binding:
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
+zmk-config-totem/zmk/app/dts/bindings/zmk,combos.yaml
+////////
+
+# Copyright (c) 2020, The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: Combos container
+
+compatible: "zmk,combos"
+
+child-binding:
+  description: "A combo"
+
+  properties:
+    bindings:
+      type: phandle-array
+      required: true
+    key-positions:
+      type: array
+      required: true
+    key-positions-leader:
+      type: array
+      required: false
+    timeout-ms:
+      type: int
+      default: 50
+    require-prior-idle-ms:
+      type: int
+      default: -1
+    key-positions-exclude:
+      type: array
+      required: false
+    slow-release:
+      type: boolean
+    layers:
+      type: array
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
 
 
 /*
@@ -326,7 +365,14 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #define COMBOS_KEYS_BYTE_ARRAY(node_id)                                                            \
     uint8_t _CONCAT(combo_prop_, node_id)[DT_PROP_LEN(node_id, key_positions)];
 
-#define MAX_COMBO_KEYS sizeof(union {DT_INST_FOREACH_CHILD(0, COMBOS_KEYS_BYTE_ARRAY)})
+#define COMBOS_KEYS_EXCL_BYTE_ARRAY(node_id)                                                       \
+    uint8_t _CONCAT(combo_prop_ex_, node_id)[DT_PROP_LEN_OR(node_id, key_positions_exclude, 0)];
+
+#define MAX_COMBO_KEYS                                                                              \
+    sizeof(union {                                                                                 \
+        DT_INST_FOREACH_CHILD(0, COMBOS_KEYS_BYTE_ARRAY)                                           \
+        DT_INST_FOREACH_CHILD(0, COMBOS_KEYS_EXCL_BYTE_ARRAY)                                      \
+    })
 
 struct combo_cfg {
     int32_t key_positions[MAX_COMBO_KEYS];
@@ -334,6 +380,9 @@ struct combo_cfg {
         /* Optional leader key array (0 elements if none). */
     int32_t key_positions_leader[MAX_COMBO_KEYS];
     int16_t key_position_len_leader;
+    /* Keys that cancel this combo immediately when pressed */
+    int32_t key_positions_exclude[MAX_COMBO_KEYS];
+    int16_t key_position_len_exclude;
     int16_t require_prior_idle_ms;
     int32_t timeout_ms;
     uint32_t layer_mask;
@@ -343,6 +392,9 @@ struct combo_cfg {
     // otherwise, the combo releases when the first key is released.
     bool slow_release;
 };
+
+/* Forward declaration */
+static bool position_in_exclude(const struct combo_cfg *combo, int32_t position);
 
 struct active_combo {
     uint16_t combo_idx;
@@ -372,6 +424,8 @@ struct active_combo {
                         .key_position_len = DT_PROP_LEN(n, key_positions),                         \
                         .key_positions_leader = DT_PROP_OR(n, key_positions_leader, { }),          \
                         .key_position_len_leader = DT_PROP_LEN_OR(n, key_positions_leader, 0),     \
+                        .key_positions_exclude = DT_PROP_OR(n, key_positions_exclude, { }),          \
+                        .key_position_len_exclude = DT_PROP_LEN_OR(n, key_positions_exclude, 0),     \
                         .behavior = ZMK_KEYMAP_EXTRACT_BINDING(0, n),                               \
                         .behavior_quick_release =                                                      \
                             COND_CODE_1(                                                               \
@@ -479,6 +533,7 @@ for (size_t i = 0; i < ARRAY_SIZE(combos); i++) {
         }
 
         if (leader_ok &&
+            !position_in_exclude(combo, position) &&
             combo_active_on_layer(combo, highest_active_layer) &&
             !is_quick_tap(combo, timestamp)) {
 
@@ -525,6 +580,16 @@ static inline uint8_t zero_one_or_more_bits(uint32_t field) {
     return 2;
 }
 
+/* Return true if the provided key position should immediately cancel all combos */
+static bool position_in_exclude(const struct combo_cfg *combo, int32_t position) {
+    for (int j = 0; j < combo->key_position_len_exclude; j++) {
+        if (combo->key_positions_exclude[j] == position) {
+            return true;
+        }
+    }
+    return false;
+}
+
 static int filter_candidates(int32_t position) {
     int matches = 0;
     for (int i = 0; i < BYTES_FOR_COMBOS_MASK; i++) {
@@ -532,6 +597,23 @@ static int filter_candidates(int32_t position) {
         if (matches < 2) {
             matches += zero_one_or_more_bits(candidates[i]);
         }
+    }
+
+    /* Further filter out any candidates that list this position in their exclude list */
+    for (int i = 0; i < ARRAY_SIZE(combos); i++) {
+        if (!sys_bitfield_test_bit((mem_addr_t)&candidates, i)) {
+            continue;
+        }
+        const struct combo_cfg *c = &combos[i];
+        if (position_in_exclude(c, position)) {
+            sys_bitfield_clear_bit((mem_addr_t)&candidates, i);
+        }
+    }
+
+    /* Re-calculate matches after applying exclude filtering */
+    matches = 0;
+    for (int i = 0; i < BYTES_FOR_COMBOS_MASK && matches < 2; i++) {
+        matches += zero_one_or_more_bits(candidates[i]);
     }
 
     LOG_DBG("combo matches after filter %d", matches);
@@ -904,4 +986,3 @@ static int combo_init(void) {
 SYS_INIT(combo_init, APPLICATION, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
 
 #endif
-
