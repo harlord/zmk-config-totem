@@ -21,11 +21,11 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     require-prior-idle-ms = <150>; \
-    layers = <BASE NAVOVERR DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 #define NAVBACOMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
-    timeout-ms = <200>; \
+    timeout-ms = <70>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <NAVOVERR>; \
@@ -66,7 +66,7 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS 33>; \
     key-positions-leader = <KEYPOS>; \
-    key-positions-exclude = <33>; \
+    key-positions-first-exclude = <33>; \
     layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 #define CBKL(BINDINGS, KEYPOS) \
@@ -75,6 +75,7 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS 33>; \
     key-positions-leader = <KEYPOS>; \
+    key-positions-first-exclude = <33>; \
     slow-release; \
     layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
@@ -83,6 +84,7 @@
     timeout-ms = <2000>; \
     bindings = <&mo NAVOVERRLEFT>, <BINDINGS>; \
     key-positions = <KEYPOS 33>; \
+    key-positions-first-exclude = <33>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
     layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
@@ -92,6 +94,7 @@
     timeout-ms = <2000>; \
     bindings = <&mo DIRECTACC>, <BINDINGS>; \
     key-positions = <KEYPOS 33>; \
+    key-positions-first-exclude = <33>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
     layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
@@ -101,6 +104,7 @@
     timeout-ms = <2000>; \
     bindings = <&mo LOWER>, <BINDINGS>; \
     key-positions = <KEYPOS 33>; \
+    key-positions-first-exclude = <33>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
     layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
@@ -111,6 +115,7 @@
     timeout-ms = <2000>; \
     bindings = <&mo LOWER>, <BINDINGS>; \
     key-positions = <KEYPOS 34>; \
+    key-positions-first-exclude = <34>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
     layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
@@ -120,6 +125,7 @@
     timeout-ms = <2000>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS 34>; \
+    key-positions-first-exclude = <34>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
     layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
@@ -129,6 +135,7 @@
     timeout-ms = <2000>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS 34>; \
+    key-positions-first-exclude = <34>; \
     key-positions-leader = <KEYPOS>; \
     layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
@@ -137,6 +144,7 @@
     timeout-ms = <2000>; \
     bindings = <&mo DIRECTACC>, <BINDINGS>; \
     key-positions = <KEYPOS 34>; \
+    key-positions-first-exclude = <34>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
     layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
@@ -146,6 +154,7 @@
     timeout-ms = <2000>; \
     bindings = <&mo RAISE>, <BINDINGS>; \
     key-positions = <KEYPOS 35>; \
+    key-positions-first-exclude = <35>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
     layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
@@ -155,8 +164,10 @@
     timeout-ms = <2000>; \
     bindings = <&mo NUMBERS>, <BINDINGS>; \
     key-positions = <KEYPOS 36>; \
+    key-positions-first-exclude = <36>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
+    require-prior-idle-ms = <1000>; \
     layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
 #define CSPCS(BINDINGS, KEYPOS) \
@@ -164,6 +175,7 @@
     timeout-ms = <350>; \
     bindings = <&mo NUMBERS>, <BINDINGS>; \
     key-positions = <KEYPOS 36>; \
+    key-positions-first-exclude = <36>; \
     key-positions-leader = <KEYPOS>; \
     layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
   };
@@ -210,13 +222,13 @@
 
         NAVBACOMBO(pg_0, &kp HOME, 27 28)// H , 
         NAVBACOMBO(pg_1, &kp END, 28 29)// , .
-        NAVBACOMBO(pg_4, &kp PG_UP, 27 18)// , H 
-        NAVBACOMBO(pg_5, &kp PG_DN, 18 29)// H .
+        NAVBACOMBO(pg_4, &kp PG_UP, 27 17)// , H 
+        NAVBACOMBO(pg_5, &kp PG_DN, 17 29)// H .
 
-        NAVBACOMBOINV(pg_0_inv, &kp HOME, 22 23 33)//  
-        NAVBACOMBOINV(pg_1_inv, &kp END, 23 24 33)// 
-        NAVBACOMBOINV(pg_4_inv, &kp PG_UP, 22 12 33)//  
-        NAVBACOMBOINV(pg_5_inv, &kp PG_DN, 12 24 33)// 
+        //NAVBACOMBOINV(pg_0_inv, &kp HOME, 22 23 33)//  
+        //NAVBACOMBOINV(pg_1_inv, &kp END, 23 24 33)// 
+        //NAVBACOMBOINV(pg_4_inv, &kp PG_UP, 22 12 33)//  
+        //NAVBACOMBOINV(pg_5_inv, &kp PG_DN, 12 24 33)// 
         // ADJUST
 
         COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
@@ -238,6 +250,7 @@
             key-positions = <34 10 11>;
             layers = <BASE>;
             slow-release;
+            key-positions-first-exclude = <34>;
             timeout-ms = <2000>;
         };
 
@@ -246,6 +259,7 @@
             key-positions = <34 10 11 12>;
             layers = <BASE>;
             slow-release;
+            key-positions-first-exclude = <34>;
             timeout-ms = <2000>;
         };
 
@@ -254,6 +268,7 @@
             key-positions = <34 10 11 12 13>;
             layers = <BASE>;
             slow-release;
+            key-positions-first-exclude = <34>;
             timeout-ms = <2000>;
         };
 
@@ -262,6 +277,7 @@
             key-positions = <34 10 11 13>;
             layers = <BASE>;
             slow-release;
+            key-positions-first-exclude = <34>;
             timeout-ms = <2000>;
         };
 
@@ -270,6 +286,7 @@
             key-positions = <34 10 13 12>;
             layers = <BASE>;
             slow-release;
+            key-positions-first-exclude = <34>;
             timeout-ms = <2000>;
         };
 
@@ -278,6 +295,7 @@
             key-positions = <34 13 12 11>;
             layers = <BASE>;
             slow-release;
+            key-positions-first-exclude = <34>;
             timeout-ms = <2000>;
         };
 
@@ -286,6 +304,7 @@
             key-positions = <34 13 10>;
             layers = <BASE>;
             slow-release;
+            key-positions-first-exclude = <34>;
             timeout-ms = <2000>;
         };
 
@@ -294,6 +313,7 @@
             key-positions = <34 12 13>;
             layers = <BASE>;
             slow-release;
+            key-positions-first-exclude = <34>;
             timeout-ms = <2000>;
         };
 
@@ -302,6 +322,7 @@
             key-positions = <34 12 11>;
             layers = <BASE>;
             slow-release;
+            key-positions-first-exclude = <34>;
             timeout-ms = <2000>;
         };
 
@@ -310,6 +331,7 @@
             key-positions = <34 13 11>;
             layers = <BASE>;
             slow-release;
+            key-positions-first-exclude = <34>;
             timeout-ms = <2000>;
         };
 
@@ -318,6 +340,7 @@
             key-positions = <34 10 12>;
             layers = <BASE>;
             slow-release;
+            key-positions-first-exclude = <34>; 
             timeout-ms = <2000>;
         };
 
@@ -331,8 +354,8 @@ CBKS(&mc_bkctilde A, 10)   CBKNUM(&kp HOME, 11)  CBKNUM(&kp UP, 12)    CBKNUM(&k
                            CBKNUM(&kp LEFT, 22)  CBKNUM(&kp DOWN, 23)  CBKNUM(&kp RIGHT, 24)  CBKNUM(&kp PG_DN, 25)                                                                                                                           CBKS(&kp LS(LA(SLASH)), 30)    
 
 //cmd+TAB<>DRAGTHUMB(inverted LOWER and DIRECTACC in low row only when DRAGTHUMB not activated)    
-CTAB(&kp N1, 0)                    CTAB(&kp N2, 1)                        CTAB(&kp N3, 2)                            CTAB(&kp N4, 3)               CTAB(&kp N5, 4)                       CTAB(&kp N6, 5)  CTAB(&kp N7, 6)  CTAB(&kp N8, 7)  CTAB(&kp N9, 8)  CTAB(&kp N0, 9)
-CTABD(&mhr LSHFT, 10)              CTABD(&mhr LCTRL, 11)                  CTABD(&mhr LALT, 12)                       CTABD(&mhr LGUI, 13)          CTABD(&kp CAPS, 14)
+CTAB(&kp N1, 0)                    CTAB(&kp N2, 1)                        CTAB(&kp N3, 2)                            CTAB(&kp N4, 3)                CTAB(&kp N5, 4)                         CTAB(&kp N6, 5)  CTAB(&kp N7, 6)  CTAB(&kp N8, 7)  CTAB(&kp N9, 8)  CTAB(&kp N0, 9)
+CTABD(&mhr LSHFT, 10)              CTABD(&mhr LCTRL, 11)                  CTABD(&mhr LALT, 12)                       CTABD(&mhr LGUI, 13)           CTABD(&kp CAPS, 14)
 CTABDA(&td_find_s_ht A LG(F), 21)  CTABDA(&td_find_g_ht A LG(LS(F)), 22)  CTABDA(&lrlMo LA(LS(H)) LA(LS(F12)), 23)   CTABDA(&kp LC(LS(MINUS)), 24)  CTABDA(&kp LC(MINUS), 25)        
 
 //alt+ENT<>RAISE

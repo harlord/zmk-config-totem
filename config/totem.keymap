@@ -4,15 +4,6 @@ cd /Users/haroldhernandez/totem/zmk-config-totem
 source ~/zephyrproject/.venv/bin/activate
 
    west build -p \
-     -s zmk/app -b seeeduino_xiao_ble -d build/left \
-     -S zmk-usb-logging \
-     -- \
-     -DZMK_CONFIG="${PWD}/config" \
-     -DOVERLAY_CONFIG=${PWD}/config/debug.conf \
-     -DSHIELD=totem_left
-
-
-   west build -p \
      -s zmk/app -b seeeduino_xiao_ble -d build/right \
      -S zmk-usb-logging \
      -- \
@@ -20,6 +11,14 @@ source ~/zephyrproject/.venv/bin/activate
      -DOVERLAY_CONFIG=${PWD}/config/debug.conf \
      -DSHIELD=totem_right
 
+   west build -p \
+     -s zmk/app -b seeeduino_xiao_ble -d build/left \
+     -S zmk-usb-logging \
+     -- \
+     -DZMK_CONFIG="${PWD}/config" \
+     -DOVERLAY_CONFIG=${PWD}/config/debug.conf \
+     -DSHIELD=totem_left
+     
 */
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
@@ -67,9 +66,9 @@ source ~/zephyrproject/.venv/bin/activate
  base_layer {
             label = "BASE";
             bindings = <
-                               &kp Q    &kp W    &kp F    &kp P   &kp B                  &kp J    &kp L    &kp U          &kp Y       &kp SQT
-                               &kp A    &kp R    &kp S    &kp T   &kp G                  &kp M    &kp N    &kp E          &kp I       &kp O
-&lm_homerow_short LALT LALT    &kp Z    &kp X    &kp C    &kp D   &kp V                  &kp K    &kp H    &kp COMMA      &kp DOT     &kp SLASH    &lm_homerow LGUI LGUI
+                               &kp Q         &kp W         &kp F        &kp P        &kp B                           &kp J    &kp L        &kp U        &kp Y         &kp SQT
+                               &hml LSHFT A  &hml LCTRL R  &hml LALT S  &hml LGUI T  &kp G                           &kp M    &hmr RGUI N  &hmr RALT E  &hmr RCTRL I  &hmr RSHFT O
+&lm_homerow_short LALT LALT    &kp Z         &kp X         &kp C        &kp D        &kp V                           &kp K    &kp H        &kp COMMA    &kp DOT       &lrDl LCTRL SLASH    &lm_homerow LGUI LGUI
    &trans  &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB                &lm_homerow_short LALT ENTER  &spacelm NAVOVERR SPACE  &trans
             >;
         };
@@ -119,7 +118,7 @@ source ~/zephyrproject/.venv/bin/activate
             bindings = <
            &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))  &lrlMo LA(LS(H)) LA(LS(F12))  &kp LC(LS(MINUS))  &kp LC(LS(MINUS))               &kp C_VOL_UP        &kp C_PREV                 &kp C_PP      &kp C_NEXT  &trans
            &kp LSHFT              &kp LCTRL                  &kp LALT                      &kp LGUI           &tdSelectCoppingLR A A          &kp C_VOL_DN        &sk RGUI                   &sk RALT      &sk RCTRL   &sk RSHFT
-&mc_sleep  &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))  &lrlMo LA(LS(H)) LA(LS(F12))  &kp LC(LS(MINUS))  &kp LC(MINUS)                   &kp C_MUTE          &kp C_BRI_DN               &kp C_BRI_UP  &bt_0       &bt_1      &bt_2
+&mc_sleep  &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))  &lrlMo LA(LS(H)) LA(LS(F12))  &kp LC(LS(MINUS))  &kp LC(MINUS)                   &kp C_MUTE          &kp C_BRI_DN               &kp C_BRI_UP  &bt_0       &bt_1       &bt_2
                                                                 &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE  &trans
             >;
         };
