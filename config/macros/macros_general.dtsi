@@ -361,4 +361,32 @@
                 <&bt BT_CLR>;
         };
 
+        //  Copy Find
+
+        pfind: pfind {
+            label = "&PFIND";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(F)>,
+                <&macro_wait_time 10>,
+                <&macro_tap>,
+                <&kp LG(V)>;
+        };
+
+        // Global Find Paste
+
+        gpfind: gpfind {
+            label = "&GPFIND";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(LS(F))>,
+                <&macro_wait_time 10>,
+                <&macro_tap>,
+                <&kp LG(V)>;
+        };
+
     };

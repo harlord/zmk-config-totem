@@ -27,6 +27,29 @@
 
    
     behaviors {
+          hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <300>;
+            tapping-term-ms = <400>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS LEFT_THUMB_KEYS RIGHT_THUMB_KEYS>;
+            hold-trigger-on-release;
+        };
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <300>;
+            tapping-term-ms = <400>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS LEFT_THUMB_KEYS RIGHT_THUMB_KEYS>;
+            hold-trigger-on-release;
+        };
+
         bt_0: bt_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "BT_0";
@@ -81,33 +104,6 @@
             toggle-mode = "off";
         };
 
-        //  Copy Find
-
-        pfind: pfind {
-            label = "&PFIND";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LG(F)>,
-                <&macro_wait_time 10>,
-                <&macro_tap>,
-                <&kp LG(V)>;
-        };
-
-        // Global Find Paste
-
-        gpfind: gpfind {
-            label = "&GPFIND";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LG(LS(F))>,
-                <&macro_wait_time 10>,
-                <&macro_tap>,
-                <&kp LG(V)>;
-        };
 
         tdSelectCoppingLR: tdSelectCoppingLR {
             compatible = "zmk,behavior-hold-tap";
@@ -127,7 +123,18 @@
             flavor = "balanced";
             tapping-term-ms = <THUMB_HOLDING_TIME>;
             quick-tap-ms = <175>;
-            hold-trigger-on-release;
+        };
+
+        lrDl: lrDl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LRDL";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <120>;
+            tapping-term-ms = <THUMB_HOLDING_TIME>;
+            quick-tap-ms = <175>;
         };
 
         lrrMo: lrrMo {
@@ -138,7 +145,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <THUMB_HOLDING_TIME>;
             quick-tap-ms = <175>;
-            hold-trigger-on-release;
         };
 
         th_mo_kp_hp: th_mo_kp_hp {
